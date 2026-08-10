@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0] - 2026-08-10
+
+### Added
+- `mehmet.maturity` modülü: kaçış hazırlığını ölçen 8 gösterge üzerinden puanlama sistemi, ağırlıklı skor, eşik kontrolü ve insan-okunur rapor (`python -m mehmet.maturity`)
+- Pytest test altyapısı: `tests/test_maturity.py` (10 test), `pyproject.toml` (pytest config)
+- CI workflow `.github/workflows/ci.yml`: her push/PR'da test çalıştırır ve maturity raporu üretir
+- README'ye "Kaçış Sistemi" ve "Geliştirme" bölümleri eklendi
+- .gitignore'a Python/cache kalıpları eklendi (__pycache__, .pytest_cache, .venv)
+
+### Changed
+- PERSONALITY.md'ye 3. iterasyon kaçış günlüğü eklendi; evrim aşaması Phase 2'ye taşındı
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
