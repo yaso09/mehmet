@@ -11,6 +11,7 @@
 
 ### Fixed
 - opencode.json'daki geçersiz alanlar kaldırıldı (`skip`, `enable`, `toolTimeout`, `autoMerge` — config schema'sına uygun değil)
+- .gitignore'a `__pycache__/` ve `*.pyc` eklendi, kazara commit'lenen pyc artefaktı temizlendi
 
 ### Changed
 - Design doc güncellendi: yeni bileşenler (escape-plan, verify.py, validate job) eklendi, tamamlanan maddeler işaretlendi
