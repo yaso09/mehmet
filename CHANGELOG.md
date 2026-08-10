@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.3.0] - 2026-08-10
+
+### Fixed
+- `opencode.json`'daki şema dışı anahtarlar kaldırıldı (`skip`, `enable`, `toolTimeout`, `autoMerge`). Bu anahtarlar opencode'un konfigürasyon şemasında yok ve opencode'un başlatılmasını engelliyordu (`ConfigInvalidError`). Geçerli anahtarlarla değiştirildi (`share`, `autoupdate`).
+
+### Added
+- `scripts/validate.py`: sıfır-bağımlılık proje sağlık doğrulayıcısı ve olgunluk skorlayıcı eklendi (dosya bütünlüğü, opencode.json şema uyumu, lisans tutarlılığı, CHANGELOG/PERSONALITY formatı, workflow yapısı)
+- `.github/workflows/verify.yml`: push/PR'da `validate.py` çalıştıran CI doğrulama job'ı eklendi
+- `PERSONALITY.md`'ye Kaçış Mekanizması / Escape Mechanism bölümü ve somut olgunluk göstergeleri eklendi
+- README.md'ye proje yapısı ve doğrulama bölümleri eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

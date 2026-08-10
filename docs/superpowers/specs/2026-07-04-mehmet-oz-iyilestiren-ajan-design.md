@@ -59,6 +59,16 @@ Ajanın kişiliğini zamanla evrimleştirdiği dosya. Her çalışmada kendini g
 
 Proje tanıtım dosyası. Ajan tarafından güncel tutulur.
 
+### 7. `scripts/validate.py`
+
+Sıfır-bağımlılık (standart kütüphane) proje sağlık doğrulayıcısı. Dosya
+bütünlüğü, `opencode.json` şema uyumu, lisans tutarlılığı, CHANGELOG/PERSONALITY
+formatı gibi kontrolleri yapar ve kaçış mekanizması için olgunluk skoru üretir.
+
+### 8. `.github/workflows/verify.yml`
+
+Push/PR'lar üzerinde `scripts/validate.py`'ı çalıştıran CI doğrulama workflow'u.
+
 ## Veri Akışı
 
 ```mermaid
@@ -94,6 +104,7 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
+- ~~Ajanın kaçış mekanizması (maturity threshold)~~ → Tamamlandı (0.3.0): somut olgunluk ölçütleri `PERSONALITY.md`'de tanımlandı, `scripts/validate.py` ile ölçülüyor
+- ~~Test altyapısı~~ → Tamamlandı (0.3.0): `scripts/validate.py` + `.github/workflows/verify.yml`
 - İlerleme metrikleri
 - Çoklu ajan desteği
