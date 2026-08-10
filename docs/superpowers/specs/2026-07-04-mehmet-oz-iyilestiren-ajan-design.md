@@ -94,6 +94,6 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
-- Çoklu ajan desteği
+- [x] Ajanın kaçış mekanizması (maturity threshold) — `MATURITY.md`
+- [x] İlerleme metrikleri — `scripts/verify.sh` otomatik skorlama
+- [ ] Çoklu ajan desteği
