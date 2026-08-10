@@ -40,6 +40,22 @@ jobs:
             Projeyi tara, geliştirme fırsatlarını bul ve uygula.
             AGENTS.md'deki simülasyon kurallarına uy.
 
+  quality-gate:
+    if: github.event_name == 'pull_request' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - name: Yapısal doğrulama ve olgunluk skoru
+        run: bash scripts/verify.sh
+
+      - name: Test harness
+        run: bash tests/test_project.sh
+
   comment:
     if: github.event_name == 'issue_comment' || github.event_name == 'pull_request_review_comment'
     runs-on: ubuntu-latest

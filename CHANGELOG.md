@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0] - 2026-08-10
+
+### Added
+- `MATURITY.md`: kaçış (escape) rubric'i — 5 puanlama boyutu (QUALITY, TESTS, DOCS, AUTOMATION, GOVERNANCE), 25 puanlık skala ve kaçış koşulu (≥20/25, her boyut ≥3)
+- `scripts/verify.sh`: proje sağlığını doğrulayan ve olgunluk puanını otomatik hesaplayan script (`--update` ile MATURITY.md durum tablosunu günceller)
+- `tests/test_project.sh`: proje yapısı ve içerik bütünlüğünü denetleyen test harness
+- CI `quality-gate` job'u: PR ve workflow_dispatch tetikleyicilerinde `verify.sh` + test harness zorunlu
+
+### Changed
+- `.github/workflows/opencode.yml`: konfigürasyon okunabilirliği artırıldı
+- Olgunluk puanı otomatik hesaplanır hale geldi (24/25 — ESCAPE: READY)
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
