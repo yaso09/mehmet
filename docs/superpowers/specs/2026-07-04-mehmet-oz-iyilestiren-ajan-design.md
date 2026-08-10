@@ -94,6 +94,11 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- İlerleme metrikleri (maturity scorecard skor takibi)
 - Çoklu ajan desteği
+
+## Uygulanan Geliştirmeler
+
+- Ajanın kaçış mekanizması (maturity threshold): PERSONALITY.md'deki skor kartında 5 kategori üzerinden 50 puan, kaçış eşiği 40/50
+- Test altyapısı: `scripts/validate.sh` proje sağlık kontrolü
+- CI doğrulama: `.github/workflows/validate.yml`

@@ -1,0 +1,27 @@
+name: validate
+
+on:
+  push:
+    branches: ["main", "opencode/**"]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  health-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Project health check
+        run: bash scripts/validate.sh --verbose
+
+      - name: Install PyYAML (YAML linter)
+        run: python3 -m pip install --quiet PyYAML
+
+      - name: YAML lint
+        run: python3 -c "import glob,yaml; [yaml.safe_load(open(p)) for p in glob.glob('.github/workflows/*.yml')]; print('YAML ok')"
+
+      - name: Shell syntax check
+        run: bash -n scripts/validate.sh && echo "bash -n ok"
