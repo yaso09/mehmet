@@ -1,0 +1,11 @@
+[project]
+name = "mehmet"
+version = "0.3.0"
+description = "Kendi kendini geliştiren otonom AI ajan — maturity/escape sistemi"
+requires-python = ">=3.10"
+license = { text = "GPL-3.0-only" }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+pythonpath = ["."]

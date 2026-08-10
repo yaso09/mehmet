@@ -6,3 +6,7 @@ node_modules/
 dist/
 build/
 *.tsbuildinfo
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
