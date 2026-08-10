@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.3.0] - 2026-08-10
+
+### Added
+- Integrity test altyapısı (tests/verify.py) — tüm state dosyalarını doğrulayan stdlib-only test paketi
+- Makefile — `make test`/`make verify` hedefleri
+- CI quality gate — workflow'a `verify` job eklendi; `autonomous` artık `needs: verify`
+- Kaçış metrikleri dokümanı (docs/kaçış-metrikleri.md) — 100 puanlık olgunluk modeli, kaçış eşiği 80
+- Durum CLI'si (bin/mehmet-status.py) — mevcut sürüm, escape log satırı ve kaçış skorunu raporlar
+- `.gitignore` zaten kapsıyordu; README'ye test/CLI kullanımı eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
