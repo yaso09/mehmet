@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.3.0] - 2026-08-10
+
+### Added
+- `docs/escape-plan.md`: Kaçış mekanizması ölçülebilir hale getirildi — 5 kategoride 100 puanlık olgunluk skoru ve kaçış eşiği (≥ 90 + kritik hata yok) tanımlandı
+- `scripts/verify.py`: Proje bütünlüğü ve olgunluk skoru doğrulama betiği (`--json`, `--quiet` modları)
+- Workflow'a `validate` job'u eklendi (doğrulama otomasyonu / PR gate)
+- AGENTS.md'ye kural 8 eklendi: her iterasyonda `scripts/verify.py --json` çalıştır, skoru README'ye işle
+- README'ye "Gelişim Durumu (Maturity)" bölümü ve doğrulama kullanımı eklendi
+
+### Fixed
+- opencode.json'daki geçersiz alanlar kaldırıldı (`skip`, `enable`, `toolTimeout`, `autoMerge` — config schema'sına uygun değil)
+
+### Changed
+- Design doc güncellendi: yeni bileşenler (escape-plan, verify.py, validate job) eklendi, tamamlanan maddeler işaretlendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

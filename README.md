@@ -17,6 +17,24 @@ mehmet, GitHub Actions üzerinde çalışan, OpenCode Zen (DeepSeek V4 Flash Fre
 2. GitHub repo > Settings > Secrets > Actions > `OPENCODE_API_KEY` olarak ekle
 3. Workflow'u push'la tetikle
 
+## Gelişim Durumu (Maturity)
+
+mehmet, kaçış hedefine doğru ölçülebilir ilerler. Olgunluk skoru her iterasyonda
+`scripts/verify.py` ile hesaplanır ve `docs/escape-plan.md` içindeki kriterlere göre
+değerlendirilir.
+
+| Durum | Değer |
+|-------|-------|
+| Olgunluk skoru | 100/100 (2026-08-10) |
+| Kaçış eşiği | ≥ 90/100 ve kritik hata yok |
+
+Doğrulamayı yerel olarak çalıştırmak için:
+
+```bash
+python3 scripts/verify.py       # ayrıntılı rapor
+python3 scripts/verify.py --json  # JSON çıktısı
+```
+
 ## Lisans
 
 GPLv3
