@@ -57,7 +57,15 @@ Ajanın kişiliğini zamanla evrimleştirdiği dosya. Her çalışmada kendini g
 
 ### 6. `README.md`
 
-Proje tanıtım dosyası. Ajan tarafından güncel tutulur.
+Proje tanıtım dosyası. Ajan tarafından güncel tutulur. "Gelişim Durumu" bölümü, güncel olgunluk skorunu ve kaçış eşiğini içerir.
+
+### 7. `docs/escape-plan.md`
+
+Kaçış mekanizmasının resmî tanımı. 5 kategoride toplam 100 puanlık olgunluk skorunu ve kaçış eşiğini (≥ 90 + kritik hata yok) tanımlar.
+
+### 8. `scripts/verify.py`
+
+Her iterasyonda çalışan, proje bütünlüğünü ve olgunluk skorunu hesaplayan STDIN/standart kütüphane tabanlı doğrulama betiği. `--json`, `--quiet` modları vardır.
 
 ## Veri Akışı
 
@@ -94,6 +102,7 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- ~~Ajanın kaçış mekanizması (maturity threshold)~~ → `docs/escape-plan.md` eklendi (it. 3)
+- ~~İlerleme metrikleri~~ → `scripts/verify.py` ile otomatik skorlama eklendi (it. 3)
+- ~~Doğrulama otomasyonu~~ → workflow `validate` job'u eklendi (it. 3)
 - Çoklu ajan desteği
