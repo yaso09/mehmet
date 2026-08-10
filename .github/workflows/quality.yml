@@ -1,0 +1,40 @@
+name: quality
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate & Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate opencode.json
+        run: |
+          python3 -c "import json; json.load(open('opencode.json')); print('opencode.json: OK')"
+
+      - name: Run tests
+        run: |
+          python3 -m unittest discover -s tests -v
+
+      - name: Measure maturity
+        run: |
+          python3 scripts/maturity.py --json > maturity.json
+          cat maturity.json
+          python3 - <<'EOF'
+          import json
+          r = json.load(open("maturity.json"))
+          print(f"Olgunluk skoru: {r['total']}/100 | Kaçış eşiği: {r['threshold']}/100")
+          print(f"Kaçış durumu: {'HAZIR (KACIS_ESIGI_ASILDI)' if r['escaped'] else 'devam ediyor'}")
+          EOF
