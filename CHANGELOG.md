@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.0] - 2026-08-10
+
+### Added
+- Test altyapısı: `scripts/validate.sh` proje sağlık kontrolü (21 kontrol: dosya varlığı, JSON/YAML geçerliliği, dokümantasyon bütünlüğü)
+- Otomasyon: `.github/workflows/validate.yml` CI workflow'u (her push/PR'da sağlık kontrolü, YAML lint, shell sözdizimi)
+- Maturity scorecard (olgunluk skor kartı) PERSONALITY.md'ye eklendi: 5 kategori / 50 puan, kaçış eşiği 40
+- README'ye Geliştirme ve Kaçış bölümleri eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
