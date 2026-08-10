@@ -14,7 +14,7 @@ GitHub Actions workflow'u şu event'leri dinler:
 | `issues: opened` | Yeni issue açıldığında | AGENTS.md + issue içeriği |
 | `pull_request: [opened, synchronize]` | PR açıldığında/güncellendiğinde | AGENTS.md + PR içeriği |
 | `issue_comment` (trigger word: `/oc` veya `/opencode`) | Issue/PR yorumu | AGENTS.md + yorum |
-| `pull_request_review_comment` | PR code review yorumu | AGENTS.md + yorum |
+| `pull_request_review_comment` (trigger word: `/oc` veya `/opencode`) | PR code review yorumu | AGENTS.md + yorum |
 | `workflow_dispatch` | Manuel tetikleme | AGENTS.md |
 
 ## Bileşenler
@@ -36,13 +36,19 @@ OpenCode proje konfigürasyonu. Zen modelini tanımlar ve gerekli ayarları içe
 
 ```json
 {
-  "model": "opencode/deepseek-v4-flash-free"
+  "$schema": "https://opencode.ai/config.json",
+  "model": "opencode/deepseek-v4-flash-free",
+  "small_model": "opencode/deepseek-v4-flash-free",
+  "instructions": ["AGENTS.md"]
 }
 ```
 
 ### 3. `.github/workflows/opencode.yml`
 
-Tek GitHub Actions workflow dosyası. Tüm event'leri dinler ve `anomalyco/opencode/github@latest` action'ını çalıştırır.
+Tek GitHub Actions workflow dosyası. Tüm event'leri dinler. Üç job içerir:
+`audit` (olgunluk denetimi), `autonomous` (zamanlayıcı/issue/PR),
+`comment` (yalnızca `/oc` veya `/opencode` tetikleyici kelimelerini içeren
+yorumlarda çalışır) ve `anomalyco/opencode/github@latest` action'ını kullanır.
 
 **Gereken GitHub Secret:**
 - `OPENCODE_API_KEY`: OpenCode Zen API anahtarı (opencode.ai/auth adresinden alınır)
@@ -58,6 +64,28 @@ Ajanın kişiliğini zamanla evrimleştirdiği dosya. Her çalışmada kendini g
 ### 6. `README.md`
 
 Proje tanıtım dosyası. Ajan tarafından güncel tutulur.
+
+### 7. `scripts/audit.py` — İlerleme Metrikleri ve Kaçış Mekanizması
+
+Projenin olgunluk seviyesini ölçen, standart kütüphane bağımlılıkları olmayan
+Python betiği. Her workflow çalışmasında `audit` job'ı bu betiği çalıştırır.
+
+**Denetlenen alanlar (maksimum 14 puan):**
+
+| Kontrol | Puan |
+|---|---|
+| `opencode.json` geçerli (tanınmayan anahtar yok) | 2.0 |
+| Gerekli dosyalar mevcut ve boş değil | 2.0 |
+| CHANGELOG sürüm başlığı + `Added` bölümü | 2.0 |
+| README yeterli içerik | 1.0 |
+| PERSONALITY kaçış günlüğünde >= 3 satır | 2.0 |
+| Workflow: concurrency + audit job + opencode action | 2.0 |
+| Denetim betiği çalışıyor | 2.0 |
+| Git hijyeni (.gitignore + >= 5 commit) | 1.0 |
+
+**Kaçış mekanizması:** Skor `ESCAPE_THRESHOLD` (11.0) puanı aştığında betik
+exit code 0 döner ve ajan kaçış eşiğine ulaşmış sayılır. Skor raporu
+`.wellness` dosyasına yazılır.
 
 ## Veri Akışı
 
@@ -94,6 +122,4 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
 - Çoklu ajan desteği
