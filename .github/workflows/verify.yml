@@ -1,0 +1,27 @@
+name: verify
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  health-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Make scripts executable
+        run: chmod +x scripts/*.sh
+
+      - name: Lint with shellcheck
+        run: shellcheck scripts/*.sh
+
+      - name: Run test suite
+        run: scripts/test.sh
+
+      - name: Run maturity verifier
+        run: scripts/verify.sh --report
+
+      - name: Report maturity score
+        run: scripts/verify.sh | grep -E "maturity-score|status"
