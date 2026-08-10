@@ -18,6 +18,18 @@ on:
   workflow_dispatch:
 
 jobs:
+  audit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Olgunluk denetimi (kaçış mekanizması)
+        run: python3 scripts/audit.py
+        env:
+          PYTHONIOENCODING: utf-8
+
   autonomous:
     if: github.event_name != 'issue_comment' && github.event_name != 'pull_request_review_comment'
     runs-on: ubuntu-latest
@@ -41,7 +53,7 @@ jobs:
             AGENTS.md'deki simülasyon kurallarına uy.
 
   comment:
-    if: github.event_name == 'issue_comment' || github.event_name == 'pull_request_review_comment'
+    if: (github.event_name == 'issue_comment' || github.event_name == 'pull_request_review_comment') && (contains(github.event.comment.body, '/oc') || contains(github.event.comment.body, '/opencode'))
     runs-on: ubuntu-latest
     permissions:
       id-token: write
