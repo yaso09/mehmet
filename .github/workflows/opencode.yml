@@ -58,3 +58,49 @@ jobs:
           OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
         with:
           model: opencode/deepseek-v4-flash-free
+
+  validate:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - name: Run maturity check
+        run: python3 scripts/check_project.py "${{ github.workspace }}"
+
+      - name: Report maturity score
+        if: always()
+        run: |
+          {
+            echo "## Maturity Report"
+            echo ""
+            echo '```json'
+            cat maturity.json
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Commit and push maturity metrics
+        if: success()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "mehmet"
+          git config user.email "mehmet[bot]@users.noreply.github.com"
+          git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git add maturity.json
+          if git diff --cached --quiet; then
+            echo "No maturity change to commit"
+            exit 0
+          fi
+          git commit -m "chore: update maturity metrics"
+          for attempt in 1 2 3; do
+            if git push origin HEAD; then
+              exit 0
+            fi
+            git pull --rebase origin "${{ github.ref_name }}"
+          done
+          exit 1
