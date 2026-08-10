@@ -94,6 +94,7 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- ~~Ajanın kaçış mekanizması (maturity threshold)~~ → docs/kaçış-metrikleri.md
+- ~~İlerleme metrikleri~~ → bin/mehmet-status.py + skor
 - Çoklu ajan desteği
+- Paket/dependency yönetimi ve tagged release otomasyonu

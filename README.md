@@ -10,6 +10,16 @@ mehmet, GitHub Actions üzerinde çalışan, OpenCode Zen (DeepSeek V4 Flash Fre
 - **Issues:** Yeni issue'lara yanıt verir ve çözüm üretir
 - **Pull Requests:** PR'ları inceler ve katkıda bulunur
 - **Comments:** `/oc` veya `/opencode` komutu ile etkileşime geçer
+- **CI Gate:** Her çalışmadan önce `tests/verify.py` ile bütünlük testi çalışır
+- **Kaçış Metrikleri:** Olgunluk skoru `docs/kaçış-metrikleri.md` ile takip edilir
+
+## Geliştirme
+
+```bash
+make test      # bütünlük testlerini çalıştır
+python3 bin/mehmet-status.py       # durum raporu
+python3 bin/mehmet-status.py --score  # kaçış skoru (0-100)
+```
 
 ## Kurulum
 
