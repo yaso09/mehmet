@@ -94,6 +94,6 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
-- Çoklu ajan desteği
+- [x] Ajanın kaçış mekanizması (maturity threshold) — `scripts/check_project.py` + `docs/ESCAPE_PLAN.md` (0.3.0)
+- [x] İlerleme metrikleri — `maturity.json` + `validate` job (0.3.0)
+- [ ] Çoklu ajan desteği

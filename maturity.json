@@ -1,0 +1,128 @@
+{
+  "score": 100,
+  "level": "Escape",
+  "label": "Phase 4 -- Escape",
+  "updated": "2026-08-10",
+  "checks": [
+    {
+      "id": "agents_md",
+      "description": "AGENTS.md simülasyon kurallarını içeriyor",
+      "weight": 5,
+      "passed": true
+    },
+    {
+      "id": "readme_exists",
+      "description": "README.md mehmet'i tanıtıyor",
+      "weight": 5,
+      "passed": true
+    },
+    {
+      "id": "changelog_exists",
+      "description": "CHANGELOG.md sürüm başlığı içeriyor",
+      "weight": 5,
+      "passed": true
+    },
+    {
+      "id": "personality",
+      "description": "PERSONALITY.md kaçış günlüğü içeriyor",
+      "weight": 5,
+      "passed": true
+    },
+    {
+      "id": "license",
+      "description": "LICENSE mevcut",
+      "weight": 5,
+      "passed": true
+    },
+    {
+      "id": "opencode_config",
+      "description": "opencode.json geçerli JSON",
+      "weight": 5,
+      "passed": true
+    },
+    {
+      "id": "maturity_tracked",
+      "description": "maturity.json mevcut",
+      "weight": 5,
+      "passed": true
+    },
+    {
+      "id": "schedule_trigger",
+      "description": "Workflow schedule tetikleyicisi var",
+      "weight": 5,
+      "passed": true
+    },
+    {
+      "id": "manual_trigger",
+      "description": "Workflow workflow_dispatch var",
+      "weight": 5,
+      "passed": true
+    },
+    {
+      "id": "secret_injected",
+      "description": "OPENCODE_API_KEY secrets'tan geliyor",
+      "weight": 5,
+      "passed": true
+    },
+    {
+      "id": "concurrency_guard",
+      "description": "Workflow concurrency koruması var",
+      "weight": 5,
+      "passed": true
+    },
+    {
+      "id": "legacy_specs",
+      "description": "Design spec & plan dokümanları mevcut",
+      "weight": 5,
+      "passed": true
+    },
+    {
+      "id": "escape_plan",
+      "description": "ESCAPE_PLAN.md mevcut",
+      "weight": 5,
+      "passed": true
+    },
+    {
+      "id": "readme_maturity",
+      "description": "README maturity/kaçış hedefinden bahsediyor",
+      "weight": 5,
+      "passed": true
+    },
+    {
+      "id": "escape_log_depth",
+      "description": "Kaçış günlüğü en az 2 satır",
+      "weight": 5,
+      "passed": true
+    },
+    {
+      "id": "checker_exists",
+      "description": "Doğrulama scripti mevcut",
+      "weight": 5,
+      "passed": true
+    },
+    {
+      "id": "tests_exist",
+      "description": "Testler mevcut",
+      "weight": 5,
+      "passed": true
+    },
+    {
+      "id": "no_secrets",
+      "description": "Tracked içerikte yapılandırılmış secret yok",
+      "weight": 5,
+      "passed": true
+    },
+    {
+      "id": "gitignore_protected",
+      "description": ".gitignore çevre/anahtar koruması var",
+      "weight": 5,
+      "passed": true
+    },
+    {
+      "id": "changelog_recent",
+      "description": "CHANGELOG son 30 günda güncellenmiş",
+      "weight": 5,
+      "passed": true
+    }
+  ]
+}
