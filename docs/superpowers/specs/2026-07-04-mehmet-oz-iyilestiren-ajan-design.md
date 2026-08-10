@@ -94,6 +94,13 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
-- Çoklu ajan desteği
+- ✅ Ajanın kaçış mekanizması (maturity threshold) — `VERSION` + `scripts/check.sh` olgunluk puanı (0-100)
+- ✅ İlerleme metrikleri — `scripts/check.sh` denetimleri, kaçış günlüğü (PERSONALITY.md), CI (`ci.yml`)
+- ⬜ Çoklu ajan desteği
+- ⬜ Kaçış eşiğinin otomatik hesaplanması ve ilerleme grafiği
+
+## Güncellemeler (2026-08-10, v0.3.0)
+
+- `scripts/check.sh` (9 denetim grubu, olgunluk puanı), `VERSION` (semver), `ci.yml` (check.sh + actionlint + markdownlint) eklendi.
+- `opencode.json` şema-uyumlu hale getirildi (geçersiz `skip`/`enable`/`toolTimeout`/`autoMerge` anahtarları kaldırıldı).
+- `opencode.yml` çalışan ajan adımına öz-doğrulama (`scripts/check.sh`) eklendi.
