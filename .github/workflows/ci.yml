@@ -1,0 +1,27 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality-gates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Unit tests
+        run: python3 -m unittest discover -s tests -v
+
+      - name: Structural validation
+        run: python3 scripts/validate.py
+
+      - name: Maturity assessment
+        run: python3 scripts/maturity.py && head -30 MATURITY.md
