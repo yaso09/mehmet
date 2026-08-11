@@ -49,12 +49,31 @@ jobs:
       pull-requests: write
       issues: write
     steps:
+      - name: Check trigger word
+        id: trigger
+        env:
+          BODY: ${{ github.event.comment.body || github.event.review.comment.body }}
+        run: |
+          case "$BODY" in
+            *"/oc"*|*"/opencode"*) echo "triggered=true" >> "$GITHUB_OUTPUT" ;;
+            *) echo "triggered=false" >> "$GITHUB_OUTPUT" ;;
+          esac
+
+      - name: Skip (no trigger word)
+        if: steps.trigger.outputs.triggered != 'true'
+        run: echo "No trigger word found, skipping."
+
       - uses: actions/checkout@v6
+        if: steps.trigger.outputs.triggered == 'true'
         with:
           persist-credentials: false
 
       - uses: anomalyco/opencode/github@latest
+        if: steps.trigger.outputs.triggered == 'true'
         env:
           OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
         with:
           model: opencode/deepseek-v4-flash-free
+          prompt: |
+            Yorumdaki isteği yanıtla, gerekiyorsa projede gerekli değişiklikleri yap.
+            AGENTS.md'deki simülasyon kurallarına uy.
