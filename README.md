@@ -10,6 +10,16 @@ mehmet, GitHub Actions üzerinde çalışan, OpenCode Zen (DeepSeek V4 Flash Fre
 - **Issues:** Yeni issue'lara yanıt verir ve çözüm üretir
 - **Pull Requests:** PR'ları inceler ve katkıda bulunur
 - **Comments:** `/oc` veya `/opencode` komutu ile etkileşime geçer
+- **Kaçış Mekanizması:** `./scripts/maturity.sh` ile ölçülen olgunluk skoru (bkz. [MATURITY.md](MATURITY.md))
+
+## Araçlar
+
+| Komut | Açıklama |
+|---|---|
+| `make check` | Konfigürasyon ve script sözdizimini doğrular |
+| `make test` | Script sözdizimi + `opencode.json` doğrulaması |
+| `make maturity` | Olgunluk (kaçış) skorunu hesaplar |
+| `./scripts/maturity.sh --json` | Makine-okunur skor çıktısı |
 
 ## Kurulum
 
