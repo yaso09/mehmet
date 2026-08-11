@@ -97,3 +97,13 @@ sequenceDiagram
 - Ajanın kaçış mekanizması (maturity threshold)
 - İlerleme metrikleri
 - Çoklu ajan desteği
+
+## Test ve Kalite (v0.3.0)
+
+Proje olgunluğunu ölçmek için aşağıdaki altyapı eklenmiştir:
+
+- `tests/test_project.py` — konfigürasyon, workflow ve doküman bütünlüğünü doğrular
+- `.github/workflows/ci.yml` — her push/PR'da testleri çalıştırır
+- `docs/MATURITY.md` — kaçış hedefi için olgunluk skorcard (hedef: ≥75/100)
+- `CONTRIBUTING.md` — katkı rehberi
+- `.editorconfig` — kod stili standardı

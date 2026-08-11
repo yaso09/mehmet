@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0] - 2026-08-11
+
+### Added
+- Test altyapısı eklendi (tests/test_project.py) — konfigürasyon, workflow ve doküman bütünlüğünü doğrular
+- CI workflow eklendi (.github/workflows/ci.yml) — her push/PR'da testleri çalıştırır
+- CONTRIBUTING.md katkı rehberi eklendi
+- .editorconfig kod stili standardı eklendi
+- docs/MATURITY.md olgunluk skorcard eklendi — kaçış hedefini ölçülebilir hale getirir
+
+### Changed
+- README.md'ye test, CI ve katkı bölümleri eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
