@@ -1,0 +1,25 @@
+name: validate
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate opencode.json
+        run: python3 -c "import json; json.load(open('opencode.json'))"
+
+      - name: Run maturity assessment
+        run: python3 scripts/assess.py
+
+      - name: Run tests
+        run: python3 tests/test_assess.py

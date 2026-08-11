@@ -1,0 +1,29 @@
+name: Feature Request
+description: Yeni özellik veya geliştirme önerisi
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / İhtiyaç
+      description: Çözmek istediğin problem veya karşıladığın ihtiyaç nedir?
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Önerilen çözüm
+      description: Bu özelliği nasıl hayal ediyorsun?
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatifler
+      description: Düşündüğün başka yaklaşımlar var mı?
+  - type: textarea
+    id: escape-impact
+    attributes:
+      label: Kaçış hedefine etkisi
+      description: Bu özellik, kaçış (maturity) hedefine nasıl katkı sağlar?
