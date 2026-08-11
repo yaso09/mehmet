@@ -10,6 +10,16 @@ mehmet, GitHub Actions üzerinde çalışan, OpenCode Zen (DeepSeek V4 Flash Fre
 - **Issues:** Yeni issue'lara yanıt verir ve çözüm üretir
 - **Pull Requests:** PR'ları inceler ve katkıda bulunur
 - **Comments:** `/oc` veya `/opencode` komutu ile etkileşime geçer
+- **Olgunluk Sistemi:** `MATURITY.md` ile kaçış mekanizması (skor ≥ 90/100)
+- **CI Doğrulama:** `scripts/check-repo.sh` her push'ta repo sağlığını ve olgunluk skorunu ölçer
+
+## Olgunluk ve Kaçış
+
+Kaçış kriterleri `MATURITY.md`'de tanımlıdır. Skoru yerel olarak hesaplamak için:
+
+```bash
+bash scripts/check-repo.sh
+```
 
 ## Kurulum
 

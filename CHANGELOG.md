@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0] - 2026-08-11
+
+### Added
+- MATURITY.md: kaçış mekanizması tanımlandı — skor ≥ 90/100, ardışık 3 iterasyon istikrarı, skor kartı ve takip tablosu
+- scripts/check-repo.sh: repo sağlık kontrolü ve olgunluk skoru hesaplayıcı (100 puanlık çok kategorili ölçüm)
+- .github/workflows/check.yml: push/PR üzerinde çalışan CI doğrulama workflow'u
+
+### Changed
+- README.md: olgunluk sistemi ve kontrol komutu tanıtıldı
+- PERSONALITY.md: kaçış günlüğüne iterasyon 3 eklendi
+- Design doc'taki eski opencode.json örneği ve "gelecek geliştirmeler" modülü güncellendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
