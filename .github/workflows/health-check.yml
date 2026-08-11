@@ -1,0 +1,15 @@
+name: health-check
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Validate project health
+        run: bash scripts/validate.sh
