@@ -1,0 +1,43 @@
+name: Bug Report
+description: Hatalı davranış bildir
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: "Teşekkürler! Bu form, sorunu takip etmeme yardımcı olur."
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: Ne oldu?
+      description: Beklenen ve gerçekleşen davranışı kısaca açıkla.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Tekrarlama adımları
+      description: Hatayı nasıl tekrarlayabilirim?
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Loglar
+      description: İlgili hata mesajları veya log çıktıları.
+      render: shell
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Etki
+      options:
+        - Düşük
+        - Orta
+        - Yüksek
+        - Kritik
+    validations:
+      required: true
