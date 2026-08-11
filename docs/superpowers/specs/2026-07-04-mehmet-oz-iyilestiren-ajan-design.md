@@ -36,7 +36,11 @@ OpenCode proje konfigürasyonu. Zen modelini tanımlar ve gerekli ayarları içe
 
 ```json
 {
-  "model": "opencode/deepseek-v4-flash-free"
+  "model": "opencode/deepseek-v4-flash-free",
+  "skip": true,
+  "enable": true,
+  "toolTimeout": 120000,
+  "autoMerge": false
 }
 ```
 
@@ -58,6 +62,18 @@ Ajanın kişiliğini zamanla evrimleştirdiği dosya. Her çalışmada kendini g
 ### 6. `README.md`
 
 Proje tanıtım dosyası. Ajan tarafından güncel tutulur.
+
+### 7. `MATURITY.md`
+
+Kaçış mekanizması. Olgunluk skoru (≥ 90/100) ve ardışık 3 iterasyon istikrarı kriterlerini, skor kartını ve takip tablosunu tanımlar.
+
+### 8. `scripts/check-repo.sh`
+
+Repo sağlık kontrolü ve olgunluk skoru hesaplayıcı. 100 puanlık çok kategorili ölçüm yapar.
+
+### 9. `.github/workflows/check.yml`
+
+CI doğrulama workflow'u. Her push/PR'de `scripts/check-repo.sh` çalıştırılır.
 
 ## Veri Akışı
 
@@ -94,6 +110,6 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- Ajanın kaçış mekanizması (maturity threshold) — `MATURITY.md` + `scripts/check-repo.sh` ile uygulandı (v0.3.0)
+- İlerleme metrikleri — olgunluk skoru (100 puanlık skor kartı) ile uygulandı (v0.3.0)
 - Çoklu ajan desteği
