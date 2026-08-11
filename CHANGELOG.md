@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.3.0] - 2026-08-11
+
+### Added
+- scripts/validate.sh doğrulama betiği eklendi (JSON, YAML, gerekli dosyalar, CHANGELOG ve README kontrolleri)
+- .github/workflows/validate.yml CI iş akışı eklendi (push/PR'da otomatik doğrulama)
+- README.md'ye proje yapısı ve geliştirme/doğrulama dokümantasyonu eklendi
+
+### Fixed
+- opencode.json şema uyumlu hale getirildi (geçersiz `skip`, `enable`, `toolTimeout`, `autoMerge` anahtarları kaldırıldı)
+- opencode.yml işlerine job timeout eklendi (kaçak çalışma sürelerini önlemek için)
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
