@@ -1,0 +1,59 @@
+{
+  "date": "2026-08-11",
+  "score": 100.0,
+  "threshold": 85,
+  "escaped": true,
+  "checks": {
+    "docs": {
+      "score": 20.0,
+      "passed": [
+        "AGENTS.md",
+        "CHANGELOG.md",
+        "PERSONALITY.md",
+        "README.md"
+      ],
+      "missing": []
+    },
+    "testing": {
+      "score": 20.0,
+      "passed": [
+        "scripts/validate.py + scripts/maturity.py",
+        ".github/workflows/validate.yml"
+      ]
+    },
+    "tests": {
+      "score": 15.0,
+      "passed": [
+        "tests/",
+        "unittest suite passes"
+      ]
+    },
+    "automation": {
+      "score": 10.0,
+      "passed": [
+        "validate.yml",
+        "opencode.yml"
+      ]
+    },
+    "escape": {
+      "score": 15.0,
+      "passed": [
+        "docs/maturity.md",
+        "meta/maturity.json",
+        "PERSONALITY.md escape log"
+      ]
+    },
+    "releases": {
+      "score": 10.0,
+      "passed": [
+        "3 release(s) in CHANGELOG.md"
+      ]
+    },
+    "config": {
+      "score": 10.0,
+      "passed": [
+        "model: opencode/deepseek-v4-flash-free"
+      ]
+    }
+  }
+}

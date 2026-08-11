@@ -1,0 +1,29 @@
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Validate project structure
+        run: python scripts/validate.py
+
+      - name: Compute maturity score
+        run: python scripts/maturity.py && cat meta/maturity.json
+
+      - name: Verify escape-log row added
+        run: |
+          ROWS=$(grep -c "^| [0-9]" PERSONALITY.md)
+          echo "escape log rows: $ROWS"
+          [ "$ROWS" -ge 3 ] || { echo "escape log has too few rows"; exit 1; }
