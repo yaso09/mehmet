@@ -18,7 +18,18 @@ on:
   workflow_dispatch:
 
 jobs:
+  selfcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - name: Proje olgunluk ve kalite kontrolü
+        run: python3 scripts/selfcheck.py
+
   autonomous:
+    needs: selfcheck
     if: github.event_name != 'issue_comment' && github.event_name != 'pull_request_review_comment'
     runs-on: ubuntu-latest
     permissions:
@@ -41,6 +52,7 @@ jobs:
             AGENTS.md'deki simülasyon kurallarına uy.
 
   comment:
+    needs: selfcheck
     if: github.event_name == 'issue_comment' || github.event_name == 'pull_request_review_comment'
     runs-on: ubuntu-latest
     permissions:

@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.3.0] - 2026-08-11
+
+### Added
+- `scripts/selfcheck.py`: olgunluk/metrik ölçüm aracı ve kalite kapısı (0-100 skor)
+- `docs/MATURITY.md`: kaçış eşiği (80) ve skor kategorilerinin tanımı
+- Workflow'a `selfcheck` işi eklendi; `autonomous` ve `comment` işleri onu bekler
+- opencode.json'a `instructions` alanı eklendi (olgunluk doğrulama kuralı)
+
+### Changed
+- README.md: Quality Gate özelliği ve Olgunluk/Kaçış sistemi bölümü eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

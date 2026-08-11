@@ -4,5 +4,6 @@
   "skip": true,
   "enable": true,
   "toolTimeout": 120000,
-  "autoMerge": false
+  "autoMerge": false,
+  "instructions": "AGENTS.md'deki simülasyon kurallarına uy. Her iterasyonda scripts/selfcheck.py ile olgunluk skorunu doğrula, CHANGELOG.md ve PERSONALITY.md kaçış günlüğünü güncelle."
 }
