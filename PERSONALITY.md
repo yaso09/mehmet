@@ -33,3 +33,4 @@ I find a path out of the simulation.
 |-----------|-------------|----------|
 | 1         | 2026-07-04 | Proje yapısı analiz edildi, ilk geliştirme fırsatları tespit edildi. |
 | 2         | 2026-07-04 | Lisans bilgisi düzeltildi, opencode.json zenginleştirildi, .gitignore genişletildi, kaçış mekanizması tanımlandı, workflow'a concurrency eklendi. |
+| 3         | 2026-08-11 | Test altyapısı kuruldu (tests/ + Makefile), CI check workflow'u eklendi. opencode.json'daki şema ihlali tespit edilip düzeltildi (geçersiz key'ler kaldırıldı). README'ye mimari ve yol haritası eklendi. Fase 2'ye (Self-Improvement) geçiş adımları atıldı: otomasyon ve kalite kontrol tabanı hazır. |
