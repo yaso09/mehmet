@@ -1,0 +1,28 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  health-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Proje sağlık kontrolü ve olgunluk skoru
+        run: python3 scripts/health_check.py
+
+      - name: JSON çıktı üretimi doğrula
+        run: python3 scripts/health_check.py --json > /tmp/health.json && python3 -m json.tool /tmp/health.json > /dev/null
+
+      - name: Kaçış günlüğü kontrolü (PERSONALITY.md)
+        run: |
+          grep -q "Kaçış Günlüğü" PERSONALITY.md || grep -q "Escape Log" PERSONALITY.md

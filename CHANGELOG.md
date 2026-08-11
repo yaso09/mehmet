@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.3.0] - 2026-08-11
+
+### Added
+- `scripts/health_check.py` eklendi: proje bütünlüğünü doğrular ve olgunluk skoru (0-100) üretir
+- `.github/workflows/ci.yml` eklendi: push/PR'da sağlık kontrolü ve JSON doğrulaması çalıştırır
+- README.md'ye proje yapısı ve geliştirme rehberi eklendi
+
+### Changed
+- README.md yeniden yapılandırıldı (Proje Yapısı ve Geliştirme bölümleri)
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
