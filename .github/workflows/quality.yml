@@ -1,0 +1,27 @@
+name: quality
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+on:
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch:
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Script syntax check
+        run: bash -n scripts/*.sh
+
+      - name: Config validity
+        run: python3 -c "import json; json.load(open('opencode.json'))"
+
+      - name: Maturity score
+        run: bash scripts/maturity.sh
