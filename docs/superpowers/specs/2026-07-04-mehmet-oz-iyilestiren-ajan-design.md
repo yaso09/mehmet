@@ -94,6 +94,6 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- Ajanın kaçış mekanizması (maturity threshold) — kısmen tamamlandı: `scripts/escape_score.py` + `docs/ESCAPE.md`
+- İlerleme metrikleri — kısmen tamamlandı: `make score`
 - Çoklu ajan desteği
