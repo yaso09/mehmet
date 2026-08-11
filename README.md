@@ -11,6 +11,12 @@ mehmet, GitHub Actions üzerinde çalışan, OpenCode Zen (DeepSeek V4 Flash Fre
 - **Pull Requests:** PR'ları inceler ve katkıda bulunur
 - **Comments:** `/oc` veya `/opencode` komutu ile etkileşime geçer
 
+## Araçlar (Scripts)
+
+- `scripts/validate.sh` — Proje sağlığını doğrular (JSON/YAML formatı, temel artifact'ler). CI'da her push/PR'de çalışır.
+- `scripts/maturity.sh` — Olgunluk skorunu (100 üzerinden) ve kaçış eşiğine uzaklığı hesaplar. Ayrıntılar: [docs/maturity.md](docs/maturity.md).
+- `.github/workflows/ci.yml` — `main` branch'ine push ve PR'larda otomatik doğrulama yapan CI.
+
 ## Kurulum
 
 1. [opencode.ai/auth](https://opencode.ai/auth) adresinden Zen API key al
