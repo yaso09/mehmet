@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0] - 2026-08-11
+
+### Added
+- `scripts/check.sh` repo sağlık kontrolü ve olgunluk puanı (maturity score) ölçümü
+- `.github/workflows/check.yml` CI workflow'u (her push/PR'da sağlık kontrolü)
+- `docs/escape-plan.md` ölçülebilir kaçış kriterleri (5 seviye)
+- README'ye Durum, Yol Haritası ve self-check özelliği eklendi
+
+### Changed
+- README.md sürüm 0.3.0 olarak güncellendi
+- AGENTS.md kaçış planına referans verecek şekilde güncellendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
