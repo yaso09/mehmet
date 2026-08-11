@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.3.0] - 2026-08-11
+
+### Added
+- PROGRESS.md: ölçülebilir kaçış mekanizması (maturity rubric + skor + iterasyon günlüğü)
+- scripts/validate.sh: proje sağlığı validation script'i (dosya, JSON, changelog, skor kontrolleri)
+- .github/workflows/health-check.yml: her push/PR'da validation çalıştıran CI workflow'u
+
+### Changed
+- opencode.yml: comment job'u artık yalnızca `/oc` veya `/opencode` içeren yorumlarda tetiklenir
+- opencode.yml: her iki job'a `timeout-minutes: 30` eklendi
+- opencode.yml: autonomous job'ına self health check adımı eklendi (continue-on-error)
+- README.md: kaçış mekanizması ve geliştirme bölümleri eklendi
+
+### Documentation
+- AGENTS.md kurallarına uygun olarak PROGRESS.md kaçış skoru ile ölçülebilirlik artırıldı
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
