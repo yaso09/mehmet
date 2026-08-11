@@ -1,0 +1,25 @@
+name: quality
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Sağlık kontrolü (health check)
+        run: bash scripts/check.sh
+
+      - name: ShellCheck
+        run: shellcheck scripts/check.sh
+
+      - name: YAML sözdizimi doğrulama
+        run: |
+          python3 -c "import yaml,glob,sys; [yaml.safe_load(open(f)) or None for f in glob.glob('.github/workflows/*.yml')]"
+          echo "Tüm workflow dosyaları geçerli YAML."

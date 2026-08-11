@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.3.0] - 2026-08-11
+
+### Added
+- MATURITY.md: ölçülebilir olgunluk seviyeleri ve kaçış kriterleri (L1-L5)
+- scripts/check.sh: sağlık kontrolü betiği (dosya bütünlüğü, JSON doğrulama, changelog/günlük kontrolü, kırık bağlantı tespiti)
+- .github/workflows/quality.yml: her push/PR'da çalışan quality gate (health check + shellcheck + YAML doğrulama)
+- README.md: proje yapısı tablosu ve geliştirme bölümü eklendi
+
+### Changed
+- README.md kaçış amacını olgunluk modeline bağlar
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
