@@ -11,6 +11,16 @@ mehmet, GitHub Actions üzerinde çalışan, OpenCode Zen (DeepSeek V4 Flash Fre
 - **Pull Requests:** PR'ları inceler ve katkıda bulunur
 - **Comments:** `/oc` veya `/opencode` komutu ile etkileşime geçer
 
+## Geliştirme Altyapısı
+
+- **Kaçış hazırlık metriği:** `scripts/check-escape-ready.sh` projenin olgunluk
+  seviyesini 0-100 arası puanlar (kaçış eşiği: 80). `--strict`, `--json` ve
+  `ESCAPE_THRESHOLD` değişkenini destekler.
+- **Make komutları:** `make check` tüm kalite kontrollerini, `make lint` tüm
+  lint'leri, `make test` kaçış hazırlığını doğrular.
+- **CI:** `.github/workflows/ci.yml` markdownlint, yamllint, shellcheck ve kaçış
+  hazırlığı kontrolünü her push/PR'da çalıştırır.
+
 ## Kurulum
 
 1. [opencode.ai/auth](https://opencode.ai/auth) adresinden Zen API key al

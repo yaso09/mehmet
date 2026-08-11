@@ -1,0 +1,42 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  quality:
+    name: Quality checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Markdown lint
+        run: npx --yes markdownlint-cli2 '**/*.md'
+
+      - name: YAML validation
+        run: |
+          pip install --quiet yamllint
+          yamllint .github/workflows/
+
+      - name: Shellcheck
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq shellcheck
+          shellcheck scripts/*.sh
+
+  escape:
+    name: Escape readiness
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Escape readiness score
+        run: |
+          chmod +x scripts/check-escape-ready.sh
+          ./scripts/check-escape-ready.sh --strict

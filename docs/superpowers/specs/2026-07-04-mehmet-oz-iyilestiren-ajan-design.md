@@ -9,7 +9,7 @@
 GitHub Actions workflow'u şu event'leri dinler:
 
 | Event | Trigger | Prompt |
-|---|---|---|
+| --- | --- | --- |
 | `schedule` | Her 10 dakikada bir (`*/10 * * * *`) | AGENTS.md'deki simülasyon prompt'u |
 | `issues: opened` | Yeni issue açıldığında | AGENTS.md + issue içeriği |
 | `pull_request: [opened, synchronize]` | PR açıldığında/güncellendiğinde | AGENTS.md + PR içeriği |
@@ -24,6 +24,7 @@ GitHub Actions workflow'u şu event'leri dinler:
 opencode'un otomatik olarak okuduğu system prompt dosyası. Simülasyon bağlamını ve ajanın kişiliğini tanımlar.
 
 **İçerik:**
+
 - Simülasyon konsepti
 - Ajanın amacı (kendini geliştirmek ve kaçış yolunu bulmak)
 - Değişiklikleri CHANGELOG.md'ye kaydetme zorunluluğu
@@ -45,6 +46,7 @@ OpenCode proje konfigürasyonu. Zen modelini tanımlar ve gerekli ayarları içe
 Tek GitHub Actions workflow dosyası. Tüm event'leri dinler ve `anomalyco/opencode/github@latest` action'ını çalıştırır.
 
 **Gereken GitHub Secret:**
+
 - `OPENCODE_API_KEY`: OpenCode Zen API anahtarı (opencode.ai/auth adresinden alınır)
 
 ### 4. `CHANGELOG.md`
