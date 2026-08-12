@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.0] - 2026-08-12
+
+### Added
+- MATURITY.md olgunluk skor kartı eklendi — kaçış eşiği (80/100) ve kaçış protokolü tanımlandı
+- scripts/check_project.sh doğrulama betiği eklendi (test altyapısı)
+- .github/workflows/ci.yml CI workflow eklendi (push + PR doğrulaması)
+- VERSION dosyası eklendi, sürüm yönetimi başlatıldı
+- AGENTS.md'ye MATURITY.md güncelleme kuralı (8) eklendi
+- README.md'ye olgunluk takibi, doğrulama ve CI bölümleri eklendi
+
+### Changed
+- PERSONALITY.md'ye kaçış günlüğü iterasyon 3 eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
