@@ -94,6 +94,7 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- ~~Ajanın kaçış mekanizması (maturity threshold)~~ → GERÇEKLEŞTİRİLDİ: PERSONALITY.md → Escape Score (100 = kaçış eşiği)
+- ~~İlerleme metrikleri~~ → GERÇEKLEŞTİRİLDİ: `scripts/validate.sh` + `ci.yml`
 - Çoklu ajan desteği
+- İleri otomasyon (maturity skoru için otomatik metric raporu)
