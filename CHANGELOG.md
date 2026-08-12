@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.3.0] - 2026-08-12
+
+### Added
+- Otomatik proje sağlık kontrolü: `scripts/health_check.py` (changelog, kişilik günlüğü, lisans, model hizalaması ve workflow varlığını denetler)
+- Periyodik sağlık CI workflow'u: `.github/workflows/health.yml` (günlük cron + PR/push doğrulaması)
+- Kaçış yol haritası: `docs/ROADMAP.md` (L0–L6 somut olgunluk kriterleri)
+- README.md'ye proje yapısı ve yol haritası bölümleri eklendi
+- PERSONALITY.md'de "Systematic" kişilik özelliği eklendi; Faz 2 (Self-Improvement) başlatıldı
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
