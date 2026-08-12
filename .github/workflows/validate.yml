@@ -1,0 +1,19 @@
+name: validate
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: validate-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Validate project integrity
+        run: bash scripts/validate.sh

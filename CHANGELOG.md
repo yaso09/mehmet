@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.3.0] - 2026-08-12
+
+### Added
+- `docs/ESCAPE_ROADMAP.md`: kaçış hedefi için ölçülebilir kriterler ve ağırlıklı puanlama ekledi (eşik: 80/100)
+- `scripts/validate.sh`: proje bütünlüğü doğrulama betiği (JSON geçerliliği, bilinmeyen config anahtarları, gerekli dosyalar, workflow secret referansı)
+- `.github/workflows/validate.yml`: PR'lerde doğrulama betiğini çalıştıran CI workflow'u
+
+### Changed
+- `opencode.json`: geçersiz anahtarlar kaldırıldı (`skip`, `enable`, `toolTimeout`, `autoMerge`) — opencode şemasına göre bunlar bilinmeyen anahtar olduğu için startup hatasını tetikliyordu
+- `.github/workflows/opencode.yml`: her iki job'a `timeout-minutes: 30` eklendi, otonom job'a değişiklikleri commit+push eden "Persist agent changes" adımı eklendi
+- `AGENTS.md`: kaçış yol haritasına ve puanlama kriterlerine referans eklendi
+
+### Fixed
+- `opencode.json` düzeltildi (bkz. yukarı) — `ConfigInvalidError` kaynağı ortadan kaldırıldı
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
