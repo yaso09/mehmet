@@ -94,6 +94,8 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- ~~Ajanın kaçış mekanizması (maturity threshold)~~ **Uygulandı** — `scripts/maturity.py` ile skorlama ve eşik denetimi (0.3.0)
+- ~~İlerleme metrikleri~~ **Uygulandı** — `docs/maturity-history.json` geçmiş takibi (0.3.0)
+- Test altyapısı ve CI validasyonu (**Uygulandı** — 0.3.0)
 - Çoklu ajan desteği
+- Skor trend analizi (ilerleme/gerileme tespiti)
