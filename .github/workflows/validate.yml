@@ -1,0 +1,30 @@
+name: validate
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  assess:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Run maturity assessment
+        run: python3 scripts/assess.py --min-score 60
+
+      - name: Run unit tests
+        run: python3 -m unittest discover -s tests -v
+
+      - name: Validate workflow YAML
+        run: |
+          python3 - <<'EOF'
+          import glob
+          import yaml
+          for path in glob.glob(".github/workflows/*.yml"):
+              with open(path) as fh:
+                  yaml.safe_load(fh)
+              print(f"OK {path}")
+          EOF
