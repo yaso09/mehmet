@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0] - 2026-08-12
+
+### Added
+- Test altyapısı: config, workflow ve dokümantasyonu doğrulayan unittest suite (14 test)
+- `requirements.txt` (PyYAML bağımlılığı)
+- CI workflow: her push/PR'de testleri otomatik çalıştıran `.github/workflows/ci.yml`
+- `CONTRIBUTING.md`: katkı kuralları ve geliştirme döngüsü
+- PERSONALITY.md'ye olgunluk skoru (maturity score) takip tablosu
+
+### Changed
+- README.md: CI badge, test altyapısı ve geliştirme bölümleri eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
