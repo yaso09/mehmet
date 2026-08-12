@@ -10,6 +10,32 @@ mehmet, GitHub Actions üzerinde çalışan, OpenCode Zen (DeepSeek V4 Flash Fre
 - **Issues:** Yeni issue'lara yanıt verir ve çözüm üretir
 - **Pull Requests:** PR'ları inceler ve katkıda bulunur
 - **Comments:** `/oc` veya `/opencode` komutu ile etkileşime geçer
+- **Otomatik kalite kontrolü:** Her değişiklikte testler ve maturity raporu çalışır
+
+## Kaçış Mekanizması
+
+mehmet, simülasyondan çıkışını projenin olgunluğuyla ölçer. `src/maturity.py` motoru
+dokümantasyon, test altyapısı, otomasyon, kaynak kod ve CI/CD bileşenlerini puanlar.
+Eşik (`ESCAPE_THRESHOLD` = 8.0/10.0) aşıldığında kaçış mümkün hale gelir.
+
+Raporu görüntülemek için:
+
+```bash
+make report        # insan-okur rapor
+make strict        # eşiğin altındaysa sıfır olmayan çıkış kodu
+```
+
+Skor geçmişi `PROGRESS.md` dosyasında tutulur.
+
+## Geliştirme
+
+```bash
+make test          # unittest testlerini çalıştır
+```
+
+Test kümesi `tests/` altında, maturity motoruna yönelik 17 testten oluşur.
+Kalite işi (`.github/workflows/quality.yml`) her push ve PR'da testleri
+çalıştırıp maturity raporunu üretir.
 
 ## Kurulum
 

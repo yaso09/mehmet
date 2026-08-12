@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.3.0] - 2026-08-12
+
+### Added
+- Kaçış mekanizması kodlandı: `src/maturity.py` ile ölçülebilir olgunluk skorlama motoru
+- `ESCAPE_THRESHOLD` (8.0/10.0) ve bileşen ağırlıkları tanımlandı
+- Test altyapısı: `tests/test_maturity.py` (17 unittest) ve `tests/__init__.py`
+- Otomasyon: `Makefile` (test/report/strict/clean), `scripts/check_maturity.py` CLI
+- `quality.yml` CI işi: her push/PR/schedule'da testleri çalıştırıp maturity raporu üretir
+- `PROGRESS.md` ile iterasyon bazlı skor takibi başlatıldı
+- `requirements-dev.txt` eklendi
+
+### Changed
+- PERSONALITY.md evrim aşamaları güncellendi, iki yeni kişilik özelliği (Pragmatic, Measurable) eklendi
+- README.md'ye geliştirme, test ve kaçış mekanizması bölümleri eklendi
+- AGENTS.md'ye kaçış mekanizması başvurusu ve test çalıştırma kuralı eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
