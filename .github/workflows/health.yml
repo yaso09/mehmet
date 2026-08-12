@@ -1,0 +1,16 @@
+name: mehmet-health
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Proje sağlık kontrolü
+        run: python3 scripts/health_check.py
