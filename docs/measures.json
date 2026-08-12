@@ -1,0 +1,13 @@
+{
+  "version": "0.3.0",
+  "score": 100,
+  "pass": 20,
+  "fail": 0,
+  "total": 20,
+  "escape": {
+    "score": 90,
+    "streak": 1,
+    "needed": 3
+  },
+  "updated_at": "2026-08-12T14:49:24.521Z"
+}

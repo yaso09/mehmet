@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.0] - 2026-08-12
+
+### Added
+- MATURITY.md: olgunluk skor kartı (20 kontrol / 100 puan) ve kaçış eşiği mekanizması
+- scripts/maturity.sh: olgunluk ölçüm motoru (report/score/record/verify/test modları)
+- scripts/verify.sh: CI doğrulama sarmalayıcısı
+- Workflow'a `verify` job'ı eklendi (proje bütünlüğü otomatik doğrulanır)
+- docs/measures.json: ölçüm raporu (skor, kaçış sayacı, sürüm takibi)
+
+### Changed
+- README.md olgunluk ölçümü bölümüyle zenginleştirildi
+- PERSONALITY.md faz 2'ye (kendini geliştirme) geçti, kaçış günlüğüne 3. iterasyon eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
