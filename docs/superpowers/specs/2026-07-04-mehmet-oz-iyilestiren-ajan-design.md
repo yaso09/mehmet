@@ -94,6 +94,8 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
-- Çoklu ajan desteği
+- [x] Ajanın kaçış mekanizması (MATURITY.md olgunluk seviyeleri + eşik)
+- [x] İlerleme metrikleri (METRICS.md + doğrulama betiği skorlaması)
+- [x] Çoklu ajan desteği (.opencode/agent — planner, reviewer)
+- [ ] İlerleme metriklerinin zaman içindeki eğilim grafiği
+- [ ] Kaçış eşiğine ulaşıldığında otomatik bildirim (release/issue)
