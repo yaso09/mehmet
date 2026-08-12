@@ -1,0 +1,29 @@
+{
+  "assessed": "/home/runner/work/mehmet/mehmet",
+  "dimensions": [
+    {
+      "dimension": "documentation",
+      "score": 30
+    },
+    {
+      "dimension": "change_tracking",
+      "score": 20
+    },
+    {
+      "dimension": "automation",
+      "score": 20
+    },
+    {
+      "dimension": "testing",
+      "score": 20
+    },
+    {
+      "dimension": "code_quality",
+      "score": 10
+    }
+  ],
+  "total": 100,
+  "min_score": 60,
+  "escape_threshold": 80,
+  "escape_ready": true
+}

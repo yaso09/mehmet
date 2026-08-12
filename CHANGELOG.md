@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.3.0] - 2026-08-12
+
+### Added
+- `scripts/assess.py`: proje olgunluk skoru (0-100) ve kaçış hazırlık sinyali üretir
+- `tests/test_assess.py`: değerlendirme mantığı için 6 birim testi
+- `.github/workflows/validate.yml`: olgunluk + test + YAML doğrulama iş akışı
+- `docs/ESCAPE.md`: kaçış eşikleri, ölçüm boyutları ve adım adım kaçış protokolü
+
+### Changed
+- README.md'ye geliştirme araçları (maturity ölçümü, testler, doğrulama) bölümü eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
