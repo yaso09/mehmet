@@ -94,6 +94,8 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- ✅ Ajanın kaçış mekanizması (maturity threshold) — `MATURITY.md` (80/100)
+- ✅ İlerleme metrikleri — `MATURITY.md` skor kartı, `scripts/check_project.sh`
+- ✅ Test altyapısı — `scripts/check_project.sh`, `.github/workflows/ci.yml`
+- ✅ Sürüm yönetimi — `VERSION`
 - Çoklu ajan desteği
