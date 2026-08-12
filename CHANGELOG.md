@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0] - 2026-08-12
+
+### Added
+- `scripts/maturity.py`: Olgunluk skorlama aracı (yapı, dokümantasyon, otomasyon, test altyapısı, güvenlik boyutları) ve `METRICS.md` üretimi
+- `scripts/validate.sh`: Repo sağlık kontrolü (zorunlu dosyalar, JSON geçerliliği, lisans uyumu, sır sızıntısı taraması)
+- GitHub Actions workflow'una `validate` job'u eklendi; her çalışmada otomatik doğrulama yapılır
+- `METRICS.md`: Kaçış eşiğini izleyen nesnel ilerleme metriği dosyası
+- README'ye geliştirme/doğrulama bölümü eklendi
+
+### Changed
+- Kaçış mekanizması somutlaştırıldı: olgunluk skoru 90/100 eşiğine bağlandı
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
