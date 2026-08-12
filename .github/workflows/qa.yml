@@ -1,0 +1,38 @@
+name: QA
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+    paths:
+      - "**.py"
+      - "**.json"
+      - "**.yml"
+      - "**.yaml"
+      - "**.md"
+      - ".github/**"
+  workflow_dispatch:
+  schedule:
+    - cron: "0 */6 * * *"
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: python -m pip install --upgrade pip
+      - run: python -m pip install pyyaml
+
+      - name: Syntax ve güvenlik denetimi
+        run: python scripts/validate.py
+
+      - name: Olgunluk skoru (kalite kapısı)
+        run: python scripts/maturity.py --check-only
+
+      - name: Test paketi
+        run: python -m unittest discover -s tests -v
