@@ -1,0 +1,35 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install validation dependencies
+        run: pip install pyyaml
+
+      - name: Validate configs and score maturity
+        run: python3 scripts/maturity.py --check
+
+      - name: Lint workflow YAML
+        run: |
+          python3 - <<'EOF'
+          import yaml, glob
+          for path in glob.glob(".github/workflows/*.yml"):
+              with open(path) as fh:
+                  yaml.safe_load(fh)
+              print("OK", path)
+          EOF

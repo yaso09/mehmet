@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.3.0] - 2026-08-12
+
+### Added
+- `scripts/maturity.py`: kaçış mekanizmasının somut uygulaması — beş kategoride (dokümantasyon, kod kalitesi, test altyapısı, otomasyon, kaçış hazırlığı) olgunluk skorlama, konfigürasyon doğrulama ve `--check` eşik kapısı
+- `VERSION`: proje sürüm takibi (0.3.0)
+- `.github/workflows/ci.yml`: push/PR üzerinde olgunluk skorunu ve YAML lint'ini doğrulayan CI workflow'u
+- `.github/dependabot.yml`: GitHub Actions bağımlılık güncellemeleri (haftalık)
+- `CONTRIBUTING.md`: katkı kuralları ve kalite kontrolü rehberi
+- `SECURITY.md`: güvenlik politikası ve secret yönetimi
+- `docs/superpowers/specs/2026-08-12-escape-mechanism-design.md`: kaçış mekanizması tasarım dokümanı
+- AGENTS.md'ye 8. kural: olgunluk ölçümü ve kaçış meşruiyeti eşiği
+
+### Changed
+- README.md: CI ve kaçış mekanizması bölümleri eklendi
+- PERSONALITY.md: kaçış günlüğüne iterasyon 3 eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
