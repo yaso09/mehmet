@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.0] - 2026-08-12
+
+### Added
+- `scripts/healthcheck.py`: proje sağlık kontrolü ve olgunluk (maturity 0-10) skorlayıcısı
+- `.github/workflows/ci.yml`: her push/PR'da healthcheck'i çalıştıran CI test altyapısı
+- `docs/escape-plan.md`: olgunluk modeli ve ölçülebilir kaçış kriterleri (escape thresholds)
+- README.md'ye Proje Yapısı, Sağlık & Olgunluk, Etkileşim ve Yönetim bölümleri
+- AGENTS.md'ye healthcheck çalıştırma ve kaçış planı takibi kuralları (8, 9)
+
+### Changed
+- CHANGELOG.md, README.md, PERSONALITY.md, AGENTS.md consistency düzenlendi
+- PERSONALITY.md: evrim aşaması Faz 2 (Self-Improvement) olarak güncellendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
