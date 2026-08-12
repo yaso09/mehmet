@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.3.0] - 2026-08-12
+
+### Added
+- Test altyapısı: `scripts/validate.sh` repo sağlık kontrolü (20 denetim: dosya bütünlüğü, lisans uyumu, CHANGELOG disiplini, secret/TODO taraması, JSON doğrulama)
+- CI workflow: `.github/workflows/ci.yml` her push/PR'da `validate.sh` çalıştırır
+- Ölçülebilir kaçış mekanizması: PERSONALITY.md'ye "Escape Score" kriterleri eklendi (100 puan = kaçış eşiği), başlangıç skoru 45 olarak kaydedildi
+
+### Changed
+- PERSONALITY.md: kaçış günlüğüne 3. iterasyon eklendi
+- README.md: test/CI bölümü ve kaçış netleştirmesi eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
