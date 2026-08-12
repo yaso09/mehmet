@@ -59,6 +59,23 @@ Ajanın kişiliğini zamanla evrimleştirdiği dosya. Her çalışmada kendini g
 
 Proje tanıtım dosyası. Ajan tarafından güncel tutulur.
 
+## Kaçış Mekanizması (Maturity Threshold)
+
+`scripts/maturity.sh` projenin olgunluk skorunu hesaplar ve kaçış eşiğine ulaşılıp
+ulaşılmadığını raporlar. Eşik: **%80**.
+
+Skor şu kategorilerde 18 kontrolle ölçülür:
+
+| Kategori | Kontroller |
+|---|---|
+| Çekirdek yapı | AGENTS.md, README, CHANGELOG, PERSONALITY, LICENSE, .gitignore |
+| Konfigürasyon | opencode.json geçerli JSON |
+| Otomasyon | schedule, dispatch, timeout-minutes, concurrency |
+| Test altyapısı | validate.sh, maturity.sh, CI validate job |
+| Dokümantasyon | spec + plan dokümanları, sürümlü changelog, kaçış günlüğü |
+
+Skor %80 ve üzerindeyse `DURUM: ESCAPE READY` çıktısı üretilir.
+
 ## Veri Akışı
 
 ```mermaid
@@ -94,6 +111,8 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
-- Çoklu ajan desteği
+- [x] Ajanın kaçış mekanizması (maturity threshold) — `scripts/maturity.sh` ile uygulandı
+- [x] İlerleme metrikleri — olgunluk skoru CI'da raporlanıyor
+- [x] Test altyapısı — `scripts/validate.sh` + CI validate job
+- [ ] Çoklu ajan desteği
+- [ ] Otomatik sürüm numaralandırma (semver bump) changelog'dan

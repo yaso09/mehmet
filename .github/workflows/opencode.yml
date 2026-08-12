@@ -19,8 +19,10 @@ on:
 
 jobs:
   autonomous:
-    if: github.event_name != 'issue_comment' && github.event_name != 'pull_request_review_comment'
+    # Açık allowlist: push tetikleyici eklense bile recursive çalışmayı engeller.
+    if: github.event_name == 'schedule' || github.event_name == 'issues' || github.event_name == 'pull_request' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     permissions:
       id-token: write
       contents: write
@@ -40,9 +42,26 @@ jobs:
             Projeyi tara, geliştirme fırsatlarını bul ve uygula.
             AGENTS.md'deki simülasyon kurallarına uy.
 
+  validate:
+    # Test altyapısı: her PR'da proje bütünlüğü ve olgunluk skoru doğrulanır.
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Proje bütünlüğü doğrula
+        run: bash scripts/validate.sh
+
+      - name: Olgunluk skoru raporla
+        run: bash scripts/maturity.sh
+
   comment:
     if: github.event_name == 'issue_comment' || github.event_name == 'pull_request_review_comment'
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     permissions:
       id-token: write
       contents: write
