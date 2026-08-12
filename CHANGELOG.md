@@ -1,5 +1,23 @@
 # Changelog
 
+## [0.3.0] - 2026-08-12
+
+### Added
+- Test altyapısı: `scripts/tests/` self-test suite (yapı, gizli bilgi, check.py, maturity entegrasyonu)
+- Olgunluk/kaçış mekanizması: `scripts/maturity.py` skorlayıcı (5 boyut, eşik 95)
+- Tutarlılık doğrulayıcı: `scripts/check.py` (8 kontrol)
+- `Makefile` hedefleri: `validate`, `test`, `maturity`, `escape`, `all`
+- CI doğrulama workflow'u: `.github/workflows/validate.yml` (push/PR tetikli)
+- Kaçış modeli dokümantasyonu: `docs/maturity.md`
+
+### Changed
+- `opencode.yml` sertleştirildi: job timeout'ları, comment trigger-word filtresi (`/oc`, `/opencode`)
+- Escape eşiği 85'ten 95'e yükseltildi
+
+### Fixed
+- `check.py` lisans kontrolü "GNU GENERAL PUBLIC LICENSE" başlığını doğru tanıyacak şekilde düzeltildi
+- Maturity self-test denetiminde yinelemeli (recursive) çalışma riski giderildi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

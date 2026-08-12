@@ -21,6 +21,7 @@ jobs:
   autonomous:
     if: github.event_name != 'issue_comment' && github.event_name != 'pull_request_review_comment'
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     permissions:
       id-token: write
       contents: write
@@ -41,8 +42,11 @@ jobs:
             AGENTS.md'deki simülasyon kurallarına uy.
 
   comment:
-    if: github.event_name == 'issue_comment' || github.event_name == 'pull_request_review_comment'
+    # Only react to comments explicitly invoking the agent via /oc or /opencode,
+    # so the bot does not fire on its own or unrelated activity.
+    if: (github.event_name == 'issue_comment' || github.event_name == 'pull_request_review_comment') && (contains(github.event.comment.body, '/oc') || contains(github.event.comment.body, '/opencode'))
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     permissions:
       id-token: write
       contents: write
