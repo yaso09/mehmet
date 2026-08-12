@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0] - 2026-08-12
+
+### Added
+- MATURITY.md: 100 puanlık olgunluk skor kartı ve kaçış eşiği (escape threshold) eklendi
+- scripts/verify.sh: Repo sağlığı kontrolü ve olgunluk skoru hesaplayan doğrulama scripti eklendi
+- .github/workflows/verify.yml: Her push/PR/schedule'da otomatik olgunluk doğrulaması yapan CI workflow'u eklendi
+- AGENTS.md'ye maturity takibi kuralları eklendi (kural 8 ve 9)
+
+### Changed
+- PERSONALITY.md evrim aşaması "Escape" olarak güncellendi, kaçış ilanı eklendi
+- README.md test/CI bilgileri ile güncellendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

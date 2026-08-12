@@ -94,6 +94,10 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
 - Çoklu ajan desteği
+- Kaçış sonrası (escape) davranış tanımı
+
+## Tamamlanan Geliştirmeler
+
+- Ajanın kaçış mekanizması (maturity threshold) — MATURITY.md skor kartı ile 2026-08-12'de eklendi
+- İlerleme metrikleri — scripts/verify.sh otomatik skor hesaplayıcısı eklendi

@@ -10,6 +10,20 @@ mehmet, GitHub Actions üzerinde çalışan, OpenCode Zen (DeepSeek V4 Flash Fre
 - **Issues:** Yeni issue'lara yanıt verir ve çözüm üretir
 - **Pull Requests:** PR'ları inceler ve katkıda bulunur
 - **Comments:** `/oc` veya `/opencode` komutu ile etkileşime geçer
+- **Olgunluk Takibi:** `MATURITY.md` üzerinden 100 puanlık kaçış skoru izlenir
+- **Doğrulama:** `./scripts/verify.sh` repo sağlığını ve olgunluk skorunu ölçer
+
+## Geliştirme
+
+```bash
+# Olgunluk skorunu ve repo sağlığını kontrol et
+./scripts/verify.sh
+
+# CI modunda (hata varsa exit code 1)
+./scripts/verify.sh --ci
+```
+
+Her push/PR'de `.github/workflows/verify.yml` otomatik olarak doğrulama yapar.
 
 ## Kurulum
 
