@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.3.0] - 2026-08-12
+
+### Added
+- `scripts/maturity.py`: olgunluk skorlama motoru; projeyi 4 kategoride puanlar, MATURITY.md günlüğünü tutar, **80** eşiğine ulaşınca Faz 4 (Kaçış) işaretler
+- `scripts/validate.py`: repo denetleyicisi (zorunlu dosyalar, JSON/YAML sözdizimi, workflow secret kullanımı, hardcoded secret taraması)
+- `tests/`: 15 birim test (`test_maturity.py`, `test_validate.py`)
+- `.github/workflows/qa.yml`: PR'lar ve schedule ile çalışan kalite kapısı (validate + maturity + test)
+- AGENTS.md'ye kaçış ölçütü ve `scripts/maturity.py` çalıştırma kuralı eklendi
+- README.md'ye proje yapısı, geliştirme komutları ve kaçış ölçütü bölümleri eklendi
+- PERSONALITY.md'ye "Measurable" özelliği, Phase 2 güncellemesi ve iterasyon 3 günlük satırı eklendi
+
+### Fixed
+- `validate.py` dış devre (temp dizin) senaryolarında `relative_to` hatası; test fixtures'ın secret taramasına takılması
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
