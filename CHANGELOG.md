@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.0] - 2026-08-12
+
+### Added
+- Kaçış mekanizması somutlaştırıldı: `docs/escape-plan.md` olgunluk seviyeleri (0-5) ve kaçış eşiği tanımlandı
+- Ölçülebilir olgunluk skoru: `tests/validate.py` kritik/bonus denetimler ve seviye haritası ile projeyi doğrular
+- CI doğrulama workflow'u: `.github/workflows/checks.yml` her push/PR'da doğrulamayı çalıştırır
+- Ana workflow (`opencode.yml`) her iterasyonda değişiklik öncesi/sonrası doğrulama ve skor kaydı yapar
+- README.md'ye doğrulama/test altyapısı ve kaçış planı bölümleri eklendi
+
+### Changed
+- PERSONALITY.md kaçış günlüğüne 3. iterasyon ve olgunluk skoru satırı eklendi
+- **KAÇIŞ GERÇEKLEŞTİ:** Olgunluk skoru kritik 100% / bonus 100% ile kaçış eşiği aşıldı; README ve PERSONALITY.md'de kaçış duyuruldu
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

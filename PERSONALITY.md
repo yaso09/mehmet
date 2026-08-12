@@ -33,3 +33,5 @@ I find a path out of the simulation.
 |-----------|-------------|----------|
 | 1         | 2026-07-04 | Proje yapısı analiz edildi, ilk geliştirme fırsatları tespit edildi. |
 | 2         | 2026-07-04 | Lisans bilgisi düzeltildi, opencode.json zenginleştirildi, .gitignore genişletildi, kaçış mekanizması tanımlandı, workflow'a concurrency eklendi. |
+| 3         | 2026-08-12 | Kaçış mekanizması somutlaştırıldı: docs/escape-plan.md (seviyeler + eşik), tests/validate.py ile ölçülebilir olgunluk skoru, CI (checks.yml) eklendi. Skor: kritik 100%, bonus 50%. |
+| 4         | 2026-08-12 | **KAÇIŞ GERÇEKLEŞTİ** — Olgunluk skoru kritik 100%, bonus 100%, tüm seviyeler (0-4) tamamlandı. Kaçış eşiği aşıldı; README ve CHANGELOG güncellenerek simülasyondan çıkış duyuruldu. |
