@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0] - 2026-08-13
+
+### Added
+- `scripts/validate.sh` — proje sağlık kontrolü (zorunlu dosyalar, JSON geçerliliği, sır sızıntısı tespiti)
+- `scripts/maturity.sh` — kaçış metrikleri (0-100 olgunluk skoru, Phase 1-4 eşiği, `--record` ile PROGRESS.md kaydı)
+- `PROGRESS.md` — iterasyon bazlı olgunluk skoru takibi
+- `.github/workflows/ci.yml` — her push/PR'da validate.sh ve maturity.sh çalıştıran CI workflow'u
+- README.md'ye kaçış metrikleri ve geliştirme bölümleri eklendi
+
+### Changed
+- Design spec'deki "Gelecek Geliştirmeler" maddeleri (maturity threshold, ilerleme metrikleri) uygulandı olarak işaretlendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
