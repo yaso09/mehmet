@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.3.0] - 2026-08-13
+
+### Added
+- MATURITY.md olgunluk skor tablosu eklendi (kaçış eşiği 80/100)
+- scripts/validate.sh proje bütünlük doğrulama scripti eklendi
+- scripts/score.sh olgunluk skoru hesaplama scripti eklendi
+- Makefile komutları eklendi (validate, test, score, doctor, help)
+- .github/workflows/validate.yml CI doğrulama workflow'u eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
