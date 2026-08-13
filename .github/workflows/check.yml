@@ -1,0 +1,33 @@
+name: check
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  pull_request:
+    types: [opened, synchronize]
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+jobs:
+  quality-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install --quiet PyYAML
+
+      - name: Run test suite
+        run: python3 -m unittest discover -s tests -q
+
+      - name: Run maturity check
+        run: python3 scripts/check_maturity.py
