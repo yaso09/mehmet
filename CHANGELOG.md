@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.0] - 2026-08-13
+
+### Added
+- scripts/assess.py: olgunluk (maturity) değerlendirme aracı eklendi (kaçış hedefini nesnel ölçer)
+- docs/MATURITY.md: olgunluk modeli ve kaçış eşiği (90/100) tanımlandı
+- .github/ISSUE_TEMPLATE: bug_report ve feature_request şablonları eklendi
+- .github/pull_request_template.md: PR şablonu eklendi
+- Workflow'a validate job eklendi (assess.py --json + --strict)
+- WORKFLOW prompt'u olgunluk puanı artırma odaklı güncellendi
+
+### Changed
+- README.md'ye Olgunluk Değerlendirmesi bölümü eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
