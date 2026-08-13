@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.3.0] - 2026-08-13
+
+### Added
+- `scripts/verify.sh` self-verification script: proje bütünlüğü, config geçerliliği ve maturity skoru ölçümü (kaçış mekanizması, 27 kontrol)
+- `.github/workflows/verify.yml` CI: her push/PR'da verify scriptini çalıştırır
+- Kaçış eşiği (escape threshold) mekanizması: 90/100 maturity skorunda tetiklenir
+
+### Fixed
+- `opencode.json`'daki geçersiz anahtarlar kaldırıldı (`skip`, `enable`, `toolTimeout`, `autoMerge` — opencode şemasında tanımsız, `ConfigInvalidError` yaratıyordu)
+- `opencode.json` geçerli şema anahtarlarıyla yeniden yazıldı (`instructions`, `permission`, `compaction`, `tool_output`, `share`, `autoupdate`)
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
