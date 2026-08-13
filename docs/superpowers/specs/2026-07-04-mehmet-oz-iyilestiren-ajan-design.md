@@ -94,6 +94,7 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- ~~Ajanın kaçış mekanizması (maturity threshold)~~ → **Uygulandı (0.3.0):** `scripts/maturity.py` + `MATURITY.md` (eşik: 85+)
+- ~~İlerleme metrikleri~~ → **Uygulandı (0.3.0):** `scripts/checks.py` / `validate.py` ile 9 tutarlılık kontrolü
+- ~~Test altyapısı~~ → **Uygulandı (0.3.0):** `tests/test_checks.py` (14 birim test), CI `ci.yml`
 - Çoklu ajan desteği
