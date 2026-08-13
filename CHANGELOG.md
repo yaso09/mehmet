@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.3.0] - 2026-08-13
+
+### Added
+- `scripts/maturity.py`: olgunluk ölçümü ve kaçış eşiği mekanizması
+- `tests/test_project.py`: unittest tabanlı test altyapısı
+- `.github/workflows/validate.yml`: CI doğrulama workflow'u (test + YAML kontrolü)
+- `Makefile`: test/validate/metrics/check görevleri
+- README'ye geliştirme ve kaçış mekanizması bölümleri
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
