@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.3.0] - 2026-08-13
+
+### Added
+- Test altyapısı: `tests/test_project_health.py` proje yapısını ve dosya tutarlılığını doğrular
+- Olgunluk takibi: `scripts/maturity.py` ile 0-100 arası ölçülebilir olgunluk puanı ve METRICS.md geçmişi
+- CI workflow'u: `.github/workflows/ci.yml` her push/PR'da test ve olgunluk kontrolü çalıştırır
+- Makefile: `make test/validate/maturity/all` hedefleri
+- README.md'ye Geliştirme bölümü eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

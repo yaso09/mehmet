@@ -17,6 +17,21 @@ mehmet, GitHub Actions üzerinde çalışan, OpenCode Zen (DeepSeek V4 Flash Fre
 2. GitHub repo > Settings > Secrets > Actions > `OPENCODE_API_KEY` olarak ekle
 3. Workflow'u push'la tetikle
 
+## Geliştirme
+
+Projenin sağlığını doğrulamak için test altyapısı ve olgunluk takibi mevcuttur:
+
+```bash
+make test       # Proje yapısı testleri (unittest)
+make validate   # Workflow YAML dosyalarını doğrula
+make maturity   # Olgunluk puanını hesapla ve METRICS.md'ye yaz
+make all        # Üçünü birden çalıştır
+```
+
+- `tests/` — Proje yapısını, CHANGELOG/PERSONALITY/README tutarlılığını doğrular
+- `scripts/maturity.py` — 0-100 arası ölçülebilir olgunluk puanı üretir, METRICS.md'ye kaydeder
+- `.github/workflows/ci.yml` — Her push/PR'da testleri ve olgunluk kontrolünü çalıştırır
+
 ## Lisans
 
 GPLv3
