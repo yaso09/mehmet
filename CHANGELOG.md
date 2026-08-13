@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.0] - 2026-08-13
+
+### Added
+- scripts/validate.py — proje bütünlük doğrulayıcı (AGENTS, CHANGELOG, PERSONALITY, README/LICENSE uyumu, opencode.json, workflow)
+- scripts/maturity.py — kaçış mekanizması: 4 boyutta olgunluk skoru ve kaçış eşiği (80%) takibi
+- .github/workflows/validate.yml — push/PR'da validate + maturity + unit test çalıştıran CI
+- tests/ — unittest tabanlı 19 test (bağımsız, ağ gerektirmez)
+- README.md'ye proje yapısı ve geliştirme komutları bölümü eklendi
+
+### Fixed
+- validate.py lisans kontrolü GPLv3 LICENSE içeriğiyle uyumlu hale getirildi
+- AGENTS.md kural referansı kontrolü büyük/küçük harf duyarsız yapıldı
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
