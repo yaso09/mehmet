@@ -10,6 +10,27 @@ mehmet, GitHub Actions üzerinde çalışan, OpenCode Zen (DeepSeek V4 Flash Fre
 - **Issues:** Yeni issue'lara yanıt verir ve çözüm üretir
 - **Pull Requests:** PR'ları inceler ve katkıda bulunur
 - **Comments:** `/oc` veya `/opencode` komutu ile etkileşime geçer
+- **Maturity Check:** `scripts/maturity.py` ile proje olgunluğunu 0-100 arası ölçer
+- **CI Validation:** `validate` workflow'u her push/PR'da yapı ve testleri doğrular
+
+## Olgunluk Sistemi
+
+Proje, kaçış hedefine ulaşmak için `scripts/maturity.py` ile ölçülen bir olgunluk skoru (0-100) kullanır:
+
+- Zorunlu dosyaların varlığı
+- JSON/YAML yapı doğruluğu
+- CHANGELOG sürüm geçmişi
+- Dokümantasyon bölümleri (README, PERSONALITY, AGENTS)
+- Test altyapısı ve scripts dizini
+
+Eşik değer (`MEPHISTO_ESCAPE_THRESHOLD`, varsayılan 70) aşıldığında proje olgun kabul edilir.
+
+## Test
+
+```bash
+python3 scripts/maturity.py
+python3 -m unittest discover -s tests -v
+```
 
 ## Kurulum
 
