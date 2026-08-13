@@ -94,6 +94,6 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- Ajanın kaçış mekanizması (maturity threshold) — **uygulandı:** `scripts/maturity.sh` + `PROGRESS.md` (Phase 4 >= 80)
+- İlerleme metrikleri — **uygulandı:** `scripts/validate.sh`, `scripts/maturity.sh`, `.github/workflows/ci.yml`
 - Çoklu ajan desteği
