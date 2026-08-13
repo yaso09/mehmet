@@ -18,6 +18,30 @@ on:
   workflow_dispatch:
 
 jobs:
+  health:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Run unit tests
+        run: make test
+
+      - name: Run project health / maturity check
+        run: make health
+
+      - name: Emit maturity report as JSON
+        run: python3 scripts/project_health.py --json > project-health.json
+
+      - name: Upload maturity report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: project-health-report
+          path: project-health.json
+          if-no-files-found: ignore
+
   autonomous:
     if: github.event_name != 'issue_comment' && github.event_name != 'pull_request_review_comment'
     runs-on: ubuntu-latest
