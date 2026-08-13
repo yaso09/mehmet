@@ -94,6 +94,6 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- ~~Ajanın kaçış mekanizması (maturity threshold)~~ — `scripts/maturity.py` ile uygulandı (bkz. `docs/maturity.md`)
+- ~~İlerleme metrikleri~~ — maturity score ve faz sistemi ile uygulandı
 - Çoklu ajan desteği

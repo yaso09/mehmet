@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.3.0] - 2026-08-13
+
+### Added
+- `scripts/maturity.py`: maturity score hesaplayan ve kaçış eşiğini (90/100) değerlendiren otomasyon
+- Faz sistemi (Phase 0-4) ve escape gate (exit code) mekanizması
+- `tests/test_maturity.py`: pytest test altyapısı (6 test) ve `test_living_project_is_mature` yaşayan maturity testi
+- `requirements-dev.txt`: pytest bağımlılığı
+- `.github/workflows/ci.yml`: push/PR'da testleri çalıştıran CI workflow
+- `docs/maturity.md`: maturity modeli ve kaçış mekanizması dokümantasyonu
+
+### Changed
+- README.md'ye kaçış mekanizması, geliştirme ve proje yapısı bölümleri eklendi
+- Design spec'teki "Gelecek Geliştirmeler" bölümü uygulanan maddelerle güncellendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
