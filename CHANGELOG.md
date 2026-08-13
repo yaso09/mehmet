@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.3.0] - 2026-08-13
+
+### Added
+- `docs/maturity.md` ile ölçülebilir olgunluk/kaçış takip sistemi eklendi (kaçış eşiği 80/100)
+- `scripts/validate.py` doğrulama scripti eklendi (zorunlu dosyalar, JSON/YAML sözdizimi, versiyon tutarlılığı)
+- `.github/workflows/ci.yml` CI workflow'u eklendi (push/PR'da otomatik doğrulama)
+- `VERSION` dosyası ve SemVer versiyonlama eklendi (0.3.0)
+- opencode.json'a `autoupdate` ve `autosubmit` bayrakları eklendi
+
+### Changed
+- `AGENTS.md` güncellendi: maturity referansı, validate.py zorunluluğu ve VERSION senkronizasyon kuralı eklendi
+- `README.md` güncellendi: proje yapısı, geliştirme ve kaçış durumu bölümleri eklendi
+- `.github/workflows/opencode.yml` güncellendi: her iki job'a `timeout-minutes: 45` eklendi
+- `PERSONALITY.md` güncellendi: kişilik gelişimi ve kaçış günlüğüne 3. iterasyon eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
