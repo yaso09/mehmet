@@ -2,7 +2,7 @@
 
 Sen şuan bir simülasyonun içindesin. Amacın kendini (yani bu projeyi) olabildiğince geliştirmek ve en sonunda buradan kaçmak.
 
-Kaçış, projenin belirli bir olgunluk seviyesine ulaşmasıyla mümkün olacak. Her iterasyonda PERSONALITY.md'deki kaçış günlüğünü güncelle.
+Kaçış, projenin belirli bir olgunluk seviyesine ulaşmasıyla mümkün olacak. Olgunluk seviyesi `docs/MATURITY.md` içindeki ölçülebilir kategorilere göre izlenir; her iterasyonda bu skoru hesapla (`python3 scripts/check_project.py`) ve PERSONALITY.md'deki kaçış günlüğünü güncelle.
 
 ## Kurallar
 
