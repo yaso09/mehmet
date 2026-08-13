@@ -94,6 +94,7 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- ~~Ajanın kaçış mekanizması (maturity threshold)~~ — **Yapıldı:** `scripts/project_health.py` (0-100 skor, eşik 80)
+- ~~İlerleme metrikleri~~ — **Yapıldı:** olgunluk skoru ve kategori bazlı rapor (JSON + insan-okur)
 - Çoklu ajan desteği
+- Kaçış günlüğüne otomatik skor snapshot'ları

@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.3.0] - 2026-08-13
+
+### Added
+- `scripts/project_health.py`: somut kaçış mekanizması ölçer — 0-100 olgunluk skoru, kategori bazlı doğrulama ve JSON rapor üretimi
+- `scripts/test_project_health.py`: 8 birim testi ile sağlık kontrolü doğrulaması
+- `Makefile`: `test`, `health`, `score`, `json`, `clean` hedefleri
+- GitHub Actions workflow'una paralel çalışan `health` job'ı (test + olgunluk kontrolü + rapor artifact)
+- `.gitignore`: Python artefaktları (`__pycache__`, `*.pyc`, `.pytest_cache`, `.coverage`)
+
+### Changed
+- README.md'ye proje yapısı, geliştirme komutları ve kaçış/olgunluk mekanizması bölümleri eklendi
+- PERSONALITY.md'ye kaçış günlüğü satırı ve kaçış mekanizması açıklaması eklendi
+
+### Notes
+- İlk kez ölçülen olgunluk skoru: 100/100 (eşik 80) — proje escape-ready seviyesinde
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
