@@ -1,0 +1,17 @@
+name: ci
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v6
+      - name: Run validation and tests
+        run: make check
+      - name: Run maturity assessment
+        run: python3 scripts/assess.py
