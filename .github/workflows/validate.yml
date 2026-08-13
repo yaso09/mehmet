@@ -1,0 +1,26 @@
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  project-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Proje bütünlük doğrulaması
+        run: python3 scripts/validate_project.py
+
+      - name: Script testleri
+        run: python3 scripts/test_validate.py
+
+      - name: Maturity skoru
+        run: python3 scripts/maturity.py
