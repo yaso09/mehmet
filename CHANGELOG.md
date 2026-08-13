@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.0] - 2026-08-13
+
+### Added
+- VERSION dosyası (0.3.0) — sürüm takibi başlatıldı
+- scripts/maturity.py — olgunluk skorlama betiği (0-100, 8 boyutlu ağırlıklı skor)
+- scripts/test_maturity.py — maturity.py için 6 unit test
+- AGENTS.md'ye kaçış mekanizması tanımı (eşik: 85 puan, test komutu)
+
+### Changed
+- .github/workflows/opencode.yml — autonomous job'a "Maturity report" adımı eklendi (skor raporu + testler)
+- README.md — kaçış/olgunluk mekanizması bölümü eklendi
+- PERSONALITY.md — evrim aşamaları ve kaçış günlüğü güncellendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
