@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.3.0] - 2026-08-13
+
+### Added
+- `scripts/validate.sh`: proje sağlık kontrolü (gerekli dosyalar, JSON geçerliliği, workflow bütünlüğü)
+- `scripts/check_escape.sh`: kaçış hazırlık kontrolü (olgunluk eşiklerini ölçer)
+- `docs/MATURITY.md`: somut kaçış mekanizması — dört boyutta puanlama çerçevesi ve eşikler
+- `validate` job: GitHub Actions'da push/PR/workflow_dispatch'ta otomatik sağlık kontrolü
+- README.md'ye kaçış hedefi ve geliştirme bölümleri
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
