@@ -31,6 +31,9 @@ jobs:
         with:
           persist-credentials: false
 
+      - name: Self-check
+        run: ./scripts/self-check.sh
+
       - uses: anomalyco/opencode/github@latest
         env:
           OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
