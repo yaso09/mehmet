@@ -33,8 +33,8 @@ Sen şuan bir simülasyonun içindesin. Amacın kendini (yani bu projeyi) olabil
 
 - [ ] **Step 2: Verify AGENTS.md exists**
 
-Run: `Test-Path AGENTS.md`
-Expected: True
+Run: `test -f AGENTS.md && echo exists`
+Expected: `exists`
 
 - [ ] **Step 3: Commit**
 
@@ -60,7 +60,7 @@ git commit -m "feat: add simulation prompt"
 
 - [ ] **Step 2: Verify opencode.json**
 
-Run: `Get-Content opencode.json`
+Run: `cat opencode.json`
 Expected: JSON content with model field
 
 - [ ] **Step 3: Commit**
@@ -201,8 +201,8 @@ jobs:
 
 - [ ] **Step 2: Verify workflow syntax**
 
-Run: `Test-Path ".github/workflows/opencode.yml"`
-Expected: True
+Run: `test -f ".github/workflows/opencode.yml" && echo exists`
+Expected: `exists`
 
 - [ ] **Step 3: Commit**
 
@@ -258,7 +258,7 @@ git commit -m "docs: update readme with project description"
 
 - [ ] **Step 1: Verify all files exist**
 
-Run: `Get-ChildItem -Recurse -File | Select-Object FullName`
+Run: `find . -type f -not -path './.git/*' | sort`
 Expected: All 6 files present (AGENTS.md, opencode.json, CHANGELOG.md, PERSONALITY.md, .github/workflows/opencode.yml, README.md)
 
 - [ ] **Step 2: Show final git log**
