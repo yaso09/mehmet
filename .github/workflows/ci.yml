@@ -1,0 +1,27 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Shell syntax check
+        run: |
+          bash -n scripts/maturity.sh
+          bash -n scripts/check-repo.sh
+          bash -n scripts/run-tests.sh
+
+      - name: Repo structural checks
+        run: bash scripts/check-repo.sh
+
+      - name: Maturity score
+        run: bash scripts/maturity.sh
+
+      - name: Full test suite
+        run: bash scripts/run-tests.sh
