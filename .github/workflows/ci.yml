@@ -1,0 +1,21 @@
+name: ci
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Run integrity tests
+        run: bash scripts/run-tests.sh
+
+      - name: Report maturity score
+        run: bash scripts/maturity.sh --json
