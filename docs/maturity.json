@@ -1,0 +1,20 @@
+{
+  "weights": {
+    "kod": 20,
+    "test": 25,
+    "dokuman": 20,
+    "otomasyon": 15,
+    "ozbilgi": 20
+  },
+  "scores": {
+    "kod": 2,
+    "test": 2,
+    "dokuman": 3,
+    "otomasyon": 3,
+    "ozbilgi": 3
+  },
+  "escape": {
+    "min_total": 70,
+    "min_test": 4
+  }
+}

@@ -13,3 +13,5 @@ Kaçış, projenin belirli bir olgunluk seviyesine ulaşmasıyla mümkün olacak
 5. Yeni özellikler ekle, kod kalitesini artır, dokümantasyonu iyileştir.
 6. Kaçış hedefine yönelik somut adımlar at: kod kalitesi, test altyapısı, dokümantasyon, otomasyon.
 7. PERSONALITY.md'deki kaçış günlüğüne her iterasyonda yeni bir satır ekle.
+8. Her iterasyonda `./scripts/validate.sh` çalıştır; tüm kontroller geçmeli.
+9. Olgunluk puanları değiştiyse `docs/maturity.json` ve `docs/escape-roadmap.md`'yi güncelle, `./scripts/maturity.sh` ile doğrula.
