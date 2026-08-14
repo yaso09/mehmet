@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.3.0] - 2026-08-14
+
+### Added
+- `scripts/self-check.sh` — proje tutarlılık doğrulama scripti (zorunlu dosyalar, JSON/YAML geçerliliği, CHANGELOG/PERSONALITY güncelliği, shellcheck lint)
+- `.github/workflows/validate.yml` — her push ve PR'da self-check'i çalıştıran CI workflow'u
+- Ana workflow'a (`opencode.yml`) her çalıştırmada ön koşul olarak self-check adımı eklendi
+
+### Changed
+- README.md'ye "Doğrulama" bölümü eklendi (test altyapısı dokümantasyonu)
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
