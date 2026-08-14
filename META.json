@@ -1,0 +1,14 @@
+{
+  "version": "0.3.0",
+  "iterations": 3,
+  "last_run": "2026-08-14",
+  "maturity_score": 100,
+  "maturity_threshold": 100,
+  "escape_ready": false,
+  "milestones": [
+    "v0.1.0: initial project setup",
+    "v0.2.0: escape mechanism defined, config hardened, workflow concurrency added",
+    "v0.3.0: valid opencode config, automated maturity scoring and repo validation added"
+  ],
+  "consecutive_ready": 2
+}
