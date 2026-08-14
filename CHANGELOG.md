@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0] - 2026-08-14
+
+### Added
+- Test altyapısı: `tests/test_project.py` bütünlük test suite'i
+- Doğrulama otomasyonu: `scripts/validate.sh` ve `Makefile` (`make test`, `make validate`)
+- `MATURITY.md`: nesnel olgunluk metrikleri ve kaçış eşiği (threshold) takibi
+- Workflow'a `validation` job'ı eklendi (test suite CI'da otomatik çalışıyor)
+- README'ye Test ve Proje Yapısı bölümleri eklendi
+
+### Changed
+- AGENTS.md: kaçış kurallarına MATURITY.md takibi ve `make validate` zorunluluğu eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
