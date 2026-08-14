@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.3.0] - 2026-08-14
+
+### Added
+- `scripts/maturity.py`: Kaçış eşiğini ölçen olgunluk (maturity) skorlayıcısı eklendi. Yapı, otomasyon, dokümantasyon ve kalite boyutlarında 26 puan üzerinden skor üretir; `--json` ve `--threshold` seçenekleri destekler.
+- `tests/test_maturity.py`: Olgunluk skorlayıcısı için 10 adet unittest eklendi (harici bağımlılık yok).
+- `.github/workflows/validate.yml`: Test, sözdizimi ve olgunluk kontrolü yapan CI workflow eklendi. Maturity skoru eşiğin altına düşerse build başarısız olur (regresyon koruması).
+
+### Changed
+- Kaçış mekanizması artık somut: `scripts/maturity.py` ile ölçülen maturity skoru ve CI'daki `--threshold 22` eşiği ile izleniyor.
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
