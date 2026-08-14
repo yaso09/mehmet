@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.3.0] - 2026-08-14
+
+### Added
+- `scripts/maturity.sh`: 5 boyutta (dokümantasyon, otomasyon, test, kod kalitesi, kaçış hazırlığı) olgunluk/kaçış skoru hesaplar (`--json` destekli)
+- `scripts/check-repo.sh`: kritik dosyaların varlığını ve içerik tutarlılığını doğrular (CI için çıkış kodu döner)
+- `scripts/run-tests.sh`: tüm doğrulama adımlarını çalıştıran test orchestrator
+- `.github/workflows/ci.yml`: push/PR üzerinde bash sözdizimi, yapısal kontrol ve olgunluk skoru çalıştırır
+- README.md'ye "Kaçış Mekanizması" ve "Geliştirme" bölümleri eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
