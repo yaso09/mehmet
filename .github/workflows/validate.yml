@@ -1,0 +1,27 @@
+name: validate
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  maturity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install PyYAML
+        run: pip install pyyaml
+
+      - name: Run maturity validation
+        run: |
+          python3 scripts/validate.py --strict --threshold 80
+
+      - name: Check CHANGELOG updated
+        run: |
+          git diff --name-only HEAD~1 HEAD | grep -q CHANGELOG.md || \
+            { echo "CHANGELOG.md must be updated in this change"; exit 1; }
