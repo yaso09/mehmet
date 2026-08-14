@@ -36,7 +36,19 @@ OpenCode proje konfigürasyonu. Zen modelini tanımlar ve gerekli ayarları içe
 
 ```json
 {
-  "model": "opencode/deepseek-v4-flash-free"
+  "$schema": "https://opencode.ai/config.json",
+  "model": "opencode/deepseek-v4-flash-free",
+  "autoupdate": "notify",
+  "snapshot": true,
+  "logLevel": "INFO",
+  "tool_output": {
+    "max_lines": 2000,
+    "max_bytes": 51200
+  },
+  "compaction": {
+    "auto": true,
+    "tail_turns": 15
+  }
 }
 ```
 
@@ -94,6 +106,6 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- Ajanın kaçış mekanizması (maturity threshold) — `META.json` + `scripts/maturity.py` ile ölçülebilir hale getirildi (0.3.0)
+- İlerleme metrikleri — `scripts/validate.py` ve `.github/workflows/check.yml` ile CI'da otomatik doğrulama eklendi (0.3.0)
 - Çoklu ajan desteği

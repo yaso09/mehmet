@@ -1,0 +1,32 @@
+name: mehmet-check
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Validate repository
+        run: python3 scripts/validate.py
+
+      - name: Compute maturity score
+        run: python3 scripts/maturity.py --json
+
+      - name: Lint workflow YAML
+        run: |
+          yamllint -d '{extends: relaxed, rules: {line-length: disable}}' .github/workflows/*.yml
