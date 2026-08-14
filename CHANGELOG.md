@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.3.0] - 2026-08-14
+
+### Added
+- `scripts/validate.sh`: proje bütünlük doğrulaması (zorunlu dosyalar, JSON/YAML, lisans, dokümantasyon, maturity)
+- `scripts/maturity.sh`: olgunluk skoru hesaplayıcı (ağırlıklı ortalama, 0–100, kaçış eşiği kontrolü)
+- `docs/maturity.json`: boyut ağırlıkları, puanlar ve kaçış eşiği (veri kaynağı)
+- `docs/escape-roadmap.md`: kaçış yol haritası, olgunluk metrikleri ve hedefler
+- `.github/workflows/ci.yml`: her push/PR'da `validate.sh` çalıştıran CI workflow
+- `CONTRIBUTING.md`: katkı rehberi ve kontrol listesi
+- `SECURITY.md`: güvenlik politikası ve en iyi uygulamalar
+
+### Changed
+- `AGENTS.md`: 8. kural (validate.sh zorunluluğu) ve 9. kural (maturity güncelleme) eklendi
+- `README.md`: proje yapısı tablosu, doğrulama ve kaçış takibi özellikleri eklendi
+- `scripts/validate.sh`: yeni dosyalar ve maturity kontrolleriyle genişletildi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
