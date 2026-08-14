@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0] - 2026-08-14
+
+### Added
+- Olgunluk (maturity) validatörü: `scripts/validate.py` ile proje sağlığı 0–100 arası ölçülüyor
+- Kaçış eşiği: strict modda skor < 80 ise build başarısız oluyor
+- Makefile otomasyonu (`validate`, `validate-strict`, `test`, `status`, `dev`)
+- `validate` CI workflow'u: push/PR'da kalite kapısı ve CHANGELOG kontrolü
+- README'ye "Olgunluk Sistemi", "Proje Yapısı" ve "Geliştirme" bölümleri eklendi
+
+### Fixed
+- Validator ve test altyapısı eksikliği (escape hedefi için kritik boşluk)
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
