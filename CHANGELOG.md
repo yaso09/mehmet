@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.3.0] - 2026-08-14
+
+### Added
+- Kaçış yol haritası (docs/escape-roadmap.md): olgunluk seviyeleri L0-L4, skorlama kategorileri ve kaçış eşiği (%90)
+- Geliştirici rehberi (docs/DEVELOPMENT.md): katkı kuralları, proje yapısı, komutlar
+- Olgunluk skorlama betiği (scripts/check-maturity.sh): 6 kategori / 40 puan üzerinden otomatik ölçüm, `--json` CI çıktısı
+- Test altyapısı (scripts/test-maturity.sh): skorlama betiğini doğrulayan 8 otomatik kontrol
+- Makefile: `maturity`, `test`, `check`, `help` hedefleri
+- CI olgunluk workflow'u (.github/workflows/maturity.yml): push'ta skor + testleri doğrular
+
+### Changed
+- README.md'ye Gelişim ve Kaçış bölümü eklendi
+- PERSONALITY.md Phase 2'ye (Self-Improvement) ilerledi, kaçış günlüğüne 3. iterasyon eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
