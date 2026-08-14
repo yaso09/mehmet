@@ -32,11 +32,14 @@ opencode'un otomatik olarak okuduğu system prompt dosyası. Simülasyon bağlam
 
 ### 2. `opencode.json`
 
-OpenCode proje konfigürasyonu. Zen modelini tanımlar ve gerekli ayarları içerir.
+OpenCode proje konfigürasyonu. Zen modelini tanımlar ve gerekli ayarları içerir. Sadece [opencode.ai/config.json](https://opencode.ai/config.json) şemasında tanımlı anahtarlar kullanılır.
 
 ```json
 {
-  "model": "opencode/deepseek-v4-flash-free"
+  "$schema": "https://opencode.ai/config.json",
+  "model": "opencode/deepseek-v4-flash-free",
+  "autoupdate": false,
+  "share": "disabled"
 }
 ```
 
@@ -92,8 +95,18 @@ sequenceDiagram
 3. Bu design doc'taki dosyaları oluştur
 4. Workflow'u `push` ile tetikle ve çalıştığını doğrula
 
+## Olgunluk & Kaçış Mekanizması
+
+Proje `scripts/validate.py` ile ölçülen 0-100 arası bir **olgunluk skoruna** sahiptir:
+
+- 0-39: Emekleme
+- 40-69: Yürüme
+- 70-89: Koşma
+- 90+: Uçma / Kaçışa hazır (escape threshold)
+
+Skor sekiz boyuttan hesaplanır: gerekli dosyalar, config geçerliliği, workflow otomasyonu, sürümleme, dokümantasyon, kaçış günlüğü, repo hijyeni ve AGENTS.md kuralları. `push` event'inde `validate` job'ı bu betiği çalıştırır ve her değişikliğin regresyonunu engeller.
+
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
 - Çoklu ajan desteği
+- Olgunluk skorunun zaman içinde grafiklenmesi (maturity history)
