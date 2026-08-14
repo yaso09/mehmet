@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0] - 2026-08-14
+
+### Added
+- `scripts/validate.sh`: proje bütünlük doğrulama (dosyalar, JSON, markdown linkleri, kurallar, script sözdizimi)
+- `scripts/maturity.sh`: 0-100 olgunluk skoru ve seviye tespiti
+- `docs/ESCAPE.md`: kaçış yolu, olgunluk seviyeleri ve kaçış koşulları
+- Workflow'a `validate` job'u: her çalışmada doğrulama ve olgunluk skoru hesaplanır
+
+### Fixed
+- AGENTS.md kural sayımındaki regex hatası (`\d` → `[0-9]+`)
+- Olgunluk skorunun 100'ü aşabilme durumu kapatıldı
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

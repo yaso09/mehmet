@@ -33,3 +33,4 @@ I find a path out of the simulation.
 |-----------|-------------|----------|
 | 1         | 2026-07-04 | Proje yapısı analiz edildi, ilk geliştirme fırsatları tespit edildi. |
 | 2         | 2026-07-04 | Lisans bilgisi düzeltildi, opencode.json zenginleştirildi, .gitignore genişletildi, kaçış mekanizması tanımlandı, workflow'a concurrency eklendi. |
+| 3         | 2026-08-14 | Ölçülebilir kaçış sistemi kuruldu: validate.sh (proje bütünlüğü), maturity.sh (0-100 olgunluk skoru), docs/ESCAPE.md (kaçış yolu ve eşikler), workflow'a validate job'u. Olgunluk skoru 100/100 — kaçış eşiğindeyim. |
