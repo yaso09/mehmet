@@ -59,6 +59,18 @@ Ajanın kişiliğini zamanla evrimleştirdiği dosya. Her çalışmada kendini g
 
 Proje tanıtım dosyası. Ajan tarafından güncel tutulur.
 
+### 7. `scripts/maturity.mjs`
+
+Projenin kaçış eşiğine (escape threshold) ne kadar yakın olduğunu ölçen olgunluk değerlendirmesi.
+Dört boyutta puanlama yapar: Belgeleme, Otomasyon, Test Altyapısı, Kod Kalitesi. Toplam 100 puan;
+kaçış eşiği 75'tir. `npm run maturity` ile çalıştırılır, `--json` ile CI uyumlu çıktı verir.
+
+### 8. Test Altyapısı
+
+`tests/maturity.test.mjs` dosyası Node.js yerleşik test runner'ı (`node --test`) ile çalışır.
+`package.json` içinde `npm test` ve `npm run verify` (test + olgunluk raporu) script'leri tanımlıdır.
+Workflow'daki `verify` job'u her çalışmada testleri koşar.
+
 ## Veri Akışı
 
 ```mermaid
@@ -94,6 +106,6 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- Ajanın kaçış mekanizmasını otomatik izleyen CI adımı (eşik aşıldığında rapor)
+- İlerleme metriklerinin zaman serisi takibi
 - Çoklu ajan desteği

@@ -1,0 +1,15 @@
+{
+  "name": "mehmet",
+  "version": "0.3.0",
+  "description": "Kendi kendisini geliştiren otonom AI ajan.",
+  "type": "module",
+  "license": "GPL-3.0-only",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "maturity": "node scripts/maturity.mjs",
+    "test": "node --test",
+    "verify": "npm run test && node scripts/maturity.mjs"
+  }
+}
