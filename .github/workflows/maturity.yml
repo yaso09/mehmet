@@ -1,0 +1,18 @@
+name: maturity
+
+on:
+  push:
+    branches: ['**']
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Olgunluk skoru
+        run: scripts/check-maturity.sh
+
+      - name: Betik testleri
+        run: scripts/test-maturity.sh
