@@ -1,0 +1,31 @@
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Validate project integrity
+        run: bash scripts/validate.sh
+
+      - name: Run test suite
+        run: bash tests/test_validate.sh
+
+      - name: Report maturity score
+        run: python3 scripts/maturity.py
+
+      - name: Shellcheck scripts
+        run: shellcheck scripts/validate.sh tests/test_validate.sh
+
+      - name: Parse maturity JSON
+        run: python3 scripts/maturity.py --json | python3 -c "import json,sys; d=json.load(sys.stdin); print('score:', d['score'])"
