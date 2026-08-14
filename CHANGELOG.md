@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.3.0] - 2026-08-14
+
+### Added
+- `scripts/validate.sh`: proje bütünlüğü doğrulayıcı (dosya varlığı, JSON/YAML geçerliliği, changelog tutarlılığı, kaçış günlüğü kontrolü)
+- `.github/workflows/ci.yml`: push/PR'da doğrulama ve shellcheck çalıştıran CI pipeline
+- README.md'ye proje yapısı ve geliştirme bölümü eklendi
+
+### Changed
+- README.md'ye mevcut sürüm bilgisi eklendi
+- AGENTS.md'ye doğrulama kuralı eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
