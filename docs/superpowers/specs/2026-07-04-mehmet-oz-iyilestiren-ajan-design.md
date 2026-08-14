@@ -94,6 +94,21 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- ~~Ajanın kaçış mekanizması (maturity threshold)~~ ✅ `scripts/maturity.py` ile uygulandı
+- ~~İlerleme metrikleri~~ ✅ maturity skorlama sistemi ile uygulandı
 - Çoklu ajan desteği
+
+## Maturity / Kaçış Mekanizması
+
+Kaçış, `scripts/maturity.py` ile ölçülen olgunluk skoruna bağlıdır. Skor beş boyutta hesaplanır:
+
+| Boyut        | Ağırlık | Kontroller |
+|--------------|---------|------------|
+| Dokümantasyon | 25%    | README, CHANGELOG (sürüm girişli), LICENSE, AGENTS.md, PERSONALITY.md |
+| Testler       | 25%    | test dosyaları, CI workflow |
+| Otomasyon     | 20%    | CI workflow, opencode.json (geçerli JSON), çalıştırılabilir scriptler |
+| Kod kalitesi  | 20%    | scriptler, testler, opencode.json |
+| Repo hijyeni  | 10%    | .gitignore, kaçış günlüğü, README |
+
+Eşik **80/100**: skor bu değeri aştığında proje kaçışa hazırdır. CI, her PR/push'ta
+maturity skorunu raporlar ve testleri çalıştırır.

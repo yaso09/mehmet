@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.0] - 2026-08-14
+
+### Added
+- Maturity skorlama sistemi (`scripts/maturity.py`): kaçış hedefini beş boyutta (dokümantasyon, testler, otomasyon, kod kalitesi, repo hijyeni) ağırlıklı olarak ölçer
+- Kaçış eşiği tanımlandı: skor 80/100'e ulaşınca proje kaçışa hazır sayılır
+- Unit test altyapısı (`tests/test_maturity.py`) — 8 test, `unittest` ile
+- CI workflow'u (`.github/workflows/ci.yml`): her PR/push'ta testleri çalıştırır ve maturity skorunu raporlar
+- README'ye "Olgunluk / Kaçış Metriği" ve "Geliştirme" bölümleri eklendi
+
+### Fixed
+- `has_ci_workflow` kontrolü: sadece `.yml` VEYA `.yaml` varken de geçerli olması sağlandı (önceki sürüm ikisini birden gerektiriyordu)
+- `.github/workflows/opencode.yml`: `run-name`, global ve job seviyesinde `timeout-minutes` eklendi (koşu başına 30 dk limit)
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
