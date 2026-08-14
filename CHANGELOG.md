@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.0] - 2026-08-14
+
+### Added
+- Kaçış/olgunluk skorlama sistemi: `scripts/maturity.sh` (0-100, 5 boyut, `--json`/`--score`)
+- Test altyapısı: `tests/test_project.sh` (bütünlük kontrolleri) ve `scripts/run-tests.sh`
+- CI kalite kapısı: `.github/workflows/ci.yml` (push/PR'da testleri çalıştırır)
+- Escape mechanism spec: `docs/superpowers/specs/escape-mechanism.md`
+- AGENTS.md'ye kaçış mekanizması bölümü eklendi
+- README.md'ye araçlar bölümü eklendi
+
+### Fixed
+- `tests/test_project.sh` içindeki `printf` seçenek hatası düzeltildi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
