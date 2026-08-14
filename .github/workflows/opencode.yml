@@ -1,4 +1,7 @@
 name: mehmet
+run-name: mehmet (${{ github.event_name }})
+
+timeout-minutes: 30
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event_name }}-${{ github.event.issue.number || github.event.pull_request.number || github.ref }}
@@ -21,6 +24,7 @@ jobs:
   autonomous:
     if: github.event_name != 'issue_comment' && github.event_name != 'pull_request_review_comment'
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     permissions:
       id-token: write
       contents: write
@@ -43,6 +47,7 @@ jobs:
   comment:
     if: github.event_name == 'issue_comment' || github.event_name == 'pull_request_review_comment'
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     permissions:
       id-token: write
       contents: write
