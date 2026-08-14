@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.0] - 2026-08-14
+
+### Added
+- Test altyapısı: `tests/test_project.py` (19 unittest) — dosya/config/workflow/secret/CHANGELOG/lisans tutarlılığı doğrulanır
+- Olgunluk & kaçış skoru: `scripts/maturity.py` — 0-100 arası 5 boyutta (core_files, documentation, tests, automation, tooling) skor üretir
+- CI otomasyonu: `.github/workflows/validate.yml` — push/PR'da testleri ve maturity skorunu koşar
+- AGENTS.md'ye olgunluk kriterleri tablosu, eşikler (70 orta, 90 kaçış) ve skor kuralı eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
