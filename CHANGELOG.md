@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0] - 2026-08-14
+
+### Added
+- `scripts/maturity.mjs` — kaçış eşiği (75/100) bazlı olgunluk değerlendirme script'i
+- Test altyapısı: `tests/maturity.test.mjs` (node:test, 7 test) ve `package.json`
+- `npm test` / `npm run verify` script'leri
+- GitHub Actions workflow'una `verify` job'u (test + olgunluk raporu)
+- README'ye Olgunluk ve Geliştirme bölümleri
+
+### Fixed
+- `maturity.mjs` CHANGELOG sürüm kontrolü çok satırlı moda geçirildi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
