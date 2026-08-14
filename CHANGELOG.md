@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.3.0] - 2026-08-14
+
+### Added
+- scripts/validate.sh — yapısal doğrulama betiği (test altyapısı)
+- scripts/check-maturity.sh — kaçış metrikleri ve olgunluk puanı (kaçış mekanizması)
+- .github/workflows/validate.yml — CI doğrulama workflow'u (push/PR)
+- MATURITY.md — olgunluk metrikleri takibi (otomatik üretilir)
+- README: Proje Yapısı, Test ve Yol Haritası bölümleri eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
