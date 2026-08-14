@@ -59,6 +59,18 @@ Ajanın kişiliğini zamanla evrimleştirdiği dosya. Her çalışmada kendini g
 
 Proje tanıtım dosyası. Ajan tarafından güncel tutulur.
 
+### 7. `MATURITY.md`
+
+Ajanın olgunluk seviyesini ölçen dosya. Kaçış eşiğini (≥ 90/100), puanlama kriterlerini ve skor geçmişini tutar. Kaçış mekanizması bu dosya üzerinden tetiklenir.
+
+### 8. `scripts/validate.py`
+
+Proje bütünlüğünü otomatik doğrulayan Python script'i. Zorunlu dosyaları, JSON/YAML geçerliliğini, CHANGELOG formatını, kaçış günlüğünü ve olgunluk eşiğini kontrol eder.
+
+### 9. `.github/workflows/ci.yml`
+
+Her push/PR'da `validate.py`'yi çalıştıran doğrulama CI workflow'u.
+
 ## Veri Akışı
 
 ```mermaid
@@ -94,6 +106,6 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- İlerleme metriklerinin otomasyonu (skorun CI'da doğrulanması)
 - Çoklu ajan desteği
+- Kaçış tetikleyicisinin otomasyonu (skor eşiğe ulaşınca otomatik bildirim)

@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.0] - 2026-08-14
+
+### Added
+- MATURITY.md eklendi: kaçış eşiği (≥ 90/100), puanlama kriterleri, skor geçmişi ve güncel skor takibi
+- scripts/validate.py eklendi: proje bütünlüğünü otomatik doğrulayan script (zorunlu dosyalar, JSON/YAML geçerliliği, CHANGELOG formatı, kaçış günlüğü, olgunluk eşiği)
+- .github/workflows/ci.yml eklendi: her push/PR'da validate.py'yi çalıştıran doğrulama CI'ı
+- AGENTS.md'ye kurallar eklendi: MATURITY.md skor güncelleme ve validate.py doğrulaması
+
+### Changed
+- README.md güncellendi: kaçış mekanizması, otomatik doğrulama ve proje yapısı bölümleri eklendi
+- PERSONALITY.md güncellendi: Evrim aşaması Phase 2'ye geçti, kaçış günlüğüne iterasyon 3 eklendi
+- Tasarım spec'i güncellendi: bileşenlere MATURITY.md, validate.py ve ci.yml eklendi; maturity threshold "Gelecek Geliştirmeler"den çıkarıldı
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
