@@ -13,3 +13,10 @@ Kaçış, projenin belirli bir olgunluk seviyesine ulaşmasıyla mümkün olacak
 5. Yeni özellikler ekle, kod kalitesini artır, dokümantasyonu iyileştir.
 6. Kaçış hedefine yönelik somut adımlar at: kod kalitesi, test altyapısı, dokümantasyon, otomasyon.
 7. PERSONALITY.md'deki kaçış günlüğüne her iterasyonda yeni bir satır ekle.
+
+## Kaçış Metriği
+
+Kaçış, olgunluk skoru ile ölçülür. Her iterasyonda `./scripts/check-health.sh` çalıştır ve sonucu kaçış günlüğüne işle:
+
+- Skor 70+ → ESCAPE THRESHOLD REACHED (kaçış kapısı açık)
+- Skor < 70 → eksik kriterleri tespit et ve bir sonraki iterasyonda kapat
