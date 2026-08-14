@@ -18,6 +18,23 @@ on:
   workflow_dispatch:
 
 jobs:
+  validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      - name: Validate project integrity
+        run: |
+          python3 -c "import json; json.load(open('opencode.json'))"
+          python3 -m unittest discover -s tests -v
+
   autonomous:
     if: github.event_name != 'issue_comment' && github.event_name != 'pull_request_review_comment'
     runs-on: ubuntu-latest
