@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.3.0] - 2026-08-15
+
+### Added
+- `scripts/verify.sh`: Proje bütünlüğü doğrulama betiği (dosya varlığı, JSON/YAML geçerliliği, dokümantasyon tutarlılığı)
+- `scripts/maturity.sh`: Kaçış hedefine yönelik olgunluk skorlama betiği (0-100)
+- `.github/workflows/verify.yml`: Her push/PR'da verify.sh ve maturity.sh çalıştıran CI doğrulama workflow'u
+- README.md'ye "Geliştirici Araçları" bölümü eklendi
+
+### Changed
+- Test altyapısı ve CI doğrulaması ile kaçış mekanizması güçlendirildi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
