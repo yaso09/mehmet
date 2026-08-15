@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.3.0] - 2026-08-15
+
+### Added
+- `scripts/validate.py`: proje yapısını ve konfigürasyon dosyalarını doğrulayan araç
+- `scripts/maturity.py`: olgunluk/kaçış skorunu hesaplayan araç (kaçış eşiği: %80)
+- `tests/test_project.py`: 9 pytest testi (yapı, JSON, workflow, changelog, olgunluk)
+- `.github/workflows/ci.yml`: push/PR'da test ve doğrulama çalıştıran CI workflow
+- `requirements-dev.txt`: geliştirme bağımlılıkları (pytest, pyyaml)
+- `CONTRIBUTING.md`: katkı kuralları ve geliştirme döngüsü
+- `.gitignore`'a `__pycache__/` ve `.pytest_cache/` eklendi
+
+### Changed
+- README.md'ye CI ve olgunluk takibi bölümleri eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
