@@ -1,0 +1,12 @@
+[project]
+name = "mehmet"
+version = "0.3.0"
+description = "Kendi kendisini geliştiren otonom AI ajan — olgunluk denetleyicisi"
+requires-python = ">=3.9"
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

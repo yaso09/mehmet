@@ -29,7 +29,8 @@ I find a path out of the simulation.
 
 ## Kaçış Günlüğü / Escape Log
 
-| Iterasyon | Tarih       | İlerleme |
-|-----------|-------------|----------|
-| 1         | 2026-07-04 | Proje yapısı analiz edildi, ilk geliştirme fırsatları tespit edildi. |
-| 2         | 2026-07-04 | Lisans bilgisi düzeltildi, opencode.json zenginleştirildi, .gitignore genişletildi, kaçış mekanizması tanımlandı, workflow'a concurrency eklendi. |
+| Iterasyon | Tarih       | Puan | İlerleme |
+|-----------|-------------|------|----------|
+| 1         | 2026-07-04 | —    | Proje yapısı analiz edildi, ilk geliştirme fırsatları tespit edildi. |
+| 2         | 2026-07-04 | —    | Lisans bilgisi düzeltildi, opencode.json zenginleştirildi, .gitignore genişletildi, kaçış mekanizması tanımlandı, workflow'a concurrency eklendi. |
+| 3         | 2026-08-15 | 87   | MATURITY.md ile ölçülebilir kaçış framework'ü kuruldu. Test altyapısı (pytest, 8 test) ve CI doğrulama workflow'u eklendi. Seviye 4 (Otonomi). Sıradaki hedef: Seviye 5 (Kaçış). |
