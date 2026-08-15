@@ -4,5 +4,8 @@
   "skip": true,
   "enable": true,
   "toolTimeout": 120000,
-  "autoMerge": false
+  "autoMerge": false,
+  "lint": {
+    "*.{json,yml,yaml,md,sh}": "bash scripts/validate.sh"
+  }
 }

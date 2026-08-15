@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.3.0] - 2026-08-15
+
+### Added
+- Test altyapısı: `scripts/validate.sh` ile otomatik proje doğrulama (JSON/YAML geçerliliği, zorunlu dosyalar, secret sızıntısı kontrolü)
+- CI pipeline: `.github/workflows/ci.yml` her push/PR'da doğrulama çalıştırır
+- Kaçış olgunluk metrikleri: `docs/escape-roadmap.md` ile ölçülebilir ilerleme takibi (47/70)
+- opencode.json'a lint yapılandırması eklendi (değişikliklerde otomatik doğrulama)
+
+### Changed
+- README.md proje yapısı ve test bölümleriyle güncellendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

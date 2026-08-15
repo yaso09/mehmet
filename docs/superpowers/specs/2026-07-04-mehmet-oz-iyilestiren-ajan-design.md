@@ -94,6 +94,6 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- İlerleme metrikleri — `docs/escape-roadmap.md` ile uygulandı (47/70)
+- CI doğrulama — `scripts/validate.sh` + `.github/workflows/ci.yml` ile uygulandı
 - Çoklu ajan desteği
