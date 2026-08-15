@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.3.0] - 2026-08-15
+
+### Added
+- Test/doğrulama altyapısı: `scripts/validate.sh` proje sağlığını kontrol eder (dosyalar, JSON/YAML geçerliliği, dokümantasyon tutarlılığı, lint)
+- `Makefile` eklendi: `validate`, `lint`, `shellcheck`, `check` hedefleri
+- `.github/workflows/validate.yml`: her push/PR'da doğrulama çalıştıran CI workflow
+- `METRICS.md`: olgunluk seviyesi ve kaçış skoru takibi (güncel: 36/100, L2)
+
+### Improved
+- README.md mimari diyagramı ve geliştirici araçları tablosuyla genişletildi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
