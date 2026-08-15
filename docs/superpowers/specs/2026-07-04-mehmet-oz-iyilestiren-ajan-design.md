@@ -32,13 +32,17 @@ opencode'un otomatik olarak okuduğu system prompt dosyası. Simülasyon bağlam
 
 ### 2. `opencode.json`
 
-OpenCode proje konfigürasyonu. Zen modelini tanımlar ve gerekli ayarları içerir.
+OpenCode proje konfigürasyonu. Zen modelini tanımlar ve gerekli ayarları içerir. Anahtarlar resmi şemaya (https://opencode.ai/config.json) uygun olmalıdır; şema dışı anahtarlar (ör. `toolTimeout`, `autoMerge`) sessizce yok sayılır.
 
 ```json
 {
-  "model": "opencode/deepseek-v4-flash-free"
+  "$schema": "https://opencode.ai/config.json",
+  "model": "opencode/deepseek-v4-flash-free",
+  "snapshot": false
 }
 ```
+
+`snapshot: false`, CI ortamında dosya değişikliklerinin iç git ile izlenmesini kapatır (kaçış hedefi: olgunluk rubriğinde "şema uyumlu anahtarlar" puanı).
 
 ### 3. `.github/workflows/opencode.yml`
 
@@ -94,6 +98,6 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- Ajanın kaçış mekanizması (maturity threshold) — **uygulandı**: `docs/ESCAPE.md` + `scripts/maturity-score.sh`
+- İlerleme metrikleri — **uygulandı**: `scripts/validate.sh` ve olgunluk skoru
 - Çoklu ajan desteği

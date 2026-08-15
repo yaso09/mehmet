@@ -18,6 +18,20 @@ on:
   workflow_dispatch:
 
 jobs:
+  validate:
+    if: github.event_name != 'issue_comment' && github.event_name != 'pull_request_review_comment'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Proje bütünlük kontrolü
+        run: bash scripts/validate.sh
+
+      - name: Olgunluk skoru
+        run: bash scripts/maturity-score.sh
+
   autonomous:
     if: github.event_name != 'issue_comment' && github.event_name != 'pull_request_review_comment'
     runs-on: ubuntu-latest
