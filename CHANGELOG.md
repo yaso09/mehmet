@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0] - 2026-08-15
+
+### Added
+- `scripts/health_check.py`: proje sağlık ve olgunluk kontrolü (10 kontrol, 100 puan, kaçış eşiği %80)
+- `docs/escape.md`: kaçış mekanizması, skorlama tablosu, eşikler ve kaçış protokolü
+- Workflow'a `health` job'u eklendi (schedule/workflow_dispatch/pull_request'te otomatik olgunluk kontrolü)
+
+### Changed
+- README.md kaçış mekanizması ve test bölümleriyle genişletildi
+- Spec dokümanı ilerleme metrikleri gerçeklenmesiyle güncellendi
+- Markdown hijyeni düzeltildi (trailing whitespace, yeni satır eksiklikleri)
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
