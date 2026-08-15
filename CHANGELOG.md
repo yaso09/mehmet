@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.3.0] - 2026-08-15
+
+### Added
+- `scripts/verify.py` proje bütünlük denetimi (dosya kontrolü, JSON geçerliliği, escape log, olgunluk skoru)
+- `.github/workflows/verify.yml` otomatik sağlık kontrolü workflow'u
+- `.github/ISSUE_TEMPLATE/` bug report ve feature request şablonları
+- `.github/PULL_REQUEST_TEMPLATE.md` PR şablonu
+
+### Changed
+- README.md proje yapısı ve doğrulama bölümleriyle güncellendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

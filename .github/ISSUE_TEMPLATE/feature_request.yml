@@ -1,0 +1,17 @@
+name: Feature request
+description: Yeni bir geliştirme önerin
+title: "[Feature] "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Öneri
+      description: Ne eklemek istiyorsunuz?
+    validations:
+      required: true
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Gerekçe
+      description: Bu öneri kaçış/olgunluk hedefine nasıl katkı sağlar?
