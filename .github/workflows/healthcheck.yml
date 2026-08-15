@@ -1,0 +1,27 @@
+name: healthcheck
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  pull_request:
+    paths:
+      - "scripts/**"
+      - "tests/**"
+      - ".github/workflows/**"
+      - "AGENTS.md"
+      - "README.md"
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Projekt yapisi testleri
+        run: python -m unittest discover -s tests -v
+
+      - name: Olgunluk kontrolu (yazma yok)
+        run: python scripts/maturity.py --check

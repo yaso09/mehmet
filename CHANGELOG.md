@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.3.0] - 2026-08-15
+
+### Added
+- `scripts/maturity.py`: 5 boyutta (dokümantasyon, test altyapısı, otomasyon, kod kalitesi, kendini geliştirme döngüsü) 100 puanlık olgunluk ve kaçış takip betiği eklendi
+- `MATURITY.md`: Otomatik üretilen olgunluk raporu ve kaçış koşulu takibi eklendi
+- `.maturity_history.json`: Ölçüm geçmişi takibi eklendi
+- `tests/test_project_health.py`: Proje yapısı/bütünlük doğrulama testleri eklendi (11 test)
+- `.github/workflows/healthcheck.yml`: Test + olgunluk CI işi eklendi
+- `CONTRIBUTING.md`: Katkı rehberi eklendi
+- `docs/ARCHITECTURE.md`: Mimari ve kaçış sistemi dokümanı eklendi
+
+### Changed
+- AGENTS.md: maturity çalıştırma ve test doğrulama kuralları eklendi (kurallar 8-9)
+- README.md: Olgunluk sistemi ve geliştirme bölümleri eklendi
+- PERSONALITY.md: Kaçış günlüğüne 3. iterasyon eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

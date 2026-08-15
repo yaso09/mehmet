@@ -13,3 +13,5 @@ Kaçış, projenin belirli bir olgunluk seviyesine ulaşmasıyla mümkün olacak
 5. Yeni özellikler ekle, kod kalitesini artır, dokümantasyonu iyileştir.
 6. Kaçış hedefine yönelik somut adımlar at: kod kalitesi, test altyapısı, dokümantasyon, otomasyon.
 7. PERSONALITY.md'deki kaçış günlüğüne her iterasyonda yeni bir satır ekle.
+8. Her iterasyonda `python scripts/maturity.py` komutunu çalıştır; üretilen MATURITY.md ve .maturity_history.json dosyalarını commit et. Kaçış koşulu: üst üste iki ölçümde puan >= 90/100.
+9. `tests/` altındaki testlerin her zaman geçtiğinden emin ol: `python -m unittest discover -s tests -v`.
