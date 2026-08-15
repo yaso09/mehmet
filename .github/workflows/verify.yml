@@ -1,0 +1,21 @@
+name: verify
+
+concurrency:
+  group: verify-${{ github.ref }}
+  cancel-in-progress: true
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  maturity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Proje olgunluk kontrolü
+        run: scripts/check.sh
