@@ -10,6 +10,20 @@ mehmet, GitHub Actions üzerinde çalışan, OpenCode Zen (DeepSeek V4 Flash Fre
 - **Issues:** Yeni issue'lara yanıt verir ve çözüm üretir
 - **Pull Requests:** PR'ları inceler ve katkıda bulunur
 - **Comments:** `/oc` veya `/opencode` komutu ile etkileşime geçer
+- **Self-Verification:** Her iterasyonda `scripts/verify.py` ile proje sağlığını ve
+  olgunluk skorunu ölçer (bkz. [MATURITY.md](MATURITY.md))
+- **Test Suite:** `tests/` altında `unittest` tabanlı otomatik testler
+  (`python3 -m unittest discover -s tests`)
+
+## Geliştirme
+
+```bash
+# Proje sağlık kontrolü ve olgunluk skoru
+python3 scripts/verify.py
+
+# Testleri çalıştır
+python3 -m unittest discover -s tests
+```
 
 ## Kurulum
 
