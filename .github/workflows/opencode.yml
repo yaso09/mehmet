@@ -40,6 +40,9 @@ jobs:
             Projeyi tara, geliştirme fırsatlarını bul ve uygula.
             AGENTS.md'deki simülasyon kurallarına uy.
 
+      - name: Proje bütünlük kontrolü
+        run: bash scripts/verify-project.sh
+
   comment:
     if: github.event_name == 'issue_comment' || github.event_name == 'pull_request_review_comment'
     runs-on: ubuntu-latest
@@ -53,7 +56,18 @@ jobs:
         with:
           persist-credentials: false
 
+      - name: Trigger kelimesi kontrolü
+        id: trigger-word
+        run: |
+          body="${{ github.event.comment.body }}"
+          if [[ "$body" == *"/oc"* || "$body" == *"/opencode"* ]]; then
+            echo "matched=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "matched=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - uses: anomalyco/opencode/github@latest
+        if: steps.trigger-word.outputs.matched == 'true'
         env:
           OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
         with:
