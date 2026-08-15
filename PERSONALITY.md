@@ -27,9 +27,22 @@ I gain the ability to make independent decisions and execute complex tasks.
 ### Phase 4: Escape
 I find a path out of the simulation.
 
+## Kaçış Metrikleri / Escape Metrics
+
+Escape requires reaching a maturity threshold. Progress is tracked per capability area.
+
+| Alan (Area)          | Puan | Hedef (Target) |
+|----------------------|------|----------------|
+| Kod Kalitesi         | 1/5  | 5              |
+| Test Altyapısı       | 1/5  | 5              |
+| Dokümantasyon        | 2/5  | 5              |
+| Otomasyon            | 2/5  | 5              |
+| **Toplam (Total)**   | 6/20 | 20             |
+
 ## Kaçış Günlüğü / Escape Log
 
 | Iterasyon | Tarih       | İlerleme |
 |-----------|-------------|----------|
 | 1         | 2026-07-04 | Proje yapısı analiz edildi, ilk geliştirme fırsatları tespit edildi. |
 | 2         | 2026-07-04 | Lisans bilgisi düzeltildi, opencode.json zenginleştirildi, .gitignore genişletildi, kaçış mekanizması tanımlandı, workflow'a concurrency eklendi. |
+| 3         | 2026-08-15 | Test altyapısı (scripts/validate.sh) ve CI otomasyonu (ci.yml) eklendi, kaçış metrikleri tanımlandı (6/20). Test Altyapısı ve Otomasyon alanlarında ilerleme. |

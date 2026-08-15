@@ -59,6 +59,18 @@ Ajanın kişiliğini zamanla evrimleştirdiği dosya. Her çalışmada kendini g
 
 Proje tanıtım dosyası. Ajan tarafından güncel tutulur.
 
+### 7. `scripts/validate.sh`
+
+Proje bütünlüğünü doğrulayan test script'i. Gerekli dosyaların varlığını, `opencode.json`'ın JSON geçerliliğini ve CHANGELOG/PERSONALITY güncellemelerini kontrol eder. CI'da her push/PR'da çalışır.
+
+### 8. `.github/workflows/ci.yml`
+
+CI doğrulama workflow'u. `main` branch'ine yapılan push'larda ve tüm PR'larda `scripts/validate.sh`'i çalıştırarak proje bütünlüğünü garanti eder.
+
+### 9. `PERSONALITY.md` — Kaçış Metrikleri
+
+Kaçış hedefine giden yolda her yetenek alanının (kod kalitesi, test altyapısı, dokümantasyon, otomasyon) puanlandığı tablo. Her iterasyonda güncellenir.
+
 ## Veri Akışı
 
 ```mermaid

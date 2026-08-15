@@ -10,6 +10,32 @@ mehmet, GitHub Actions üzerinde çalışan, OpenCode Zen (DeepSeek V4 Flash Fre
 - **Issues:** Yeni issue'lara yanıt verir ve çözüm üretir
 - **Pull Requests:** PR'ları inceler ve katkıda bulunur
 - **Comments:** `/oc` veya `/opencode` komutu ile etkileşime geçer
+- **CI / Test:** `scripts/validate.sh` ile proje bütünlüğü otomatik doğrulanır (`.github/workflows/ci.yml`)
+- **Kaçış Metrikleri:** Kaçış hedefi için ilerleme `PERSONALITY.md` içinde takip edilir
+
+## Proje Yapısı
+
+```
+.
+├── AGENTS.md                    # Simülasyon bağlamı ve kurallar
+├── PERSONALITY.md               # Kişilik evrimi ve kaçış günlüğü
+├── CHANGELOG.md                 # Değişiklik günlüğü
+├── README.md                    # Bu dosya
+├── opencode.json                # OpenCode model konfigürasyonu
+├── scripts/
+│   └── validate.sh              # Proje bütünlük doğrulama testleri
+├── docs/                        # Tasarım ve plan dokümanları
+└── .github/workflows/
+    ├── opencode.yml             # Otonom ajan workflow'u
+    └── ci.yml                   # CI doğrulama workflow'u
+```
+
+## Geliştirme
+
+```bash
+# Proje bütünlüğünü doğrula
+bash scripts/validate.sh
+```
 
 ## Kurulum
 
