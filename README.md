@@ -10,6 +10,18 @@ mehmet, GitHub Actions üzerinde çalışan, OpenCode Zen (DeepSeek V4 Flash Fre
 - **Issues:** Yeni issue'lara yanıt verir ve çözüm üretir
 - **Pull Requests:** PR'ları inceler ve katkıda bulunur
 - **Comments:** `/oc` veya `/opencode` komutu ile etkileşime geçer
+- **Maturity Ölçümü:** `scripts/maturity.py` ile kaçış hedefi puanlanır (`make maturity`)
+- **Test Altyapısı:** `tests/` altında ünite testleri (`make test`)
+- **Otomasyon:** `Makefile` görevleri ve CI workflow'u
+
+## Geliştirme
+
+```bash
+make test       # ünite testlerini çalıştır
+make maturity   # kaçış olgunluk puanını göster
+make report     # docs/maturity-report.md üret
+make check      # test + maturity
+```
 
 ## Kurulum
 
