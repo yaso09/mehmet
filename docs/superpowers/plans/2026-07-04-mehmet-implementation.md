@@ -242,7 +242,7 @@ mehmet, GitHub Actions üzerinde çalışan, OpenCode Zen (DeepSeek V4 Flash Fre
 
 ## Lisans
 
-MIT
+GPLv3
 ```
 
 - [ ] **Step 2: Commit**

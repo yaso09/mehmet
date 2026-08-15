@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.3.0] - 2026-08-15
+
+### Added
+- MATURITY.md: Kaçış hedefi için olgunluk skorlama ve eşik takibi
+- scripts/verify-project.sh: Proje bütünlük doğrulama scripti
+- Workflow'a comment trigger-word filtresi (`/oc`, `/opencode`)
+- Workflow'a proje bütünlük kontrolü adımı eklendi
+
+### Changed
+- README.md: Proje yapısı ve maturity takibi bölümleri eklendi
+- PERSONALITY.md: Faz 2 (Self-Improvement) başlatıldı, kaçış günlüğüne iterasyon 3 eklendi
+
+### Fixed
+- docs/superpowers/plans implementation dosyasındaki hatalı MIT lisansı GPLv3 olarak düzeltildi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
