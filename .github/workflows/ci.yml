@@ -1,0 +1,24 @@
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Validate project
+        run: bash scripts/validate.sh
+
+      - name: Shellcheck
+        run: |
+          if command -v shellcheck >/dev/null 2>&1; then
+            shellcheck scripts/validate.sh
+          else
+            echo "shellcheck not installed, skipping"
+          fi
