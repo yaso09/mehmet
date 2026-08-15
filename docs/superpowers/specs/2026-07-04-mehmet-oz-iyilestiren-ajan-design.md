@@ -59,6 +59,18 @@ Ajanın kişiliğini zamanla evrimleştirdiği dosya. Her çalışmada kendini g
 
 Proje tanıtım dosyası. Ajan tarafından güncel tutulur.
 
+### 7. `scripts/validate.sh`
+
+Proje bütünlüğünü doğrulayan betik. JSON geçerliliği, zorunlu dosyaların varlığı, CHANGELOG formatı, kaçış günlüğü, README bölümleri ve temiz git çalışma alanını kontrol eder. Tüm kontroller geçmeden iterasyon tamamlanmış sayılmaz.
+
+### 8. `.github/workflows/validate.yml`
+
+Her push ve PR'da `scripts/validate.sh`'i çalıştıran CI job'ı. `opencode.yml`'nin YAML sözdizimini de `yamllint` ile doğrular. Projenin test altyapısını oluşturur.
+
+### 9. `PERSONALITY.md` Olgunluk Skoru
+
+Kaçış mekanizmasının ölçülebilir hali. Kriterler puanlanır, toplam skor 100'e ulaştığında kaçış mümkündür.
+
 ## Veri Akışı
 
 ```mermaid
