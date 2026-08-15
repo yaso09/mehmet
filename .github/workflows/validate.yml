@@ -1,0 +1,25 @@
+name: validate
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  health-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Bash script sağlık kontrolü
+        run: bash scripts/health-check.sh
+
+      - name: Bash sözdizimi kontrolü
+        run: bash -n scripts/health-check.sh
+
+      - name: YAML sözdizimi doğrulama
+        run: |
+          for f in .github/workflows/*.yml; do
+            echo "Doğrulanıyor: $f"
+            node -e "const fs=require('fs');const s=fs.readFileSync('$f','utf8');if(!s.includes('on:')){throw new Error('on eksik')}" "$f" || exit 1
+          done
