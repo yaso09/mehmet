@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.0] - 2026-08-15
+
+### Added
+- `scripts/maturity.py` — ölçülebilir olgunluk/kaçış-hazırlık skorlama motoru (0-100, 4 grup)
+- Kaçış mekanizması kodlandı: `ESCAPE_THRESHOLD=80` + ardışık 3 nitelikli iterasyon (sürdürülebilir olgunluk)
+- `tests/` unittest altyapısı (`test_maturity.py`, `test_docs.py`, `tests/README.md`, `__init__.py`)
+- `.github/workflows/quality.yml` — CI: test + olgunluk kapısı, concurrency kontrolü
+- `docs/maturity.md` — kaçış mekanizması dokümantasyonu
+- `docs/maturity-history.json` — tarihli puan geçmişi takibi
+
+### Fixed
+- README.md'ye test/CI geliştirme bölümü eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

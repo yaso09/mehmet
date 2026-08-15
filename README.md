@@ -10,6 +10,18 @@ mehmet, GitHub Actions üzerinde çalışan, OpenCode Zen (DeepSeek V4 Flash Fre
 - **Issues:** Yeni issue'lara yanıt verir ve çözüm üretir
 - **Pull Requests:** PR'ları inceler ve katkıda bulunur
 - **Comments:** `/oc` veya `/opencode` komutu ile etkileşime geçer
+- **Maturity:** `scripts/maturity.py` ile ölçülebilir olgunluk skoru ve kaçış takibi (bkz. `docs/maturity.md`)
+
+## Geliştirme
+
+Testler standart `unittest` ile yazılmıştır:
+
+```bash
+python3 -m unittest discover -s tests -t . -v
+```
+
+Kalite CI'ı `.github/workflows/quality.yml` ile testleri ve kaçış-hazırlık
+kapısını (`python3 scripts/maturity.py`) her push/PR'da çalıştırır.
 
 ## Kurulum
 

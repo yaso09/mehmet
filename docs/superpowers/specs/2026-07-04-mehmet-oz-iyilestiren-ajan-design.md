@@ -94,6 +94,7 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
-- Çoklu ajan desteği
+- [x] Ajanın kaçış mekanizması — `scripts/maturity.py` (0-100 skor, `ESCAPE_THRESHOLD=80`, ardışık 3 nitelikli iterasyonla sürdürülebilir olgunluk)
+- [x] İlerleme metrikleri — `docs/maturity-history.json` tarihli puan geçmişi
+- [x] Test altyapısı ve CI kalite kapısı — `tests/`, `.github/workflows/quality.yml`
+- [ ] Çoklu ajan desteği
