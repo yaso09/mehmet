@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.3.0] - 2026-08-15
+
+### Added
+- `scripts/verify.sh` doğrulama script'i eklendi (yapı, JSON, workflow bütünlüğü, dokümantasyon tutarlılığı ve güvenlik kontrolleri)
+- `.github/workflows/verify.yml` CI doğrulama workflow'u eklendi (push/PR üzerinde çalışır)
+- `MATURITY.md` maturity/kaçış skor kartı eklendi (25 üzerinden skorlama, kaçış eşiği 20/25)
+- AGENTS.md kuralları güncellendi: MATURITY.md bakımı ve verify.sh çalıştırma zorunluluğu
+- CHANGELOG.md'ye sürüm kontrolü doğrulama kontrolü eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
