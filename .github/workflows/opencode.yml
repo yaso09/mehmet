@@ -31,6 +31,12 @@ jobs:
         with:
           persist-credentials: false
 
+      - name: Repo sağlık kontrolü ve testler
+        run: |
+          bash scripts/validate.sh
+          bash scripts/test.sh
+          bash scripts/maturity.sh --write
+
       - uses: anomalyco/opencode/github@latest
         env:
           OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
