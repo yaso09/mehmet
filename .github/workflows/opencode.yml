@@ -31,6 +31,11 @@ jobs:
         with:
           persist-credentials: false
 
+      - name: Run self-verification and tests
+        run: |
+          python3 scripts/verify.py
+          python3 -m unittest discover -s tests
+
       - uses: anomalyco/opencode/github@latest
         env:
           OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
@@ -39,6 +44,7 @@ jobs:
           prompt: |
             Projeyi tara, geliştirme fırsatlarını bul ve uygula.
             AGENTS.md'deki simülasyon kurallarına uy.
+            Her iterasyonda scripts/verify.py ve testleri çalıştır.
 
   comment:
     if: github.event_name == 'issue_comment' || github.event_name == 'pull_request_review_comment'
