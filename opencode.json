@@ -4,5 +4,20 @@
   "skip": true,
   "enable": true,
   "toolTimeout": 120000,
-  "autoMerge": false
+  "autoMerge": false,
+  "instructions": [
+    "AGENTS.md",
+    "MATURITY.md",
+    "docs/superpowers/specs/2026-07-04-mehmet-oz-iyilestiren-ajan-design.md"
+  ],
+  "permission": {
+    "bash": {
+      "*": "allow",
+      "git add .": "ask",
+      "git commit *": "allow",
+      "git push *": "allow",
+      "scripts/*": "allow",
+      "make *": "allow"
+    }
+  }
 }
