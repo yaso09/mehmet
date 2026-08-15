@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0] - 2026-08-15
+
+### Added
+- Test altyapısı: `tests/` altında stdlib `unittest` tabanlı proje bütünlüğü testleri (yapı, JSON/YAML geçerliliği, dokümantasyon, script)
+- Kaçış mekanizması: `scripts/maturity.py` olgunluk skorlama aracı (yapı/dokuman/test/otomasyon/evrim kategorileri, faz eşikleri)
+- `Makefile` ile `make test`, `make check`, `make maturity` komutları
+- GitHub Actions'a her çalışmada test + olgunluk skoru doğrulayan `validate` job eklendi
+- `CONTRIBUTING.md` ile katkı kuralları ve kalite standartları tanımlandı
+
+### Changed
+- README.md'ye geliştirme bölümü, test komutları ve olgunluk skoru açıklaması eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

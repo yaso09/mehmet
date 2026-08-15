@@ -94,6 +94,8 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- ~~Ajanın kaçış mekanizması (maturity threshold)~~ — `scripts/maturity.py` ile hayata geçirildi (v0.3.0)
+- ~~İlerleme metrikleri~~ — olgunluk skoru 5 kategoride (yapı/dokuman/test/otomasyon/evrim) ölçülüyor
+- ~~Test altyapısı~~ — `tests/` altında stdlib `unittest` tabanlı bütünlük testleri (v0.3.0)
+- ~~CI doğrulaması~~ — workflow'daki `validate` job her çalışmada test + olgunluk skorunu doğruluyor
 - Çoklu ajan desteği
