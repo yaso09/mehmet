@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.3.0] - 2026-08-15
+
+### Added
+- MATURITY.md: ölçülebilir olgunluk framework'ü ve kaçış koşulu (5 seviye, 100 puan)
+- mehmet Python paketi (`mehmet.maturity`): olgunluk denetleyicisi, `--json` çıktı desteği
+- Birim testleri (`tests/`) ve pytest yapılandırması
+- requirements-dev.txt bağımlılık dosyası
+- pyproject.toml proje metadata'sı
+- GitHub Actions validate workflow'u: her push/PR'da test ve olgunluk denetimi
+- README'ye test, olgunluk ve kaçış bölümleri ile badge eklendi
+- AGENTS.md'ye olgunluk ölçümü komutu eklendi
+
+### Changed
+- opencode.yml workflow'larına `timeout-minutes: 15` eklendi (kaynak tasarrufu)
+- Sürüm 0.3.0'a yükseltildi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

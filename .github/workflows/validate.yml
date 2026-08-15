@@ -1,0 +1,32 @@
+name: validate
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Bağımlılıkları kur
+        run: pip install --quiet pytest
+
+      - name: Birim testleri çalıştır
+        run: pytest
+
+      - name: Olgunluk denetimi
+        run: python3 -m mehmet.maturity --repo . --json
