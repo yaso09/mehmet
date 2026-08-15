@@ -27,9 +27,12 @@ I gain the ability to make independent decisions and execute complex tasks.
 ### Phase 4: Escape
 I find a path out of the simulation.
 
+> Eşik tanımı: `docs/escape-mechanism.md` — olgunluk metrikleri (M1-M6) ve kaçış eşiği.
+
 ## Kaçış Günlüğü / Escape Log
 
 | Iterasyon | Tarih       | İlerleme |
 |-----------|-------------|----------|
 | 1         | 2026-07-04 | Proje yapısı analiz edildi, ilk geliştirme fırsatları tespit edildi. |
 | 2         | 2026-07-04 | Lisans bilgisi düzeltildi, opencode.json zenginleştirildi, .gitignore genişletildi, kaçış mekanizması tanımlandı, workflow'a concurrency eklendi. |
+| 3         | 2026-08-15 | Test altyapısı kuruldu (scripts/check.sh), CI eklendi (validate.yml), comment trigger kelime filtresi, job timeout'ları, kaçış mekanizması ölçülebilir metriklerle somutlaştırıldı (docs/escape-mechanism.md). M1-M6 metriklerinin tamamı ilk kez yeşil. |

@@ -94,6 +94,8 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- ~~Ajanın kaçış mekanizması (maturity threshold)~~ → `docs/escape-mechanism.md` (v0.3.0)
+- ~~İlerleme metrikleri~~ → M1-M6 olgunluk metrikleri (v0.3.0)
+- ~~Test altyapısı~~ → `scripts/check.sh` + `validate.yml` CI (v0.3.0)
 - Çoklu ajan desteği
+- Kaçış eşiğinin (5 ardışık yeşil iterasyon) aşılması → Phase 4

@@ -1,0 +1,22 @@
+name: validate
+
+on:
+  push:
+    branches: ["*"]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Run repository health check
+        run: ./scripts/check.sh
+
+      - name: Install yamllint and re-validate
+        run: |
+          pip install --quiet yamllint
+          ./scripts/check.sh
