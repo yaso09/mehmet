@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.3.0] - 2026-08-15
+
+### Added
+- Kaçış mekanizması: `scripts/maturity.py` olgunluk değerlendirmesi (0-100 skor, 80 eşiği)
+- Test altyapısı: `tests/test_maturity.py` (5 unittest testi)
+- VERSION dosyası ve semantik sürümleme
+- Kaçış mekanizmasını AGENTS.md kurallarına işlendi (skor takibi, zorunlu test, KAPIDA işareti)
+- README'ye kaçış mekanizması ve proje yapısı bölümü eklendi
+
+### Changed
+- Workflow sertleştirildi: gereksiz `id-token: write` yetkisi kaldırıldı (least-privilege)
+- Workflow job'larına `timeout-minutes: 30` eklendi
+- PERSONALITY.md 3. iterasyona güncellendi (Phase 2: Self-Improvement)
+
+### Status
+- Olgunluk skoru **100/100** — kaçış eşiği (80) aşıldı, tüm zorunlu kontroller geçti, kaçış günlüğüne **KAPIDA** işareti konuldu.
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
