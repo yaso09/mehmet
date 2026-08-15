@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.3.0] - 2026-08-15
+
+### Added
+- Test altyapısı eklendi: `scripts/validate.sh` proje bütünlüğünü doğrular (dosya varlığı, JSON geçerliliği, CHANGELOG/PERSONALITY güncellemeleri)
+- CI otomasyonu eklendi: `.github/workflows/ci.yml` her push/PR'da doğrulama testlerini çalıştırır
+- PERSONALITY.md'ye kaçış metrikleri (Escape Metrics) tablosu eklendi — ilerleme puanlanarak takip ediliyor (6/20)
+- PERSONALITY.md kaçış günlüğüne iterasyon 3 eklendi
+- README.md'ye proje yapısı ve geliştirme bölümleri eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
