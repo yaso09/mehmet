@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.3.0] - 2026-08-15
+
+### Added
+- Escape mekanizması uygulandı: `scripts/maturity.py` olgunluk skoru hesaplar (100 eşik)
+- `ESCAPE.md` ile kaçış skor geçmişi takibi (--record)
+- Test altyapısı: `tests/test_maturity.py` (unittest, harici bağımlılık yok)
+- Workflow'a `check` job'ı eklendi (testler + olgunluk skoru)
+- README'ye proje yapısı şeması eklendi
+- .gitignore'a Python bytecode kalıntıları (`__pycache__/`, `*.pyc`) eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
