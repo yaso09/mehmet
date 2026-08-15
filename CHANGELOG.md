@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.3.0] - 2026-08-15
+
+### Added
+- Kaçış mekanizması: `scripts/maturity.py` olgunluk değerlendirme sistemi (6 boyut, 100 puan, eşik 80)
+- Test altyapısı: `tests/test_maturity.py` unittest suite (11 test)
+- CI workflow: `.github/workflows/ci.yml` test + olgunluk + JSON doğrulama
+- README.md'ye kaçış mekanizması ve test talimatları eklendi
+
+### Fixed
+- opencode.json'daki geçersiz anahtarlar (`skip`, `enable`, `toolTimeout`, `autoMerge`) kaldırıldı; şema uyumlu config yazıldı
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
