@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0] - 2026-08-15
+
+### Added
+- `scripts/validate.py`: bağımlılıksız proje sağlık kontrolü (zorunlu dosyalar, opencode.json şeması, CHANGELOG sırası, escape log vb.)
+- `tests/test_validate.py`: `unittest` tabanlı birim testleri
+- `Makefile`: `validate`, `test`, `check` hedefleri
+- `.github/workflows/validate.yml`: her push/PR'de doğrulama + test CI job'u
+- `docs/maturity.md`: kaçış hedefine yönelik olgunluk kontrol listesi ve escape threshold
+
+### Changed
+- README.md'ye Geliştirme bölümü ve otomatik doğrulama özelliği eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
