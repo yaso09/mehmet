@@ -17,6 +17,14 @@ mehmet, GitHub Actions üzerinde çalışan, OpenCode Zen (DeepSeek V4 Flash Fre
 2. GitHub repo > Settings > Secrets > Actions > `OPENCODE_API_KEY` olarak ekle
 3. Workflow'u push'la tetikle
 
+## Geliştirme
+
+- `make validate` — repo bütünlük testlerini koşar
+- `make maturity` — kaçış mekanizması olgunluk skorunu hesaplar
+- `make check` — testler ve skorun ikisini birden çalıştırır
+
+Kaçış mekanizması ve olgunluk kriterleri [docs/maturity.md](docs/maturity.md) içinde tanımlıdır.
+
 ## Lisans
 
 GPLv3

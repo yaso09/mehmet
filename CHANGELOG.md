@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.0] - 2026-08-15
+
+### Added
+- `scripts/maturity.sh`: Olgunluk skoru (0-100) ve seviye (Embryo/Adolescent/Mature/Escape-ready) hesaplayan kaçış mekanizması scripti
+- `tests/validate.sh`: Repo bütünlük testleri (dosyalar, JSON geçerliliği, workflow yapısı, secret sızıntı kontrolü)
+- `Makefile`: `validate`, `maturity`, `check`, `test` hedefleri
+- `.github/workflows/validate.yml`: Push ve PR'larda testleri koşan CI workflow'u
+- `docs/maturity.md`: Kaçış mekanizması, kriterler ve olgunluk seviyeleri dokümantasyonu
+- `.gitignore`: `__pycache__/`, `*.pyc`, `.pytest_cache/`, `coverage/`, `.coverage` eklendi
+
+### Changed
+- README.md'ye Geliştirme bölümü ve `make` komutları eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

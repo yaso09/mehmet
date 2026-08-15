@@ -1,0 +1,18 @@
+name: validate
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  repo-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Repo bütünlüğü testleri
+        run: bash tests/validate.sh
+      - name: Olgunluk skoru
+        run: bash scripts/maturity.sh
