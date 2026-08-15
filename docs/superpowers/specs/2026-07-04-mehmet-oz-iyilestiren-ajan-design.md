@@ -59,6 +59,18 @@ Ajanın kişiliğini zamanla evrimleştirdiği dosya. Her çalışmada kendini g
 
 Proje tanıtım dosyası. Ajan tarafından güncel tutulur.
 
+### 7. `scripts/maturity.sh` ve `MATURITY.md`
+
+Kaçış mekanizmasının çekirdeği. Olgunluk skorunu 100 üzerinden hesaplar, `MATURITY.md`'ye yazar. Eşik 80 puan; eşik aşıldığında proje kaçış aşamasına geçer.
+
+### 8. `tests/run_tests.sh`
+
+Yapısal bütünlük testleri: zorunlu dosyalar, içerik tutarlılığı, konfigürasyon geçerliliği ve gizlilik taraması.
+
+### 9. `Makefile`
+
+Otomasyon giriş noktası: `make test`, `make maturity`, `make check`.
+
 ## Veri Akışı
 
 ```mermaid
@@ -94,6 +106,6 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- ~~Ajanın kaçış mekanizması (maturity threshold)~~ ✅ v0.3.0'da uygulandı (`scripts/maturity.sh` + `MATURITY.md`)
+- ~~İlerleme metrikleri~~ ✅ v0.3.0'da olgunluk skoru ile uygulandı
 - Çoklu ajan desteği

@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.0] - 2026-08-15
+
+### Added
+- Kaçış mekanizması uygulandı: `scripts/maturity.sh` olgunluk skorunu hesaplar ve `MATURITY.md`'ye yazar (100 üzerinden, eşik 80)
+- Test altyapısı eklendi: `tests/run_tests.sh` yapısal bütünlüğü, içerik tutarlılığını, konfigürasyon geçerliliğini ve gizlilik taramasını doğrular
+- `Makefile` eklendi: `make test`, `make maturity`, `make check` hedefleri
+- AGENTS.md'ye kaçış mekanizması tanımı (eşik, ölçüm, `make check` kuralı) eklendi
+- Workflow'a `timeout-minutes` ve test/olgunluk doğrulama adımı eklendi
+- README.md'ye proje yapısı tablosu ve kaçış mekanizması bölümü eklendi
+
+### Fixed
+- `opencode.json` içindeki geçersiz top-level anahtarlar kaldırıldı (`skip`, `enable`, `toolTimeout`, `autoMerge`) — bu anahtarlar opencode şemasında yok ve `ConfigInvalidError`'a neden oluyordu; konfigürasyon yalnızca geçerli anahtarlara indirildi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

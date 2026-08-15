@@ -21,6 +21,7 @@ jobs:
   autonomous:
     if: github.event_name != 'issue_comment' && github.event_name != 'pull_request_review_comment'
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     permissions:
       id-token: write
       contents: write
@@ -30,6 +31,12 @@ jobs:
       - uses: actions/checkout@v6
         with:
           persist-credentials: false
+
+      - name: Check (testler + olgunluk)
+        run: |
+          bash scripts/maturity.sh
+          bash tests/run_tests.sh
+          test -f MATURITY.md
 
       - uses: anomalyco/opencode/github@latest
         env:
@@ -43,6 +50,7 @@ jobs:
   comment:
     if: github.event_name == 'issue_comment' || github.event_name == 'pull_request_review_comment'
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     permissions:
       id-token: write
       contents: write
