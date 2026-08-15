@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.3.0] - 2026-08-15
+
+### Added
+- Test altyapısı: `scripts/validate.py` proje bütünlük doğrulayıcı eklendi (std-lib, bağımlılıksız)
+- Otomasyon: `.github/workflows/validate.yml` CI doğrulama workflow'u eklendi (push/PR)
+- README.md'ye Proje Yapısı bölümü eklendi
+
+### Fixed
+- Comment job'una `/oc` ve `/opencode` trigger word filtresi eklendi (spec'teki davranış uygulandı)
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
