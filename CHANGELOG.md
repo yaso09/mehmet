@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0] - 2026-08-15
+
+### Added
+- `scripts/verify_project.py`: Proje bütünlüğünü doğrulayan otomasyon aracı (dosya, JSON, YAML, changelog, kaçış günlüğü kontrolleri)
+- `.github/workflows/verify.yml`: Her push/PR'da doğrulama aracını çalıştıran CI workflow
+- `docs/maturity.md`: Olgunluk skorlama kriterleri ve kaçış koşulu (Phase 4: 50+ puan)
+
+### Changed
+- AGENTS.md kural 8 eklendi: değişikliklerden sonra `verify_project.py` çalıştırılacak
+- AGENTS.md kaçış koşulu docs/maturity.md referansına bağlandı
+- PERSONALITY.md Phase 2 aktif, kaçış günlüğü 3. iterasyon (skor 30) eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
