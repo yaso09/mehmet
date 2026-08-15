@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.0] - 2026-08-15
+
+### Added
+- scripts/health-check.sh — proje bütünlüğünü doğrulayan sağlık kontrolü
+- .github/workflows/validate.yml — her push/PR'da sağlık kontrolü çalıştıran CI
+- METRICS.md — kaçış mekanizması için olgunluk skorlama sistemi (maks 100)
+- VERSION dosyası — sürüm takibi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
