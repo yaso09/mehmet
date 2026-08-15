@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.0] - 2026-08-15
+
+### Added
+- `mehmet/` Python paketi oluşturuldu: tarama (scanner), olgunluk skorlama (maturity) ve CLI rapor (report)
+- Kaçış olgunluğu motoru: 6 kriter (kaynak kod, test, CI, dokümantasyon, changelog, konfigürasyon) ağırlıklı skorlanır, eşik 0.90
+- `python -m mehmet` komut satırı arayüzü — projeyi tarar, fırsatları listeler, kaçış hazırlığını raporlar
+- `pyproject.toml` ile paket kurulumu ve pytest konfigürasyonu (console script `mehmet`)
+- 11 adet pytest testi (`tests/test_scanner.py`, `tests/test_maturity.py`)
+- GitHub Actions'a `test` job eklendi: pytest çalıştırır ve `python -m mehmet` ile kendini raporlar
+
+### Changed
+- README.md güncellendi: yeni özellikler, yapı ve kullanım dokümanları eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

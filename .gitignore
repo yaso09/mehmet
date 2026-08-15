@@ -6,3 +6,6 @@ node_modules/
 dist/
 build/
 *.tsbuildinfo
+*.egg-info/
+.pytest_cache/
+__pycache__/

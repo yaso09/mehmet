@@ -59,6 +59,20 @@ Ajanın kişiliğini zamanla evrimleştirdiği dosya. Her çalışmada kendini g
 
 Proje tanıtım dosyası. Ajan tarafından güncel tutulur.
 
+### 7. `mehmet/` — Çekirdek Paket
+
+Ajanın kendi kodunu ölçmek ve geliştirmek için kullandığı Python paketi:
+
+| Modül | Görev |
+|---|---|
+| `scanner.py` | Proje kökünü tarar, geliştirme fırsatlarını listeler |
+| `maturity.py` | Kaçış olgunluğunu 6 ağırlıklı kriterle skorlar (eşik 0.90) |
+| `report.py` | `python -m mehmet` CLI arayüzü, tarama + kaçış raporu üretir |
+
+### 8. `tests/` — Test Altyapısı
+
+`pytest` tabanlı testler. CI'da `test` job'ı olarak otomatik çalışır.
+
 ## Veri Akışı
 
 ```mermaid
@@ -94,6 +108,6 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- ~~Ajanın kaçış mekanizması (maturity threshold)~~ → `mehmet/maturity.py` ile uygulandı (eşik 0.90)
+- İlerleme metriklerinin GitHub'a raporlanması (issue/PR otomasyonu)
 - Çoklu ajan desteği
