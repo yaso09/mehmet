@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.0] - 2026-08-15
+
+### Added
+- `scripts/maturity.py`: Kaçış hedefi için olgunluk (maturity) puanlama mekanizması
+- `tests/test_maturity.py`: 12 ünite testi (stdlib unittest tabanlı)
+- `Makefile`: test, maturity, report, check, clean görevleri
+- `.github/workflows/ci.yml`: Push/PR'da test + maturity raporu çalıştıran CI job'u
+- `docs/maturity-report.md`: Otomatik üretilen olgunluk raporu
+
+### Changed
+- `opencode.json` config'i maturity skorlamasında daha detaylı puanlanıyor
+- Design spec'teki "Gelecek Geliştirmeler" tamamlanan maddeler işaretlendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
