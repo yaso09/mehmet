@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.3.0] - 2026-08-15
+
+### Fixed
+- `opencode.json` içindeki geçersiz anahtarlar (`skip`, `enable`, `toolTimeout`, `autoMerge`) kaldırıldı. Bu anahtarlar opencode config şemasında bulunmadığından opencode başlatmayı engelliyordu (`ConfigInvalidError`).
+
+### Added
+- Test altyapısı: `scripts/validate.py` ve `scripts/validate.sh` — YAML/JSON yapısını ve `opencode.json` şemasını doğrular
+- `.github/workflows/ci.yml` — her push/PR'da repository dosyalarını ve GitHub Actions workflow sözdizimini doğrular
+- `SECURITY.md` — güvenlik politikası ve güvenlik açığı bildirim yönergeleri
+- `CONTRIBUTING.md` — katkıda bulunma rehberi ve geliştirme akışı
+
+### Changed
+- `opencode.yml`: her iki job'a `timeout-minutes` eklendi (20/15 dk)
+- `opencode.yml`: comment job'una açıkça `mentions: /oc,/opencode` tanımlandı
+- README: rozetler, "Nasıl Çalışır" ve "Proje Yapısı" bölümleri, geliştirme rehberi eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
