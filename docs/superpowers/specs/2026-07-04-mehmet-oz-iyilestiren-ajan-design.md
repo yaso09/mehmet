@@ -94,6 +94,6 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- ~~Ajanın kaçış mekanizması (maturity threshold)~~ — **gerçeklendi:** docs/escape.md + scripts/health_check.py (v0.3.0)
+- ~~İlerleme metrikleri~~ — **gerçeklendi:** 10 kontrol, 100 puanlık olgunluk skoru (v0.3.0)
 - Çoklu ajan desteği

@@ -18,6 +18,17 @@ on:
   workflow_dispatch:
 
 jobs:
+  health:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' || github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - name: Saglik ve olgunluk kontrolu
+        run: python3 scripts/health_check.py
+
   autonomous:
     if: github.event_name != 'issue_comment' && github.event_name != 'pull_request_review_comment'
     runs-on: ubuntu-latest
