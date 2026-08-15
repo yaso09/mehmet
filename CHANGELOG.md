@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.0] - 2026-08-15
+
+### Added
+- MATURITY.md ile ölçülebilir kaçış mekanizması tanımlandı (kaçış eşiği 80/100)
+- scripts/check.sh olgunluk kontrol scripti eklendi (dokümantasyon, yapılandırma, otomasyon, güvenlik boyutları)
+- .github/workflows/verify.yml CI doğrulama workflow'u eklendi (her push/PR'da olgunluk kontrolü)
+- AGENTS.md'ye olgunluk takip kuralı (kural 8) eklendi
+
+### Changed
+- Ana workflow (opencode.yml) sertleştirildi: her job'a timeout-minutes eklendi
+- Yorum job'ına `/oc` veya `/opencode` trigger word filtresi eklendi
+- README.md'ye "Olgunluk / Kaçış" bölümü eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
