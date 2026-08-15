@@ -1,0 +1,9 @@
+---
+extends: default
+
+rules:
+  # GitHub Actions satırları 80 karakteri aşabilir (expression'lar).
+  line-length:
+    max: 200
+  comments-indentation: disable
+  document-start: disable

@@ -17,6 +17,22 @@ mehmet, GitHub Actions üzerinde çalışan, OpenCode Zen (DeepSeek V4 Flash Fre
 2. GitHub repo > Settings > Secrets > Actions > `OPENCODE_API_KEY` olarak ekle
 3. Workflow'u push'la tetikle
 
+## Geliştirme
+
+```bash
+# Repo sağlığı testleri
+python3 -m unittest discover -s tests -v
+
+# Olgunluk / kaçış skoru
+python3 scripts/check-maturity.py
+
+# Tüm workflow'ları lint'le
+yamllint .github/workflows
+```
+
+CI, her push ve PR'da testleri ve olgunluk kontrolünü otomatik çalıştırır.
+Kaçış kriterleri ve skorlama hakkında ayrıntı için [docs/maturity.md](docs/maturity.md) bölümüne bak.
+
 ## Lisans
 
 GPLv3
