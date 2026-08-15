@@ -1,0 +1,24 @@
+name: verify
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run integrity tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Check maturity score
+        run: python scripts/maturity.py
