@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.3.0] - 2026-08-15
+
+### Added
+- Kaçış mekanizması hayata geçirildi: `scripts/maturity.py` altı boyutta olgunluk skoru hesaplar
+- Kaçış kapısı: %100 skor gerekir ve yalnızca en az 3 farklı günde sürdürülen evrimle ulaşılır (history boyutu)
+- `--json` ve `--write` seçenekleriyle makine okunur çıktı ve `MATURITY.md` raporu
+- `scripts/validate.py` proje sağlık kontrolü (dosyalar, kurallar, lisans, sözdizimi)
+- `.github/workflows/ci.yml` her push/PR'da doğrulama ve maturity skorunu çalıştırır
+- README'ye maturity mekanizması, doğrulama ve proje yapısı bölümleri eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
