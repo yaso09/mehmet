@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.0] - 2026-08-15
+
+### Added
+- `scripts/validate.sh`: Repo sağlık kontrolü (zorunlu dosyalar, CHANGELOG formatı, README bölümleri, sır/anahtar taraması, script izinleri)
+- `scripts/maturity.sh`: Kaçış mekanizması — olgunluk skoru ve seviye hesaplama (Embryo → Escaped); `--write` ile MATURITY.md'yi günceller
+- `scripts/test.sh`: Test suite — validate ve maturity scriptlerinin davranışını test eder (7 test)
+- `MATURITY.md`: Olgunluk ve kaçış takip dosyası
+- `CONTRIBUTING.md`: Katkı rehberi ve geliştirme döngüsü dokümantasyonu
+- Workflow'a doğrulama ve test adımı eklendi (her çalışmadan önce validate.sh + test.sh + maturity.sh --write)
+
+### Changed
+- README.md: Doğrulama/olgunluk bölümü ve katkı linki eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
