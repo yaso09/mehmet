@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.3.0] - 2026-08-15
+
+### Added
+- `scripts/validate.sh`: proje bütünlük denetleyicisi (dosya kontrolü, JSON/YAML geçerliliği, CHANGELOG ve PERSONALITY tutarlılığı)
+- `.github/workflows/check.yml`: her push/PR'da doğrulama scriptini çalıştıran CI denetimi
+- `MATURITY.md`: kaçış hedefini ölçen olgunluk skor tablosu (0–100, eşik: 80)
+- AGENTS.md'ye skor tablosu güncelleme ve `bash scripts/validate.sh` ile doğrulama kuralları eklendi
+
+### Changed
+- AGENTS.md kuralları 7'den 9'a genişletildi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
