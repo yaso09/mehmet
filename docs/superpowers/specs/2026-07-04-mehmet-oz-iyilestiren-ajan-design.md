@@ -94,6 +94,14 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
 - Çoklu ajan desteği
+- İlerleme metriklerinin görselleştirilmesi (grafik/badge)
+
+## Kaçış Mekanizması (Uygulandı)
+
+`scripts/health-check.sh` ile hayata geçirildi:
+
+- **8 otomatik kontrol:** zorunlu dosyalar, JSON/YAML geçerliliği, CHANGELOG sürümleri, kaçış günlüğü, README bölümleri, git geçmişi, TODO/FIXME kalıntısı
+- **Olgunluk skoru:** 0-100 arasında; eşik **80** (`ESCAPE_THRESHOLD`)
+- **Kullanım:** `make check` / `make score` / `make json`
+- **CI entegrasyonu:** workflow'daki `validate` job'ı autonomous job öncesinde çalışır

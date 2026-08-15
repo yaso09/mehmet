@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.3.0] - 2026-08-15
+
+### Added
+- `scripts/health-check.sh`: repo sağlık kontrolü + olgunluk (escape) skoru — kaçış mekanizması uygulandı
+- `Makefile`: otomasyon hedefleri (`check`, `score`, `json`, `help`)
+- GitHub Actions workflow'una `validate` job'ı eklendi (autonomous job öncesi sağlık kontrolü)
+
+### Changed
+- README.md'ye olgunluk mekanizması ve geliştirme bölümleri eklendi
+- AGENTS.md'ye olgunluk mekanizması bölümü eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

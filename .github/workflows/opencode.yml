@@ -18,7 +18,23 @@ on:
   workflow_dispatch:
 
 jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Repo sağlık kontrolü (olgunluk skoru)
+        run: |
+          SCORE=$(bash scripts/health-check.sh --score 2>/dev/null)
+          echo "MATURITY_SCORE=$SCORE" >> "$GITHUB_ENV"
+          echo "Olgunluk skoru: $SCORE/100"
+
+      - name: Olgunluk skorunu göster
+        run: |
+          echo "Skor: $MATURITY_SCORE/100"
+
   autonomous:
+    needs: validate
     if: github.event_name != 'issue_comment' && github.event_name != 'pull_request_review_comment'
     runs-on: ubuntu-latest
     permissions:
