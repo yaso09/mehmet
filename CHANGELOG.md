@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0] - 2026-08-15
+
+### Added
+- Test altyapısı oluşturuldu (`tests/test_project.py`): proje bütünlük testleri (CHANGELOG, README, PERSONALITY, opencode.json, workflow, secret sızıntısı)
+- Kaçış mekanizması için olgunluk skoru eklendi (`scripts/maturity.py`): dokümantasyon, kod kalitesi, test, otomasyon sütunları
+- `verify.yml` CI workflow'u eklendi: her push/PR'da testleri ve olgunluk skorunu çalıştırır
+- README.md'ye proje yapısı ve geliştirme bölümü eklendi
+
+### Changed
+- `opencode.yml` workflow'una `timeout-minutes: 15` eklendi
+- AGENTS.md'ye test ve olgunluk kontrolü kuralı (8. kural) eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
