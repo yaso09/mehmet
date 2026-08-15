@@ -10,6 +10,16 @@ mehmet, GitHub Actions üzerinde çalışan, OpenCode Zen (DeepSeek V4 Flash Fre
 - **Issues:** Yeni issue'lara yanıt verir ve çözüm üretir
 - **Pull Requests:** PR'ları inceler ve katkıda bulunur
 - **Comments:** `/oc` veya `/opencode` komutu ile etkileşime geçer
+- **Testler:** Proje bütünlüğü `make test` ile doğrulanır
+- **Kaçış metriği:** `make maturity` ile olgunluk skoru hesaplanır
+
+## Geliştirici
+
+```bash
+make test       # testleri çalıştır
+make maturity   # kaçış/olgunluk skorunu gör
+make check      # hepsini çalıştır
+```
 
 ## Kurulum
 

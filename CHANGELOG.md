@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.3.0] - 2026-08-15
+
+### Added
+- Test altyapısı: `tests/test_project.py` (stdlib unittest, 21 test) proje bütünlüğünü doğrular
+- Kaçış/olgunluk metriği: `scripts/maturity.py` 0-100 skor üretir, kaçış eşiğini hesaplar
+- CI validation workflow: `.github/workflows/validate.yml` push/PR'da test ve maturity çalıştırır
+- `Makefile`: `test`, `maturity`, `check` hedefleri
+
+### Changed
+- `.github/workflows/opencode.yml`: action `@latest`'ten `@v1.18.18`'e pinlendi, job'lara 30 dk timeout eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
