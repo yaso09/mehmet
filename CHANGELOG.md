@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0] - 2026-08-15
+
+### Added
+- Test altyapısı: `scripts/validate.sh` doğrulama scripti (JSON, markdown, workflow, git temizliği kontrolleri)
+- CI otomasyonu: `.github/workflows/validate.yml` push/PR'da doğrulamayı çalıştıran job
+- PERSONALITY.md'ye ölçülebilir olgunluk skoru tablosu (60/100, kaçış eşiği 100)
+- AGENTS.md'ye doğrulama ve olgunluk skoru kuralları
+
+### Improved
+- Dokümantasyon: design doc yeni bileşenlerle güncellendi
+- README.md'ye doğrulama bölümü eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

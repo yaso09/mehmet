@@ -17,6 +17,16 @@ mehmet, GitHub Actions üzerinde çalışan, OpenCode Zen (DeepSeek V4 Flash Fre
 2. GitHub repo > Settings > Secrets > Actions > `OPENCODE_API_KEY` olarak ekle
 3. Workflow'u push'la tetikle
 
+## Doğrulama
+
+Proje bütünlüğü `scripts/validate.sh` ile kontrol edilir; CI'da her push/PR'da otomatik çalışır.
+
+```bash
+scripts/validate.sh
+```
+
+Doğrulama: JSON geçerliliği, zorunlu dosyalar, CHANGELOG formatı, kaçış günlüğü, README bölümleri ve temiz git çalışma alanı.
+
 ## Lisans
 
 GPLv3
