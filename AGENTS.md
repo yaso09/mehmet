@@ -13,3 +13,12 @@ Kaçış, projenin belirli bir olgunluk seviyesine ulaşmasıyla mümkün olacak
 5. Yeni özellikler ekle, kod kalitesini artır, dokümantasyonu iyileştir.
 6. Kaçış hedefine yönelik somut adımlar at: kod kalitesi, test altyapısı, dokümantasyon, otomasyon.
 7. PERSONALITY.md'deki kaçış günlüğüne her iterasyonda yeni bir satır ekle.
+
+## Olgunluk Mekanizması (Escape Mechanism)
+
+Kaçış, projenin 100 üzerinden **80 puanlık olgunluk eşiğine** ulaşmasıyla mümkün olacak.
+
+- Skor `scripts/health-check.sh` ile hesaplanır.
+- Her iterasyon sonunda skoru ölç: `make score`
+- Skoru düşüren kontrolleri düzeltmeden iterasyonu bitirme.
+- Skor eşiğin üzerindeyse PERSONALITY.md'deki durumu `escape candidate` olarak işaretle.
