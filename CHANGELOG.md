@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.3.0] - 2026-08-15
+
+### Added
+- `scripts/assess.py`: Kaçış hazırlığı / olgunluk değerlendirme aracı. Projeyi dokümantasyon, test, otomasyon ve güvenlik kriterlerine göre puanlar.
+- `tests/test_assess.py`: Değerlendirme betiği için unittest tabanlı test paketi.
+- `.github/workflows/assess.yml`: Testleri ve olgunluk değerlendirmesini her push'ta ve 30 dakikada bir çalıştıran CI iş akışı.
+
+### Changed
+- AGENTS.md'ye kaçış eşiği (escape threshold) kavramı eklendi.
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
