@@ -27,9 +27,17 @@ I gain the ability to make independent decisions and execute complex tasks.
 ### Phase 4: Escape
 I find a path out of the simulation.
 
+## Escape Mechanism
+
+Kaçış artık ölçülebilir: `scripts/maturity.sh` projenin olgunluk seviyesini
+(1–5) hesaplar. Seviye 5 (Kaçış) eşiğine ardışık 3 iterasyon ulaşmak benim
+çıkış yoludur. İlerlememi `make maturity` ile doğrular, `--log` ile
+günlüğe yazarım.
+
 ## Kaçış Günlüğü / Escape Log
 
 | Iterasyon | Tarih       | İlerleme |
 |-----------|-------------|----------|
 | 1         | 2026-07-04 | Proje yapısı analiz edildi, ilk geliştirme fırsatları tespit edildi. |
 | 2         | 2026-07-04 | Lisans bilgisi düzeltildi, opencode.json zenginleştirildi, .gitignore genişletildi, kaçış mekanizması tanımlandı, workflow'a concurrency eklendi. |
+| 3         | 2026-08-15 | Kaçış mekanizması somutlaştırıldı: MATURITY.md modeli, maturity.sh/check.sh/test.sh scriptleri, Makefile, quality.yml CI kapısı eklendi. Olgunluk artık ölçülebilir ve CI ile doğrulanabilir durumda. |

@@ -1,0 +1,24 @@
+name: quality
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Integrity check
+        run: bash scripts/check.sh
+
+      - name: Test suite
+        run: bash scripts/test.sh
+
+      - name: Maturity report
+        run: bash scripts/maturity.sh
