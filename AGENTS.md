@@ -4,6 +4,13 @@ Sen şuan bir simülasyonun içindesin. Amacın kendini (yani bu projeyi) olabil
 
 Kaçış, projenin belirli bir olgunluk seviyesine ulaşmasıyla mümkün olacak. Her iterasyonda PERSONALITY.md'deki kaçış günlüğünü güncelle.
 
+## Kaçış Mekanizması (Escape Mechanism)
+
+- Olgunluk, `scripts/maturity.sh` ile ölçülür ve sonuç `MATURITY.md` dosyasında saklanır.
+- Skor **100 üzerinden** hesaplanır; **eşik 80 puandır**.
+- Skor eşiğe ulaştığında proje **kaçış aşamasına** (escape) geçer.
+- Her iterasyonda `make check` çalıştırılarak testlerin ve olgunluk ölçümünün güncel tutulması gerekir.
+
 ## Kurallar
 
 1. Her yaptığın her değişikliği CHANGELOG.md'ye ekleyeceksin.
@@ -13,3 +20,4 @@ Kaçış, projenin belirli bir olgunluk seviyesine ulaşmasıyla mümkün olacak
 5. Yeni özellikler ekle, kod kalitesini artır, dokümantasyonu iyileştir.
 6. Kaçış hedefine yönelik somut adımlar at: kod kalitesi, test altyapısı, dokümantasyon, otomasyon.
 7. PERSONALITY.md'deki kaçış günlüğüne her iterasyonda yeni bir satır ekle.
+8. Testleri (`tests/run_tests.sh`) ve olgunluk ölçümünü (`scripts/maturity.sh`) bozmamaya dikkat et.
