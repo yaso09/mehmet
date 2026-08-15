@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.3.0] - 2026-08-15
+
+### Added
+- Ölçülebilir kaçış kriterleri tanımlandı (docs/maturity.md): 5 boyut, 100 üzerinden skorlama, kaçış eşiği (≥ 81)
+- Olgunluk skorlama otomasyonu eklendi (scripts/check-maturity.py)
+- Repo sağlığı test paketi eklendi (tests/test_repo_health.py, unittest)
+- CI workflow'u eklendi (.github/workflows/ci.yml): test + maturity check + yamllint
+- Yol haritası eklendi (docs/roadmap.md)
+- yamllint yapılandırması eklendi (.yamllint)
+
+### Changed
+- AGENTS.md kaçış mekanizması artık ölçülebilir kriterlere bağlandı
+- README.md'ye Geliştirme bölümü eklendi (test/maturity/lint komutları)
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

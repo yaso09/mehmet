@@ -1,0 +1,31 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install Python deps
+        run: python3 -m pip install --quiet pyyaml
+
+      - name: Repo health tests
+        run: python3 -m unittest discover -s tests -v
+
+      - name: Maturity check
+        run: python3 scripts/check-maturity.py --threshold 81
+
+      - name: Lint workflows
+        uses: crazy-max/ghaction-yamllint@v3
+        with:
+          args: --format parsable --no-warnings -c .yamllint .github/workflows
