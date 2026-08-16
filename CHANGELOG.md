@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.0] - 2026-08-16
+
+### Added
+- Kaçış/olgunluk mekanizması: `scripts/score-maturity.sh` (0-100 skor, 5 faz) ve MATURITY.md
+- Test altyapısı: `scripts/test.sh`, `scripts/validate.sh`, `scripts/check-links.py`
+- CI workflow'u (`.github/workflows/ci.yml`) — push/PR'da test suite ve olgunluk eşiği (>= 90)
+- AGENTS.md'ye somut kaçış kapısı tanımı ve iterasyon prosedürü
+- README.md'ye test ve olgunluk bölümleri
+
+### Fixed
+- `opencode.json` şemasına aykırı geçersiz alanlar (`skip`, `enable`, `toolTimeout`, `autoMerge`) kaldırıldı; geçerli alanlarla yeniden yazıldı
+- `scripts/validate.sh` doğrulama suite'i depo durumunu otomatik kontrol ediyor
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
