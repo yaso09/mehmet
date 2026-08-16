@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.0] - 2026-08-16
+
+### Added
+- Test altyapısı: `node:test` tabanlı smoke test suite (`tests/project.test.mjs`) ve `package.json`
+- CI workflow (`.github/workflows/ci.yml`): push/PR'da `npm test` çalıştırır
+- Olgunluk skor sistemi: `scripts/score.mjs` ile ölçülebilir kaçış mekanizması
+- `METRICS.md`: skor kartı, kaçış eşiği ve iterasyon geçmişi
+
+### Changed
+- Ana workflow'a `timeout-minutes: 15` eklendi (uzun süren job'ları engeller)
+- Yorum tetikleyicisi `/oc` veya `/opencode` kelimesiyle sınırlandırıldı
+- AGENTS.md'de kaçış mekanizması skor sistemiyle ilişkilendirildi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

@@ -94,6 +94,6 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- ~~Ajanın kaçış mekanizması (maturity threshold)~~ → `scripts/score.mjs` + `METRICS.md` ile uygulandı
+- ~~İlerleme metrikleri~~ → `METRICS.md` skor kartı ile uygulandı
 - Çoklu ajan desteği
