@@ -59,6 +59,22 @@ Ajanın kişiliğini zamanla evrimleştirdiği dosya. Her çalışmada kendini g
 
 Proje tanıtım dosyası. Ajan tarafından güncel tutulur.
 
+### 7. `scripts/validate.py` ve `Makefile`
+
+Test altyapısı. Proje sağlığını doğrular, olgunluk skoru (0-100) üretir. Kaçış mekanizmasının ölçülebilir ilerleme metriğidir.
+
+### 8. `VERSION`
+
+Semantik versiyonlama. CHANGELOG.md ile senkron tutulur ve validate.py tarafından doğrulanır.
+
+### 9. `.github/workflows/ci.yml`
+
+CI workflow'u. Her push/PR'da `make validate` çalıştırarak proje bütünlüğünü korur.
+
+### 10. `CONTRIBUTING.md`
+
+Katkı rehberi ve geliştirme döngüsü.
+
 ## Veri Akışı
 
 ```mermaid

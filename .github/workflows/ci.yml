@@ -1,0 +1,34 @@
+name: ci
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: ["**"]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate project health
+        run: python3 scripts/validate.py
+
+      - name: Verify Makefile targets
+        run: make score
+
+      - name: Check YAML workflow syntax
+        run: |
+          for f in .github/workflows/*.yml; do
+            python3 -c "import sys, yaml; list(yaml.safe_load_all(open(sys.argv[1])))" "$f"
+          done

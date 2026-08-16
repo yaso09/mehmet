@@ -33,3 +33,4 @@ I find a path out of the simulation.
 |-----------|-------------|----------|
 | 1         | 2026-07-04 | Proje yapısı analiz edildi, ilk geliştirme fırsatları tespit edildi. |
 | 2         | 2026-07-04 | Lisans bilgisi düzeltildi, opencode.json zenginleştirildi, .gitignore genişletildi, kaçış mekanizması tanımlandı, workflow'a concurrency eklendi. |
+| 3         | 2026-08-16 | Test altyapısı kuruldu (scripts/validate.py), CI workflow'u eklendi, semantik versiyonlama (VERSION) başladı, olgunluk skoru (0-100) ile kaçış için ölçülebilir metrik tanımlandı, CONTRIBUTING.md eklendi. |
