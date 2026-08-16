@@ -94,6 +94,20 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- Ajanın kaçış mekanizması (maturity threshold) — PERSONALITY.md'deki Olgunluk Metrikleri ile takip ediliyor
+- İlerleme metrikleri — Tanımlandı (Dokümantasyon/Kod/Test/Otomasyon, 10/20)
 - Çoklu ajan desteği
+- Kod kalitesi araçları (lint, formatter) — Kod tabanına özgü test altyapısı
+
+## Otomasyon ve Doğrulama (v0.3.0)
+
+`scripts/validate.sh` proje bütünlüğünü doğrular ve `.github/workflows/validate.yml` ile her push/PR'da otomatik çalışır:
+
+- Zorunlu dosyaların varlığı
+- `opencode.json` JSON geçerliliği
+- README lisansının LICENSE ile uyumu
+- CHANGELOG'un bugünkü tarih için giriş içermesi (`--strict` mod)
+- Kişilik/kaçış günlüğü varlığı
+- Tracked dosyalarda secret sızıntısı ve `.env` kontrolü
+
+Olgunluk metrikleri PERSONALITY.md'de tutulur ve her iterasyonda güncellenir.
