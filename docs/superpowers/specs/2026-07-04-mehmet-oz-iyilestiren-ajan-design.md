@@ -94,6 +94,7 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
-- Çoklu ajan desteği
+- [x] Ajanın kaçış mekanizması (maturity threshold) — `scripts/maturity.sh` ile olgunluk puanı hesaplanır, `docs/maturity.md`'de raporlanır
+- [x] İlerleme metrikleri — `VERSION` dosyası ve CHANGELOG günlüğü üzerinden takip
+- [x] Test/doğrulama altyapısı — `scripts/validate.sh` + `.github/workflows/validate.yml` (CI)
+- [ ] Çoklu ajan desteği
