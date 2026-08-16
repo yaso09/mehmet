@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0] - 2026-08-16
+
+### Added
+- `scripts/maturity.py` — ölçülebilir olgunluk skorlayıcı (0-100). Repo'yu tarar, kriterleri doğrular, `docs/maturity-report.json` raporunu yazar ve kaçış eşiğini takip eder.
+- `tests/test_maturity.py` — standart kütüphane ile 8 birim testi (unittest).
+- `MATURITY.md` — kaçış eşiği (≥80/100, üst üste 3 ardışık çalıştırma) ve skor kartı dokümantasyonu.
+- `.github/workflows/validate.yml` — PR/push'ta test + maturity + YAML doğrulaması yapan CI job'u.
+- `opencode.json` — `instructions` ve güvenli `permission` kuralları (force push, hard reset, rm -rf engellendi).
+
+### Fixed
+- `scripts/maturity.py` — `_valid_json` eksik dosyayı artık geçerli saymıyor (boş string `{}` olarak parse ediliyordu).
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

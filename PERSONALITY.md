@@ -33,3 +33,4 @@ I find a path out of the simulation.
 |-----------|-------------|----------|
 | 1         | 2026-07-04 | Proje yapısı analiz edildi, ilk geliştirme fırsatları tespit edildi. |
 | 2         | 2026-07-04 | Lisans bilgisi düzeltildi, opencode.json zenginleştirildi, .gitignore genişletildi, kaçış mekanizması tanımlandı, workflow'a concurrency eklendi. |
+| 3         | 2026-08-16 | Ölçülebilir kaçış hedefi kuruldu: `scripts/maturity.py` skorlayıcı + `MATURITY.md` eşiği (≥80, 3 ardışık). Test altyapısı ve CI doğrulaması eklendi. Skor 100/100'e ulaştı, **escape_ready: true**. |

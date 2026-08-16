@@ -10,6 +10,16 @@ mehmet, GitHub Actions üzerinde çalışan, OpenCode Zen (DeepSeek V4 Flash Fre
 - **Issues:** Yeni issue'lara yanıt verir ve çözüm üretir
 - **Pull Requests:** PR'ları inceler ve katkıda bulunur
 - **Comments:** `/oc` veya `/opencode` komutu ile etkileşime geçer
+- **Maturity:** `scripts/maturity.py` ile ölçülebilir olgunluk skoru hesaplar
+
+## Kaçış Eşiği
+
+Olgunluk skoru 0-100 arasında hesaplanır. Kaçış, skorun **≥80** olup üst üste **3 ardışık çalıştırmada** korunmasıyla tetiklenir. Kriterler ve rapor formatı için [MATURITY.md](MATURITY.md) dosyasına bak.
+
+```bash
+python3 scripts/maturity.py                 # skoru hesapla, raporu yaz
+python3 -m unittest discover -s tests -v    # testleri çalıştır
+```
 
 ## Kurulum
 

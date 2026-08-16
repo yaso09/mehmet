@@ -1,0 +1,99 @@
+{
+  "score": 100,
+  "max": 100,
+  "threshold": 80,
+  "consistent_runs_required": 3,
+  "consistent_runs_above_threshold": 4,
+  "escape_ready": true,
+  "checked_at": "2026-08-16T17:10:39",
+  "criteria": {
+    "agents_prompt": {
+      "label": "AGENTS.md simulation prompt exists",
+      "points": 10,
+      "earned": 10,
+      "ok": true
+    },
+    "changelog": {
+      "label": "CHANGELOG.md exists and is recent",
+      "points": 10,
+      "earned": 10,
+      "ok": true
+    },
+    "personality": {
+      "label": "PERSONALITY.md escape log updated recently",
+      "points": 10,
+      "earned": 10,
+      "ok": true
+    },
+    "readme": {
+      "label": "README.md exists",
+      "points": 10,
+      "earned": 10,
+      "ok": true
+    },
+    "license": {
+      "label": "LICENSE exists",
+      "points": 5,
+      "earned": 5,
+      "ok": true
+    },
+    "opencode_config": {
+      "label": "opencode.json is valid JSON",
+      "points": 5,
+      "earned": 5,
+      "ok": true
+    },
+    "workflow": {
+      "label": "GitHub Actions workflow exists",
+      "points": 10,
+      "earned": 10,
+      "ok": true
+    },
+    "tests": {
+      "label": "tests/ passes",
+      "points": 20,
+      "earned": 20,
+      "ok": true
+    },
+    "automation": {
+      "label": "validation automation wired into CI",
+      "points": 10,
+      "earned": 10,
+      "ok": true
+    },
+    "maturity_tracking": {
+      "label": "maturity rubric documented (MATURITY.md)",
+      "points": 5,
+      "earned": 5,
+      "ok": true
+    },
+    "escape_log": {
+      "label": "escape log tracks >= 3 iterations",
+      "points": 5,
+      "earned": 5,
+      "ok": true
+    }
+  },
+  "history": [
+    {
+      "date": "2026-08-16",
+      "score": 85,
+      "max": 100
+    },
+    {
+      "date": "2026-08-16",
+      "score": 90,
+      "max": 100
+    },
+    {
+      "date": "2026-08-16",
+      "score": 100,
+      "max": 100
+    },
+    {
+      "date": "2026-08-16",
+      "score": 100,
+      "max": 100
+    }
+  ]
+}

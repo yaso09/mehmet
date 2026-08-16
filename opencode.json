@@ -4,5 +4,15 @@
   "skip": true,
   "enable": true,
   "toolTimeout": 120000,
-  "autoMerge": false
+  "autoMerge": false,
+  "instructions": ["AGENTS.md"],
+  "permission": {
+    "bash": {
+      "*": "allow",
+      "git push --force*": "deny",
+      "git reset --hard*": "deny",
+      "git clean -f*": "deny",
+      "rm -rf*": "deny"
+    }
+  }
 }
