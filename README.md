@@ -17,6 +17,19 @@ mehmet, GitHub Actions üzerinde çalışan, OpenCode Zen (DeepSeek V4 Flash Fre
 2. GitHub repo > Settings > Secrets > Actions > `OPENCODE_API_KEY` olarak ekle
 3. Workflow'u push'la tetikle
 
+## Doğrulama
+
+Her çalıştırmada `validate` job'u otomatik olarak bütünlük testlerini ve olgunluk skorunu denetler. Manuel çalıştırmak için:
+
+```bash
+bash tests/integrity_test.sh        # bütünlük testleri
+bash scripts/maturity.sh --check    # olgunluk skoru + kaçış eşiği
+```
+
+## Olgunluk
+
+Projenin olgunluk seviyesi [MATURITY.md](MATURITY.md) içinde tanımlanmıştır. Kaçış eşiği **11/12**'dir; mevcut skor **12/12**.
+
 ## Lisans
 
 GPLv3
