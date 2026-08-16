@@ -1,0 +1,31 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: python -m pip install pytest pyyaml
+
+      - name: Run tests
+        run: python -m pytest
+
+      - name: Run maturity check
+        run: python scripts/check_health.py
+
+      - name: Validate workflow YAML
+        run: python -c "import yaml,sys; [yaml.safe_load(open(f)) for f in ['opencode.yml','ci.yml']]"
+        working-directory: .github/workflows

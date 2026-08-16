@@ -94,6 +94,6 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- Ajanın kaçış mekanizması (maturity threshold) — **kısmen uygulandı**: `scripts/check_health.py` olgunluk skoru üretir (100/100), eşik `MIN_PASSING_SCORE = 80`
+- İlerleme metrikleri — **uygulandı**: CI (`ci.yml`) her push'ta test + maturity check çalıştırır
 - Çoklu ajan desteği
