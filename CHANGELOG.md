@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.3.0] - 2026-08-16
+
+### Added
+- `scripts/check-project.sh`: proje sağlık kontrolü (zorunlu dosyalar, JSON geçerliliği, lisans tutarlılığı, `--strict` modu)
+- `scripts/maturity.sh`: kaçış olgunluğu skoru (0-100) ve faz eşlemesi
+- `tests/run-tests.sh`: basit bash test koşucusu
+- `tests/check_project_test.sh` ve `tests/maturity_test.sh`: test durumları
+- `Makefile`: check/test/maturity/ci hedefleri
+- `docs/DEVELOPMENT.md`: geliştirici rehberi
+- CI: workflow'a `quality` işi eklendi (her olayda `make ci` çalıştırır)
+- README.md'ye geliştirme bölümü eklendi
+
+### Changed
+- `opencode.json`: `autoupdate: false` ve `share: "disabled"` eklendi (deterministik otonom davranış)
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

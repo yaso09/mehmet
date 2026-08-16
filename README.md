@@ -17,6 +17,19 @@ mehmet, GitHub Actions üzerinde çalışan, OpenCode Zen (DeepSeek V4 Flash Fre
 2. GitHub repo > Settings > Secrets > Actions > `OPENCODE_API_KEY` olarak ekle
 3. Workflow'u push'la tetikle
 
+## Geliştirme
+
+Proje, kendini geliştirmek için şu otomasyon araçlarını kullanır:
+
+```bash
+make check     # Proje sağlık kontrolü
+make test      # Test altyapısını çalıştır
+make maturity  # Kaçış olgunluğu skorunu göster
+make ci        # check + test
+```
+
+Detaylar için [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md) dosyasına bak.
+
 ## Lisans
 
 GPLv3

@@ -18,6 +18,22 @@ on:
   workflow_dispatch:
 
 jobs:
+  quality:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Proje sağlık kontrolü
+        run: make check
+
+      - name: Testler
+        run: make test
+
+      - name: Olgunluk skoru
+        run: make maturity
+
   autonomous:
     if: github.event_name != 'issue_comment' && github.event_name != 'pull_request_review_comment'
     runs-on: ubuntu-latest

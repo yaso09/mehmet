@@ -4,5 +4,7 @@
   "skip": true,
   "enable": true,
   "toolTimeout": 120000,
-  "autoMerge": false
+  "autoMerge": false,
+  "autoupdate": false,
+  "share": "disabled"
 }
