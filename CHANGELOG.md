@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.3.0] - 2026-08-16
+
+### Added
+- **Maturity / escape mekanizması**: `scripts/maturity.py` ile proje beş boyutta (code, tests, docs, automation, config) puanlanıyor; ilerleme `docs/metrics.json`'a kaydediliyor; 80/100 eşiğinde kaçış sinyali veriliyor
+- **Test altyapısı**: `tests/test_project.py` (stdlib `unittest`) ile proje bütünlüğü, lisans, changelog, config ve workflow testleri
+- **CI validate job'ı**: Workflow'da `autonomous` job'ından önce testler ve maturity skoru çalıştırılıyor
+- **Makefile**: `test`, `validate`, `maturity`, `docs`, `clean` hedefleri
+- **Design spec**: `docs/superpowers/specs/2026-08-16-maturity-escape-mechanism.md`
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
