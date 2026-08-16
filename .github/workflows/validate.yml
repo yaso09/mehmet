@@ -1,0 +1,24 @@
+name: validate
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Repo sağlık doğrulama
+        run: scripts/validate.sh
+
+      - name: Shell script lint (shellcheck)
+        run: shellcheck scripts/*.sh
+
+      - name: Olgunluk skoru
+        run: scripts/maturity-score.sh
