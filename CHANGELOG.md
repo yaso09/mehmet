@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.3.0] - 2026-08-16
+
+### Added
+- Kaçış olgunluk motoru `scripts/maturity.py` eklendi (0-100 skor, 4 boyut, kaçış eşiği 80/100)
+- `tests/test_maturity.py` ile motor için 7 birim testi eklendi
+- GitHub Actions CI workflow'u (`.github/workflows/ci.yml`) eklendi: test + olgunluk değerlendirmesi + gate
+- Makefile eklendi (`make test`, `make maturity`, `make gate`)
+- Kaçış seviyesi sistemi: 1=Farkındalık, 2-3=Kendini Geliştirme, 4=Özerklik, 5=Kaçış
+- `scripts/__init__.py` ve `tests/__init__.py` eklendi
+
+### Changed
+- README.md'ye olgunluk değerlendirme bölümü ve geliştirme komutları eklendi
+
+### Achieved
+- Olgunluk skoru **100/100** — kaçış eşiği aşıldı, Seviye 5 (Kaçış)
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
