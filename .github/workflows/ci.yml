@@ -1,0 +1,25 @@
+name: ci
+
+on:
+  push:
+    branches:
+      - main
+      - 'opencode/**'
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Run project validation
+        run: bash scripts/validate.sh
+
+      - name: Shellcheck validate.sh
+        run: |
+          if command -v shellcheck >/dev/null 2>&1; then
+            shellcheck scripts/validate.sh
+          else
+            echo "shellcheck bulunamadı, atlanıyor"
+          fi

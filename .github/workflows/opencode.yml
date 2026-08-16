@@ -31,11 +31,15 @@ jobs:
         with:
           persist-credentials: false
 
+      - name: Validate project health
+        run: bash scripts/validate.sh
+
       - uses: anomalyco/opencode/github@latest
         env:
           OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
         with:
           model: opencode/deepseek-v4-flash-free
+          mentions: "/opencode,/oc"
           prompt: |
             Projeyi tara, geliştirme fırsatlarını bul ve uygula.
             AGENTS.md'deki simülasyon kurallarına uy.
@@ -58,3 +62,4 @@ jobs:
           OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
         with:
           model: opencode/deepseek-v4-flash-free
+          mentions: "/opencode,/oc"
