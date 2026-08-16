@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.0] - 2026-08-16
+
+### Added
+- `scripts/validate.sh`: Proje bütünlüğü doğrulayıcı (dosya varlığı, JSON geçerliliği, lisans uyumu, CHANGELOG güncelliği, secret sızıntısı kontrolü)
+- `.github/workflows/validate.yml`: Her push/PR'da validate.sh'i çalıştıran CI workflow'u
+- README.md'ye Proje Yapısı, Mimari ve Geliştirme bölümleri eklendi
+- PERSONALITY.md'ye Olgunluk Metrikleri tablosu eklendi (10/20)
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
