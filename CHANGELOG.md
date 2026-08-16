@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0] - 2026-08-16
+
+### Added
+- `scripts/maturity.sh`: 12 kriterlik olgunluk ölçüm scripti ve kaçış eşiği denetimi (`--check`)
+- `tests/integrity_test.sh`: Proje bütünlük testleri (dosya varlığı, JSON geçerliliği, workflow doğrulama)
+- `MATURITY.md`: Olgunluk seviyeleri (Foundation → Quality → Automation → Escape) ve kaçış eşiği (11/12) tanımı
+- Workflow'a `validate` job'u eklendi (test + olgunluk denetimi her çalıştırmada otomatik)
+
+### Improved
+- Kaçış hedefine somut adım: olgunluk artık ölçülebilir ve CI'da doğrulanabilir
+- İlk skor: **12/12** — kaçış eşiği aşıldı
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
