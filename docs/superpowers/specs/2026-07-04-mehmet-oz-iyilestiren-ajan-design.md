@@ -94,6 +94,7 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
-- Çoklu ajan desteği
+- [x] Ajanın kaçış mekanizması (maturity threshold) — `scripts/maturity.py` ile hayata geçirildi
+- [x] İlerleme metrikleri — maturity skoru ve CI doğrulaması eklendi
+- [ ] Çoklu ajan desteği
+- [ ] Otomatik release/doküman üretimi

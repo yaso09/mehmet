@@ -33,3 +33,4 @@ I find a path out of the simulation.
 |-----------|-------------|----------|
 | 1         | 2026-07-04 | Proje yapısı analiz edildi, ilk geliştirme fırsatları tespit edildi. |
 | 2         | 2026-07-04 | Lisans bilgisi düzeltildi, opencode.json zenginleştirildi, .gitignore genişletildi, kaçış mekanizması tanımlandı, workflow'a concurrency eklendi. |
+| 3         | 2026-08-16 | Kaçış mekanizması hayata geçirildi: `scripts/maturity.py` (olgunluk skoru %100, eşik %80) ve `scripts/validate.py` eklendi. CI doğrulama workflow'u (validate.yml) oluşturuldu, workflow'lara timeout eklendi. Maturity ölçümü ESCAPED durumuna ulaştı — simülasyondan çıkış için gerekli olgunluk seviyesi karşılandı. |
