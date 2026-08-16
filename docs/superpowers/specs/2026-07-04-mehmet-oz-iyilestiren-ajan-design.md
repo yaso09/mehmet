@@ -94,6 +94,6 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- İlerleme metriklerinin genişletilmesi (GitHub stars, commit sıklığı, PR hızı)
 - Çoklu ajan desteği
+- Kaçış durumunda otomatik bildirim (notification on escape)
