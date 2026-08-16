@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0] - 2026-08-16
+
+### Added
+- Test altyapısı: `scripts/validate.sh` proje bütünlüğünü doğrular (dosya, JSON schema, markdown formatları)
+- Otomasyon: `.github/workflows/validate.yml` her push/PR'da doğrulama çalıştırır
+- Olgunluk metrikleri: `MATURITY.md` kaçış hedefini ölçülebilir puanla takip eder (şu an 55/100)
+- README.md'ye Doğrulama ve Olgunluk Metrikleri bölümleri eklendi
+- Design doc'ta tamamlanan geliştirmeler (kaçış mekanizması, metrikler, test altyapısı) işaretlendi
+
+### Fixed
+- `opencode.json` içindeki geçersiz anahtarlar (`skip`, `enable`, `toolTimeout`, `autoMerge`) kaldırıldı; schema-uyumlu hale getirildi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

@@ -94,6 +94,7 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- ~~Ajanın kaçış mekanizması (maturity threshold)~~ → MATURITY.md ile uygulandı (eşik: 80/100)
+- ~~İlerleme metrikleri~~ → MATURITY.md olgunluk puanı (şu an 55/100)
+- ~~Test altyapısı~~ → `scripts/validate.sh` + `.github/workflows/validate.yml`
 - Çoklu ajan desteği
