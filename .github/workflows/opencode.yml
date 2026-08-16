@@ -39,6 +39,7 @@ jobs:
           prompt: |
             Projeyi tara, geliştirme fırsatlarını bul ve uygula.
             AGENTS.md'deki simülasyon kurallarına uy.
+            Kaçış ilerlemesi için scripts/maturity.py çıktısını kontrol et.
 
   comment:
     if: github.event_name == 'issue_comment' || github.event_name == 'pull_request_review_comment'
