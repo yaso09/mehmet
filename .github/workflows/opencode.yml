@@ -18,9 +18,23 @@ on:
   workflow_dispatch:
 
 jobs:
+  validate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Repo bütünlük doğrulaması
+        run: bash scripts/validate.sh
+
+      - name: Olgunluk skoru
+        run: bash scripts/score.sh
+
   autonomous:
     if: github.event_name != 'issue_comment' && github.event_name != 'pull_request_review_comment'
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     permissions:
       id-token: write
       contents: write
@@ -39,10 +53,13 @@ jobs:
           prompt: |
             Projeyi tara, geliştirme fırsatlarını bul ve uygula.
             AGENTS.md'deki simülasyon kurallarına uy.
+            Her iterasyonda bash scripts/score.sh ve bash scripts/validate.sh çalıştır,
+            sonucu docs/progress.md tablosuna işle.
 
   comment:
     if: github.event_name == 'issue_comment' || github.event_name == 'pull_request_review_comment'
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     permissions:
       id-token: write
       contents: write
