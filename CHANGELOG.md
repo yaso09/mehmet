@@ -9,6 +9,9 @@
 - AGENTS.md'ye kaçış mekanizması akışı eklendi (selfcheck çalıştır, skoru kaydet, başarısız kontrolleri düzelt)
 - README.md'ye Geliştirme bölümü, selfcheck ve CI özellikleri eklendi
 
+### Fixed
+- .gitignore'a `__pycache__/` ve `*.py[cod]` eklendi (git-clean kontrolünün başarısız olmasına neden olan Python bytecode çıktıları)
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
