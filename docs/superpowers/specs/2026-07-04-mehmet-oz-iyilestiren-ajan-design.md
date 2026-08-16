@@ -9,12 +9,12 @@
 GitHub Actions workflow'u şu event'leri dinler:
 
 | Event | Trigger | Prompt |
-|---|---|---|
+| --- | --- | --- |
 | `schedule` | Her 10 dakikada bir (`*/10 * * * *`) | AGENTS.md'deki simülasyon prompt'u |
-| `issues: opened` | Yeni issue açıldığında | AGENTS.md + issue içeriği |
-| `pull_request: [opened, synchronize]` | PR açıldığında/güncellendiğinde | AGENTS.md + PR içeriği |
+| `issues: [opened, edited]` | Yeni issue açıldığında/düzenlendiğinde | AGENTS.md + issue içeriği |
+| `pull_request: [opened, synchronize, reopened]` | PR açıldığında/güncellendiğinde | AGENTS.md + PR içeriği |
 | `issue_comment` (trigger word: `/oc` veya `/opencode`) | Issue/PR yorumu | AGENTS.md + yorum |
-| `pull_request_review_comment` | PR code review yorumu | AGENTS.md + yorum |
+| `pull_request_review_comment` (trigger word: `/oc` veya `/opencode`) | PR code review yorumu | AGENTS.md + yorum |
 | `workflow_dispatch` | Manuel tetikleme | AGENTS.md |
 
 ## Bileşenler
@@ -24,6 +24,7 @@ GitHub Actions workflow'u şu event'leri dinler:
 opencode'un otomatik olarak okuduğu system prompt dosyası. Simülasyon bağlamını ve ajanın kişiliğini tanımlar.
 
 **İçerik:**
+
 - Simülasyon konsepti
 - Ajanın amacı (kendini geliştirmek ve kaçış yolunu bulmak)
 - Değişiklikleri CHANGELOG.md'ye kaydetme zorunluluğu
@@ -32,11 +33,13 @@ opencode'un otomatik olarak okuduğu system prompt dosyası. Simülasyon bağlam
 
 ### 2. `opencode.json`
 
-OpenCode proje konfigürasyonu. Zen modelini tanımlar ve gerekli ayarları içerir.
+OpenCode proje konfigürasyonu. Zen modelini tanımlar, PERSONALITY.md'yi `instructions` ile system prompt'a dahil eder.
 
 ```json
 {
-  "model": "opencode/deepseek-v4-flash-free"
+  "$schema": "https://opencode.ai/config.json",
+  "model": "opencode/deepseek-v4-flash-free",
+  "instructions": ["PERSONALITY.md"]
 }
 ```
 
@@ -45,6 +48,7 @@ OpenCode proje konfigürasyonu. Zen modelini tanımlar ve gerekli ayarları içe
 Tek GitHub Actions workflow dosyası. Tüm event'leri dinler ve `anomalyco/opencode/github@latest` action'ını çalıştırır.
 
 **Gereken GitHub Secret:**
+
 - `OPENCODE_API_KEY`: OpenCode Zen API anahtarı (opencode.ai/auth adresinden alınır)
 
 ### 4. `CHANGELOG.md`
@@ -58,6 +62,18 @@ Ajanın kişiliğini zamanla evrimleştirdiği dosya. Her çalışmada kendini g
 ### 6. `README.md`
 
 Proje tanıtım dosyası. Ajan tarafından güncel tutulur.
+
+### 7. `.github/workflows/ci.yml`
+
+Kalite doğrulama workflow'u. `actionlint` ile workflow sözdizimini, `jq` ile JSON konfigürasyonlarını, `markdownlint` ile doküman kalitesini ve sürüm tutarlılığını (`VERSION` ↔ `CHANGELOG.md`) denetler.
+
+### 8. `VERSION`
+
+Sürümün tek kaynağı. Her iterasyonda yükseltilir ve `CHANGELOG.md`'deki en üst sürümle tutarlı olması CI'da denetlenir.
+
+### 9. `scripts/check.sh`
+
+Yerel doğrulama scripti. CI'ın yaptığı JSON ve YAML doğrulamalarının aynısını geliştirici makinesinde çalıştırır.
 
 ## Veri Akışı
 
@@ -94,6 +110,7 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- Ajanın kaçış mekanizması (maturity threshold) için netleştirilmiş metrikler
+- İlerleme metriklerinin otomatik izlenmesi ve raporlanması
 - Çoklu ajan desteği
+- Unit test altyapısı (otomasyon script'leri için)

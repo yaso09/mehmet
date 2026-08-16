@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Validate GitHub Actions workflows
+        uses: raven-actions/actionlint@v2
+
+      - name: Validate JSON configs
+        run: |
+          set -e
+          jq empty opencode.json
+          jq -e '.model == "opencode/deepseek-v4-flash-free"' opencode.json > /dev/null
+          jq -e '.instructions | index("PERSONALITY.md") != null' opencode.json > /dev/null
+
+      - name: Lint Markdown
+        uses: DavidAnson/markdownlint-cli2-action@v24
+        with:
+          config: .markdownlint.json
+          globs: "**/*.md"
+          fix: false
+
+      - name: Verify version consistency
+        run: |
+          set -e
+          VERSION="$(cat VERSION)"
+          CHANGELOG_VERSION="$(grep -m1 -oP '(?<=^## \[)[^\]]+' CHANGELOG.md)"
+          test "$VERSION" = "$CHANGELOG_VERSION"
+          echo "Version $VERSION matches CHANGELOG."
