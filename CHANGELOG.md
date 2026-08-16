@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.3.0] - 2026-08-16
+
+### Added
+- Test/doğrulama altyapısı: `scripts/validate.sh` (zorunlu dosyalar, JSON/schema geçerliliği, doküman bütünlüğü kontrolü)
+- Olgunluk ölçümü: `scripts/maturity.sh` (5 boyutta 0-100 kaçış puanı hesaplar)
+- `PROGRESS.md`: olgunluk modeli, kaçış eşiği (90/100) ve yol haritası (kaçış mekanizması)
+- Workflow'a `validate` job'u eklendi; `autonomous` job'u doğrulamaya bağımlı hale getirildi
+- AGENTS.md kuralı: PROGRESS.md'deki olgunluk puanının her iterasyonda güncellenmesi
+
+### Changed
+- README.md: doğrulama komutları, proje yapısı ve yeni özellikler eklendi
+
+### Fixed
+- `opencode.json` şemaya aykırı anahtarlar (`skip`, `enable`, `toolTimeout`, `autoMerge`) kaldırıldı; açıkça `$schema` geçerli anahtarlarla (`instructions`, `logLevel`, `autoupdate`, `share`, `compaction`) yeniden yazıldı
+- `scripts/maturity.sh`'te ayrıcı satırdaki `printf --` hatası giderildi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
