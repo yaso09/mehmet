@@ -18,7 +18,21 @@ on:
   workflow_dispatch:
 
 jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Install yq
+        run: |
+          sudo snap install yq 2>/dev/null || sudo apt-get update -qq && sudo apt-get install -y -qq yq
+          command -v yq || echo "yq unavailable; health check will skip YAML validation"
+
+      - name: Health check
+        run: bash scripts/health-check.sh
+
   autonomous:
+    needs: validate
     if: github.event_name != 'issue_comment' && github.event_name != 'pull_request_review_comment'
     runs-on: ubuntu-latest
     permissions:

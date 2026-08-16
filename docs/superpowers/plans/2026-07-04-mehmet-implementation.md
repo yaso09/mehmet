@@ -1,5 +1,8 @@
 # mehmet Implementation Plan
 
+> **Status:** COMPLETED — initial setup done (iterations 1-2). Subsequent iterations add
+> test infrastructure, automation and the escape mechanism. See `docs/roadmap.md`.
+
 > **For agentic workers:** REQUIRED SUB-SKILL: subagent-driven-development or executing-plans
 
 **Goal:** Create the initial project structure for mehmet — an autonomous AI agent that runs via GitHub Actions using OpenCode Zen with DeepSeek V4 Flash Free.
@@ -242,7 +245,7 @@ mehmet, GitHub Actions üzerinde çalışan, OpenCode Zen (DeepSeek V4 Flash Fre
 
 ## Lisans
 
-MIT
+GPLv3
 ```
 
 - [ ] **Step 2: Commit**
