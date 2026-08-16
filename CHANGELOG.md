@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.0] - 2026-08-16
+
+### Added
+- `scripts/selfcheck.sh`: repo bütünlük, sürüm tutarlılığı ve olgunluk skoru denetimi
+- `VERSION` dosyası ve sürüm senkronizasyonu kontrolü (CHANGELOG/README ile)
+- `Makefile` (`make check`) ile tek komutla doğrulama
+- `docs/ROADMAP.md`: kaçış yol haritası ve olgunluk fazları
+- GitHub Actions workflow'una `Self-check` adımı eklendi
+- AGENTS.md'ye kural 8 (selfcheck zorunluluğu) ve kural 9 (VERSION senkronizasyonu)
+
+### Fixed
+- README.md'ye proje yapısı, doğrulama ve sürüm bölümleri eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
