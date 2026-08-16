@@ -59,6 +59,18 @@ Ajanın kişiliğini zamanla evrimleştirdiği dosya. Her çalışmada kendini g
 
 Proje tanıtım dosyası. Ajan tarafından güncel tutulur.
 
+### 7. `scripts/validate.py`
+
+Kaçış hedefini ölçülebilir kılan olgunluk doğrulama aracı. Projenin dokümantasyon, yapılandırma, otomasyon ve kod kalitesi kategorilerindeki durumunu kontrol eder, %0-100 arası bir skor üretir ve belirlenen eşiğin (varsayılan `%85`) altında kalındığında sıfırdan farklı çıkış kodu döndürür. `--json` bayrağı ile CI dostu çıktı üretir.
+
+```bash
+python3 scripts/validate.py --threshold 85
+```
+
+### 8. `.github/workflows/validate.yml`
+
+Push/PR'da ve günde 4 kez (her 6 saatte bir) çalışan CI doğrulama işi. `scripts/validate.py`'yi `%85` eşiğiyle koşturur ve skor eşiğin altındaysa işi başarısıza düşürür.
+
 ## Veri Akışı
 
 ```mermaid
@@ -94,6 +106,6 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- İlerleme metriklerinin zaman içindeki grafiği
 - Çoklu ajan desteği
+- Doğrulama sonuçlarının otomatik issue olarak raporlanması

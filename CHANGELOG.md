@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.3.0] - 2026-08-16
+
+### Added
+- `scripts/validate.py`: olgunluk skorlama ve doğrulama aracı (kaçış eşiği %85)
+- `.github/workflows/validate.yml`: push/PR'da ve günde 4 kez çalışan CI doğrulama işi
+- README.md'ye "Olgunluk ve Kaçış Durumu" bölümü
+- AGENTS.md'ye her iterasyonda `scripts/validate.py` çalıştırma kuralı
+- .gitignore'a `__pycache__/` ve `*.pyc` eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
