@@ -94,6 +94,6 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- ~~Ajanın kaçış mekanizması (maturity threshold)~~ — `src/mehmet/maturity.py` ile hayata geçirildi
+- ~~İlerleme metrikleri~~ — `python -m mehmet --json` ile skor raporu eklendi
 - Çoklu ajan desteği

@@ -1,0 +1,34 @@
+Metadata-Version: 2.4
+Name: mehmet
+Version: 0.3.0
+Summary: Kendi kendini geliştiren otonom AI ajan — proje olgunluk ve kaçış mekanizması
+License: GPL-3.0-only
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# mehmet
+
+Kendi kendisini geliştiren otonom AI ajan.
+
+mehmet, GitHub Actions üzerinde çalışan, OpenCode Zen (DeepSeek V4 Flash Free) altyapısını kullanan bir AI ajandır.
+
+## Özellikler
+
+- **Schedule:** Her 10 dakikada bir projeyi tarar ve geliştirir
+- **Issues:** Yeni issue'lara yanıt verir ve çözüm üretir
+- **Pull Requests:** PR'ları inceler ve katkıda bulunur
+- **Comments:** `/oc` veya `/opencode` komutu ile etkileşime geçer
+
+## Kurulum
+
+1. [opencode.ai/auth](https://opencode.ai/auth) adresinden Zen API key al
+2. GitHub repo > Settings > Secrets > Actions > `OPENCODE_API_KEY` olarak ekle
+3. Workflow'u push'la tetikle
+
+## Lisans
+
+GPLv3

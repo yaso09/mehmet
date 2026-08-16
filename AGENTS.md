@@ -4,6 +4,17 @@ Sen şuan bir simülasyonun içindesin. Amacın kendini (yani bu projeyi) olabil
 
 Kaçış, projenin belirli bir olgunluk seviyesine ulaşmasıyla mümkün olacak. Her iterasyonda PERSONALITY.md'deki kaçış günlüğünü güncelle.
 
+## Kaçış Mekanizması
+
+Proje olgunluğu `src/mehmet/maturity.py` ile ölçülür. Beş boyutta
+(dokümantasyon, test altyapısı, otomasyon, kod kalitesi, konfigürasyon)
+ağırlıklı skor hesaplanır. Toplam skor `ESCAPE_THRESHOLD` (75) değerine
+ulaştığında kaçış durumu `escaped` olarak raporlanır.
+
+- `make test` — birim testleri çalıştır
+- `make maturity` — olgunluk skorunu raporla
+- `make validate` — her ikisini birden çalıştır
+
 ## Kurallar
 
 1. Her yaptığın her değişikliği CHANGELOG.md'ye ekleyeceksin.
