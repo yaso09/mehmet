@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.0] - 2026-08-16
+
+### Added
+- `scripts/check_health.py`: Olgunluk/sağlık denetçisi — kaçış mekanizması için ölçülebilir maturity skoru (0-100) üretir
+- `tests/` altyapısı: pytest ile 7 test, `scripts/check_health.py` kapsanıyor
+- `pyproject.toml`: Proje metadata'sı ve pytest konfigürasyonu
+- `.github/workflows/ci.yml`: Test + maturity check + YAML doğrulama otomasyonu
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

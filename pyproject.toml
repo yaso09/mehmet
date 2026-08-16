@@ -1,0 +1,10 @@
+[project]
+name = "mehmet"
+version = "0.3.0"
+description = "Kendi kendisini geliştiren otonom AI ajan"
+requires-python = ">=3.8"
+license = { text = "GPLv3" }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
