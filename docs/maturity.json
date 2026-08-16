@@ -1,0 +1,162 @@
+{
+  "score": 100,
+  "max_score": 100,
+  "threshold": 80,
+  "escaped": true,
+  "criteria": [
+    {
+      "id": "doc_readme",
+      "category": "documentation",
+      "detail": "README.md mevcut ve bo\u015f de\u011fil",
+      "weight": 8,
+      "passed": true,
+      "earned": 8
+    },
+    {
+      "id": "doc_changelog",
+      "category": "documentation",
+      "detail": "CHANGELOG.md mevcut ve bo\u015f de\u011fil",
+      "weight": 6,
+      "passed": true,
+      "earned": 6
+    },
+    {
+      "id": "doc_personality",
+      "category": "documentation",
+      "detail": "PERSONALITY.md mevcut ve bo\u015f de\u011fil",
+      "weight": 6,
+      "passed": true,
+      "earned": 6
+    },
+    {
+      "id": "doc_agents",
+      "category": "documentation",
+      "detail": "AGENTS.md mevcut ve bo\u015f de\u011fil",
+      "weight": 6,
+      "passed": true,
+      "earned": 6
+    },
+    {
+      "id": "doc_docs",
+      "category": "documentation",
+      "detail": "docs/ dizininde dok\u00fcmantasyon mevcut",
+      "weight": 4,
+      "passed": true,
+      "earned": 4
+    },
+    {
+      "id": "auto_workflow",
+      "category": "automation",
+      "detail": "Ana agent workflow'u mevcut",
+      "weight": 8,
+      "passed": true,
+      "earned": 8
+    },
+    {
+      "id": "auto_schedule",
+      "category": "automation",
+      "detail": "Workflow zamanlanm\u0131\u015f (schedule) tetikleyici i\u00e7eriyor",
+      "weight": 4,
+      "passed": true,
+      "earned": 4
+    },
+    {
+      "id": "auto_concurrency",
+      "category": "automation",
+      "detail": "Workflow concurrency kontrol\u00fc i\u00e7eriyor",
+      "weight": 4,
+      "passed": true,
+      "earned": 4
+    },
+    {
+      "id": "auto_ci",
+      "category": "automation",
+      "detail": "CI workflow'u (ci.yml) mevcut",
+      "weight": 9,
+      "passed": true,
+      "earned": 9
+    },
+    {
+      "id": "quality_gitignore",
+      "category": "quality",
+      "detail": ".gitignore mevcut",
+      "weight": 5,
+      "passed": true,
+      "earned": 5
+    },
+    {
+      "id": "quality_license",
+      "category": "quality",
+      "detail": "LICENSE mevcut",
+      "weight": 5,
+      "passed": true,
+      "earned": 5
+    },
+    {
+      "id": "quality_config_valid",
+      "category": "quality",
+      "detail": "opencode.json ge\u00e7erli JSON",
+      "weight": 5,
+      "passed": true,
+      "earned": 5
+    },
+    {
+      "id": "quality_config_rich",
+      "category": "quality",
+      "detail": "opencode.json model tan\u0131m\u0131 i\u00e7eriyor",
+      "weight": 5,
+      "passed": true,
+      "earned": 5
+    },
+    {
+      "id": "tests_dir",
+      "category": "tests",
+      "detail": "tests/ dizini mevcut",
+      "weight": 8,
+      "passed": true,
+      "earned": 8
+    },
+    {
+      "id": "tests_files",
+      "category": "tests",
+      "detail": "tests/ i\u00e7inde test dosyalar\u0131 mevcut",
+      "weight": 8,
+      "passed": true,
+      "earned": 8
+    },
+    {
+      "id": "tests_assertions",
+      "category": "tests",
+      "detail": "Test dosyalar\u0131nda ger\u00e7ek test fonksiyonlar\u0131 mevcut",
+      "weight": 9,
+      "passed": true,
+      "earned": 9
+    }
+  ],
+  "categories": {
+    "documentation": {
+      "earned": 30,
+      "weight": 30,
+      "passed": 5,
+      "total": 5
+    },
+    "automation": {
+      "earned": 25,
+      "weight": 25,
+      "passed": 4,
+      "total": 4
+    },
+    "quality": {
+      "earned": 20,
+      "weight": 20,
+      "passed": 4,
+      "total": 4
+    },
+    "tests": {
+      "earned": 25,
+      "weight": 25,
+      "passed": 3,
+      "total": 3
+    }
+  }
+}
