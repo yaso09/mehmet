@@ -9,6 +9,9 @@
 - **Makefile**: `test`, `validate`, `maturity`, `docs`, `clean` hedefleri
 - **Design spec**: `docs/superpowers/specs/2026-08-16-maturity-escape-mechanism.md`
 
+### Fixed
+- `.gitignore`'a `__pycache__/` ve `*.pyc` eklendi; yanlışlıkla commit'lenen bytecode cache'i repodan kaldırıldı
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
