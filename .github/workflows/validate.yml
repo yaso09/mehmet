@@ -1,0 +1,27 @@
+name: validate
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+
+jobs:
+  maturity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Olgunluk doğrulaması
+        id: validate
+        run: python3 scripts/validate.py --threshold 85
+
+      - name: Raporu özetle
+        if: always()
+        run: echo "Olgunluk doğrulaması tamamlandı (skor doğrulama adımında görülebilir)."
