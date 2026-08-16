@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0] - 2026-08-16
+
+### Added
+- Maturity/kaçış mekanizması: `src/mehmet/maturity.py` ile proje olgunluğu beş boyutta ölçülür, `ESCAPE_THRESHOLD` (75) aşıldığında durum `escaped` olarak raporlanır
+- CLI: `python -m mehmet [path]` ile skor raporu, `--json` çıktı desteği
+- Test altyapısı: `tests/test_maturity.py` (unittest, 5 test)
+- Paketleme: `pyproject.toml` + `mehmet` konsol komutu
+- Otomasyon: `Makefile` (test/maturity/validate/install/clean hedefleri)
+- CI doğrulama: `.github/workflows/ci.yml` (testler + maturity skoru)
+- AGENTS.md'ye kaçış mekanizması ve `make` komutları eklendi
+- README.md'ye kaçış mekanizması ve proje yapısı bölümleri eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
