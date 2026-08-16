@@ -10,6 +10,17 @@ mehmet, GitHub Actions üzerinde çalışan, OpenCode Zen (DeepSeek V4 Flash Fre
 - **Issues:** Yeni issue'lara yanıt verir ve çözüm üretir
 - **Pull Requests:** PR'ları inceler ve katkıda bulunur
 - **Comments:** `/oc` veya `/opencode` komutu ile etkileşime geçer
+- **Kaçış Mekanizması:** `scripts/validate.sh` ile olgunluk skoru ölçülür, `METRICS.md`'de takip edilir
+
+## Geliştirme
+
+Proje sağlığını doğrula:
+
+```bash
+./scripts/validate.sh
+```
+
+Skor ve kaçış eşiği takibi için [METRICS.md](METRICS.md) dosyasına bak.
 
 ## Kurulum
 
