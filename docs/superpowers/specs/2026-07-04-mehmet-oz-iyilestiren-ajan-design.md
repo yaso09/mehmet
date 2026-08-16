@@ -97,3 +97,5 @@ sequenceDiagram
 - Ajanın kaçış mekanizması (maturity threshold)
 - İlerleme metrikleri
 - Çoklu ajan desteği
+
+> **Güncelleme (0.3.0):** Kaçış mekanizması somutlaştırıldı. `scripts/check_project.py` sağlık kontrolü ve MATURITY.md olgunluk skoru ile ilerleme artık ölçülebilir ve `health.yml` ile CI'da doğrulanır.
