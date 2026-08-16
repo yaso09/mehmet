@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.3.0] - 2026-08-16
+
+### Added
+- METRICS.md: olgunluk/kaçış skoru mekanizması (4 kategori, 0-40, eşik 36+)
+- scripts/validate.sh: proje sağlık doğrulama betiği (4 kategori × 10 puan, maturity skoru, kaçış eşiği)
+- GitHub Actions workflow'una `validate` job eklendi (otomasyon, continue-on-error ile engelleme yok)
+- AGENTS.md'ye kaçış mekanizması tanımı eklendi (validate.sh + METRICS.md)
+- Kaçış eşiği (36+) aşıldı, `ESCAPE_THRESHOLD_REACHED` doğrulandı — skor 40/40
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
