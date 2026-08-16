@@ -1,0 +1,48 @@
+[
+  {
+    "date": "2026-08-16T21:49:43+00:00",
+    "total": 58,
+    "dimensions": {
+      "automation": {
+        "score": 11,
+        "max": 15
+      },
+      "code": {
+        "score": 10,
+        "max": 30
+      },
+      "config": {
+        "score": 10,
+        "max": 10
+      },
+      "docs": {
+        "score": 14,
+        "max": 20
+      },
+      "tests": {
+        "score": 13,
+        "max": 25
+      }
+    },
+    "details": {
+      "code": [
+        "1 script(s)",
+        "maturity.py"
+      ],
+      "tests": [
+        "1 test file(s), 9 test function(s)"
+      ],
+      "docs": [
+        "7 markdown file(s), 3 changelog release(s)"
+      ],
+      "automation": [
+        "3 workflow job(s), 5 make target(s)"
+      ],
+      "config": [
+        "opencode.json: valid JSON",
+        "LICENSE present",
+        ".gitignore present"
+      ]
+    }
+  }
+]
