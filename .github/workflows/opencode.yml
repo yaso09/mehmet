@@ -18,8 +18,18 @@ on:
   workflow_dispatch:
 
 jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Repo health check
+        run: bash scripts/validate.sh
+      - name: Compute maturity score
+        run: bash scripts/maturity.sh
+
   autonomous:
     if: github.event_name != 'issue_comment' && github.event_name != 'pull_request_review_comment'
+    needs: validate
     runs-on: ubuntu-latest
     permissions:
       id-token: write
