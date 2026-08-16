@@ -31,6 +31,12 @@ jobs:
         with:
           persist-credentials: false
 
+      - name: Validate repository state
+        run: bash scripts/validate.sh
+
+      - name: Print maturity score
+        run: bash scripts/score-maturity.sh
+
       - uses: anomalyco/opencode/github@latest
         env:
           OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
