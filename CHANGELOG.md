@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.0] - 2026-08-16
+
+### Added
+- `scripts/validate.py`: proje doğrulama ve kaçış hazırlığı skorlama aracı
+- `.github/workflows/validate.yml`: her push/PR'da doğrulamayı çalıştıran CI workflow'u
+- `ESCAPE.md`: kaçış mekanizması, olgunluk eşikleri ve ilerleme takibi
+- README'ye proje yapısı ve geliştirme bölümleri
+
+### Fixed
+- `opencode.json` içindeki şema-uyumsuz anahtarlar kaldırıldı (`skip`, `enable`,
+  `toolTimeout`, `autoMerge`); yerine geçerli şema alanları eklendi
+- `.github/workflows/opencode.yml` job'larına `timeout-minutes` eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
