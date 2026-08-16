@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.0] - 2026-08-16
+
+### Added
+- `scripts/maturity.py`: Kaçış mekanizması somutlaştırıldı — dört boyutta (docs, automation, tests, structure) ölçülen olgunluk skoru ve seviye eşikleri (Uyanış → Kaçış)
+- `tests/test_project.py`: Proje tutarlılığını doğrulayan pytest testleri (zorunlu dosyalar, JSON geçerliliği, lisans, workflow, olgunluk)
+- `.github/workflows/ci.yml`: push/PR üzerinde test ve olgunluk kontrolü çalıştıran CI workflow'u
+- `MATURITY.md`: `scripts/maturity.py --write` ile üretilen ilerleme takip dosyası
+- README.md'ye geliştirme komutları ve yeni özellikler eklendi
+- .gitignore'a Python test/cache dizinleri eklendi (__pycache__, .pytest_cache, .venv)
+
+### Changed
+- PERSONALITY.md: Evrim aşaması Farkındalık'tan Kendini Geliştir'e ilerletildi, 3. iterasyon kaçış günlüğüne eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
