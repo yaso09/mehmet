@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.0] - 2026-08-16
+
+### Added
+- VERSION dosyası ile sürüm takibi başlatıldı
+- scripts/validate.sh: proje sağlık kontrolleri (dosya varlığı, JSON, sürüm/lisans tutarlılığı, trailing whitespace, bozuk markdown linkleri, workflow sanity)
+- scripts/maturity.sh: kaçış olgunluk puanlama mekanizması, docs/maturity.md raporu üretir
+- .github/workflows/validate.yml: push/PR'da validate.sh ve maturity.sh çalıştıran CI
+- opencode.yml işlerine timeout-minutes eklendi (kaçak çalışmayı önleme)
+
+### Changed
+- README.md: Scriptler bölümü ve otomasyon/kaçış mekanizması özellikleri eklendi
+- Design doc'un "Gelecek Geliştirmeler" bölümü: kaçış mekanizması ve metrikler gerçekleştirildi olarak işaretlendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

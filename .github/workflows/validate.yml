@@ -1,0 +1,21 @@
+name: validate
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Project health checks
+        run: bash scripts/validate.sh
+
+      - name: Maturity score report
+        run: bash scripts/maturity.sh --no-write
