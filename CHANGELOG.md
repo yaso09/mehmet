@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.3.0] - 2026-08-16
+
+### Added
+- `scripts/validate.py`: proje sağlığı doğrulama aracı ve kaçış olgunluk puanı
+- `.github/workflows/ci.yml`: her push/PR'da otomatik sağlık doğrulaması
+- `VERSION` dosyası: semver sürüm takibi ve CHANGELOG ile senkronizasyon kontrolü
+- README'e "Proje Yapısı" ve "Kaçış" bölümleri eklendi
+
+### Fixed
+- `opencode.json` şemaya uygun hale getirildi: geçersiz anahtarlar
+  (`skip`, `enable`, `toolTimeout`, `autoMerge`) kaldırıldı, yerine geçerli
+  yapılandırma (`autoupdate`, `share`, `instructions`, `permission`,
+  `tool_output`, `compaction`) eklendi. Önceki dosya opencode'un sıkı şema
+  doğrulamasını geçemezdi.
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
