@@ -1,0 +1,25 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Python sürümü
+        run: python3 --version
+
+      - name: Birim testleri
+        run: python3 -m unittest discover -q
+
+      - name: Olgunluk değerlendirmesi
+        run: python3 scripts/maturity.py
+
+      - name: Kaçış kapısı (gate)
+        run: python3 scripts/maturity.py --gate
