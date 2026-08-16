@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.3.0] - 2026-08-16
+
+### Added
+- `scripts/verify.py`: Proje sağlık doğrulama betiği (dosya yapısı, JSON/YAML geçerliliği, CHANGELOG ve PERSONALITY güncelliği)
+- `scripts/maturity.py`: Olgunluk skoru hesabı (otomasyon, test, dokümantasyon, yapı boyutları; kaçış eşiği 80/100)
+- `.github/workflows/ci.yml`: Push/PR/schedule üzerinde doğrulama ve olgunluk ölçümü yapan CI workflow'u
+- `Makefile`: `verify`, `maturity`, `check` hedefleri
+- `CONTRIBUTING.md`: Katkı kuralları
+- `docs/README.md`: Dokümantasyon dizini
+- `VERSION`: Sürüm takibi
+- `tests/test_scripts.py`: Doğrulama ve olgunluk betiklerinin testleri
+
+### Changed
+- `opencode.yml`: Ajan çalışmadan önce proje sağlık ön kontrolü eklendi
+- `README.md`: Proje yapısı ve geliştirme bölümü eklendi
+- `scripts/verify.py` ve `scripts/maturity.py` çalıştırılabilir (executable) yapıldı
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

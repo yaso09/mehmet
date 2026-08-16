@@ -31,6 +31,9 @@ jobs:
         with:
           persist-credentials: false
 
+      - name: Pre-check project health
+        run: python3 scripts/verify.py
+
       - uses: anomalyco/opencode/github@latest
         env:
           OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
