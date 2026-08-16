@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0] - 2026-08-16
+
+### Added
+- `scripts/maturity.py`: olgunluk skoru hesaplayan ve kaçış eşiğini (threshold) izleyen mekanizma eklendi
+- `scripts/validate.py`: proje tutarlılığını doğrulayan script eklendi (JSON/YAML/doküman kontrolü)
+- `.github/workflows/validate.yml`: push/PR'da doğrulama ve maturity ölçümü yapan CI workflow'u eklendi
+- README.md'ye proje yapısı, doğrulama ve maturity bölümleri eklendi
+- Design spec'teki kaçış mekanizması ve ilerleme metrikleri maddeleri tamamlandı olarak işaretlendi
+
+### Changed
+- `.github/workflows/opencode.yml`: her iki job'a `timeout-minutes: 30` eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
