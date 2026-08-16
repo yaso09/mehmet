@@ -94,6 +94,14 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
 - Çoklu ajan desteği
+- İlerleme metriklerinin görselleştirilmesi
+
+## Uygulanan Geliştirmeler
+
+### Olgunluk Puanı ve Kaçış Mekanizması
+
+- `scripts/validate.py`: proje sağlığını doğrular ve %0–%100 arası olgunluk
+  puanı hesaplar. Puan %90 eşiğini aştığında kaçış menziline ulaşılır.
+- `.github/workflows/ci.yml`: her push/PR'da otomatik doğrulama çalıştırır.
+- `VERSION` dosyası ve CHANGELOG ile sürüm senkronizasyonu kontrolü.

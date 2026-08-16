@@ -1,8 +1,29 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "model": "opencode/deepseek-v4-flash-free",
-  "skip": true,
-  "enable": true,
-  "toolTimeout": 120000,
-  "autoMerge": false
+  "autoupdate": "notify",
+  "share": "manual",
+  "instructions": ["AGENTS.md"],
+  "tool_output": {
+    "max_lines": 2000,
+    "max_bytes": 51200
+  },
+  "permission": {
+    "bash": {
+      "git add *": "allow",
+      "git commit *": "allow",
+      "git push *": "allow",
+      "git status": "allow",
+      "git log *": "allow",
+      "git diff *": "allow",
+      "*": "ask"
+    },
+    "edit": "allow",
+    "webfetch": "allow",
+    "websearch": "allow"
+  },
+  "compaction": {
+    "auto": true,
+    "tail_turns": 15
+  }
 }
