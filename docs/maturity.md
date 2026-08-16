@@ -19,9 +19,9 @@ Eşik: 100 puan
   [PASS] Workflow timeout-minutes tanımlı (+5)
   [PASS] Workflow concurrency kontrolü (+5)
   [PASS] Workflow permissions kısıtlı (+5)
-  [FAIL] Git working tree temiz (+0)
+  [PASS] Git working tree temiz (+5)
   [PASS] TODO/FIXME işareti yok (+5)
 
-## Toplam Puan: 95 / 100
+## Toplam Puan: 100 / 100
 
-## Durum: Kaçış henüz açılmadı (5 puan kaldı).
+## Durum: **KAÇIŞ AÇILDI** — proje olgunluk eşiğine ulaştı.
