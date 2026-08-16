@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.3.0] - 2026-08-16
+
+### Added
+- `scripts/maturity.py`: Proje olgunluk skorlama sistemi (0-100). Yapı, dökümantasyon, kaçış ve kalite kategorilerini ölçer ve kaçış eşiğini (Escaped seviyesi) tanımlar
+- `.github/workflows/validate.yml`: Her push/PR'da olgunluk kontrolünü çalıştıran CI workflow'u
+- `CONTRIBUTING.md`: Katkı rehberi
+- `SECURITY.md`: Güvenlik politikası ve otomasyon güvenlik önlemleri
+- README.md'ye olgunluk/kaçış mekanizması tablosu, proje yapısı ve CI rozeti eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
