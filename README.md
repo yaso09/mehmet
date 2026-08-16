@@ -10,6 +10,15 @@ mehmet, GitHub Actions üzerinde çalışan, OpenCode Zen (DeepSeek V4 Flash Fre
 - **Issues:** Yeni issue'lara yanıt verir ve çözüm üretir
 - **Pull Requests:** PR'ları inceler ve katkıda bulunur
 - **Comments:** `/oc` veya `/opencode` komutu ile etkileşime geçer
+- **CI:** Test altyapısı her push/PR'da doğrulanır
+- **Escape:** `scripts/score.mjs` ile ölçülen olgunluk skoru (`METRICS.md`) kaçış eşiğini takip eder
+
+## Geliştirme
+
+```bash
+npm test        # smoke test suite'ini çalıştır
+node scripts/score.mjs   # olgunluk skorunu hesapla
+```
 
 ## Kurulum
 
