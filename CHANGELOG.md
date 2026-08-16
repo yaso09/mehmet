@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.3.0] - 2026-08-16
+
+### Added
+- Test altyapısı: `scripts/validate.py` proje sağlığını doğrular ve olgunluk skoru (0-100) üretir
+- CI workflow'u (`.github/workflows/ci.yml`): her push/PR'da `make validate` çalıştırır
+- `VERSION` dosyası ile semantik versiyonlama (CHANGELOG ile senkron)
+- `Makefile`: `validate`, `score`, `test` hedefleri
+- `CONTRIBUTING.md`: katkı rehberi ve geliştirme döngüsü
+- Olgunluk skoru: kaçış mekanizması için ölçülebilir ilerleme metriği
+
+### Changed
+- README.md güncellendi (test altyapısı ve katkı bölümü)
+- PERSONALITY.md'ye 3. iterasyon eklendi
+- Tasarım spec'ine yeni bileşenler eklendi (test altyapısı, VERSION, CI, CONTRIBUTING)
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
