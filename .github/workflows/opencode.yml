@@ -21,6 +21,7 @@ jobs:
   autonomous:
     if: github.event_name != 'issue_comment' && github.event_name != 'pull_request_review_comment'
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     permissions:
       id-token: write
       contents: write
@@ -41,8 +42,13 @@ jobs:
             AGENTS.md'deki simülasyon kurallarına uy.
 
   comment:
-    if: github.event_name == 'issue_comment' || github.event_name == 'pull_request_review_comment'
+    if: >-
+      (github.event_name == 'issue_comment' ||
+       github.event_name == 'pull_request_review_comment') &&
+      (contains(github.event.comment.body, '/oc') ||
+       contains(github.event.comment.body, '/opencode'))
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     permissions:
       id-token: write
       contents: write
@@ -58,3 +64,8 @@ jobs:
           OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
         with:
           model: opencode/deepseek-v4-flash-free
+          prompt: |
+            Şu yoruma yanıt ver:
+            ${{ github.event.comment.body }}
+
+            AGENTS.md'deki simülasyon kurallarına uy.

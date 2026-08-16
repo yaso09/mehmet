@@ -11,6 +11,17 @@ mehmet, GitHub Actions üzerinde çalışan, OpenCode Zen (DeepSeek V4 Flash Fre
 - **Pull Requests:** PR'ları inceler ve katkıda bulunur
 - **Comments:** `/oc` veya `/opencode` komutu ile etkileşime geçer
 
+## Sağlık Kontrolü ve Olgunluk
+
+Proje, kaçış hedefine yönelik ilerlemeyi ölçen bir sağlık kontrolü içerir:
+
+```bash
+python3 scripts/check_project.py        # kontrol + MATURITY.md güncelle
+python3 scripts/check_project.py --check  # sadece kontrol (CI)
+```
+
+Kontrol; zorunlu dosyaları, JSON/YAML geçerliliğini, sır sızıntısını, CHANGELOG ve README tutarlılığını doğrular ve 0-100 arası olgunluk skoru üretir. Skorlar [MATURITY.md](MATURITY.md)'de takip edilir ve [health workflow'u](.github/workflows/health.yml) her push/PR'de kontrolü çalıştırır. Katkı kuralları için [CONTRIBUTING.md](CONTRIBUTING.md)'e bakın.
+
 ## Kurulum
 
 1. [opencode.ai/auth](https://opencode.ai/auth) adresinden Zen API key al
