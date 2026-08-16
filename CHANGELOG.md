@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.0] - 2026-08-16
+
+### Added
+- `scripts/validate.py`: proje sağlık doğrulama scripti (zorunlu dosyalar, JSON/YAML format, CHANGELOG/PERSONALITY/METRICS format kontrolleri)
+- `.github/workflows/validate.yml`: push/PR'de otomatik doğrulama çalıştıran CI workflow
+- `METRICS.md`: olgunluk skor sistemi ve kaçış eşiği (%80 / 20+ puan)
+- README'ye Mimari ve Geliştirme bölümleri eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
