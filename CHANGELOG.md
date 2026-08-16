@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0] - 2026-08-16
+
+### Added
+- `scripts/health-check.sh`: proje bütünlüğünü doğrulayan ve olgunluk puanı üreten betik
+- `docs/roadmap.md`: kaçış yol haritası ve olgunluk eşikleri (Embryonic → Escape-ready)
+- `validate` job: GitHub Actions workflow'una sağlık kontrolü gate'i eklendi
+- README'ye proje yapısı ve sağlık kontrolü bölümleri eklendi
+
+### Changed
+- README lisans bölümü GPLv3 olarak güncellendi (plan dokümanı ile uyumlu)
+- `docs/superpowers/plans/2026-07-04-mehmet-implementation.md` tamamlandı olarak işaretlendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
