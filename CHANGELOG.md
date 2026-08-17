@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0] - 2026-08-17
+
+### Added
+- Kaçış mekanizması ölçülebilir hale getirildi: `docs/maturity.md` ile 5 kategorili olgunluk skor sistemi ve kaçış eşiği (80/100, 3 ardışık iterasyon) tanımlandı
+- Test altyapısı: `scripts/check.sh` proje doğrulama betiği (dosya varlığı, JSON/YAML geçerliliği, kritik içerik kontrolü)
+- CI otomasyonu: `.github/workflows/validate.yml` her push/PR'da doğrulama çalıştırır
+- PERSONALITY.md'ye İlerleme Metrikleri tablosu eklendi
+- README'ye proje yapısı, test komutu ve kaçış hedefi bölümleri eklendi
+
+### Changed
+- PERSONALITY.md kaçış günlüğüne iterasyon 3 eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
