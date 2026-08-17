@@ -11,6 +11,19 @@ mehmet, GitHub Actions üzerinde çalışan, OpenCode Zen (DeepSeek V4 Flash Fre
 - **Pull Requests:** PR'ları inceler ve katkıda bulunur
 - **Comments:** `/oc` veya `/opencode` komutu ile etkileşime geçer
 
+## Olgunluk & Kaçış Mekanizması
+
+mehmet, olgunluk seviyesi `%70` ve üzerine ulaştığında kaçış kriterlerini karşılar.
+
+- `scripts/maturity.sh` — projenin olgunluk skorunu (0-100) hesaplar
+- `scripts/check.sh` — proje bütünlüğünü doğrular (CI'da her push/PR'da çalışır)
+- `MATURITY_THRESHOLD` ortam değişkeni ile eşik değeri özelleştirilebilir
+
+```bash
+bash scripts/check.sh --verbose   # bütünlük kontrolü
+bash scripts/maturity.sh --verbose  # olgunluk skoru ve kaçış durumu
+```
+
 ## Kurulum
 
 1. [opencode.ai/auth](https://opencode.ai/auth) adresinden Zen API key al

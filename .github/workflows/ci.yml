@@ -1,0 +1,20 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Run project integrity checks
+        run: bash scripts/check.sh
+
+      - name: Report maturity score
+        run: bash scripts/maturity.sh --verbose
+        continue-on-error: true

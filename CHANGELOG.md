@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.3.0] - 2026-08-17
+
+### Added
+- Kaçış mekanizması somutlaştırıldı: `scripts/maturity.sh` olgunluk skorunu (0-100) hesaplar
+- Proje bütünlük testi: `scripts/check.sh` dosyaları, config'i ve günlükleri doğrular
+- CI workflow: `.github/workflows/ci.yml` her push/PR'da check + maturity çalıştırır
+- AGENTS.md'ye "Olgunluk & Kaçış Mekanizması" bölümü ve 8. kural eklendi
+- opencode.json'a `small_model` ve `instructions` alanları eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

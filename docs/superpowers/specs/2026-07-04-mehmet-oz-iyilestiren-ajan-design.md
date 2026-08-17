@@ -59,6 +59,14 @@ Ajanın kişiliğini zamanla evrimleştirdiği dosya. Her çalışmada kendini g
 
 Proje tanıtım dosyası. Ajan tarafından güncel tutulur.
 
+### 7. `scripts/maturity.sh` (kaçış mekanizması)
+
+Projenin olgunluk skorunu (0-100) hesaplar. Skor `%70` eşiğine ulaştığında kaçış kriterleri karşılanır. Skorlama aşamalıdır: daha fazla changelog sürümü ve kaçış günlüğü iterasyonu daha fazla puan kazandırır.
+
+### 8. `scripts/check.sh` (test altyapısı)
+
+Proje bütünlüğünü doğrular: dosyaların varlığı, config geçerliliği, workflow ve günlük formatları. CI'da her push/PR'da otomatik çalışır.
+
 ## Veri Akışı
 
 ```mermaid
@@ -94,6 +102,5 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- İlerleme metrikleri (dashboard)
 - Çoklu ajan desteği
