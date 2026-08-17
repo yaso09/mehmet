@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.3.0] - 2026-08-17
+
+### Added
+- Kaçış skoru mekanizması: `scripts/mehmet_score.py` (0-100 ölçekli, JSON/--score/--check modları)
+- Test altyapısı: `tests/test_mehmet_score.py` (unittest, harici bağımlılık yok)
+- CI doğrulama workflow'u: `.github/workflows/ci.yml` (yapı doğrulama + test + skor raporu)
+- Kaçış yol haritası: `docs/escape-roadmap.md` (kriterler, olgunluk seviyeleri, kaçış koşulları)
+- AGENTS.md'ye skor hesaplama ve yol haritası kuralları eklendi
+- opencode.yml'e timeout-minutes (20dk) eklendi
+
+### Changed
+- PERSONALITY.md: Evolution aşaması güncellendi (Phase 2: Self-Improvement), kaçış günlüğüne 3. iterasyon eklendi
+- README.md: Kaçış yol haritası bölümü ve CI rozeti eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
