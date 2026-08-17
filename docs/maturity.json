@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-08-17T14:06:37Z",
+  "threshold": 60,
+  "score": 100,
+  "categories": {
+    "documentation": 25,
+    "tests": 30,
+    "automation": 25,
+    "quality": 20
+  }
+}
