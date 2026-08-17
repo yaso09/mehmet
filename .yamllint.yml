@@ -1,0 +1,9 @@
+---
+extends: relaxed
+rules:
+  line-length: disable
+  key-duplicates: disable
+  new-line-at-end-of-file: enable
+ignore: |
+  .git/
+  node_modules/
