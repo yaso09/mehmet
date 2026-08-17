@@ -1,0 +1,29 @@
+name: checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Test suite
+        run: python3 -m unittest discover -s tests -v
+
+      - name: Repo doğrulama
+        run: python3 scripts/validate.py
+
+      - name: Olgunluk skoru
+        run: python3 scripts/maturity.py

@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0] - 2026-08-17
+
+### Added
+- Kaçış eşiği artık ölçülebilir: `scripts/maturity.py` ile olgunluk skoru hesaplanıyor
+- Eşik konfigürasyonu `escape.json` dosyasına taşındı (varsayılan: 80/100)
+- `scripts/validate.py`: CHANGELOG/VERSION tutarlılığı ve kaçış günlüğü doğrulaması
+- `VERSION` dosyası ile semantik versiyon takibi başlatıldı
+- `tests/` altında unittest tabanlı test altyapısı (16 test)
+- `Makefile` ile `test`, `validate`, `maturity` hedefleri
+- `.github/workflows/checks.yml`: her push/PR'de test ve doğrulama çalıştıran CI
+- AGENTS.md'ye somut kaçış eşiği ve metrik tanımı eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
