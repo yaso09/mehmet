@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.0] - 2026-08-17
+
+### Added
+- `scripts/maturity.py` olgunluk skoru hesaplayıcı eklendi (10/10, kaçış eşiği 9.0)
+- `tests/test_maturity.py` test altyapısı eklendi (unittest, bağımlılıksız)
+- `.github/workflows/validate.yml` kalite kapısı workflow'u eklendi (test + maturity)
+- `MATURITY.md` olgunluk düzeyleri ve kaçış koşulu dokümantasyonu eklendi
+- `CONTRIBUTING.md` katkı kuralları eklendi
+- README.md'ye proje yapısı ve maturity bölümü eklendi
+
+### Changed
+- `scripts/maturity.py` `main()` fonksiyonuna `root` parametresi eklendi (test edilebilirlik)
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
