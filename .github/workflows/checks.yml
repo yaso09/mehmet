@@ -1,0 +1,44 @@
+name: checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Shellcheck
+        run: shellcheck -x scripts/*.sh tests/*.sh
+
+      - name: YAML/JSON doğrulama
+        run: |
+          yq e '.' .github/workflows/*.yml >/dev/null
+          jq e '.' opencode.json >/dev/null
+
+      - name: Testleri çalıştır
+        run: bash scripts/run_tests.sh
+
+  maturity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Olgunluk skorunu hesapla (eşik kontrolü)
+        run: bash scripts/self_assess.sh --check --threshold 60
+
+      - name: Raporu arşivle
+        uses: actions/upload-artifact@v4
+        with:
+          name: maturity-report
+          path: docs/maturity.json

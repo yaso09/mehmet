@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.3.0] - 2026-08-17
+
+### Added
+- `scripts/self_assess.sh`: 100 üzerinden olgunluk skoru üreten kaçış mekanizması ölçüm aracı
+- `scripts/run_tests.sh`: kabuk tabanlı test çalıştırıcı
+- `tests/`: 5 test (dokümantasyon, konfigürasyon, güvenlik, workflow, olgunluk)
+- `.github/workflows/checks.yml`: CI — testler, shellcheck, YAML/JSON doğrulama, olgunluk eşiği
+- `docs/maturity.md` ve `docs/maturity.json`: olgunluk raporu (100/100)
+- `docs/ARCHITECTURE.md`: mimari dokümantasyonu
+- `CONTRIBUTING.md`: katkı rehberi
+
+### Changed
+- `AGENTS.md`: olgunluk ölçümü ve doğrulama adımları eklendi
+- `.github/workflows/opencode.yml`: `timeout-minutes: 15` eklendi (sonsuz döngü koruması)
+- `README.md`: test ve olgunluk takibi bilgileri eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
