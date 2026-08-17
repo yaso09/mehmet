@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.3.0] - 2026-08-17
+
+### Added
+- `scripts/self_check.py`: proje bütünlüğünü doğrulayan ve olgunluk puanı (0-100) hesaplayan doğrulama aracı
+- `.github/workflows/validate.yml`: her push/PR'da self-check + JSON/YAML sözdizimi doğrulaması yapan CI workflow'u
+- README.md'ye Proje Yapısı ve Geliştirme bölümleri eklendi
+- PERSONALITY.md'ye Maturity/Olgunluk bölümü eklendi (grade seviyeleri ve ölçülen alanlar)
+
+### Changed
+- Kaçış günlüğüne iterasyon 3 eklendi (olgunluk notu: 180/184 — SELF-SUSTAINING)
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
