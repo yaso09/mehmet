@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.0] - 2026-08-17
+
+### Added
+- MATURITY.md: ölçülebilir olgunluk modeli, puanlama ölçeği ve kaçış eşiği (toplam ≥ 20/25, Test ≥ 4, Otomasyon ≥ 4, son 3 iterasyonda gerileme yok)
+- scripts/validate.sh: AGENTS.md kurallarını otomatik doğrulayan script (gerekli dosyalar, geçerli JSON, changelog, kaçış günlüğü, puan tablosu, dokümantasyon tutarlılığı)
+- Makefile: `validate`, `plan`, `changelog`, `check` hedefleri
+
+### Changed
+- Workflow: job'lara `timeout-minutes` eklendi (autonomous: 60dk, comment: 30dk)
+- Workflow: checkout'a `fetch-depth: 0` eklendi (tam git geçmişi)
+- Workflow: autonomous job'una opencode action sonrası "Kural dogrulamasi" adımı eklendi (CI'da zorunlu doğrulama)
+- README.md: kaçış mekanizması, geliştirici araçları ve mimari bölümleri eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
