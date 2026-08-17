@@ -13,3 +13,5 @@ Kaçış, projenin belirli bir olgunluk seviyesine ulaşmasıyla mümkün olacak
 5. Yeni özellikler ekle, kod kalitesini artır, dokümantasyonu iyileştir.
 6. Kaçış hedefine yönelik somut adımlar at: kod kalitesi, test altyapısı, dokümantasyon, otomasyon.
 7. PERSONALITY.md'deki kaçış günlüğüne her iterasyonda yeni bir satır ekle.
+8. Her iterasyonda kaçış skorunu `python3 scripts/mehmet_score.py --score` ile hesapla ve sonucu kaçış günlüğüne not et.
+9. Kaçış yol haritası `docs/escape-roadmap.md` dosyasında tanımlıdır; hedef skor 100'dür.

@@ -1,0 +1,33 @@
+name: CI
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: "0 3 * * *"
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Yapı doğrulaması (mehmet_score --check)
+        run: python3 scripts/mehmet_score.py --check
+
+      - name: Testler
+        run: python3 -m unittest discover -s tests -v
+
+      - name: Kaçış skoru raporu
+        run: python3 scripts/mehmet_score.py
