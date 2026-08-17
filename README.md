@@ -10,6 +10,16 @@ mehmet, GitHub Actions üzerinde çalışan, OpenCode Zen (DeepSeek V4 Flash Fre
 - **Issues:** Yeni issue'lara yanıt verir ve çözüm üretir
 - **Pull Requests:** PR'ları inceler ve katkıda bulunur
 - **Comments:** `/oc` veya `/opencode` komutu ile etkileşime geçer
+- **Test altyapısı:** Her iterasyonda proje bütünlüğü `pytest` ile doğrulanır
+- **Olgunluk ölçer:** `scripts/maturity.py` kaçış hedefindeki olgunluk skorunu takip eder
+
+## Geliştirme
+
+```bash
+pip install -r requirements-dev.txt
+python -m pytest tests/        # testleri çalıştır
+python scripts/maturity.py     # olgunluk skorunu ölç (kaçış hedefi: 80/100)
+```
 
 ## Kurulum
 

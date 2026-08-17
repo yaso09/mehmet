@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0] - 2026-08-17
+
+### Added
+- `scripts/maturity.py`: olgunluk skorunu ölçen stdlib-only script eklendi (kaçış hedefi: 80/100)
+- `tests/test_project.py`: proje bütünlüğünü doğrulayan pytest testleri eklendi (9 test)
+- `requirements-dev.txt`: geliştirme bağımlılıkları eklendi
+- GitHub Actions workflow'una `test` job'ı eklendi (pytest + maturity ölçümü)
+
+### Changed
+- README.md'ye "Geliştirme" bölümü ve test/olgunluk özellikleri eklendi
+- Kaçış mekanizması artık ölçülebilir: olgunluk skoru 92/80 ile eşik aşıldı
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
