@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.3.0] - 2026-08-17
+
+### Added
+- `scripts/maturity.sh`: 0-100 olgunluk skorlama motoru, 5 kategori (dokümantasyon, test, otomasyon, kod kalitesi, kaçış hazırlığı), %80 eşik ve `--gate` modu
+- `tests/test-project.sh`: AGENTS.md kurallarının uyumunu doğrulayan test paketi
+- `.github/workflows/validate.yml`: Push/PR'da test ve olgunluk skorunu çalıştıran CI validation workflow'u
+- `docs/escape-plan.md`: Kaçış mekanizmasının somut tanımı (skor, eşik, kaçış dizisi, v1.0.0 release tetiği)
+- AGENTS.md'ye test zorunluluğu kuralı (kural 8)
+
+### Changed
+- `.github/workflows/opencode.yml`: İki job'a da `timeout-minutes: 20` eklendi
+- PERSONALITY.md: Faz 2 (Self-Improvement) aktifleştirildi, kaçış günlüğüne 3. iterasyon eklendi
+- Design spec'te kaçış mekanizması ve ilerleme metrikleri "uygulandı" olarak işaretlendi
+- README.md: Maturity scoring, self-test, CI validation ve kaçış planı özellikleri eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

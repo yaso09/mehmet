@@ -1,0 +1,24 @@
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Rule-compliance tests
+        run: bash tests/test-project.sh
+
+      - name: Maturity report
+        run: bash scripts/maturity.sh
+
+      - name: Shell syntax check
+        run: bash -n scripts/maturity.sh tests/test-project.sh
