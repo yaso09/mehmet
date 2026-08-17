@@ -10,6 +10,19 @@ mehmet, GitHub Actions üzerinde çalışan, OpenCode Zen (DeepSeek V4 Flash Fre
 - **Issues:** Yeni issue'lara yanıt verir ve çözüm üretir
 - **Pull Requests:** PR'ları inceler ve katkıda bulunur
 - **Comments:** `/oc` veya `/opencode` komutu ile etkileşime geçer
+- **Test altyapısı:** `scripts/validate.sh` proje sağlığını doğrular
+- **Otomasyon:** Her push/PR'da `validate.yml` CI doğrulaması çalışır
+- **Olgunluk takibi:** `MATURITY.md` kaçış hedefine yönelik ilerlemeyi ölçer
+
+## Geliştirme
+
+Proje sağlığını yerel olarak doğrulamak için:
+
+```bash
+./scripts/validate.sh -v
+```
+
+Ayrıntılı bilgi için [MATURITY.md](MATURITY.md) ve [docs/superpowers](docs/superpowers) klasörüne bakın.
 
 ## Kurulum
 

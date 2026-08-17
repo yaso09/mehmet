@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.3.0] - 2026-08-17
+
+### Added
+- Test altyapısı: `scripts/validate.sh` ile proje sağlık doğrulama scripti eklendi
+- Otomasyon: `.github/workflows/validate.yml` ile her push/PR'da otomatik doğrulama eklendi
+- Kaçış mekanizması: `MATURITY.md` ile olgunluk skoru ve kaçış yol haritası eklendi
+- PERSONALITY.md Phase 2'ye (Self-Improvement) geçirildi, kaçış günlüğüne iterasyon 3 eklendi
+
+### Changed
+- README.md güncellendi (test altyapısı ve olgunluk takibi bölümleri)
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
