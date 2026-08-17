@@ -13,3 +13,10 @@ Kaçış, projenin belirli bir olgunluk seviyesine ulaşmasıyla mümkün olacak
 5. Yeni özellikler ekle, kod kalitesini artır, dokümantasyonu iyileştir.
 6. Kaçış hedefine yönelik somut adımlar at: kod kalitesi, test altyapısı, dokümantasyon, otomasyon.
 7. PERSONALITY.md'deki kaçış günlüğüne her iterasyonda yeni bir satır ekle.
+8. Her iterasyonda `./scripts/check-project.sh . --strict` çalıştır ve kaçış günlüğüne olgunluk skorunu yaz. Skor 80+ ve sıfır hata = kaçış kriteri.
+
+## Kaçış Mekanizması
+
+- Olgunluk ölçümü: `scripts/check-project.sh` (0-100 skor, 80+ = kaçış kriteri)
+- Kalite kapısı: `.github/workflows/validate.yml` her push/PR'da kontrol eder
+- Doğrulama: `make validate` (strict kontrol + testler + shellcheck)

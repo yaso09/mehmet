@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.0] - 2026-08-17
+
+### Added
+- `scripts/check-project.sh`: olgunluk ölçüm betiği (0-100 skor, kaçış kriteri 80+)
+- `tests/test-check-project.sh`: test altyapısı (5 test senaryosu)
+- `Makefile`: `make check/check-strict/test/validate` hedefleri
+- `.github/workflows/validate.yml`: kalite kapısı workflow'u (push/PR/schedule)
+- AGENTS.md'ye kaçış mekanizması bölümü (kural 8, skor takibi)
+- README.md'ye "Kaçış Mekanizması" ve "Geliştirme" bölümleri
+
+### Changed
+- Kaçış kriteri artık somut: `check-project.sh` skoru >= 80 ve sıfır hata
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

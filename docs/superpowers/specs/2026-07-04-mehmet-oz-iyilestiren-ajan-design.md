@@ -94,6 +94,8 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
 - Çoklu ajan desteği
+- Daha fazla olgunluk kontrolü (kod kalitesi, kapsam, dokümantasyon kapsamı)
+- Otonom iterasyon geçmişinin grafiksel takibi
+
+> **Güncelleme (2026-08-17):** Ajanın kaçış mekanizması (maturity threshold) ve ilerleme metrikleri artık `scripts/check-project.sh` ile hayata geçirildi; kalite kapısı `.github/workflows/validate.yml` ve `make validate` ile otomatikleştirildi.

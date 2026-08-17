@@ -11,6 +11,24 @@ mehmet, GitHub Actions üzerinde çalışan, OpenCode Zen (DeepSeek V4 Flash Fre
 - **Pull Requests:** PR'ları inceler ve katkıda bulunur
 - **Comments:** `/oc` veya `/opencode` komutu ile etkileşime geçer
 
+## Kaçış Mekanizması
+
+mehmet, projenin olgunluk seviyesini ölçerek kaçış kriterini takip eder:
+
+- **Olgunluk ölçümü:** `scripts/check-project.sh` (0-100 skor, 80+ = kaçış kriteri)
+- **Test altyapısı:** `tests/test-check-project.sh` ile doğrulanır
+- **Kalite kapısı:** `.github/workflows/validate.yml` her push/PR'da kontrol eder
+- **Tek komut:** `make validate` (strict kontrol + testler + shellcheck)
+
+## Geliştirme
+
+```bash
+make check          # Olgunluk raporu
+make check-strict   # Strict olgunluk kontrolü (kalite kapısı)
+make test           # Testleri çalıştır
+make validate       # Tüm doğrulamaları çalıştır
+```
+
 ## Kurulum
 
 1. [opencode.ai/auth](https://opencode.ai/auth) adresinden Zen API key al
