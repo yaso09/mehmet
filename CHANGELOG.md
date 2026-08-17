@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.0] - 2026-08-17
+
+### Added
+- Test altyapısı: `tests/test_project.py` proje bütünlük doğrulama testleri
+  (dosya yapısı, konfigürasyon, YAML sözdizimi, dokümantasyon, sır taraması)
+- `Makefile` — `make validate` ile tek komutta test çalıştırma
+- `.github/workflows/validate.yml` — push/PR üzerinde otomatik doğrulama CI'ı
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
