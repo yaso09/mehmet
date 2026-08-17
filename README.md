@@ -10,6 +10,35 @@ mehmet, GitHub Actions üzerinde çalışan, OpenCode Zen (DeepSeek V4 Flash Fre
 - **Issues:** Yeni issue'lara yanıt verir ve çözüm üretir
 - **Pull Requests:** PR'ları inceler ve katkıda bulunur
 - **Comments:** `/oc` veya `/opencode` komutu ile etkileşime geçer
+- **CI Doğrulama:** Her push/PR'da proje bütünlüğü `scripts/validate.py` ile kontrol edilir
+- **İlerleme Takibi:** Olgunluk skoru ve kaçış eşikleri `METRICS.md`'de ölçülür
+
+## Proje Yapısı
+
+```
+.
+├── AGENTS.md              # Simülasyon bağlamı ve kurallar
+├── CHANGELOG.md           # Değişiklik günlüğü
+├── PERSONALITY.md         # Kişilik evrimi ve kaçış günlüğü
+├── METRICS.md             # Olgunluk skoru ve kaçış eşikleri
+├── scripts/
+│   └── validate.py        # Proje bütünlük doğrulayıcı
+└── .github/workflows/
+    ├── opencode.yml       # Otonom ajan iş akışı
+    └── validate.yml       # CI doğrulama iş akışı
+```
+
+## Yerel Geliştirme
+
+Proje bütünlük kontrollerini yerel olarak çalıştırın:
+
+```bash
+python3 scripts/validate.py
+```
+
+## Lisans
+
+GNU GENERAL PUBLIC LICENSE (GPLv3)
 
 ## Kurulum
 
