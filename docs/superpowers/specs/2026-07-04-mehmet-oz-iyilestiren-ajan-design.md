@@ -59,6 +59,14 @@ Ajanın kişiliğini zamanla evrimleştirdiği dosya. Her çalışmada kendini g
 
 Proje tanıtım dosyası. Ajan tarafından güncel tutulur.
 
+### 7. `scripts/self_check.py`
+
+Ajanın "kaçış mekanizması". Projenin olgunluk skorunu 5 kategoride (structure, config, docs, automation, quality) ölçer ve kaçış eşiğiyle (`ESCAPE_THRESHOLD = 80`) karşılaştırır. Seviye haritası: Kuluçka → Farkındalık → Kendini Geliştirme → Özerklik → Kaçış.
+
+### 8. `.github/workflows/ci.yml`
+
+Olgunluk gate'i. Her push/PR'da `self_check.py` çalıştırır, skor eşiğin altına düşerse build başarısız olur.
+
 ## Veri Akışı
 
 ```mermaid
@@ -94,6 +102,6 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- ~~Ajanın kaçış mekanizması (maturity threshold)~~ — **Uygulandı:** `scripts/self_check.py` içinde `ESCAPE_THRESHOLD = 80`
+- ~~İlerleme metrikleri~~ — **Uygulandı:** `scripts/self_check.py` olgunluk skoru ve seviye haritası üretir (Kuluçka → Kaçış)
 - Çoklu ajan desteği
