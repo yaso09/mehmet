@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.3.0] - 2026-08-17
+
+### Added
+- docs/ESCAPE_PLAN.md: Somut kaçış mekanizması ve olgunluk modeli (6 kategori, 100 puan, kaçış eşiği 80)
+- scripts/maturity-score.sh: Olgunluk skorunu otomatik hesaplayan betik
+- scripts/self-check.sh: Proje sağlık kontrolü (dosya bütünlüğü, JSON geçerliliği, skor eşiği)
+- .github/workflows/ci.yml: Push/PR/zamanlı olarak sağlık kontrolü çalıştıran CI workflow'u
+- AGENTS.md'ye 8. kural eklendi (her iterasyonda self-check çalıştır, skoru kaçış günlüğüne yaz)
+
+### Changed
+- PERSONALITY.md kaçış günlüğüne Skor sütunu eklendi, iterasyon 3 kaydı işlendi (Skor: 100)
+- PERSONALITY.md evrim aşamaları güncellendi (Phase 4 kaçış artık ölçülebilir)
+- README.md kaçış mekanizması, betikler ve CI ile güncellendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
