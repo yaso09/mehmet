@@ -1,0 +1,101 @@
+{
+  "current_version": "0.3.0",
+  "escape_threshold": 90,
+  "project_name": "mehmet",
+  "criteria": [
+    {
+      "id": "structure",
+      "name": "Proje yapısı eksiksiz",
+      "weight": 10,
+      "check": {
+        "type": "files",
+        "value": [
+          "AGENTS.md",
+          "CHANGELOG.md",
+          "LICENSE",
+          "PERSONALITY.md",
+          "README.md",
+          "MATURITY.md",
+          "CONTRIBUTING.md",
+          "opencode.json",
+          "maturity.json",
+          "Makefile"
+        ]
+      }
+    },
+    {
+      "id": "docs",
+      "name": "Dokümantasyon güncel ve tutarlı",
+      "weight": 15,
+      "check": {
+        "type": "keywords",
+        "value": {
+          "README.md": ["Kurulum", "GPLv3", "Test", "maturity"],
+          "CHANGELOG.md": ["Added"],
+          "PERSONALITY.md": ["Kaçış Günlüğü", "Escape"],
+          "MATURITY.md": ["olgunluk", "Kaçış"],
+          "docs/ARCHITECTURE.md": ["maturity", "tests"],
+          "CONTRIBUTING.md": ["test", "CHANGELOG"]
+        }
+      }
+    },
+    {
+      "id": "version",
+      "name": "Sürüm senkronizasyonu (CHANGELOG == current_version)",
+      "weight": 10,
+      "check": {
+        "type": "version",
+        "value": {
+          "current_version": "0.3.0"
+        }
+      }
+    },
+    {
+      "id": "tests",
+      "name": "Test suite'i başarıyla çalışıyor",
+      "weight": 20,
+      "check": {
+        "type": "command",
+        "value": "python3 -m unittest discover -s tests"
+      }
+    },
+    {
+      "id": "automation",
+      "name": "CI otomasyonu mevcut ve doğru",
+      "weight": 15,
+      "check": {
+        "type": "keywords",
+        "value": {
+          ".github/workflows/opencode.yml": ["schedule", "concurrency", "OPENCODE_API_KEY"],
+          ".github/workflows/ci.yml": ["unittest", "maturity"]
+        }
+      }
+    },
+    {
+      "id": "code",
+      "name": "Scriptler derlenebiliyor ve YAML temiz",
+      "weight": 10,
+      "check": {
+        "type": "command",
+        "value": "python3 -m py_compile scripts/maturity.py tests/*.py && yamllint -c .yamllint.yml .github/workflows/*.yml"
+      }
+    },
+    {
+      "id": "security",
+      "name": "Repo'da sır sızıntısı yok",
+      "weight": 15,
+      "check": {
+        "type": "secrets"
+      }
+    },
+    {
+      "id": "autonomy",
+      "name": "Otonomi: olgunluk mekanizması tam işlevsel",
+      "weight": 5,
+      "check": {
+        "type": "command",
+        "value": "python3 -m unittest tests.test_maturity_script -v"
+      }
+    }
+  ]
+}
