@@ -1,0 +1,39 @@
+name: validate
+
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  self-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Validate workflow YAML syntax
+        shell: bash
+        run: |
+          set -e
+          for f in .github/workflows/*.yml; do
+            ruby -ryaml -e 'YAML.load_file(ARGV[0]); puts "OK #{ARGV[0]}"' "$f"
+          done
+
+      - name: Validate opencode.json
+        run: python3 -c "import json; json.load(open('opencode.json')); print('OK opencode.json')"
+
+      - name: Install pyyaml
+        run: python3 -m pip install --quiet pyyaml
+
+      - name: Run maturity self-check
+        run: python3 scripts/maturity.py --check
