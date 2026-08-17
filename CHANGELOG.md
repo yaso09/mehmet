@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.3.0] - 2026-08-17
+
+### Added
+- `scripts/escape_score.py`: Kaçış olgunluk skoru (0-100) hesaplayan script, eşik 95/100
+- `scripts/check_project.py`: Proje tutarlılık kontrolleri (zorunlu dosyalar, CHANGELOG formatı, kaçış günlüğü, lisans, .gitignore)
+- `tests/test_project.py`: Bağımlılıksız (stdlib) unittest testleri
+- `.github/workflows/ci.yml`: Her push/PR'de kontrolleri ve testleri çalıştıran CI workflow'u
+- AGENTS.md'ye "Kaçış Kriterleri" bölümü eklendi
+- README.md'ye "Proje Yapısı" ve "Doğrulama" bölümleri eklendi
+- Design spec'e uygulanan özellikler bölümü eklendi
+
+### Changed
+- Kaçış eşiği 80'den 95'e yükseltildi (escape_score.py)
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

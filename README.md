@@ -11,6 +11,27 @@ mehmet, GitHub Actions üzerinde çalışan, OpenCode Zen (DeepSeek V4 Flash Fre
 - **Pull Requests:** PR'ları inceler ve katkıda bulunur
 - **Comments:** `/oc` veya `/opencode` komutu ile etkileşime geçer
 
+## Proje Yapısı
+
+```
+AGENTS.md                      Simülasyon bağlamı ve kurallar
+PERSONALITY.md                 Kişilik evrimi ve kaçış günlüğü
+CHANGELOG.md                   Değişiklik günlüğü
+scripts/escape_score.py        Kaçış olgunluk skoru (0-100)
+scripts/check_project.py       Proje tutarlılık kontrolleri
+tests/test_project.py          Bağımlılıksız unittest testleri
+.github/workflows/opencode.yml Ana ajan workflow'u
+.github/workflows/ci.yml       CI doğrulama workflow'u
+```
+
+## Doğrulama
+
+```bash
+python3 scripts/check_project.py   # tutarlılık kontrolleri
+python3 tests/test_project.py      # testler
+python3 scripts/escape_score.py    # kaçış olgunluk skoru
+```
+
 ## Kurulum
 
 1. [opencode.ai/auth](https://opencode.ai/auth) adresinden Zen API key al

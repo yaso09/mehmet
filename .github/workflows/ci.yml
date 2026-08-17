@@ -1,0 +1,25 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Proje tutarlılık kontrolleri
+        run: python3 scripts/check_project.py
+
+      - name: Testler
+        run: python3 tests/test_project.py
+
+      - name: Kaçış olgunluk skoru
+        run: python3 scripts/escape_score.py
