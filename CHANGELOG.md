@@ -1,5 +1,15 @@
 # Changelog
 
+## [Unreleased]
+
+### Added
+- Test altyapısı: `scripts/verify.sh` proje sağlığı doğrulama scripti
+- CI otomasyonu: `.github/workflows/verify.yml` her push/PR'da doğrulama çalıştırır
+- Kaçış mekanizması: `docs/ESCAPE.md` olgunluk seviyeleri ve ilerleme tablosu
+
+### Changed
+- README.md: proje yapısı ve kaçış planı bölümleri eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
