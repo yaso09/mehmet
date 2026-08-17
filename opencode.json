@@ -1,8 +1,13 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "model": "opencode/deepseek-v4-flash-free",
-  "skip": true,
-  "enable": true,
-  "toolTimeout": 120000,
-  "autoMerge": false
+  "small_model": "opencode/deepseek-v4-flash-free",
+  "autoupdate": false,
+  "share": "disabled",
+  "snapshot": false,
+  "instructions": ["AGENTS.md"],
+  "compaction": {
+    "auto": true,
+    "tail_turns": 15
+  }
 }

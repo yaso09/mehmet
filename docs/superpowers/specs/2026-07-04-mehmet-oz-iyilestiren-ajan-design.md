@@ -94,6 +94,11 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- ~~Ajanın kaçış mekanizması (maturity threshold)~~ **Tamamlandı (2026-08-17):** `scripts/validate.sh` ile hesaplanan olgunluk skoru 10/10'a ulaştı, kaçış koşulu karşılandı.
+- ~~İlerleme metrikleri~~ **Tamamlandı (2026-08-17):** Olgunluk skoru (0-10) PERSONALITY.md'de takip ediliyor.
 - Çoklu ajan desteği
+- Doğrulama kapsamının genişletilmesi (link/format kontrolü, lisans taraması)
+
+## Ek Notlar (2026-08-17)
+
+- `opencode.json` yalnızca geçerli schema anahtarları içermelidir; `skip`, `enable`, `toolTimeout`, `autoMerge` gibi geçersiz alanlar opencode'un başlatılmasını engeller (`ConfigInvalidError`). Bu hata v0.3.0'da giderildi.
