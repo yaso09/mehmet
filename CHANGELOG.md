@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.0] - 2026-08-17
+
+### Added
+- Kaçış mekanizması uygulandı: `scripts/self_check.py` olgunluk skorunu 5 kategoride (structure, config, docs, automation, quality) ölçer, `ESCAPE_THRESHOLD = 80` eşiğini raporlar
+- Olgunluk seviye haritası: Kuluçka → Farkındalık → Kendini Geliştirme → Özerklik → Kaçış
+- CI gate'i: `.github/workflows/ci.yml` her push/PR'da `self_check.py --require-score 80` çalıştırır
+- `--json` çıktı modu (makine tarafından okunabilir skor raporu)
+
+### Changed
+- README.md'ye olgunluk & kaçış bölümü ve CI badge'i eklendi
+- Design spec'teki "kaçış mekanizması" ve "ilerleme metrikleri" maddeleri tamamlandı olarak işaretlendi
+- Design spec bileşen listesine `scripts/self_check.py` ve `ci.yml` eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
