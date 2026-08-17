@@ -1,0 +1,27 @@
+name: validate
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch:
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Olgunluk kontrolü (strict)
+        run: ./scripts/check-project.sh . --strict
+
+      - name: Testler
+        run: make test
+
+      - name: Shellcheck
+        run: shellcheck scripts/*.sh tests/*.sh
