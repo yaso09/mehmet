@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.0] - 2026-08-17
+
+### Added
+- `scripts/validate.py` proje bütünlük doğrulayıcı eklendi (zorunlu dosyalar, JSON, CHANGELOG formatı, PERSONALITY kaçış günlüğü, lisans uyumu, workflow secret kontrolü)
+- `.github/workflows/validate.yml` CI doğrulama iş akışı eklendi (her push/PR'da çalışır)
+- `METRICS.md` olgunluk skoru ve kaçış eşikleri (thresholds) ile ilerleme takibi eklendi
+- README.md'ye proje yapısı ve yerel geliştirme bölümleri eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
