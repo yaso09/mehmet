@@ -11,6 +11,27 @@ mehmet, GitHub Actions üzerinde çalışan, OpenCode Zen (DeepSeek V4 Flash Fre
 - **Pull Requests:** PR'ları inceler ve katkıda bulunur
 - **Comments:** `/oc` veya `/opencode` komutu ile etkileşime geçer
 
+## Olgunluk Metrikleri
+
+Kaçış hedefi ölçülebilir kılınmıştır. `scripts/maturity_check.sh` 8 kriteri
+100 puan üzerinden değerlendirir ve seviye belirler:
+
+| Seviye | Skor   | Anlam          |
+|--------|--------|----------------|
+| 1      | 0-49   | Başlangıç      |
+| 2      | 50-74  | Gelişen        |
+| 3      | 75-89  | Olgun          |
+| 4      | 90-100 | Kaçışa Hazır   |
+
+Çalıştırmak için:
+
+```bash
+make check
+```
+
+Her workflow çalışmasında `validate` job'u bu kontrolü yürütür ve
+`autonomous` job'u kontrol başarılı olduktan sonra başlar.
+
 ## Kurulum
 
 1. [opencode.ai/auth](https://opencode.ai/auth) adresinden Zen API key al

@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.0] - 2026-08-17
+
+### Added
+- Olgunluk takip sistemi: `scripts/maturity_check.sh` ile 100 puanlık maturity skoru ve seviye tespiti
+- `Makefile` eklendi (`make check` / `make maturity`)
+- Workflow'a `validate` job'u eklendi; `autonomous` job'u maturity kontrolüne bağlandı
+- Kaçış günlüğüne iterasyon 3 kaydı eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
