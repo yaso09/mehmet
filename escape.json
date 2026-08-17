@@ -1,0 +1,4 @@
+{
+  "threshold": 80.0,
+  "required": ["README.md", "CHANGELOG.md", "AGENTS.md", "PERSONALITY.md"]
+}
