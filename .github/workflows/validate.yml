@@ -1,0 +1,43 @@
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  self-check:
+    name: Self-check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Validate opencode.json
+        run: python3 -m json.tool opencode.json > /dev/null
+
+      - name: Validate workflow syntax
+        run: |
+          for f in .github/workflows/*.yml; do
+            echo "Checking $f"
+            ruby -e 'require "yaml"; YAML.load_file(ARGV[0]); exit 0' "$f"
+          done
+
+      - name: Run self-check
+        run: bash scripts/self-check.sh
+
+  actionlint:
+    name: actionlint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Check workflow files
+        uses: rhysd/actionlint@v1
