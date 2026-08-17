@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.3.0] - 2026-08-17
+
+### Added
+- `scripts/validate.py`: Yapı ve uyumluluk doğrulama (JSON/YAML, lisans, dokümantasyon bütünlüğü)
+- `scripts/maturity.py`: Olgunluk skor motoru (0-100, 5 kategori) ve otomatik `docs/status.md` raporu
+- `scripts/test_maturity.py`: Olgunluk motoru birim testleri (5 test)
+- `Makefile`: `validate`, `maturity`, `status`, `test`, `lint`, `all` hedefleri
+- `.github/workflows/validate.yml`: CI doğrulama workflow'u (validate + test + lint + maturity)
+- `.yamllint`: GitHub Actions'a uygun lint konfigürasyonu
+
+### Changed
+- README.md: Olgunluk/kaçış mekanizması, geliştirme araçları ve mimari bölümleri eklendi
+- README.md: `docs/status.md` otomatik üretilen rapora bağlantı eklendi
+
+### Security
+- CI workflow'ları `contents: read` ile sınırlandırıldı
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

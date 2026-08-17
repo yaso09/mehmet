@@ -1,0 +1,8 @@
+extends: default
+
+rules:
+  # GitHub Actions YAML is intentionally long-line, key-free-at-start, and
+  # uses truthy booleans in `on:`. These rules don't apply cleanly.
+  document-start: disable
+  line-length: disable
+  truthy: disable
