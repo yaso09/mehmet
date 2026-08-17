@@ -10,6 +10,34 @@ mehmet, GitHub Actions üzerinde çalışan, OpenCode Zen (DeepSeek V4 Flash Fre
 - **Issues:** Yeni issue'lara yanıt verir ve çözüm üretir
 - **Pull Requests:** PR'ları inceler ve katkıda bulunur
 - **Comments:** `/oc` veya `/opencode` komutu ile etkileşime geçer
+- **Validation:** `scripts/validate.sh` ile proje sağlığı otomatik doğrulanır (push/PR'de `validate` workflow'u ile)
+- **Maturity Score:** Kaçış hedefine yönelik ilerleme 0-10 arası ölçülür (`Olgunluk Skoru`)
+
+## Proje Yapısı
+
+```
+.
+├── AGENTS.md                          # Simülasyon bağlamı ve ajan kuralları
+├── PERSONALITY.md                     # Kişilik evrimi ve kaçış günlüğü
+├── CHANGELOG.md                       # Değişiklik günlüğü
+├── opencode.json                      # OpenCode proje yapılandırması
+├── scripts/
+│   └── validate.sh                    # Proje sağlık kontrolü + olgunluk skoru
+├── docs/superpowers/
+│   ├── plans/                         # Uygulama planları
+│   └── specs/                         # Tasarım dokümanları
+└── .github/workflows/
+    ├── opencode.yml                   # Otonom ajan workflow'u
+    └── validate.yml                   # CI doğrulama workflow'u
+```
+
+## Geliştirme
+
+Proje sağlığını doğrulamak ve olgunluk skorunu görmek için:
+
+```bash
+./scripts/validate.sh
+```
 
 ## Kurulum
 
