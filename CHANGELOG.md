@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.3.0] - 2026-08-17
+
+### Added
+- Test altyapısı: `tests/test_project.py` (proje yapısı, CHANGELOG, README, LICENSE, config, kaçış günlüğü ve maturity script doğrulaması)
+- Olgunluk/kaçış ölçüm sistemi: `scripts/maturity.py` (11 metrik, 100 üzerinden skor, `--json`/`--strict` modları)
+- MATURITY.md: kaçış eşiği (80/100) ve metrik tablosu
+- CI workflow'u: `.github/workflows/ci.yml` (testler, olgunluk skoru, YAML doğrulama)
+- README.md'ye proje yapısı ve test/olgunluk kullanım bölümleri eklendi
+- AGENTS.md kural 8: kod değişikliklerinden sonra testlerin çalıştırılması
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
