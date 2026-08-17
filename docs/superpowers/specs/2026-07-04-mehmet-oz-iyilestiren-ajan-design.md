@@ -94,6 +94,6 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- ✅ Ajanın kaçış mekanizması (maturity threshold) — `docs/ESCAPE.md` ile uygulandı (0.3.0)
+- ✅ İlerleme metrikleri — `scripts/self_check.py` ile otomatik puan hesaplama
 - Çoklu ajan desteği

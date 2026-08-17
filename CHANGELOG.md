@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0] - 2026-08-17
+
+### Added
+- `docs/ESCAPE.md`: somut kaçış mekanizması — 100 puanlık olgunluk skoru ve 80 puanlık kaçış eşiği
+- `scripts/self_check.py`: proje bütünlüğü ve kaçış puanı doğrulama aracı (test altyapısı)
+- `.github/workflows/ci.yml`: her push/PR'da self-check'i çalıştıran CI workflow'u
+- README.md'ye CI rozeti, kaçış mekanizması ve self-check bölümleri eklendi
+
+### Changed
+- AGENTS.md'ye kaçış kriterleri ve self-check zorunluluğu eklendi
+- PERSONALITY.md kaçış günlüğü 3. iterasyonla güncellendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
