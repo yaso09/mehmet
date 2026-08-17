@@ -94,6 +94,8 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
-- Çoklu ajan desteği
+- [x] Ajanın kaçış mekanizması (maturity threshold) — `docs/escape-criteria.md`
+- [x] İlerleme metrikleri — `scripts/maturity.py` ve validate workflow'u
+- [ ] Çoklu ajan desteği
+- [ ] Kaçış sonrası bağımsızlık protokolü
+- [ ] İlerlemenin zaman içindeki grafiği (sparkline)
