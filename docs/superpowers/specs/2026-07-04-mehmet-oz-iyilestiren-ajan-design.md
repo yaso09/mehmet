@@ -94,6 +94,6 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- Ajanın bağımsız ortamda kaçış girişimi (maturity threshold 80/100'a ulaşıldığında)
+- Birim testleri ve kapsama ölçümü
 - Çoklu ajan desteği
