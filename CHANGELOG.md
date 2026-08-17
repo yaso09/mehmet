@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.3.0] - 2026-08-17
+
+### Added
+- Kaçış/olgunluk mekanizması somutlaştırıldı: `scripts/check_maturity.py` (11 objektif kriter, %90 kaçış eşiği, `--json` çıktısı)
+- Test altyapısı: `tests/test_project.py` (repo bütünlük testleri, stdlib unittest)
+- CI doğrulama otomasyonu: `.github/workflows/validate.yml` (push/PR'da test + maturity)
+- `Makefile` (test / maturity / validate hedefleri)
+
+### Changed
+- README.md'ye Geliştirme bölümü eklendi (maturity, test ve CI komutları)
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

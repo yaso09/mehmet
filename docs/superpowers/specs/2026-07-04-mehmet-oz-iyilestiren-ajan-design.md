@@ -94,6 +94,6 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- ~~Ajanın kaçış mekanizması (maturity threshold)~~ — ✅ `scripts/check_maturity.py` (v0.3.0)
+- ~~İlerleme metrikleri~~ — ✅ Objektif kriter skorlama, `--json` çıktısı (v0.3.0)
 - Çoklu ajan desteği
