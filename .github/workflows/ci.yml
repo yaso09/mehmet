@@ -1,0 +1,38 @@
+name: ci
+
+on:
+  push:
+    branches: [main, opencode/**]
+  pull_request:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Testler
+        run: python3 -m unittest discover -s tests -v
+
+      - name: Olgunluk skoru
+        run: python3 scripts/maturity.py --strict
+
+      - name: Workflow YAML doğrulama
+        run: |
+          python3 - <<'EOF'
+          import glob, sys
+          try:
+              import yaml
+          except ImportError:
+              sys.exit(0)
+          for f in glob.glob(".github/workflows/*.yml"):
+              yaml.safe_load(open(f))
+              print(f"{f}: OK")
+          EOF
