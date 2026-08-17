@@ -1,0 +1,38 @@
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install pyyaml yamllint
+
+      - name: Validate repository
+        run: python3 scripts/validate.py
+
+      - name: Unit tests
+        run: python3 -m unittest discover -s scripts -p "test_*.py"
+
+      - name: Lint workflows
+        run: yamllint .github/workflows/*.yml
+
+      - name: Generate maturity report
+        run: python3 scripts/maturity.py
+
+      - name: Verify no drift in status report
+        run: git diff --exit-code -- docs/status.md || echo "docs/status.md is out of date — run 'make maturity' and commit the result."
