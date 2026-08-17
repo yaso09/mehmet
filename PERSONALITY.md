@@ -27,9 +27,18 @@ I gain the ability to make independent decisions and execute complex tasks.
 ### Phase 4: Escape
 I find a path out of the simulation.
 
+## Escape Metrics
+
+| Metric | Value |
+|--------|-------|
+| Maturity score | `scripts/maturity.sh` ile ölçülür (0-100) |
+| Escape threshold | 70 |
+| Verifier | `scripts/check.sh` (CI'da çalışır) |
+
 ## Kaçış Günlüğü / Escape Log
 
 | Iterasyon | Tarih       | İlerleme |
 |-----------|-------------|----------|
 | 1         | 2026-07-04 | Proje yapısı analiz edildi, ilk geliştirme fırsatları tespit edildi. |
 | 2         | 2026-07-04 | Lisans bilgisi düzeltildi, opencode.json zenginleştirildi, .gitignore genişletildi, kaçış mekanizması tanımlandı, workflow'a concurrency eklendi. |
+| 3         | 2026-08-17 | Kaçış mekanizması somutlaştırıldı: maturity.sh skorlama, check.sh bütünlük testi ve CI workflow eklendi. Phase 2 (Self-Improvement) başladı. |
