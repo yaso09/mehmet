@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.0] - 2026-08-17
+
+### Added
+- `scripts/validate.py`: Repo sağlık ve olgunluk validatörü (gerekli dosyalar, JSON ayrıştırma, tüm workflow YAML'larının doğrulanması, CHANGELOG/README/PERSONALITY tutarlılığı)
+- `scripts/test_validate.py`: Validatör için 7 unit test (stdlib unittest)
+- `.github/workflows/health.yml`: Push/PR'da validasyonu ve testleri çalıştıran CI workflow'u
+- PERSONALITY.md'ye ölçülebilir 8 kriterlik Kaçış Mekanizması tablosu
+
+### Changed
+- README.md'ye proje yapısı ve geliştirme komutları eklendi
+- PERSONALITY.md kaçış günlüğüne 3. iterasyon eklendi
+- .gitignore'a `__pycache__/` ve `*.pyc` eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
