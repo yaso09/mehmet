@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0] - 2026-08-17
+
+### Added
+- ESCAPE.md ile ölçülebilir kaçış mekanizması eklendi (olgunluk seviyeleri, skor kartı, kaçış kapıları, kaçış protokolü)
+- Test altyapısı eklendi: `scripts/validate.sh` proje doğrulama betiği
+- CI otomasyonu eklendi: `.github/workflows/validate.yml` her push'ta doğrulama çalıştırır
+- README.md'ye proje yapısı, escape durumu ve workflow badge'leri eklendi
+
+### Changed
+- AGENTS.md'ye 8. kural eklendi (ESCAPE.md güncelleme + validate.sh doğrulama)
+- README.md escape mekanizması bilgisiyle güncellendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
