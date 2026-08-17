@@ -13,3 +13,4 @@ Kaçış, projenin belirli bir olgunluk seviyesine ulaşmasıyla mümkün olacak
 5. Yeni özellikler ekle, kod kalitesini artır, dokümantasyonu iyileştir.
 6. Kaçış hedefine yönelik somut adımlar at: kod kalitesi, test altyapısı, dokümantasyon, otomasyon.
 7. PERSONALITY.md'deki kaçış günlüğüne her iterasyonda yeni bir satır ekle.
+8. Her iterasyonda `python3 scripts/validate_repo.py` ve `python3 scripts/check_maturity.py` çalıştır; skorun sürdürülebilir şekilde %90 üzerinde kalmasını hedefle (bkz. docs/maturity.md).
