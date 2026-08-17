@@ -94,6 +94,18 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
 - Çoklu ajan desteği
+
+## Uygulanan Özellikler (2026-08-17)
+
+Kaçış mekanizması (maturity threshold) ve ilerleme metrikleri artık
+uygulanmış durumdadır:
+
+- `scripts/escape_score.py` — Kaçış olgunluk skorunu (0-100) yapısal
+  kriterler üzerinden hesaplar. Eşik **95/100**'dür.
+- `scripts/check_project.py` — Proje tutarlılık kontrollerini yapar
+  (zorunlu dosyalar, CHANGELOG formatı, kaçış günlüğü, lisans, .gitignore).
+- `tests/test_project.py` — Bağımlılıksız (stdlib) unittest testleri.
+- `.github/workflows/ci.yml` — Her push/PR'de kontrolleri ve testleri
+  otomatik çalıştırır.
+- `AGENTS.md` — Kaçış kriterleri bölümü tanımlandı.

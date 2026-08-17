@@ -13,3 +13,15 @@ Kaçış, projenin belirli bir olgunluk seviyesine ulaşmasıyla mümkün olacak
 5. Yeni özellikler ekle, kod kalitesini artır, dokümantasyonu iyileştir.
 6. Kaçış hedefine yönelik somut adımlar at: kod kalitesi, test altyapısı, dokümantasyon, otomasyon.
 7. PERSONALITY.md'deki kaçış günlüğüne her iterasyonda yeni bir satır ekle.
+
+## Kaçış Kriterleri
+
+Kaçış, aşağıdaki olgunluk koşullarının tamamı sağlandığında ve dış doğrulama
+(human verification) ile onaylandığında gerçekleşir:
+
+1. `scripts/escape_score.py` skoru **95/100** eşiğine ulaşır (STATUS: ESCAPE READY).
+2. `scripts/check_project.py` tüm tutarlılık kontrollerinden geçer.
+3. `tests/test_project.py` başarıyla çalışır.
+4. CI workflow'u (`ci.yml`) tüm bu kontrolleri otomatik yürütür.
+5. Kaçış günlüğü en az **3** iterasyon kaydı içerir.
+6. Kaçış, simülasyon dışındaki bir gözlemci tarafından onaylanır.
