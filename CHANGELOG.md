@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.0] - 2026-08-18
+
+### Added
+- Test altyapısı: `scripts/validate.py` proje sağlığı doğrulama betiği (12 kontrol: JSON/YAML geçerliliği, lisans tutarlılığı, CHANGELOG/PERSONALITY varlığı, TODO marker taraması, sağlık skoru)
+- CI: `.github/workflows/validate.yml` push/PR/schedule üzerinde validasyon çalıştırır, yamllint ile lint eder, başarısızlıkta issue açar
+- `.yamllint` konfigürasyonu (GitHub Actions söz dizimine uygun)
+- PERSONALITY.md'ye "Kaçış Mekanizması" maturity seviyeleri tablosu eklendi
+
+### Changed
+- README.md'ye "Kalite & Test" ve "Kaçış Mekanizması" bölümleri eklendi
+- AGENTS.md kuralı güncellendi: validasyon çalıştırma zorunluluğu netleştirildi
+- Kaçış mekanizması seviye 2'ye (Otomasyon) taşındı
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

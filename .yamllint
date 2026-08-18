@@ -1,0 +1,15 @@
+extends: default
+ignore:
+  - LICENSE
+rules:
+  document-start:
+    present: false
+  line-length:
+    max: 140
+  truthy:
+    check-keys: false
+    allowed-values:
+      - "true"
+      - "false"
+      - "on"
+      - "off"
