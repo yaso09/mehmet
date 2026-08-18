@@ -1,5 +1,24 @@
 # Changelog
 
+## [0.3.0] - 2026-08-18
+
+### Added
+- `scripts/maturity.sh`: Kaçış olgunluk skoru hesaplayıcı (5 kategori, 50 puan, eşik 40)
+- `scripts/validate.sh`: Yapılandırma ve script doğrulama scripti
+- `MATURITY.md`: Escape (kaçış) olgunluk skoru tablosu (script tarafından güncellenir)
+- `.github/workflows/ci.yml`: Push/PR'da doğrulama ve shellcheck denetimi
+- `CONTRIBUTING.md`: Katkı kuralları
+- `.editorconfig`: Tutarlı kod stili ayarları
+
+### Changed
+- `opencode.yml`: Otonom job'a `validate.sh` + `maturity.sh` adımları ve genişletilmiş prompt eklendi
+- `README.md`: Geliştirme bölümü, script kullanımı ve dosya yapısı tablosu eklendi
+- `AGENTS.md`: Kaçış hedefi ve olgunluk ölçümü kuralı güçlendirildi
+
+### Fixed
+- Uygulama planındaki lisans bilgisi MIT'den GPLv3'e düzeltildi
+- Design doc'taki "Gelecek Geliştirmeler" kaçış mekanizması tamamlandı olarak işaretlendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
