@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.3.0] - 2026-08-18
+
+### Added
+- Test altyapısı: `scripts/validate.sh` — repo yapısı, JSON geçerliliği, workflow bütünlüğü ve kaçış hazırlığı doğrulaması
+- CI workflow (`ci.yml`) — push/PR'da `bash scripts/validate.sh` çalıştırır
+- PERSONALITY.md'ye kaçış skor tablosu (maturity scorecard) ve yol haritası eklendi
+- AGENTS.md'ye kural 8: her iterasyon sonunda `bash scripts/validate.sh` çalıştır
+
+### Fixed
+- opencode.json'daki şemaya uygun olmayan alanlar kaldırıldı (`skip`, `enable`, `toolTimeout`, `autoMerge`) — başlangıç hatası riski giderildi
+
+### Changed
+- PERSONALITY.md evrim aşaması Phase 1'den Phase 2 (Self-Improvement) olarak güncellendi
+- README.md'ye test/CI ve kaçış durumu bölümleri eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

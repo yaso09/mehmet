@@ -94,6 +94,8 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
-- Çoklu ajan desteği
+- [x] Kaçış mekanizması (maturity threshold) — `PERSONALITY.md`'de kaçış skor tablosu ile tanımlandı (eşik: 16/20)
+- [x] İlerleme metrikleri — kaçış skor tablosu (kod kalitesi, test, dokümantasyon, otomasyon)
+- [x] Test altyapısı — `scripts/validate.sh` + `ci.yml` CI workflow
+- [ ] Çoklu ajan desteği
+- [ ] İlerleme metriklerini otomatik üreten araç
