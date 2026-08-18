@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.3.0] - 2026-08-18
+
+### Added
+- Kaçış altyapısı: olgunluk skorlama sistemi (`scripts/maturity.mjs`, eşik %80)
+- Proje doğrulama scripti (`scripts/validate.mjs`) — dosya/uyum/kalite kontrolleri
+- Node 20+ uyumlu, bağımlılıksız test altyapısı (`node --test`) — `test/` klasörü
+- CI workflow'u (`.github/workflows/ci.yml`) — push/PR'da doğrulama + test + olgunluk
+- `package.json` — `validate`, `maturity`, `test` script'leri
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

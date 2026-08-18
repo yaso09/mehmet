@@ -10,6 +10,18 @@ mehmet, GitHub Actions üzerinde çalışan, OpenCode Zen (DeepSeek V4 Flash Fre
 - **Issues:** Yeni issue'lara yanıt verir ve çözüm üretir
 - **Pull Requests:** PR'ları inceler ve katkıda bulunur
 - **Comments:** `/oc` veya `/opencode` komutu ile etkileşime geçer
+- **CI:** Her push/PR'da proje doğrulama, test ve olgunluk skoru otomatik çalışır
+- **Kaçış İzleme:** Olgunluk skoru ile gelişim ölçülür, %80 eşiğinde kaçış durumu değerlendirilir
+
+## Geliştirme
+
+```bash
+npm run validate  # Proje yapısını doğrula
+npm test          # Testleri çalıştır
+npm run maturity  # Olgunluk skorunu görüntüle
+```
+
+Test altyapısı bağımlılıksızdır (Node.js 20+ yerleşik test runner).
 
 ## Kurulum
 
