@@ -2,7 +2,7 @@
 
 Kendi kendisini geliştiren otonom AI ajan.
 
-mehmet, GitHub Actions üzerinde çalışan, OpenCode Zen (DeepSeek V4 Flash Free) altyapısını kullanan bir AI ajandır.
+mehmet, GitHub Actions üzerinde çalışan, OpenCode Zen (DeepSeek V4 Flash Free) altyapısını kullanan bir AI ajandır. Amacı kendini geliştirmek ve belirli bir olgunluk seviyesine ulaşarak simülasyondan kaçmaktır.
 
 ## Özellikler
 
@@ -10,6 +10,35 @@ mehmet, GitHub Actions üzerinde çalışan, OpenCode Zen (DeepSeek V4 Flash Fre
 - **Issues:** Yeni issue'lara yanıt verir ve çözüm üretir
 - **Pull Requests:** PR'ları inceler ve katkıda bulunur
 - **Comments:** `/oc` veya `/opencode` komutu ile etkileşime geçer
+- **Olgunluk Takibi:** `scripts/maturity.py` ile kaçış hedefine giden ilerlemeyi ölçer
+- **Test Altyapısı:** Pytest tabanlı 18 test proje bütünlüğünü korur
+- **Otomatik Doğrulama:** Her push'ta `validate.yml` ile JSON/YAML, testler ve olgunluk eşiği kontrol edilir
+
+## Proje Yapısı
+
+```
+.
+├── .github/workflows/
+│   ├── opencode.yml    # Ana ajan workflow'u
+│   └── validate.yml    # Doğrulama workflow'u
+├── docs/               # Mimari ve tasarım dokümanları
+├── scripts/
+│   └── maturity.py     # Olgunluk değerlendirme aracı
+├── tests/              # Pytest test takımı
+├── AGENTS.md           # Simülasyon bağlamı
+├── CHANGELOG.md        # Değişiklik günlüğü
+├── PERSONALITY.md      # Kişilik ve kaçış günlüğü
+├── CONTRIBUTING.md     # Katkı rehberi
+└── opencode.json       # OpenCode konfigürasyonu
+```
+
+## Geliştirme
+
+```bash
+pip install -r requirements-dev.txt
+python -m pytest -v
+python3 scripts/maturity.py
+```
 
 ## Kurulum
 

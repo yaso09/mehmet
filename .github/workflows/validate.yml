@@ -1,0 +1,38 @@
+name: validate
+
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements-dev.txt
+
+      - name: Validate YAML workflow syntax
+        run: python -c "import yaml,glob; [yaml.safe_load(open(f)) for f in glob.glob('.github/workflows/*.yml')]; print('YAML OK')"
+        continue-on-error: true
+
+      - name: Validate opencode.json
+        run: python -c "import json; json.load(open('opencode.json')); print('opencode.json OK')"
+
+      - name: Run test suite
+        run: python -m pytest -v
+
+      - name: Run maturity assessment (strict)
+        run: python3 scripts/maturity.py --strict
+
+      - name: Report maturity score
+        run: python3 scripts/maturity.py --json
