@@ -2,6 +2,7 @@ import json
 import sys
 import tempfile
 import unittest
+from datetime import datetime, timezone
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
@@ -120,6 +121,29 @@ class TestMaturityAssess(unittest.TestCase):
         self.write("PERSONALITY.md", "# x\n\n## Kaçış Günlüğü\n| a | b |\n")
         passed, _ = CHECKS["escape_log"](self.root)
         self.assertTrue(passed)
+
+    def test_git_recent_commits_handles_trailing_message(self):
+        now = int(datetime.now(timezone.utc).timestamp())
+        logdir = self.r / ".git" / "logs"
+        logdir.mkdir(parents=True, exist_ok=True)
+        (logdir / "HEAD").write_text(
+            f"old0 new0 Me <me@x> {now - 99999} +0000\tcommit: eski\n"
+            f"new0 new1 Me <me@x> {now} +0000\tcommit: son mesaj artifacts\n",
+            encoding="utf-8",
+        )
+        (self.r / ".git" / "HEAD").write_text("ref: refs/heads/main\n", encoding="utf-8")
+        self.assertTrue(maturity.git_recent_commits(self.root))
+
+    def test_git_recent_commits_false_when_old(self):
+        now = int(datetime.now(timezone.utc).timestamp())
+        logdir = self.r / ".git" / "logs"
+        logdir.mkdir(parents=True, exist_ok=True)
+        (logdir / "HEAD").write_text(
+            f"old0 new0 Me <me@x> {now - 31 * 86400} +0000\tcommit: eski\n",
+            encoding="utf-8",
+        )
+        (self.r / ".git" / "HEAD").write_text("ref: refs/heads/main\n", encoding="utf-8")
+        self.assertFalse(maturity.git_recent_commits(self.root))
 
 
 if __name__ == "__main__":

@@ -49,11 +49,13 @@ def git_recent_commits(root, days=30):
         lines = [ln for ln in fh if ln.strip()]
     if not lines:
         return False
+    import re
+
     last = lines[-1]
-    try:
-        ts = int(last.split()[-1])
-    except (IndexError, ValueError):
+    match = re.search(r"\b(1[5-9]\d{8})\b", last)
+    if not match:
         return False
+    ts = int(match.group(1))
     age = (datetime.now(timezone.utc).timestamp() - ts) / 86400
     return age <= days
 

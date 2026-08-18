@@ -10,6 +10,9 @@
 - README'ye kaçış mekanizması bölümü eklendi
 - Spec dokümanı güncellendi: kaçış mekanizması "uygulandı" olarak işaretlendi
 
+### Fixed
+- `maturity.py` git aktivite kontrolü: reflog satırındaki son kelime timestamp sanılıyordu; artık regex ile doğru unix zamanı çıkarılıyor
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
