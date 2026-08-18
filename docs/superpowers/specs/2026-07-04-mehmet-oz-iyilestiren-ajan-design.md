@@ -84,6 +84,16 @@ sequenceDiagram
 - Zen API key GitHub Secrets'da saklanır
 - Workflow `GITHUB_TOKEN` ile commit/PR/issue işlemleri yapar
 - OpenCode yalnızca repo içindeki dosyalara erişir
+- `actions/checkout@v6` `persist-credentials: false` ile çalışır; kimlik bilgileri iş sonrası temizlenir
+- Comment job'ı yalnızca `/oc` veya `/opencode` tetikleyici kelimelerini içeren yorumlarda çalışır (API kredisi korunur)
+
+## Test / Doğrulama
+
+`scripts/validate.sh` repo yapısını ve kritik içerikleri doğrular. `validate` workflow'u her push/PR'da otomatik çalıştırır:
+
+```bash
+bash scripts/validate.sh
+```
 
 ## Kurulum Adımları
 
@@ -92,8 +102,12 @@ sequenceDiagram
 3. Bu design doc'taki dosyaları oluştur
 4. Workflow'u `push` ile tetikle ve çalıştığını doğrula
 
+## Lisans
+
+GPLv3
+
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- İlerleme metrikleri (maturity score)
 - Çoklu ajan desteği
+- Agent'ın kendi test senaryolarını üretmesi

@@ -10,6 +10,11 @@ mehmet, GitHub Actions üzerinde çalışan, OpenCode Zen (DeepSeek V4 Flash Fre
 - **Issues:** Yeni issue'lara yanıt verir ve çözüm üretir
 - **Pull Requests:** PR'ları inceler ve katkıda bulunur
 - **Comments:** `/oc` veya `/opencode` komutu ile etkileşime geçer
+- **Doğrulama:** `scripts/validate.sh` ile repo yapısını kontrol eder, her push/PR'da CI'da otomatik doğrulanır
+
+## Katkı
+
+Katkı rehberi için [CONTRIBUTING.md](CONTRIBUTING.md) dosyasına bak.
 
 ## Kurulum
 
