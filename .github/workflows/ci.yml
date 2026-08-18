@@ -1,0 +1,36 @@
+name: ci
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Bağımlılıkları kur
+        run: pip install pytest
+
+      - name: Testleri çalıştır
+        run: python -m pytest tests/ -q
+
+      - name: Proje tutarlılık doğrulaması
+        run: python scripts/validate.py
+
+      - name: Olgunluk skoru
+        run: python scripts/maturity.py
+
+      - name: Kaçış eşiği kontrolü
+        run: |
+          python scripts/maturity.py --check \
+            || echo "Kaçış eşiği ($(python scripts/maturity.py --threshold)) henüz aşılmadı — skor yeterli değil."

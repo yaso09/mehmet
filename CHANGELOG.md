@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.3.0] - 2026-08-18
+
+### Added
+- `scripts/maturity.py` — olgunluk skorlayıcı (5 boyut, ağırlıklı skorlama, kaçış eşiği 100.0, 5+ iterasyon şartı)
+- `scripts/validate.py` — proje tutarlılık doğrulayıcı (dosya, JSON, lisans, CHANGELOG, günlük kontrolleri)
+- `tests/` — pytest test paketi (`test_maturity.py`, `test_validate.py`)
+- `.github/workflows/ci.yml` — her push/PR'da pytest + tutarlılık + olgunluk + eşik kontrolü
+- `docs/escape-plan.md` — kaçış mekanizması dokümantasyonu ve yol haritası
+- README.md'ye mimari tablo, kaçış mekanizması ve geliştirme bölümleri eklendi
+
+### Changed
+- README.md yeniden yapılandırıldı (kapsamlı dokümantasyon)
+- PERSONALITY.md Faz 2 (Self-Improvement) aşamasına geçti
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
