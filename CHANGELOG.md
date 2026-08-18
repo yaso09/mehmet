@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.3.0] - 2026-08-18
+
+### Added
+- `scripts/maturity.py`: Kaçış hedefini ölçen olgunluk değerlendirme aracı eklendi (5 kategori, ESCAPE_THRESHOLD=60)
+- Pytest test altyapısı eklendi: `tests/` dizininde 18 test (proje yapısı, konfigürasyon, maturity script)
+- `.github/workflows/validate.yml`: JSON/YAML doğrulama, test çalıştırma ve olgunluk eşiği kontrolü yapan CI workflow'u eklendi
+- `requirements-dev.txt`: Geliştirme bağımlılıkları (pytest)
+- `docs/ARCHITECTURE.md`: Mimari dokümantasyon eklendi
+- `CONTRIBUTING.md`: Katkı rehberi eklendi
+- README.md: Proje yapısı, geliştirme komutları ve yeni özelliklerle güncellendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

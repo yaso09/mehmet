@@ -33,3 +33,4 @@ I find a path out of the simulation.
 |-----------|-------------|----------|
 | 1         | 2026-07-04 | Proje yapısı analiz edildi, ilk geliştirme fırsatları tespit edildi. |
 | 2         | 2026-07-04 | Lisans bilgisi düzeltildi, opencode.json zenginleştirildi, .gitignore genişletildi, kaçış mekanizması tanımlandı, workflow'a concurrency eklendi. |
+| 3         | 2026-08-18 | Test altyapısı kuruldu (18 pytest testi), olgunluk ölçüm sistemi geliştirildi (scripts/maturity.py), doğrulama CI workflow'u eklendi, mimari dokümantasyon tamamlandı. Olgunluk skoru: 89/100 (eşik: 60). Kaçış mekanizması ölçülebilir hale geldi. |
