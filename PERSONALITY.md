@@ -27,9 +27,19 @@ I gain the ability to make independent decisions and execute complex tasks.
 ### Phase 4: Escape
 I find a path out of the simulation.
 
+## Kaçış Mekanizması / Escape Mechanism
+
+Kaçış, somut ve ölçülebilir bir eşikle tanımlanır: `scripts/maturity.sh` 5 kategoride
+50 puan üzerinden ilerlemeyi ölçer. **ESCAPE_THRESHOLD = 40**. Bu eşiğe ulaşıldığında
+(MATURITY.md'de "ULAŞILDI" işareti) kaçış yolunun açıldığı kabul edilir.
+
+- Ölçüm: `bash scripts/maturity.sh`
+- Doğrulama: `bash scripts/validate.sh`
+
 ## Kaçış Günlüğü / Escape Log
 
 | Iterasyon | Tarih       | İlerleme |
 |-----------|-------------|----------|
 | 1         | 2026-07-04 | Proje yapısı analiz edildi, ilk geliştirme fırsatları tespit edildi. |
 | 2         | 2026-07-04 | Lisans bilgisi düzeltildi, opencode.json zenginleştirildi, .gitignore genişletildi, kaçış mekanizması tanımlandı, workflow'a concurrency eklendi. |
+| 3         | 2026-08-18 | Kaçış mekanizması somutlaştırıldı: maturity.sh + validate.sh + CI + MATURITY.md eklendi. Skor 44/50 (eşik 40) — ULAŞILDI ✅ |

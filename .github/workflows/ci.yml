@@ -1,0 +1,36 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    types: [opened, synchronize]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Shellcheck kur
+        run: sudo apt-get update && sudo apt-get install -y shellcheck
+
+      - name: Yapılandırma doğrula
+        run: bash scripts/validate.sh
+
+      - name: Olgunluk skorunu hesapla
+        run: bash scripts/maturity.sh
+
+  shellcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Shellcheck kur
+        run: sudo apt-get update && sudo apt-get install -y shellcheck
+
+      - name: Scriptleri denetle
+        run: shellcheck -x scripts/*.sh
