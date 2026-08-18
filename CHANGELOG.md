@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.3.0] - 2026-08-18
+
+### Added
+- docs/escape-plan.md: ölçülebilir kaçış koşulu ve 0-5 olgunluk seviyesi tanımlandı
+- scripts/self_check.py: kendi kendini doğrulama aracı (dokümantasyon, JSON, workflow, olgunluk skoru)
+- tests/test_self_check.py: proje bütünlüğünü doğrulayan 7 unittest
+- .github/workflows/ci.yml: her push/PR'da self-check + testleri çalıştıran CI pipeline
+
+### Changed
+- opencode.json: schema'ya uymayan geçersiz alanlar (skip, enable, toolTimeout, autoMerge) kaldırıldı; instructions ve autoupdate eklendi
+- README.md: kaçış planı, yapı tablosu ve geliştirme komutları eklendi
+- CHANGELOG.md: sürüm takibi docs/escape-plan.md metriklerine bağlandı
+
+### Fixed
+- opencode.json: geçersiz top-level anahtarlar ConfigInvalidError'a yol açıyordu, düzeltildi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
