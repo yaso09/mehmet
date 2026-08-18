@@ -4,5 +4,11 @@
   "skip": true,
   "enable": true,
   "toolTimeout": 120000,
-  "autoMerge": false
+  "autoMerge": false,
+  "references": {
+    "docs": {
+      "path": "./docs",
+      "description": "Use for project design docs and implementation plans."
+    }
+  }
 }

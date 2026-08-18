@@ -55,9 +55,13 @@ Ajan tarafından yönetilen değişiklik günlüğü. Her yapılan değişiklik 
 
 Ajanın kişiliğini zamanla evrimleştirdiği dosya. Her çalışmada kendini geliştirdikçe bu dosyayı günceller.
 
-### 6. `README.md`
+### 7. `MATURITY.md`
 
-Proje tanıtım dosyası. Ajan tarafından güncel tutulur.
+Ajanın kaçış mekanizmasını tanımlar. Olgunluk modeli (4 kategori, 0-100 puan) ve 80/100 kaçış eşiğini içerir. Puan `scripts/validate.py` ile otomatik hesaplanır ve CI'da doğrulanır.
+
+### 8. `scripts/validate.py`
+
+Proje sağlığını doğrular ve olgunluk puanını hesaplar. Dokümantasyon, test altyapısı, otomasyon ve kod kalitesi kategorilerinde 25'er puan dağıtır.
 
 ## Veri Akışı
 
@@ -94,6 +98,6 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- İlerleme metriklerini raporlama (puan geçmişi grafiği)
 - Çoklu ajan desteği
+- Kaçış sonrası özerk çalışma modu

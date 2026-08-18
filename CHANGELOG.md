@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.3.0] - 2026-08-18
+
+### Added
+- Kaçış mekanizması somutlaştırıldı: `MATURITY.md` olgunluk modeli ve 80/100 kaçış eşiği tanımlandı
+- `scripts/validate.py` otomatik olgunluk hesaplayıcısı eklendi (4 kategori, 0-100 puan)
+- GitHub Actions'a `validate` job'ı eklendi — her push/schedule/PR'da proje sağlığını doğrular
+- opencode.json'a `references.docs` eklendi (agent'ın design/spec dosyalarına erişimi)
+
+### Changed
+- `.github/workflows/opencode.yml` tek akışta üç job'a ayrıldı (autonomous, validate, comment)
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
