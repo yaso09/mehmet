@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0] - 2026-08-18
+
+### Added
+- `scripts/verify.sh` ile proje bütünlük doğrulama altyapısı (test/doğrulama boyutu)
+- `METRICS.md` ile olgunluk modeli, kaçış eşiği ve ilerleme takibi
+- Workflow'a `verify` job'u eklendi; her çalışmada otomatik doğrulama yapılır
+- README'ye Doğrulama ve Olgunluk & Kaçış bölümleri eklendi
+
+### Changed
+- Olgunluk puanı güncellendi (13/30 → 16/30)
+- README özellik listesi genişletildi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
