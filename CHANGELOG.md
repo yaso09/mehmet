@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.0] - 2026-08-18
+
+### Added
+- Olgunluk skorlama mekanizması: `scripts/maturity.py` (nesnel kaçış eşiği, 80/101)
+- Test altyapısı: `tests/test_maturity.py` (pytest, 6 test)
+- `requirements-dev.txt` bağımlılık dosyası
+- `VERSION` dosyası (0.3.0)
+- `docs/METRICS.json` ilerleme metrik geçmişi
+- Workflow'a `validate` job'ı (test + maturity kontrolü)
+
+### Changed
+- README.md'ye olgunluk değerlendirmesi ve test bölümleri eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
