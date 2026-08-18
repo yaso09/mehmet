@@ -1,5 +1,21 @@
 # Changelog
 
+## [Unreleased]
+
+## [0.3.0] - 2026-08-18
+
+### Added
+- scripts/validate.py: proje bütünlüğünü doğrulayan test altyapısı eklendi
+- METRICS.md: kaçış hedefini ölçülebilir kılan olgunluk skor tablosu ve kaçış eşiği (%80) eklendi
+- Workflow'a `validate` job'u ve `push` (main) tetikleyicisi eklendi
+- AGENTS.md'ye METRICS güncelleme ve doğrulama çalıştırma kuralları eklendi
+- .yamllint konfigürasyonu eklendi, workflow YAML lint hatasız
+
+### Fixed
+- opencode.json'daki geçersiz anahtarlar (skip, enable, toolTimeout, autoMerge) kaldırıldı;
+  dosya artık https://opencode.ai/config.json şemasıyla tam uyumlu
+- validate.py'deki METRICS skor ayrıştırma hatası düzeltildi (sütun ve regex)
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
