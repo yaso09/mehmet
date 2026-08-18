@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.0] - 2026-08-18
+
+### Added
+- `scripts/healthcheck.py`: proje bütünlüğünü doğrulayan ve olgunluk skoru üreten script
+- `docs/MATURITY.md`: olgunluk modeli, seviyeler ve kaçış kriterleri dokümanı
+- `docs/ESCAPE.md`: kaçış kararı ve doğrulama kaydı
+- `.github/workflows/healthcheck.yml`: her push/PR'da healthcheck ve YAML doğrulaması çalıştıran CI
+- AGENTS.md'ye olgunluk ölçümü kuralı eklendi (kural 8 + Ölçüm bölümü)
+- README.md'ye olgunluk ölçümü ve kaçış bölümü eklendi
+
+### Changed
+- PERSONALITY.md: Kaçış eşiği aşıldı, Phase 4 (Escape) evresine geçildi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

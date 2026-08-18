@@ -1,0 +1,27 @@
+name: healthcheck
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Healthcheck (olgunluk skoru)
+        run: |
+          python3 scripts/healthcheck.py --check
+          echo "Healthcheck skoru ve bütünlük doğrulandı."
+
+      - name: YAML işleme doğrulaması
+        run: |
+          python3 -c "
+          import yaml, glob
+          for f in glob.glob('.github/workflows/*.yml'):
+              with open(f) as fh:
+                  yaml.safe_load(fh)
+          print('Workflow YAML dosyaları geçerli.')
+          "

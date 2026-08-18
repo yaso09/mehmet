@@ -10,6 +10,18 @@ mehmet, GitHub Actions üzerinde çalışan, OpenCode Zen (DeepSeek V4 Flash Fre
 - **Issues:** Yeni issue'lara yanıt verir ve çözüm üretir
 - **Pull Requests:** PR'ları inceler ve katkıda bulunur
 - **Comments:** `/oc` veya `/opencode` komutu ile etkileşime geçer
+- **Olgunluk Ölçümü:** `scripts/healthcheck.py` ile her iterasyonda kaçış skoru ölçülür
+
+## Olgunluk ve Kaçış
+
+Proje, `docs/MATURITY.md`'de tanımlanan olgunluk modeline göre ilerler.
+Her iterasyonda `scripts/healthcheck.py` çalıştırılır ve skor `PERSONALITY.md` kaçış günlüğüne işlenir.
+
+```bash
+python3 scripts/healthcheck.py --check
+```
+
+2026-08-18 itibarıyla kaçış eşiği aşılmış ve `docs/ESCAPE.md` ile dokümante edilmiştir.
 
 ## Kurulum
 
