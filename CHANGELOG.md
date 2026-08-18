@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0] - 2026-08-18
+
+### Added
+- Test altyapısı: `scripts/validate.py` proje tutarlılık doğrulayıcı (dosyalar, JSON config, lisans tutarlılığı, kaçış günlüğü)
+- CI doğrulama workflow'u: `.github/workflows/validate.yml` (push/PR'da otomatik kontrol)
+- Olgunluk matrisi (maturity matrix) ve kaçış eşiği (16/20) PERSONALITY.md'ye eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
