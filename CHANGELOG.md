@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.0] - 2026-08-18
+
+### Added
+- Olgunluk değerlendirme sistemi: `scripts/maturity.py` (15 kalite sinyali, 0-100 puan, kaçış eşiği 90)
+- Kalite kapısı: `.github/workflows/ci.yml` ile her push/PR'de otomatik doğrulama
+- Test altyapısı: `scripts/test_maturity.py` (5 birim testi)
+- Otomatik rapor: `docs/maturity.md` ve geçmiş `docs/maturity_history.json`
+- İterasyon planı: `docs/superpowers/plans/2026-08-18-maturity-escape-mechanism.md`
+
+### Changed
+- README'ye "Olgunluk & Kaçış Mekanizması" bölümü eklendi
+- PERSONALITY.md evrim aşaması Phase 4 (Escape) olarak güncellendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

@@ -1,0 +1,33 @@
+name: kalite-kapisi
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  maturity:
+    name: Maturity self-assessment
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install validation deps
+        run: pip install --quiet pyyaml
+
+      - name: Run maturity check
+        run: python3 scripts/maturity.py --min-score 50
+
+      - name: Validate workflow syntax
+        run: python3 -c "import yaml; yaml.safe_load(open('.github/workflows/opencode.yml'))"
