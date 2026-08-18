@@ -94,6 +94,7 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
-- Çoklu ajan desteği
+- [x] Ajanın kaçış mekanizması (maturity threshold) — PERSONALITY.md "Kaçış Yol Haritası"
+- [x] İlerleme metrikleri — maturity gates tablosu ve test altyapısı
+- [x] Test altyapısı — `tests/test_project.py` + `.github/workflows/ci.yml`
+- [ ] Çoklu ajan desteği

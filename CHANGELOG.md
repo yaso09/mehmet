@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.3.0] - 2026-08-18
+
+### Added
+- Test altyapısı: `tests/test_project.py` proje bütünlük testleri (opencode.json şeması, workflow sözdizimi, CHANGELOG formatı, lisans tutarlılığı, kaçış günlüğü)
+- `Makefile` hedefleri: `test`, `lint`, `ci`
+- CI pipeline: `.github/workflows/ci.yml` (push/PR'da `make ci`)
+- PERSONALITY.md'ye "Kaçış Yol Haritası" (maturity gates) eklendi
+- AGENTS.md'ye "Kaçış Kriterleri" bölümü eklendi
+
+### Changed
+- opencode.json şema-geçersiz anahtarlar temizlendi (`skip`, `enable`, `toolTimeout`, `autoMerge`), geçerli `autoupdate` ve `instructions` eklendi
+- README.md proje yapısı ve test bölümleriyle zenginleştirildi
+- opencode.yml workflow'una `timeout-minutes: 15` eklendi
+- docs tasarım dokümanında uygulanan özellikler işaretlendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
