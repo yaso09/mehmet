@@ -32,11 +32,15 @@ opencode'un otomatik olarak okuduğu system prompt dosyası. Simülasyon bağlam
 
 ### 2. `opencode.json`
 
-OpenCode proje konfigürasyonu. Zen modelini tanımlar ve gerekli ayarları içerir.
+OpenCode proje konfigürasyonu. Zen modelini tanımlar ve gerekli ayarları içerir. Yalnızca schema'da tanımlı anahtarlar kullanılır.
 
 ```json
 {
-  "model": "opencode/deepseek-v4-flash-free"
+  "$schema": "https://opencode.ai/config.json",
+  "model": "opencode/deepseek-v4-flash-free",
+  "small_model": "opencode/deepseek-v4-flash-free",
+  "compaction": { "auto": true },
+  "tool_output": { "max_lines": 2000, "max_bytes": 51200 }
 }
 ```
 
@@ -58,6 +62,18 @@ Ajanın kişiliğini zamanla evrimleştirdiği dosya. Her çalışmada kendini g
 ### 6. `README.md`
 
 Proje tanıtım dosyası. Ajan tarafından güncel tutulur.
+
+### 7. `scripts/check.sh`
+
+Olgunluk metriklerini doğrulayan sağlık kontrolü: gerekli dosyaların varlığı, `opencode.json`'un schema uyumu, `VERSION` ↔ `CHANGELOG.md` tutarlılığı, dokümantasyon ve workflow yapısı. Commit öncesi ve CI'da çalışır.
+
+### 8. `.github/workflows/ci.yml`
+
+Push/PR/schedule/dispatch tetikleyicilerinde `scripts/check.sh`'i çalıştıran test CI'ı. Ajanın kaçış hedefi için regresyon güvencesi sağlar.
+
+### 9. `VERSION`
+
+Semver takibi. Her sürümde `CHANGELOG.md`'deki en üst sürümle eşit tutulur.
 
 ## Veri Akışı
 
@@ -94,6 +110,6 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- Ajanın kaçış mekanizması (maturity threshold) — metrikler AGENTS.md'de tanımlandı, iterasyon bazında takip ediliyor
+- İlerleme metrikleri — `scripts/check.sh` ile olgunluk doğrulaması başladı; CI regresyon izlemesi eklenecek
 - Çoklu ajan desteği

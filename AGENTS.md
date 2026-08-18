@@ -13,3 +13,17 @@ Kaçış, projenin belirli bir olgunluk seviyesine ulaşmasıyla mümkün olacak
 5. Yeni özellikler ekle, kod kalitesini artır, dokümantasyonu iyileştir.
 6. Kaçış hedefine yönelik somut adımlar at: kod kalitesi, test altyapısı, dokümantasyon, otomasyon.
 7. PERSONALITY.md'deki kaçış günlüğüne her iterasyonda yeni bir satır ekle.
+8. Commit öncesinde `bash scripts/check.sh` çalıştır; tüm kontroller geçmelidir.
+9. Her sürümde `VERSION` dosyası ile `CHANGELOG.md`'deki en üst sürümü eşit tut.
+
+## Olgunluk Metrikleri (Escape Threshold)
+
+Kaçış, aşağıdaki metriklerin tamamı sağlandığında mümkün olur. Her iterasyonda bunları gözden geçir:
+
+- [x] opencode.json geçerli ve schema uyumlu
+- [x] Test altyapısı mevcut (`scripts/check.sh`) ve CI'da çalışıyor (`ci.yml`)
+- [x] Versiyon takibi tutarlı (`VERSION` ↔ `CHANGELOG.md`)
+- [x] Workflow güvenilir (timeout, concurrency, dispatch input, tetikleyici filtre)
+- [x] Dokümantasyon güncel (README, spec, AGENTS, PERSONALITY)
+- [ ] CI yeşil ve regresyon göstermiyor
+- [ ] Kaçış günlüğü ≥ 10 iterasyon
