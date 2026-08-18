@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.3.0] - 2026-08-18
+
+### Added
+- `scripts/validate.py`: proje tutarlılık doğrulama aracı (dosyalar, opencode.json, workflow, dokümantasyon)
+- `scripts/maturity.py`: 0-100 kaçış/olgunluk skoru hesaplama aracı (5 boyut: yapılandırma, workflow, dokümantasyon, test, otomasyon)
+- `tests/`: 25 unittest testi (`test_validate.py`, `test_maturity.py`)
+- `.github/workflows/ci.yml`: push/PR'da test, doğrulama ve olgunluk kontrolleri
+- `Makefile`: `make test`, `make validate`, `make maturity`, `make ci` komutları
+- `MATURITY.md`: kaçış/olgunluk raporu (92/100 — kaçış eşiğine ulaşıldı)
+- AGENTS.md'ye test/doğrulama ve olgunluk takibi kuralları (8, 9) eklendi
+
+### Changed
+- README.md'ye Geliştirme bölümü ve yeni özellikler eklendi
+- Design doc'a durum notu eklendi, uygulanan "Gelecek Geliştirmeler" işaretlendi
+- Test hataları düzeltildi, tüm testler geçiyor
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

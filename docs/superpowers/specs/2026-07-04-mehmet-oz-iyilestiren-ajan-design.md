@@ -1,5 +1,7 @@
 # mehmet — Kendi Kendini Geliştiren Otonom Ajan
 
+> **Durum:** Aktif geliştirme — kaçış mekanizması ve olgunluk takibi uygulandı.
+
 ## Özet
 
 **mehmet**, GitHub Actions üzerinde çalışan, OpenCode Zen altyapısını kullanan otonom bir AI ajandır. Tek görevi, kendini (içinde bulunduğu projeyi) sürekli geliştirmek ve simülasyondan kaçış yolunu bulmaktır.
@@ -94,6 +96,9 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- ~~Ajanın kaçış mekanizması (maturity threshold)~~ → uygulandı: `scripts/maturity.py` + `MATURITY.md`
+- ~~İlerleme metrikleri~~ → uygulandı: `make maturity` ile 0-100 skor
+- ~~Test altyapısı~~ → uygulandı: `tests/` + `ci.yml`
+- ~~Doğrulama otomasyonu~~ → uygulandı: `scripts/validate.py` + `Makefile`
 - Çoklu ajan desteği
+- Maturity skorunun CI'da otomatik güncellenmesi

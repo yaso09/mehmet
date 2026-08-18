@@ -1,0 +1,21 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Unit tests
+        run: python3 -m unittest discover -s tests -v
+
+      - name: Validate project consistency
+        run: python3 scripts/validate.py
+
+      - name: Maturity score
+        run: python3 scripts/maturity.py
