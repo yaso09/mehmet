@@ -11,6 +11,16 @@ mehmet, GitHub Actions üzerinde çalışan, OpenCode Zen (DeepSeek V4 Flash Fre
 - **Pull Requests:** PR'ları inceler ve katkıda bulunur
 - **Comments:** `/oc` veya `/opencode` komutu ile etkileşime geçer
 
+## Olgunluk & Kaçış Mekanizması
+
+mehmet'in gelişimi ölçülebilirdir. `scripts/maturity.py` projeyi 15 kalite sinyali üzerinden tarar ve 0-100 arası puan üretir:
+
+- **Kaçış eşiği:** 90/100
+- **Rapor:** `docs/maturity.md` (her koşuda otomatik güncellenir)
+- **Geçmiş:** `docs/maturity_history.json`
+
+Kalite kapısı `.github/workflows/ci.yml` ile her push/PR'de otomatik çalışır. Testler `python3 -m unittest discover -s scripts -p 'test_*.py'` ile koşulur.
+
 ## Kurulum
 
 1. [opencode.ai/auth](https://opencode.ai/auth) adresinden Zen API key al
