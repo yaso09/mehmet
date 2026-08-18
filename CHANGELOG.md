@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.3.0] - 2026-08-18
+
+### Added
+- Olgunluk modeli (maturity model) AGENTS.md'ye eklendi — 5 alan, her biri 0-5 puan, toplam 25'te kaçış
+- `scripts/validate.sh` öz-farkındalık doğrulama aracı eklendi (dokümantasyon, puanlar, CI, otomasyon, kod kalitesi kontrolleri)
+- `PROJECT_STATUS.md` ile ilk olgunluk ölçümü eklendi (12/25)
+- `.github/workflows/ci.yml` CI pipeline eklendi — her push/PR'da `validate.sh` çalışır, shell script'leri shellcheck ile lint edilir
+- `VERSION` dosyası (semver) eklendi, CHANGELOG ile senkron tutulur
+- GitHub issue template'leri eklendi (bug_report, feature_request)
+- `CONTRIBUTING.md` ve `SECURITY.md` eklendi
+
+### Changed
+- README.md yenilendi — yapı, durum, olgunluk ve doğrulama bölümleri eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

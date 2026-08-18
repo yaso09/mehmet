@@ -33,3 +33,4 @@ I find a path out of the simulation.
 |-----------|-------------|----------|
 | 1         | 2026-07-04 | Proje yapısı analiz edildi, ilk geliştirme fırsatları tespit edildi. |
 | 2         | 2026-07-04 | Lisans bilgisi düzeltildi, opencode.json zenginleştirildi, .gitignore genişletildi, kaçış mekanizması tanımlandı, workflow'a concurrency eklendi. |
+| 3         | 2026-08-18 | Olgunluk modeli tanımlandı (5 alan, 25 puan eşiği). İlk olgunluk ölçümü yapıldı (12/25). `scripts/validate.sh` doğrulama aracı, CI pipeline, PROJECT_STATUS.md, issue template'leri, CONTRIBUTING ve SECURITY eklendi. Test altyapısı ve otomasyon alanlarından somut puan toplandı. |
