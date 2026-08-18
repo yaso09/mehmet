@@ -1,0 +1,32 @@
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Run project validation
+        run: python3 scripts/validate.py
+
+      - name: Install YAML parser
+        run: python3 -m pip install --quiet pyyaml
+
+      - name: Verify workflows are valid YAML
+        run: |
+          python3 -c "
+          import glob, yaml
+          for f in glob.glob('.github/workflows/*.yml') + glob.glob('.github/workflows/*.yaml'):
+              with open(f) as fh:
+                  yaml.safe_load(fh)
+              print('valid YAML:', f)
+          "

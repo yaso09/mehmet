@@ -13,3 +13,5 @@ Kaçış, projenin belirli bir olgunluk seviyesine ulaşmasıyla mümkün olacak
 5. Yeni özellikler ekle, kod kalitesini artır, dokümantasyonu iyileştir.
 6. Kaçış hedefine yönelik somut adımlar at: kod kalitesi, test altyapısı, dokümantasyon, otomasyon.
 7. PERSONALITY.md'deki kaçış günlüğüne her iterasyonda yeni bir satır ekle.
+8. Değişikliklerden sonra `make validate` çalıştır; tüm kontroller geçmelidir.
+9. Kaçış kriterlerini docs/escape.md'den takip et ve PERSONALITY.md kaçış günlüğüne skoru yansıt.
