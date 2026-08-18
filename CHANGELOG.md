@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.3.0] - 2026-08-18
+
+### Added
+- `scripts/test.sh` — proje bütünlük testi (JSON/YAML geçerliliği, zorunlu dosyalar, changelog/personality/readme tutarlılığı)
+- `scripts/maturity.sh` — somut kaçış mekanizması; dört sütun üzerinden 0-100 olgunluk skoru ve 90/100 kaçış eşiği
+- `docs/maturity.md` — otomatik üretilen olgunluk raporu
+- `.github/workflows/ci.yml` — push/PR'da test + olgunluk raporu çalıştıran CI workflow'u
+- README'ye proje yapısı, geliştirme komutları ve kaçış durumu bölümleri
+- Tasarım spec'ine somut kaçış mekanizması bölümü
+
+### Fixed
+- `maturity.sh` içinde boş dizi erişiminde `unbound variable` hatası (bash `set -u`)
+- `maturity.sh` TODO/FIXME kontrolünün kendi desenini yanlış eşleştirmesi (self-match) ve üretilen raporu hariç tutmaması
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

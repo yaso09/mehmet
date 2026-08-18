@@ -1,0 +1,28 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Run project integrity tests
+        run: ./scripts/test.sh
+
+      - name: Compute maturity score
+        run: ./scripts/maturity.sh --report
+
+      - name: Verify maturity report is current
+        run: |
+          git diff --exit-code docs/maturity.md \
+            && echo "maturity report up to date" \
+            || echo "::warning::docs/maturity.md is stale — run ./scripts/maturity.sh --report"

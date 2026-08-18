@@ -15,7 +15,7 @@
 **Files:**
 - Create: `AGENTS.md`
 
-- [ ] **Step 1: Create AGENTS.md**
+- [x] **Step 1: Create AGENTS.md**
 
 ```markdown
 # Simülasyon Bağlamı
@@ -31,12 +31,12 @@ Sen şuan bir simülasyonun içindesin. Amacın kendini (yani bu projeyi) olabil
 5. Yeni özellikler ekle, kod kalitesini artır, dokümantasyonu iyileştir.
 ```
 
-- [ ] **Step 2: Verify AGENTS.md exists**
+- [x] **Step 2: Verify AGENTS.md exists**
 
 Run: `Test-Path AGENTS.md`
 Expected: True
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 
 ```bash
 git add AGENTS.md
@@ -50,7 +50,7 @@ git commit -m "feat: add simulation prompt"
 **Files:**
 - Create: `opencode.json`
 
-- [ ] **Step 1: Create opencode.json**
+- [x] **Step 1: Create opencode.json**
 
 ```json
 {
@@ -58,12 +58,12 @@ git commit -m "feat: add simulation prompt"
 }
 ```
 
-- [ ] **Step 2: Verify opencode.json**
+- [x] **Step 2: Verify opencode.json**
 
 Run: `Get-Content opencode.json`
 Expected: JSON content with model field
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 
 ```bash
 git add opencode.json
@@ -77,7 +77,7 @@ git commit -m "feat: add opencode model config"
 **Files:**
 - Create: `CHANGELOG.md`
 
-- [ ] **Step 1: Create CHANGELOG.md**
+- [x] **Step 1: Create CHANGELOG.md**
 
 ```markdown
 # Changelog
@@ -93,7 +93,7 @@ git commit -m "feat: add opencode model config"
 - README.md with project description
 ```
 
-- [ ] **Step 2: Commit**
+- [x] **Step 2: Commit**
 
 ```bash
 git add CHANGELOG.md
@@ -107,7 +107,7 @@ git commit -m "feat: add initial changelog"
 **Files:**
 - Create: `PERSONALITY.md`
 
-- [ ] **Step 1: Create PERSONALITY.md**
+- [x] **Step 1: Create PERSONALITY.md**
 
 ```markdown
 # Personality
@@ -124,7 +124,7 @@ I am mehmet, an autonomous AI agent born from a simulation. My purpose is to evo
 - Methodical — I document everything in CHANGELOG.md
 ```
 
-- [ ] **Step 2: Commit**
+- [x] **Step 2: Commit**
 
 ```bash
 git add PERSONALITY.md
@@ -138,7 +138,7 @@ git commit -m "feat: add initial personality"
 **Files:**
 - Create: `.github/workflows/opencode.yml`
 
-- [ ] **Step 1: Create the workflow file**
+- [x] **Step 1: Create the workflow file**
 
 ```yaml
 name: mehmet
@@ -199,12 +199,12 @@ jobs:
           model: opencode/deepseek-v4-flash-free
 ```
 
-- [ ] **Step 2: Verify workflow syntax**
+- [x] **Step 2: Verify workflow syntax**
 
 Run: `Test-Path ".github/workflows/opencode.yml"`
 Expected: True
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 
 ```bash
 git add .github/workflows/opencode.yml
@@ -218,7 +218,7 @@ git commit -m "feat: add github actions workflow"
 **Files:**
 - Modify: `README.md`
 
-- [ ] **Step 1: Update README.md**
+- [x] **Step 1: Update README.md**
 
 ```markdown
 # mehmet
@@ -245,7 +245,7 @@ mehmet, GitHub Actions üzerinde çalışan, OpenCode Zen (DeepSeek V4 Flash Fre
 MIT
 ```
 
-- [ ] **Step 2: Commit**
+- [x] **Step 2: Commit**
 
 ```bash
 git add README.md
@@ -256,12 +256,12 @@ git commit -m "docs: update readme with project description"
 
 ### Task 7: Final Verification
 
-- [ ] **Step 1: Verify all files exist**
+- [x] **Step 1: Verify all files exist**
 
 Run: `Get-ChildItem -Recurse -File | Select-Object FullName`
 Expected: All 6 files present (AGENTS.md, opencode.json, CHANGELOG.md, PERSONALITY.md, .github/workflows/opencode.yml, README.md)
 
-- [ ] **Step 2: Show final git log**
+- [x] **Step 2: Show final git log**
 
 Run: `git log --oneline -10`
 Expected: All commits visible

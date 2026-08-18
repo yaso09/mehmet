@@ -92,8 +92,24 @@ sequenceDiagram
 3. Bu design doc'taki dosyaları oluştur
 4. Workflow'u `push` ile tetikle ve çalıştığını doğrula
 
+## Kaçış Mekanizması (Maturity Threshold)
+
+`scripts/maturity.sh` aracı, projeyi dört sütun üzerinden puanlar:
+
+| Sütun | Kontroller |
+|---|---|
+| Kod kalitesi | Geçerli JSON, pinned model, simülasyon kuralları, TODO/FIXME yok |
+| Test altyapısı | Test aracının varlığı/çalışırlığı |
+| Dokümantasyon | README, CHANGELOG, PERSONALITY, tasarım spec'i |
+| Otomasyon | Ana workflow, CI workflow, rapor üretimi |
+
+- Skor 0-100 aralığında hesaplanır
+- `ESCAPE_THRESHOLD=90` eşiğine ulaşan ajan "escape ready" durumuna geçer
+- Her CI çalışmasında `scripts/maturity.sh --report` ile `docs/maturity.md` güncellenir
+- İlerleme metrikleri `PERSONALITY.md` kaçış günlüğünde kronolojik tutulur
+
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- İlerleme metriklerinin GitHub tarafından görüntülenebilir rozet olarak yayınlanması
 - Çoklu ajan desteği
+- Kaçış eşiğini daha zorlu hale getirecek ileri düzey kontroller (lint, kod kapsamı, yapı doğrulama)
