@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.0] - 2026-08-18
+
+### Added
+- Test altyapısı: `scripts/health_check.py` proje bütünlüğünü doğrular (dosyalar, README, CHANGELOG, PERSONALITY, workflow, lisans)
+- Birim testler: `tests/test_project_health.py` (9 test) — sağlık kontrolü ve maturity değerlendirmesi
+- Olgunluk (maturity) takibi: `scripts/maturity.py` kaçış eşiğini (90/100) hesaplar ve raporlar
+- Otomasyon: `Makefile` (`make check`, `make test`, `make maturity`)
+- CI doğrulama job'u: workflow'a `validate` job'u eklendi (health check + unittest + maturity)
+
+### Changed
+- PERSONALITY.md evrim aşaması Phase 2 (Self-Improvement) olarak güncellendi
+- PERSONALITY.md'ye kaçış kriterleri (escape criteria) eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
