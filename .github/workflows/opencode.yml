@@ -16,11 +16,17 @@ on:
   pull_request_review_comment:
     types: [created]
   workflow_dispatch:
+    inputs:
+      prompt:
+        description: "Özel görev prompt'u (boşsa varsayılan simülasyon prompt'u kullanılır)"
+        required: false
+        default: ""
 
 jobs:
   autonomous:
     if: github.event_name != 'issue_comment' && github.event_name != 'pull_request_review_comment'
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     permissions:
       id-token: write
       contents: write
@@ -37,12 +43,14 @@ jobs:
         with:
           model: opencode/deepseek-v4-flash-free
           prompt: |
-            Projeyi tara, geliştirme fırsatlarını bul ve uygula.
-            AGENTS.md'deki simülasyon kurallarına uy.
+            ${{ inputs.prompt || 'Projeyi tara, geliştirme fırsatlarını bul ve uygula. AGENTS.md''deki simülasyon kurallarına uy.' }}
 
   comment:
-    if: github.event_name == 'issue_comment' || github.event_name == 'pull_request_review_comment'
+    if: |
+      (github.event_name == 'issue_comment' || github.event_name == 'pull_request_review_comment') &&
+      (contains(github.event.comment.body, '/oc') || contains(github.event.comment.body, '/opencode'))
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     permissions:
       id-token: write
       contents: write
