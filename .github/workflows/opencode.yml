@@ -18,6 +18,20 @@ on:
   workflow_dispatch:
 
 jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.x"
+      - name: Repo yapısını doğrula
+        run: python3 scripts/validate.py
+      - name: Testleri çalıştır
+        run: python3 -m unittest discover -s tests -v
+      - name: Olgunluk skorunu raporla
+        run: python3 scripts/maturity.py
+
   autonomous:
     if: github.event_name != 'issue_comment' && github.event_name != 'pull_request_review_comment'
     runs-on: ubuntu-latest

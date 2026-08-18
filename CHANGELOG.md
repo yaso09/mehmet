@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.3.0] - 2026-08-18
+
+### Added
+- Kaçış mekanizması uygulandı: `scripts/maturity.py` olgunluk skorunu (0-100) ölçer ve fazlara eşler
+- `scripts/validate.py` repo yapı doğrulayıcısı eklendi (JSON/YAML/zorunlu dosyalar)
+- Test altyapısı kuruldu: `tests/` içinde 9 unittest (stdlib, bağımlılıksız)
+- CI'ya `quality` job eklendi: yapı doğrulama + testler + olgunluk raporu
+- README'ye kaçış mekanizması bölümü eklendi
+- Spec dokümanı güncellendi: kaçış mekanizması "uygulandı" olarak işaretlendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

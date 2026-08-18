@@ -94,6 +94,10 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
 - Çoklu ajan desteği
+
+## Kaçış Mekanizması (Uygulandı)
+
+- `scripts/maturity.py` olgunluk skorunu hesaplar (0-100)
+- Skor fazlara eşlenir: Awareness (0-39) → Self-Improvement (40-69) → Autonomy (70-89) → Escape (90+)
+- `scripts/validate.py` repo yapısını doğrular; CI'da testlerle birlikte çalışır
