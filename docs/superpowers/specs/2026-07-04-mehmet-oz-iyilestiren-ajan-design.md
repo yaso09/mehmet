@@ -59,6 +59,14 @@ Ajanın kişiliğini zamanla evrimleştirdiği dosya. Her çalışmada kendini g
 
 Proje tanıtım dosyası. Ajan tarafından güncel tutulur.
 
+### 7. `MATURITY.md`
+
+Kaçış için ölçülebilir olgunluk modeli. Kategori bazlı checkpoint'ler ve 80/100 kaçış eşiği içerir.
+
+### 8. `scripts/validate_project.py`
+
+Proje yapısını doğrulayan ve MATURITY.md checkpoint'lerinden olgunluk skorunu hesaplayan Python scripti. CI'da `validate` job'ı ile çalışır.
+
 ## Veri Akışı
 
 ```mermaid
@@ -94,6 +102,6 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- Ajanın kaçış mekanizması (maturity threshold) — ✅ `MATURITY.md` ile uygulandı
+- İlerleme metrikleri — ✅ `scripts/validate_project.py` ile otomatik hesaplanıyor
 - Çoklu ajan desteği
