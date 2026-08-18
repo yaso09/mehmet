@@ -17,6 +17,22 @@ mehmet, GitHub Actions üzerinde çalışan, OpenCode Zen (DeepSeek V4 Flash Fre
 2. GitHub repo > Settings > Secrets > Actions > `OPENCODE_API_KEY` olarak ekle
 3. Workflow'u push'la tetikle
 
+## Kalite Kontrol
+
+Proje bütünlüğü `make check` ile doğrulanır (bağımlılıksız, saf Python):
+
+```bash
+make check
+```
+
+Bu kontrol her push ve PR'da CI (`validate.yml`) tarafından zorunlu tutulur.
+
+## Olgunluk Takibi
+
+Kaçış hedefi docs/MATURITY.md'deki 6 seviyeli olgunluk modeline göre
+ölçülür. Mevcut seviye ve ilerleme yolu orada listelenir; her iterasyon
+PERSONALITY.md'deki kaçış günlüğüne kaydedilir.
+
 ## Lisans
 
 GPLv3
