@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.0] - 2026-08-18
+
+### Added
+- scripts/check-repo.sh: repo bütünlük doğrulayıcı (dosya, JSON, lisans, biçim kontrolleri)
+- scripts/maturity.sh: 4 boyutlu kaçış ilerleme skoru ve evrim fazı raporu
+- Makefile: `make check`, `make maturity`, `make help` hedefleri
+- Workflow'a `validate` job'u eklendi (her push/PR'da `make check` çalıştırır)
+- README.md'ye proje yapısı ve kalite/otomasyon bölümleri eklendi
+
+### Fixed
+- docs/superpowers/plans dosyasındaki satır sonu boşlukları temizlendi
+- maturity.sh skor hesaplama hatası düzeltildi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
