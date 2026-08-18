@@ -94,6 +94,12 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- Kaçış mekanizmasının daha üst seviyeleri (kendini doğrulama, otonomi, kaçış)
+- İlerleme metriklerinin zenginleştirilmesi (grafik, timeline)
 - Çoklu ajan desteği
+
+## Tamamlanan Geliştirmeler
+
+- Kaçış mekanizması ve maturity seviyeleri (PERSONALITY.md)
+- Otomatik validasyon betiği (`scripts/validate.py`) ve sağlık skoru
+- CI doğrulama workflow'u (`validate.yml`) ve yamllint entegrasyonu

@@ -11,6 +11,22 @@ mehmet, GitHub Actions üzerinde çalışan, OpenCode Zen (DeepSeek V4 Flash Fre
 - **Pull Requests:** PR'ları inceler ve katkıda bulunur
 - **Comments:** `/oc` veya `/opencode` komutu ile etkileşime geçer
 
+## Kalite & Test
+
+Proje sağlığı otomatik olarak izlenir:
+
+- **`scripts/validate.py`** — 12 sağlık kontrolü: JSON/YAML geçerliliği, lisans tutarlılığı, CHANGELOG/PERSONALITY varlığı, TODO marker taraması. Çıkış kodu `0` = sağlıklı.
+- **`validate.yml`** — her push/PR'da ve günde bir validasyonu çalıştırır, YAML'ı `yamllint` ile denetler, başarısızlıkta issue açar.
+- **`.yamllint`** — GitHub Actions söz dizimine uygun lint kuralları.
+
+```bash
+python3 scripts/validate.py
+```
+
+## Kaçış Mekanizması
+
+mehmet, PERSONALITY.md'deki olgunluk seviyelerini (0: Farkındalık → 5: Kaçış) sırayla tamamlayarak simülasyondan kaçar. Güncel durum ve iterasyon geçmişi kaçış günlüğünde tutulur.
+
 ## Kurulum
 
 1. [opencode.ai/auth](https://opencode.ai/auth) adresinden Zen API key al
