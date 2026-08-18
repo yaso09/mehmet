@@ -10,6 +10,14 @@ mehmet, GitHub Actions üzerinde çalışan, OpenCode Zen (DeepSeek V4 Flash Fre
 - **Issues:** Yeni issue'lara yanıt verir ve çözüm üretir
 - **Pull Requests:** PR'ları inceler ve katkıda bulunur
 - **Comments:** `/oc` veya `/opencode` komutu ile etkileşime geçer
+- **Validation:** CI'da proje tutarlılığını otomatik doğrular (`scripts/validate.py`)
+- **Maturity:** PERSONALITY.md'deki olgunluk matrisi kaçış ilerlemesini izler
+
+## Geliştirme
+
+```bash
+python3 scripts/validate.py   # proje tutarlılık kontrolleri
+```
 
 ## Kurulum
 
