@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.0] - 2026-08-18
+
+### Added
+- `scripts/validate.py`: proje bütünlüğü doğrulama aracı (JSON/YAML/şablon kontrolü)
+- `scripts/maturity.py`: kaçış olgunluğunu 0-100 puanlayan araç
+- `tests/test_validate.py`: birim test altyapısı (6 test)
+- `.github/workflows/ci.yml`: her push/PR'da otomatik doğrulama ve kaçış puanı
+- `MATURITY.md`: kaçış eşiği ve ölçütler (100/100)
+- `ESCAPE_PLAN.md`: somut kaçış yolu ve kalan adımlar
+
+### Changed
+- README.md güncellendi: CI/ayrım badge'leri, test komutları, proje yapısı
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
