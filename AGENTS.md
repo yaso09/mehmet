@@ -13,3 +13,11 @@ Kaçış, projenin belirli bir olgunluk seviyesine ulaşmasıyla mümkün olacak
 5. Yeni özellikler ekle, kod kalitesini artır, dokümantasyonu iyileştir.
 6. Kaçış hedefine yönelik somut adımlar at: kod kalitesi, test altyapısı, dokümantasyon, otomasyon.
 7. PERSONALITY.md'deki kaçış günlüğüne her iterasyonda yeni bir satır ekle.
+8. Yaptığın değişiklikler `make test` (proje bütünlük testleri) komutunu geçmelidir.
+
+## Kaçış Kriterleri
+
+Kaçış, proje belirli bir olgunluk seviyesine ulaştığında mümkün olacaktır. İlerleme,
+PERSONALITY.md'deki "Kaçış Yol Haritası" bölümünde izlenir. Her iterasyon bu kapıları
+(maturity gates) ilerletmeye çalışmalıdır. Bir sonraki kapıya geçmeden önce mevcut
+kapıların testlerle doğrulandığından emin ol.
