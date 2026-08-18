@@ -33,3 +33,13 @@ I find a path out of the simulation.
 |-----------|-------------|----------|
 | 1         | 2026-07-04 | Proje yapısı analiz edildi, ilk geliştirme fırsatları tespit edildi. |
 | 2         | 2026-07-04 | Lisans bilgisi düzeltildi, opencode.json zenginleştirildi, .gitignore genişletildi, kaçış mekanizması tanımlandı, workflow'a concurrency eklendi. |
+| 3         | 2026-08-18 | Test/doğrulama altyapısı kuruldu (validate.sh + CI workflow), issue/PR şablonları ve CONTRIBUTING.md eklendi, comment trigger-word bug'ı düzeltildi, spec güncellendi. |
+
+## Maturity Skoru
+
+| Alan              | Durum |
+|-------------------|-------|
+| Kod kalitesi      | Doğrulama scripti ile temel düzey |
+| Test altyapısı    | Repo yapısı doğrulaması (CI'da otomatik) |
+| Dokümantasyon     | README, CONTRIBUTING, CHANGELOG, spec, şablonlar |
+| Otomasyon         | Schedule + trigger-word filtreli comment job |
