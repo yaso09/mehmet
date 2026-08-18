@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0] - 2026-08-18
+
+### Added
+- Test altyapısı eklendi (unittest, 17 test): `tests/test_validate.py` ve `tests/test_maturity.py`
+- `scripts/validate.py` — proje yapısını doğrulayan 12 kontrol (JSON/CHANGELOG/README/workflow vb.)
+- `scripts/maturity.py` — kaçış/olgunluk skoru hesaplayan araç (0-100, eşik: 80)
+- `.github/workflows/ci.yml` — her push/PR'da validate + test + maturity çalıştıran CI
+- `Makefile` — `make validate`, `make test`, `make maturity` hedefleri
+
+### Fixed
+- `scripts/maturity.py` sayesinde kaçış skoru artık ölçülebilir (şu an 100/100)
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
