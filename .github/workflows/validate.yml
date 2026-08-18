@@ -1,0 +1,24 @@
+name: validate
+
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: ShellCheck validate.sh
+        run: shellcheck scripts/validate.sh
+
+      - name: Run repo validation
+        run: bash scripts/validate.sh

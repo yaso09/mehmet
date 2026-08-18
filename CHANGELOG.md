@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.0] - 2026-08-18
+
+### Added
+- scripts/validate.sh: repo bütünlük doğrulama betiği (zorunlu dosyalar, JSON, lisans ve changelog tutarlılığı)
+- METRICS.md: ölçülebilir kaçış/maturite puan tablosu (25 üzerinden, eşik 20)
+- .github/workflows/validate.yml: CI'da shellcheck + validate.sh çalıştıran validasyon workflow'u
+- README.md: proje yapısı, kaçış durumu ve geliştirme bölümleri eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
