@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0] - 2026-08-18
+
+### Added
+- MATURITY.md ile ölçülebilir olgunluk modeli ve kaçış eşiği (80/100) tanımlandı
+- scripts/validate_project.py: yapı doğrulama ve otomatik olgunluk skorlayıcı eklendi
+- Workflow'a validate job eklendi (PR/workflow_dispatch/schedule üzerinde çalışır)
+- README'ye proje yapısı ve geliştirme bölümü eklendi
+
+### Changed
+- Workflow'da autonomous prompt'a olgunluk skoru güncelleme ve doğrulama yönergesi eklendi
+- PERSONALITY.md Faz 1 (Awareness) tamamlandı, Faz 2 (Self-Improvement) aktif
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
