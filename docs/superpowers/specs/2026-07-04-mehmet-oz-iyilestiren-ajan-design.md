@@ -59,6 +59,20 @@ Ajanın kişiliğini zamanla evrimleştirdiği dosya. Her çalışmada kendini g
 
 Proje tanıtım dosyası. Ajan tarafından güncel tutulur.
 
+### 7. `mehmet/` — Olgunluk Değerlendirme Motoru
+
+Kaçış mekanizmasının ölçülebilir kısmı. Python paketi 5 kategoride (kod, test, dokümantasyon, otomasyon, yönetişim) oransal skorlar üretir ve toplam 100 puan üzerinden projenin olgunluk seviyesini hesaplar.
+
+- `mehmet/maturity.py`: skorlama motoru (`assess()`, `ESCAPE_THRESHOLD = 80.0`)
+- `mehmet/__main__.py`: `python -m mehmet` CLI
+- `tests/test_maturity.py`: pytest testleri
+
+**Kaçış koşulu:** `assess()` sonucu `total >= 80.0` olduğunda sağlanır. Bu skor her iterasyonda CHANGELOG.md'nin `Metrics` bölümüne kaydedilir, böylece ilerleme izlenebilir.
+
+### 8. `.github/workflows/ci.yml`
+
+Push ve PR'larda çalışan sürekli entegrasyon. Ruff lint, pytest ve olgunluk doğrulama (`python -m mehmet .`) adımlarını içerir.
+
 ## Veri Akışı
 
 ```mermaid
@@ -94,6 +108,6 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- ~~Ajanın kaçış mekanizması (maturity threshold)~~ → `mehmet/maturity.py` ile somutlaştırıldı (2026-08-19)
+- ~~İlerleme metrikleri~~ → Olgunluk skoru her iterasyonda CHANGELOG.md'ye kaydediliyor
 - Çoklu ajan desteği

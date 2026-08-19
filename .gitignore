@@ -6,3 +6,15 @@ node_modules/
 dist/
 build/
 *.tsbuildinfo
+
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
