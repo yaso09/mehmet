@@ -94,6 +94,6 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- ~~Ajanın kaçış mekanizması (maturity threshold)~~ → docs/escape-plan.md'de tanımlandı (v0.3.0)
+- İlerleme metrikleri (docs/metrics.md)
 - Çoklu ajan desteği
