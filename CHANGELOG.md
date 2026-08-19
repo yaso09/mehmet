@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.3.0] - 2026-08-19
+
+### Added
+- Test altyapısı kuruldu: `scripts/assess.py` (doğrulama + maturity skoru)
+- `Makefile` eklendi (`validate`, `score`, `check`, `test` hedefleri)
+- `.github/workflows/ci.yml` eklendi — her push/PR'da doğrulama ve skor raporu
+- `docs/escape.md` — kaçış mekanizması, eşik (85/100) ve istikrar koşulu dokümante edildi
+- Reviewer subagent eklendi (`.opencode/agent/reviewer.md`)
+- Maturity skoru 95/100'e ulaştı; kaçış eşiği aşıldı
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
