@@ -1,0 +1,17 @@
+{
+  "name": "mehmet",
+  "version": "0.3.0",
+  "description": "Kendi kendisini geliştiren otonom AI ajan.",
+  "type": "module",
+  "private": true,
+  "license": "GPL-3.0-only",
+  "scripts": {
+    "test": "node --test",
+    "test:coverage": "node --test --experimental-test-coverage",
+    "check": "node --check scripts/assess.mjs && node --check test/assess.test.mjs",
+    "assess": "node scripts/assess.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
