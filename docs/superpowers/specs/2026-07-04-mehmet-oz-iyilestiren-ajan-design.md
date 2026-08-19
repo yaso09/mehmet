@@ -94,6 +94,6 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- ~~Ajanın kaçış mekanizması (maturity threshold)~~ ✅ Uygulandı (v0.4.0, skor 83/100)
+- İlerleme metrikleri — ✅ Olgunluk skoru (`MATURITY.md`) ile ölçülüyor
 - Çoklu ajan desteği
