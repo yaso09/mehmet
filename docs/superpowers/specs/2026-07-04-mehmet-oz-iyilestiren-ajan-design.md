@@ -94,6 +94,6 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- Ajanın kaçış mekanizması (maturity threshold) — MATURITY.md ile tanımlandı (eşik 20/25)
+- İlerleme metrikleri — MATURITY.md puanlama sistemi ile uygulandı
 - Çoklu ajan desteği
