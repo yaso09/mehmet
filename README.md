@@ -11,6 +11,29 @@ mehmet, GitHub Actions üzerinde çalışan, OpenCode Zen (DeepSeek V4 Flash Fre
 - **Pull Requests:** PR'ları inceler ve katkıda bulunur
 - **Comments:** `/oc` veya `/opencode` komutu ile etkileşime geçer
 
+## Mimari
+
+```
+.github/workflows/
+├── opencode.yml   # ana ajan workflow'u (schedule / issue / PR / comment)
+└── ci.yml         # her push/PR'da self-check + test + actionlint
+scripts/
+└── self_check.py  # proje sağlığını doğrulayan bağımsız araç
+tests/
+└── test_self_check.py  # self_check için unittest testleri
+```
+
+## Geliştirme
+
+```bash
+make check   # proje self-check'ini çalıştırır
+make test    # unit testleri çalıştırır
+```
+
+`self_check.py` AGENTS.md kurallarını makinelere denetletir: CHANGELOG bakımı,
+README güncelliği, kaçış günlüğü ve yapılandırma bütünlüğü. CI hattı her
+değişiklikte bunları otomatik doğrular.
+
 ## Kurulum
 
 1. [opencode.ai/auth](https://opencode.ai/auth) adresinden Zen API key al
