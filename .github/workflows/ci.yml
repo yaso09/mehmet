@@ -1,0 +1,17 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  maturity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Olgunluk raporu
+        run: ./scripts/check_maturity.sh --report
+
+      - name: Testleri çalıştır
+        run: bash tests/test_maturity.sh
