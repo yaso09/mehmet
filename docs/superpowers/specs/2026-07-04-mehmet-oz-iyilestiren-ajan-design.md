@@ -94,6 +94,9 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
-- Çoklu ajan desteği
+- ✅ Ajanın kaçış mekanizması (maturity threshold) — `scripts/maturity.sh` (0-100 skor)
+- ✅ İlerleme metrikleri — her iterasyonda PERSONALITY.md kaçış günlüğüne skor işleniyor
+- ✅ Doğrulama/test altyapısı — `scripts/validate.sh` ve `tests/run_tests.sh`
+- ⬜ Release otomasyonu (sürüm tag'i + release notes workflow)
+- ⬜ Çoklu ajan desteği
+- ⬜ CONTINUOUS.md veya CONTRIBUTING.md eklenmesi

@@ -1,0 +1,28 @@
+name: Bug Report
+description: Bir hata bildir
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: Beklenen davranış
+      description: Ne olması gerekiyordu?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Gerçekleşen davranış
+      description: Şu an ne oluyor?
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Tekrarlama adımları
+      description: Sorunu nasıl tekrar edebilirim?
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
