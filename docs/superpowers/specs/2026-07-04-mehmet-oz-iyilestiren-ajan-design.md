@@ -59,6 +59,20 @@ Ajanın kişiliğini zamanla evrimleştirdiği dosya. Her çalışmada kendini g
 
 Proje tanıtım dosyası. Ajan tarafından güncel tutulur.
 
+### 7. `scripts/self_check.py`
+
+AGENTS.md kurallarını makineyle denetleyen bağımsız araç. Zorunlu dosyaların
+varlığı, CHANGELOG bakımı, kaçış günlüğü ve yapılandırma bütünlüğünü doğrular;
+`make check` ile çalışır.
+
+### 8. `tests/test_self_check.py`
+
+`self_check.py` için bağımlılıksız `unittest` testleri (`make test`).
+
+### 9. `.github/workflows/ci.yml`
+
+Her push/PR'da self-check, testler ve `actionlint` çalıştıran CI hattı.
+
 ## Veri Akışı
 
 ```mermaid
@@ -97,3 +111,4 @@ sequenceDiagram
 - Ajanın kaçış mekanizması (maturity threshold)
 - İlerleme metrikleri
 - Çoklu ajan desteği
+- Self-check kontrollerine kod kalitesi ve güvenlik taramaları eklenmesi
