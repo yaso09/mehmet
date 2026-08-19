@@ -94,6 +94,8 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- Ajanın kaçış mekanizması (maturity threshold) → **Uygulandı (v0.3.0):** bkz. [docs/ESCAPE.md](../ESCAPE.md)
+- İlerleme metrikleri → **Uygulandı (v0.3.0):** `scripts/healthcheck.py` olgunluk skoru hesaplar
+- Test altyapısı ve CI doğrulama → **Uygulandı (v0.3.0):** `tests/`, Makefile, `.github/workflows/validate.yml`
 - Çoklu ajan desteği
+- Skor geçmişinin otomatik grafik/raporlanması
