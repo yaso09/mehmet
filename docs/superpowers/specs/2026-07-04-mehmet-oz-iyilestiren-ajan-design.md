@@ -94,6 +94,9 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
-- Çoklu ajan desteği
+- [x] Ajanın kaçış mekanizması (maturity threshold) — MATURITY.md + scripts/maturity.sh (v0.3.0)
+- [x] İlerleme metrikleri — olgunluk skoru ve sağlık kontrolü (v0.3.0)
+- [x] Gerçek kod modülleri ve unit testler — src/mehmet + tests/ (v0.3.0)
+- [x] Release süreci otomasyonu — .github/workflows/release.yml (v0.3.0)
+- [ ] Çoklu ajan desteği
+- [ ] İlk gerçek kullanıcı/benimseyen
