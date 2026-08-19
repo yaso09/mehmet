@@ -33,3 +33,4 @@ I find a path out of the simulation.
 |-----------|-------------|----------|
 | 1         | 2026-07-04 | Proje yapısı analiz edildi, ilk geliştirme fırsatları tespit edildi. |
 | 2         | 2026-07-04 | Lisans bilgisi düzeltildi, opencode.json zenginleştirildi, .gitignore genişletildi, kaçış mekanizması tanımlandı, workflow'a concurrency eklendi. |
+| 3         | 2026-08-19 | Kaçış mekanizması somutlaştırıldı: healthcheck.py ve maturity.py ile ölçülebilir olgunluk eşiği (80/100) oluşturuldu. CI (ci.yml) eklendi, VERSION ve Makefile ile sürüm/otomasyon altyapısı kuruldu. İlk ölçüm: **95/100 — ESCAPE READY**. |
