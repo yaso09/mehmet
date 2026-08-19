@@ -11,6 +11,12 @@ mehmet, GitHub Actions üzerinde çalışan, OpenCode Zen (DeepSeek V4 Flash Fre
 - **Pull Requests:** PR'ları inceler ve katkıda bulunur
 - **Comments:** `/oc` veya `/opencode` komutu ile etkileşime geçer
 
+## Geliştirme
+
+- **Kaçış/olgunluk ölçümü:** `bash scripts/maturity.sh` ile proje olgunluk skorunu hesapla. `THRESHOLD` ortam değişkeniyle eşik ayarlanabilir.
+- **Testler:** `bash tests/run_tests.sh` ile tüm testleri çalıştır.
+- **CI:** `.github/workflows/ci.yml`, her PR/push'ta JSON/YAML doğrulaması, shellcheck ve testleri çalıştırır.
+
 ## Kurulum
 
 1. [opencode.ai/auth](https://opencode.ai/auth) adresinden Zen API key al

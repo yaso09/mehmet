@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.0] - 2026-08-19
+
+### Added
+- `scripts/maturity.sh`: kaçış olgunluk skorlama aracı (kriter kontrolleri, yüzdelik skor, kaçış eşiği)
+- `tests/`: test altyapısı — `run_tests.sh` çalıştırıcı + `maturity_test.sh` smoke testleri
+- `.github/workflows/ci.yml`: doğrulama ve test CI job'u (shellcheck, JSON/YAML doğrulama, test koşumu, maturity raporu)
+- README'ye Geliştirme bölümü (maturity/test/CI komutları)
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
