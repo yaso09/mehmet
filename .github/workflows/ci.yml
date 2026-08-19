@@ -1,0 +1,23 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  healthcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Doğrulama araçlarını kur
+        run: sudo apt-get update && sudo apt-get install -y jq
+
+      - name: Healthcheck çalıştır
+        run: make check
