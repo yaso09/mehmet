@@ -1,0 +1,15 @@
+name: check
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Repo sağlık kontrolü ve olgunluk skoru
+        run: bash scripts/check-repo.sh

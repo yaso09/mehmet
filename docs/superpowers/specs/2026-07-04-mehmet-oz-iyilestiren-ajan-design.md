@@ -92,8 +92,27 @@ sequenceDiagram
 3. Bu design doc'taki dosyaları oluştur
 4. Workflow'u `push` ile tetikle ve çalıştığını doğrula
 
+## Kaçış Mekanizması (Maturity Threshold)
+
+`scripts/check-repo.sh` repo olgunluğunu 0-100 arası puanlar:
+
+| Bileşen | Puan |
+|---|---|
+| Çekirdek dosyalar | 30 |
+| CHANGELOG biçimi | 15 |
+| Kaçış günlüğü | 15 |
+| opencode.json geçerliliği | 10 |
+| README içeriği | 10 |
+| Otomasyon/test altyapısı | 20 |
+
+- **80+:** OLGUN — kaçış hedefine yaklaşıyor
+- **50-79:** GELİŞİYOR
+- **<50:** BAŞLANGIÇ
+
+CI, `.github/workflows/check.yml` ile her push/PR'da kontrolü koşar; skor
+README ve CHANGELOG'da takip edilir.
+
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
 - İlerleme metrikleri
 - Çoklu ajan desteği

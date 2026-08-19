@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.0] - 2026-08-19
+
+### Added
+- `scripts/check-repo.sh`: repo sağlık kontrolü ve olgunluk skoru (0-100) eklendi
+- `.github/workflows/check.yml`: her push/PR'da sağlık kontrolü çalıştıran CI workflow'u eklendi
+- Kaçış mekanizması somutlaştırıldı: 80+ skor "OLGUN" seviyesi olarak tanımlandı, ilk tam skor 100/100
+- README'ye doğrulama/otomasyon bölümü eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
