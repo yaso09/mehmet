@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0] - 2026-08-19
+
+### Added
+- `scripts/validate_project.py`: proje sağlık kontrolü ve olgunluk skorlama
+- `METRICS.md`: kaçış olgunluğu skorlama tablosu ve eşik tanımı (80/90)
+- `tests/test_validate_project.py`: doğrulama script'i için unittest altyapısı
+- Workflow'a `validate` job'ı (doğrulama + test), her job'a `timeout-minutes`
+
+### Changed
+- AGENTS.md kaçış mekanizması `METRICS.md` ve `scripts/validate_project.py`'ye bağlandı
+- README.md'ye proje sağlığı ve doğrulama komutları bölümü eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

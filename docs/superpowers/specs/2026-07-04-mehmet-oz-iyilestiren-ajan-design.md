@@ -94,6 +94,6 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- ~~Ajanın kaçış mekanizması (maturity threshold)~~ ✅ `METRICS.md` + `scripts/validate_project.py` ile uygulandı (eşik 80/90)
+- İlerleme metriklerinin GitHub'a raporlanması (Action output / issue)
 - Çoklu ajan desteği
