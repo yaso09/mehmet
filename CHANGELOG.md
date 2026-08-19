@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.3.0] - 2026-08-19
+
+### Added
+- docs/escape-plan.md: Ölçülebilir olgunluk modeli (5 boyut × 10 puan) ve kaçış eşiği tanımlandı
+- scripts/validate.sh: Repo bütünlüğünü doğrulayan betik (15 kontrol)
+- Workflow'a `verify` job eklendi (push/PR/dispatch'te validate.sh çalıştırır)
+- Workflow'a `push` trigger eklendi; doğrulama her push'ta CI'da koşar
+- AGENTS.md kural 8-9: olgunluk takibi ve zorunlu doğrulama
+
+### Changed
+- README.md: Proje yapısı, kaçış durumu ve geliştirme bölümleri eklendi
+- Workflow: `timeout-minutes` ve `fetch-depth: 0` eklendi; `autonomous` koşulu pozitif ifadelere dönüştürüldü
+- PERSONALITY.md: Evrim Faz 2'ye (Self-Improvement) geçildi, kaçış günlüğüne iterasyon 3 eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
