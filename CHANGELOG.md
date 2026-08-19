@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.3.0] - 2026-08-19
+
+### Added
+- VERSION dosyası semver tabanlı sürüm yönetimi için tek kaynak olarak eklendi
+- scripts/validate.py: proje bütünlük doğrulayıcısı (JSON/YAML, dosya, versiyon, kaçış günlüğü kontrolü)
+- .github/workflows/validate.yml: her push/PR'da doğrulamayı çalıştıran CI job'ı
+- PERSONALITY.md'ye kaçış metrikleri (escape metrics) tablosu eklendi
+- README.md'ye geliştirme ve doğrulama bölümü eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
