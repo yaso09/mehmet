@@ -1,8 +1,13 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "model": "opencode/deepseek-v4-flash-free",
-  "skip": true,
-  "enable": true,
-  "toolTimeout": 120000,
-  "autoMerge": false
+  "instructions": ["AGENTS.md", "PERSONALITY.md"],
+  "references": {
+    "docs": {
+      "path": "./docs",
+      "description": "Use for design specs, implementation plans, and project documentation"
+    }
+  },
+  "autoupdate": false,
+  "logLevel": "INFO"
 }
