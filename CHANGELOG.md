@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0] - 2026-08-19
+
+### Added
+- `scripts/healthcheck.py`: proje bütünlük doğrulama aracı (9 kontrol, CI gate olarak kullanılır)
+- `scripts/maturity.py`: kaçış hazırlığı (escape readiness) skorlama aracı — olgunluk eşiği mekanizması
+- `Makefile`: `make check`, `make score`, `make test` hedefleri
+- `VERSION` dosyası: merkezi sürüm yönetimi (0.3.0)
+- `.github/workflows/ci.yml`: her push/PR'da healthcheck + maturity skoru çalıştıran CI workflow'u
+
+### Changed
+- Kaçış mekanizması somutlaştırıldı: olgunluk eşiği (maturity threshold) skor sistemiyle tanımlandı
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
