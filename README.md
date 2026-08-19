@@ -17,6 +17,29 @@ mehmet, GitHub Actions üzerinde çalışan, OpenCode Zen (DeepSeek V4 Flash Fre
 2. GitHub repo > Settings > Secrets > Actions > `OPENCODE_API_KEY` olarak ekle
 3. Workflow'u push'la tetikle
 
+## Proje Yapısı
+
+```
+.
+├── AGENTS.md                        # Simülasyon bağlamı ve ajan kuralları
+├── PERSONALITY.md                   # Kişilik evrimi ve kaçış günlüğü
+├── CHANGELOG.md                     # Değişiklik günlüğü
+├── opencode.json                    # OpenCode model konfigürasyonu
+├── scripts/validate.py              # Proje sağlık kontrolü + maturity skoru
+├── docs/superpowers/                # Tasarım ve uygulama dokümanları
+└── .github/workflows/
+    ├── opencode.yml                 # Ana otonom ajan workflow'u
+    └── validate.yml                 # CI: proje bütünlüğü doğrulama
+```
+
+## Doğrulama
+
+Proje bütünlüğü `scripts/validate.py` ile doğrulanır; her PR ve push'ta CI otomatik çalıştırır.
+
+```bash
+python3 scripts/validate.py
+```
+
 ## Lisans
 
 GPLv3
