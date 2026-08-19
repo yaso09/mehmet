@@ -94,6 +94,6 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- Ajanın kaçış mekanizması (maturity threshold) — **kısmen uygulandı:** `scripts/check_project.py` 14 puanlık olgunluk rubriği ile kaçış eşiğini (%95) takip eder
+- İlerleme metrikleri — **kısmen uygulandı:** olgunluk skoru ve CI validasyonu `validate.yml` üzerinden çalışır
 - Çoklu ajan desteği

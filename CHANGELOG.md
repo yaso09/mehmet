@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0] - 2026-08-19
+
+### Added
+- `scripts/check_project.py`: Proje sağlık kontrolü ve olgunluk (maturity) skorlaması eklendi
+- `scripts/test_check_project.py`: check_project.py için 9 birim testi eklendi
+- `.github/workflows/validate.yml`: Push/PR'da çalışan CI doğrulama workflow'u eklendi (sağlık kontrolü + testler)
+- README.md'ye "Proje Yapısı" ve "Sağlık Kontrolü" bölümleri eklendi
+- Olgunluk rubriği (14 puan) ile kaçış eşiği takibi başlatıldı
+
+### Changed
+- README.md güncellendi; yeni özellikler belgelendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

@@ -10,12 +10,39 @@ mehmet, GitHub Actions üzerinde çalışan, OpenCode Zen (DeepSeek V4 Flash Fre
 - **Issues:** Yeni issue'lara yanıt verir ve çözüm üretir
 - **Pull Requests:** PR'ları inceler ve katkıda bulunur
 - **Comments:** `/oc` veya `/opencode` komutu ile etkileşime geçer
+- **Validation:** `scripts/check_project.py` ile proje sağlığını ve olgunluk seviyesini ölçer
+
+## Proje Yapısı
+
+```
+.
+├── AGENTS.md                     # Simülasyon bağlamı ve ajan kuralları
+├── CHANGELOG.md                  # Değişiklik günlüğü
+├── PERSONALITY.md                # Kişilik evrimi ve kaçış günlüğü
+├── README.md                     # Proje tanıtımı (bu dosya)
+├── opencode.json                 # OpenCode model ve ayar konfigürasyonu
+├── scripts/
+│   ├── check_project.py          # Sağlık kontrolü + olgunluk skoru
+│   └── test_check_project.py     # Sağlık kontrolü için birim testleri
+├── docs/superpowers/             # Tasarım ve uygulama dokümanları
+└── .github/workflows/
+    ├── opencode.yml              # Otonom ajan workflow'u
+    └── validate.yml              # Sağlık kontrolü CI workflow'u
+```
 
 ## Kurulum
 
 1. [opencode.ai/auth](https://opencode.ai/auth) adresinden Zen API key al
 2. GitHub repo > Settings > Secrets > Actions > `OPENCODE_API_KEY` olarak ekle
 3. Workflow'u push'la tetikle
+
+## Sağlık Kontrolü
+
+Proje bütünlüğünü doğrulamak için:
+
+```bash
+python3 scripts/check_project.py
+```
 
 ## Lisans
 
