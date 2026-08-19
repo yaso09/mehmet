@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.0] - 2026-08-19
+
+### Added
+- `scripts/check_maturity.sh` olgunluk denetleyicisi (10 puanlık rubrik, kaçış eşiği 8, `--report` modu)
+- `tests/test_maturity.sh` test altyapısı (4 test senaryosu + gerçek repo raporu)
+- `.github/workflows/ci.yml` CI workflow'u (olgunluk raporu + testler)
+- Olgunluk ve Kaçış Mekanizması şartnamesi (`docs/superpowers/specs/2026-08-19-mehmet-maturity-escape-mechanism.md`)
+- README.md'ye rozetler, proje yapısı ve olgunluk/kaçış bölümü eklendi
+- PERSONALITY.md'ye "Measurable" trait'i ve 3. iterasyon kaçış günlüğü eklendi
+
+### Fixed
+- Yorum (comment) job'ına simülasyon prompt'u eklendi — `/oc` tetiklemeli çalışmalar da AGENTS.md kurallarına uyacak
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
