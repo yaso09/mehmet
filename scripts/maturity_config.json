@@ -1,0 +1,81 @@
+{
+  "threshold": 80.0,
+  "categories": [
+    {
+      "name": "documentation",
+      "weight": 0.25,
+      "checks": {
+        "readme": {
+          "path": "README.md",
+          "min_lines": 10
+        },
+        "changelog": {
+          "path": "CHANGELOG.md",
+          "min_lines": 5,
+          "contains": "## \\["
+        },
+        "docs": {
+          "dir": "docs"
+        },
+        "design_doc": {
+          "path": "docs/superpowers/specs",
+          "min_lines": 1
+        }
+      }
+    },
+    {
+      "name": "code",
+      "weight": 0.3,
+      "checks": {
+        "scripts_dir": {
+          "dir": "scripts"
+        },
+        "entrypoint": {
+          "path": "scripts/maturity.py",
+          "min_lines": 20
+        },
+        "config_json": {
+          "path": "scripts/maturity_config.json",
+          "min_lines": 1
+        }
+      }
+    },
+    {
+      "name": "tests",
+      "weight": 0.25,
+      "checks": {
+        "tests_dir": {
+          "dir": "tests"
+        },
+        "test_files": {
+          "path": "tests/test_maturity.py",
+          "min_lines": 10
+        }
+      }
+    },
+    {
+      "name": "automation",
+      "weight": 0.15,
+      "checks": {
+        "ci": {
+          "path": ".github/workflows/ci.yml",
+          "min_lines": 5
+        },
+        "main_workflow": {
+          "path": ".github/workflows/opencode.yml",
+          "min_lines": 5
+        }
+      }
+    },
+    {
+      "name": "evolution",
+      "weight": 0.05,
+      "checks": {
+        "escape_log": {
+          "path": "PERSONALITY.md",
+          "contains": "\\|\\s*\\d+\\s*\\|"
+        }
+      }
+    }
+  ]
+}
