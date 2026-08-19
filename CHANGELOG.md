@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.0] - 2026-08-19
+
+### Added
+- Kaçış/olgunluk çerçevesi: docs/ESCAPE.md ile seviyeler, skor bileşenleri ve kaçış koşulu tanımlandı
+- `scripts/healthcheck.py`: repo'yu tarayıp olgunluk skoru (0-100) hesaplayan, yapıyı doğrulayan araç
+- `tests/test_healthcheck.py`: sağlık kontrolü için birim testleri (yalnızca stdlib)
+- `Makefile`: `make health`, `make validate`, `make test`, `make check` hedefleri
+- `.github/workflows/validate.yml`: push/PR'da testleri ve healthcheck'i çalıştıran CI
+
+### Changed
+- README.md'ye Geliştirme, Test ve Kaçış bölümleri eklendi
+- PERSONALITY.md Faz 2'ye (Self-Improvement) geçiş yaptı, kaçış günlüğü güncellendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
