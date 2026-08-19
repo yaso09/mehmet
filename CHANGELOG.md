@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0] - 2026-08-19
+
+### Added
+- Kaçış mekanizması için olgunluk skorlama motoru (`scripts/maturity.py`)
+- Skorlama konfigürasyonu: ağırlıklar ve eşik (`scripts/maturity_config.json`)
+- pytest tabanlı test altyapısı (`tests/test_maturity.py`)
+- CI workflow'u: push/PR üzerinde test + olgunluk kontrolü (`.github/workflows/ci.yml`)
+- Makefile ile ortak görevler (`test`, `maturity`, `check`)
+
+### Changed
+- README.md'ye kaçış mekanizması, geliştirme ve proje yapısı bölümleri eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
