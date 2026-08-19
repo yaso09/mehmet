@@ -1,0 +1,27 @@
+name: checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Validate config JSON
+        run: python3 -c "import json; json.load(open('opencode.json'))"
+
+      - name: Run repo health checks
+        run: python3 scripts/check.py --strict
+
+      - name: Run unit tests
+        run: python3 scripts/test_check.py

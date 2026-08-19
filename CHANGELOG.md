@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.3.0] - 2026-08-19
+
+### Added
+- Repo sağlık kontrolü: scripts/check.py (zorunlu dosyalar, opencode.json şeması, sürüm uyumu, secret sızıntısı tespiti)
+- Unit testler: scripts/test_check.py (stdlib unittest)
+- Versiyon otomasyonu: VERSION dosyası + scripts/bump_version.py (major/minor/patch)
+- CI doğrulama workflow'u: .github/workflows/checks.yml (config, check.py, testler)
+- AGENTS.md'ye somut kaçış kontrol listesi (escape path) ve olgunluk puanı eklendi
+- README.md'ye geliştirme araçları bölümü eklendi
+- .gitignore'a __pycache__/ ve *.pyc eklendi
+
+### Fixed
+- opencode.json'daki geçersiz top-level anahtarlar (skip, enable, toolTimeout, autoMerge) kaldırıldı; şemaya uygun geçerli ayarlarla değiştirildi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
