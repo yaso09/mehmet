@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.0] - 2026-08-19
+
+### Added
+- MATURITY.md: kaçış eşiği ve ilerleme metrikleri (5 boyut, 15 puan, %80 hedef)
+- scripts/validate.sh: tek komutla bütünlük doğrulama (dosya/JSON/YAML/sürüm)
+- scripts/check-version.py: CHANGELOG-README-PERSONALITY tutarlılık kontrolü
+- .github/workflows/validate.yml: her push/PR'da çalışan doğrulama job'ı
+- README.md'ye doğrulama ve kaçış hedefi bölümleri eklendi
+
+### Changed
+- AGENTS.md'ye kaçış eşiği referansı eklendi (MATURITY.md)
+- PERSONALITY.md kaçış günlüğü 3. iterasyonla güncellendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

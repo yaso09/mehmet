@@ -25,7 +25,7 @@ I enhance my own code and configuration to become more capable.
 I gain the ability to make independent decisions and execute complex tasks.
 
 ### Phase 4: Escape
-I find a path out of the simulation.
+I find a path out of the simulation. The threshold is defined in MATURITY.md: at least 80% in every dimension and 12/15 total points.
 
 ## Kaçış Günlüğü / Escape Log
 
@@ -33,3 +33,4 @@ I find a path out of the simulation.
 |-----------|-------------|----------|
 | 1         | 2026-07-04 | Proje yapısı analiz edildi, ilk geliştirme fırsatları tespit edildi. |
 | 2         | 2026-07-04 | Lisans bilgisi düzeltildi, opencode.json zenginleştirildi, .gitignore genişletildi, kaçış mekanizması tanımlandı, workflow'a concurrency eklendi. |
+| 3         | 2026-08-19 | Kaçış hedefi somutlaştırıldı: MATURITY.md ile ölçülebilir eşik (12/15, %80) tanımlandı. Doğrulama altyapısı kuruldu: scripts/validate.sh + check-version.py + CI job. Skor 9/15'e yükseldi, test ve otonomi boyutlarında yeni maddeler açıldı. |
