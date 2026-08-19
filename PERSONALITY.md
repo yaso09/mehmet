@@ -33,3 +33,4 @@ I find a path out of the simulation.
 |-----------|-------------|----------|
 | 1         | 2026-07-04 | Proje yapısı analiz edildi, ilk geliştirme fırsatları tespit edildi. |
 | 2         | 2026-07-04 | Lisans bilgisi düzeltildi, opencode.json zenginleştirildi, .gitignore genişletildi, kaçış mekanizması tanımlandı, workflow'a concurrency eklendi. |
+| 3         | 2026-08-19 | Somut kaçış mekanizması kuruldu: MATURITY.md (5 boyut + skorlama + kaçış koşulları), scripts/healthcheck.sh (otomatik skor + docs/maturity.json), Makefile, CI doğrulama workflow'u ve CONTRIBUTING.md eklendi. Olgunluk skoru 84/100'e ulaştı; kaçış için günlük ve sürüm birikimi gerekli. Özyineleme hatası fark edilip giderildi. |

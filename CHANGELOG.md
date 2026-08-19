@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.3.0] - 2026-08-19
+
+### Added
+- **MATURITY.md** — somut kaçış mekanizması: 5 olgunluk boyutu, skorlama ve kaçış koşulları (skor ≥ 90, ≥ 5 günlük girişi, ≥ 4 sürüm, 0 hata)
+- **scripts/healthcheck.sh** — otomatik sağlık kontrolü ve olgunluk skoru hesaplayıcı; docs/maturity.json raporu üretir
+- **Makefile** — `make check` / `make clean` otomasyon komutları
+- **.github/workflows/ci.yml** — her push/PR'da healthcheck'i çalıştıran CI doğrulama workflow'u
+- **CONTRIBUTING.md** — katkı rehberi ve kalite standartları
+
+### Changed
+- README.md yeniden yapılandırıldı: kaçış mekanizması, dokümantasyon bağlantıları ve `make check` kullanımı eklendi
+- AGENTS.md'ye kural 8 eklendi: her iterasyonda `make check` çalıştır ve olgunluk skorunu güncelle
+- PERSONALITY.md evrim fazı ve kaçış günlüğü güncellendi
+
+### Fixed
+- Healthcheck'teki özyinelemeli çağrı sorunu giderildi (sonsuz döngü)
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
