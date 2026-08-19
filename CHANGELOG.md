@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.3.0] - 2026-08-19
+
+### Added
+- `scripts/health-check.sh`: proje bütünlüğünü ve olgunluk skorunu doğrulayan otomatik sağlık kontrolü eklendi
+- GitHub Actions workflow'una `health-check` job'u eklendi (her çalıştırmada sağlık kontrolü yapılır)
+- opencode.json'a güvenlik sıkılaştırması eklendi (share kapalı, zararlı bash komutları engellendi, dış dizin erişimi kısıtlandı)
+
+### Changed
+- README.md'ye Sağlık Kontrolü bölümü ve kullanım dokümantasyonu eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

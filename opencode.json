@@ -4,5 +4,18 @@
   "skip": true,
   "enable": true,
   "toolTimeout": 120000,
-  "autoMerge": false
+  "autoMerge": false,
+  "share": "disabled",
+  "instructions": ["AGENTS.md"],
+  "permission": {
+    "bash": {
+      "rm -rf /*": "deny",
+      "git push --force*": "deny",
+      "git reset --hard*": "deny",
+      "*": "allow"
+    },
+    "external_directory": {
+      "*": "deny"
+    }
+  }
 }
