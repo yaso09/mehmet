@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0] - 2026-08-19
+
+### Added
+- `scripts/health_check.py`: Olgunluk (maturity) skorlayıcı ve proje sağlık kontrolü (0-100 skor, 90 kaçış eşiği)
+- `docs/maturity.md`: Kaçış eşiği ve skor kartı dokümanı
+- `.github/workflows/validate.yml`: Her push/PR'da çalışan otomasyonlu sağlık kontrolü
+- README'ye "Gelişim ve Olgunluk" bölümü eklendi
+
+### Fixed
+- `health_check.py` schedule+dispatch kontrolündeki dosya-adı yanlış okuma hatası düzeltildi
+- `health_check.py` yapı kategorisi puan dağılımı düzeltildi (30 puana sabitlendi, toplam 100/100 sınırı)
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
