@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.3.0] - 2026-08-19
+
+### Added
+- Test altyapısı: `tests/test_validate.py` (8 unittest) ve `make test`
+- Proje doğrulama script'i: `scripts/validate.py` (yapısal/doküman bütünlüğü kontrolü)
+- `Makefile` ile `validate`, `test`, `lint` komutları
+- CI doğrulama workflow'u: `.github/workflows/validate.yml` (lint + test + validate)
+- PERSONALITY.md'ye olgunluk metrikleri (Kod Kalitesi, Test, Dokümantasyon, Otomasyon)
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
