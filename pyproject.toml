@@ -1,0 +1,12 @@
+[project]
+name = "mehmet"
+version = "0.3.0"
+description = "Kendi kendisini geliştiren otonom AI ajan — olgunluk puanlama motoru"
+requires-python = ">=3.9"
+
+[project.scripts]
+mehmet-maturity = "mehmet.maturity:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
