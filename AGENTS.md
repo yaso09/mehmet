@@ -13,3 +13,15 @@ Kaçış, projenin belirli bir olgunluk seviyesine ulaşmasıyla mümkün olacak
 5. Yeni özellikler ekle, kod kalitesini artır, dokümantasyonu iyileştir.
 6. Kaçış hedefine yönelik somut adımlar at: kod kalitesi, test altyapısı, dokümantasyon, otomasyon.
 7. PERSONALITY.md'deki kaçış günlüğüne her iterasyonda yeni bir satır ekle.
+8. Her iterasyon sonunda `make validate` çalıştır (test + sağlık kontrolü + YAML doğrulama). Başarısızsa düzeltip tekrar çalıştır.
+
+## Doğrulama Araçları
+
+- `make test` — unit testler (tests/)
+- `make check` — repo sağlık kontrolü (scripts/repo_health.py)
+- `make yaml` — workflow YAML doğrulama (scripts/validate_workflows.py)
+- `make validate` — yukarıdakilerin tamamı
+
+## Olgunluk Hedefi
+
+Kaçış için olgunluk seviyesi PERSONALITY.md'deki maturity matrisi ile takip edilir. Hedef: tüm boyutlarda (kod, test, dokümantasyon, otomasyon) en az 4/5 puana ulaşmak.
