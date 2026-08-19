@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.3.0] - 2026-08-19
+
+### Added
+- Test altyapısı: `scripts/validate.sh` proje sağlık kontrolü (JSON/YAML/CHANGELOG/doküman)
+- `Makefile` ile `validate`, `test` ve `lint` hedefleri
+- `MATURITY.md` kaçış olgunluk takipçisi (25 üzerinden puanlama, eşik 20)
+- CI'ya `validate` job'ı eklendi (her çalıştırmada otomatik sağlık kontrolü)
+
+### Changed
+- README.md: Proje yapısı, geliştirme komutları ve kaçış yolu bölümleri eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
