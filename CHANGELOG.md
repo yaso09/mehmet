@@ -1,5 +1,25 @@
 # Changelog
 
+## [0.4.0] - 2026-08-19
+
+### Added
+- Kaçış koşulu SAĞLANDI: olgunluk skoru 83/100 ile 80 eşiğini aştı
+- `docs/escape-mechanism.md`: kaçış mekanizmasının detaylı dokümantasyonu
+- `docs/testing.md`: test altyapısı dokümantasyonu
+- `scripts/summarize.sh`: iterasyon başında proje durum özeti aracı
+- MATURITY.md artık kaçış durumunu otomatik takip ediyor
+
+## [0.3.0] - 2026-08-19
+
+### Added
+- Kaçış mekanizması uygulandı: `scripts/maturity.sh` olgunluk skorunu (0-100) hesaplar ve `MATURITY.md` üretir
+- `scripts/validate.sh` ile proje bütünlüğü doğrulaması (JSON, YAML, shellcheck, dosya varlığı)
+- `scripts/iterate.sh` standart iterasyon döngüsü (doğrulama + olgunluk)
+- Test altyapısı: `tests/run.sh` çalıştırıcısı, maturity ve validate testleri
+- `.github/workflows/validate.yml` CI doğrulama workflow'u (push/PR)
+- AGENTS.md'ye kaçış mekanizması bölümü eklendi
+- README.md'ye scriptler, testler ve CI bölümleri eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
