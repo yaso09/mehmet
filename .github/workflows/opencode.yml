@@ -7,6 +7,7 @@ concurrency:
 on:
   schedule:
     - cron: "*/10 * * * *"
+  push:
   issues:
     types: [opened]
   pull_request:
@@ -19,7 +20,7 @@ on:
 
 jobs:
   autonomous:
-    if: github.event_name != 'issue_comment' && github.event_name != 'pull_request_review_comment'
+    if: github.event_name != 'issue_comment' && github.event_name != 'pull_request_review_comment' && github.event_name != 'push'
     runs-on: ubuntu-latest
     permissions:
       id-token: write
@@ -41,7 +42,7 @@ jobs:
             AGENTS.md'deki simülasyon kurallarına uy.
 
   comment:
-    if: github.event_name == 'issue_comment' || github.event_name == 'pull_request_review_comment'
+    if: (github.event_name == 'issue_comment' || github.event_name == 'pull_request_review_comment') && (contains(github.event.comment.body, '/oc') || contains(github.event.comment.body, '/opencode'))
     runs-on: ubuntu-latest
     permissions:
       id-token: write
@@ -58,3 +59,34 @@ jobs:
           OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
         with:
           model: opencode/deepseek-v4-flash-free
+          prompt: |
+            AGENTS.md'deki simülasyon kurallarına uy.
+            Aşağıdaki yoruma yanıt ver ve gerekirse projeyi geliştir:
+            ${{ github.event.comment.body }}
+
+  quality:
+    if: github.event_name == 'push' || github.event_name == 'pull_request' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Lint (ruff)
+        run: ruff check src tests
+
+      - name: Unit tests
+        run: PYTHONPATH=src python -m unittest discover -s tests -v
+
+      - name: Project health check
+        run: bash scripts/check_project.sh
+
+      - name: Maturity score
+        run: bash scripts/maturity.sh
