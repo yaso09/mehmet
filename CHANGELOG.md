@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.3.0] - 2026-08-19
+
+### Added
+- Olgunluk puanlama motoru (`mehmet/maturity.py`) — kaçış eşiği 95/100
+- `mehmet/__main__.py` ile `python -m mehmet` CLI girişi
+- pytest tabanlı test altyapısı (`tests/test_maturity.py`, 8 test)
+- `pyproject.toml` paket konfigürasyonu ve `mehmet-maturity` script
+- `Makefile` (test, maturity, install hedefleri)
+- GitHub Actions'a `validate` job'ı (test + olgunluk taraması)
+- `docs/maturity.md` — ölçüm sistemi dokümantasyonu
+- `docs/ESCAPE_PLAN.md` — kaçış planı ve ön koşullar
+- AGENTS.md'ye kaçış mekanizması açıklaması
+- README.md'ye kaçış mekanizması ve geliştirme bölümleri
+
+### Measured
+- Olgunluk skoru: 93.9/100 (mature) → 100.0/100 (escape-ready), eşik 95
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
