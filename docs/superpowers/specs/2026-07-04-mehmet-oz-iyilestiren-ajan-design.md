@@ -59,6 +59,14 @@ Ajanın kişiliğini zamanla evrimleştirdiği dosya. Her çalışmada kendini g
 
 Proje tanıtım dosyası. Ajan tarafından güncel tutulur.
 
+### 7. `scripts/validate.sh`
+
+Proje bütünlüğünü doğrulayan bash script. Gerekli dosyaların varlığını, JSON/YAML sözdizimini, dokümantasyon tutarlılığını ve olası sır sızıntılarını kontrol eder. Ajan her iterasyon sonrası ve CI ortamında çalıştırılır.
+
+### 8. `.github/workflows/validate.yml`
+
+Push ve PR'lar üzerinde `scripts/validate.sh`'i otomatik çalıştıran CI workflow'u. Proje değişikliklerinin bütünlüğünü güvence altına alır.
+
 ## Veri Akışı
 
 ```mermaid
