@@ -92,8 +92,12 @@ sequenceDiagram
 3. Bu design doc'taki dosyaları oluştur
 4. Workflow'u `push` ile tetikle ve çalıştığını doğrula
 
+## Gerçekleşen Geliştirmeler (v0.3.0)
+
+- **Olgunluk metrikleri:** `scripts/maturity.py` — dokümantasyon, otomasyon, test ve meta boyutlarında skor üretir, `MATURITY.md`'de takip edilir
+- **Kaçış mekanizması (maturity threshold):** 100/100 skor + ardışık 3 iterasyon süreklilik (streak) şartı
+- **Test altyapısı:** `tests/` — stdlib `unittest` ile proje bütünlüğü testleri, workflow'un `check` job'ında otomatik çalışır
+
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
 - Çoklu ajan desteği
