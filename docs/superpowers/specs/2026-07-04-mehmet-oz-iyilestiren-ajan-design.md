@@ -94,6 +94,7 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- ~~Ajanın kaçış mekanizması (maturity threshold)~~ → PERSONALITY.md'deki Kaçış Olgunluk Matrisi (0.3.0)
+- ~~İlerleme metrikleri~~ → Kaçış Olgunluk Matrisi ve `scripts/validate.sh` sağlık kontrolü (0.3.0)
+- Test altyapısının genişletilmesi (validate.sh'e daha fazla kontrol)
 - Çoklu ajan desteği
