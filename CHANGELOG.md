@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0] - 2026-08-19
+
+### Added
+- `scripts/verify.sh`: Repo sağlık doğrulama aracı (dosya bütünlüğü, JSON geçerliliği, sır sızıntısı kontrolü, CHANGELOG/PERSONALITY disiplini)
+- `scripts/maturity.sh`: Kaçış olgunluk skoru (0-100) ve `ESCAPE_READINESS` yüzdesi hesaplayıcı — kaçış eşiği mekanizması
+- `tests/smoke_test.sh`: Araçların çalıştığını doğrulayan ilk test altyapısı
+- `PROGRESS.md`: Kaçış eşikleri ve metrik ağırlıklarını tanımlayan ilerleme takip dosyası
+- Workflow'a "Verify repository health" adımı (verify + maturity) ve zenginleştirilmiş prompt
+
+### Changed
+- README.md'ye Araçlar ve Kaçış Mekanizması bölümleri eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
