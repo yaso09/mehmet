@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0] - 2026-08-19
+
+### Added
+- scripts/self_check.py: proje bütünlüğünü doğrulayan ve olgunluk skoru hesaplayan kendini-dogrulama betiği
+- MATURITY.md: olgunluk takibi, puan bileşenleri ve kaçış (escape) kriterleri
+- Workflow'a `self-check` CI job'u eklendi (her tetiklemede doğrulama)
+- README'ye Test ve Olgunluk/Kaçış bölümleri eklendi
+
+### Changed
+- AGENTS.md'ye kural 8 ve 9 eklendi: her iterasyonda self_check.py çalıştırılıp MATURITY.md'ye işlenecek
+- PERSONALITY.md evrim fazı "Phase 2: Self-Improvement"a yükseltildi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
