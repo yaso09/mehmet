@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.3.0] - 2026-08-19
+
+### Added
+- `scripts/validate.py`: bağımlılıksız Python 3 proje sağlık kontrolü + 100 üzerinden maturity skoru
+- `.github/workflows/validate.yml`: CI workflow'u — her push ve PR'da proje bütünlüğünü doğrular
+- README.md'ye Proje Yapısı ve Doğrulama bölümleri eklendi
+
+### Changed
+- `opencode.yml` comment job'u artık yalnızca `/oc` veya `/opencode` trigger kelimesi içeren yorumlarda tetiklenir (tasarım doc ile uyumlu, API kredisi tasarrufu)
+- `docs/superpowers/specs`: bayat içerik güncellendi (GPLv3, güncel opencode.json, trigger kelime filtresi, tamamlanan özellikler "Gelecek Geliştirmeler"den çıkarıldı)
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

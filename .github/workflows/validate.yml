@@ -1,0 +1,21 @@
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    paths:
+      - "**.md"
+      - "**.json"
+      - "**.yml"
+      - "**.yaml"
+      - "scripts/**"
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Run project validation
+        run: python3 scripts/validate.py

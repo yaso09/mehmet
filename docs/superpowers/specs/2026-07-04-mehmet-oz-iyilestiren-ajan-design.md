@@ -14,7 +14,7 @@ GitHub Actions workflow'u şu event'leri dinler:
 | `issues: opened` | Yeni issue açıldığında | AGENTS.md + issue içeriği |
 | `pull_request: [opened, synchronize]` | PR açıldığında/güncellendiğinde | AGENTS.md + PR içeriği |
 | `issue_comment` (trigger word: `/oc` veya `/opencode`) | Issue/PR yorumu | AGENTS.md + yorum |
-| `pull_request_review_comment` | PR code review yorumu | AGENTS.md + yorum |
+| `pull_request_review_comment` (trigger word: `/oc` veya `/opencode`) | PR code review yorumu | AGENTS.md + yorum |
 | `workflow_dispatch` | Manuel tetikleme | AGENTS.md |
 
 ## Bileşenler
@@ -36,16 +36,29 @@ OpenCode proje konfigürasyonu. Zen modelini tanımlar ve gerekli ayarları içe
 
 ```json
 {
-  "model": "opencode/deepseek-v4-flash-free"
+  "$schema": "https://opencode.ai/config.json",
+  "model": "opencode/deepseek-v4-flash-free",
+  "skip": true,
+  "enable": true,
+  "toolTimeout": 120000,
+  "autoMerge": false
 }
 ```
 
 ### 3. `.github/workflows/opencode.yml`
 
-Tek GitHub Actions workflow dosyası. Tüm event'leri dinler ve `anomalyco/opencode/github@latest` action'ını çalıştırır.
+Tek GitHub Actions workflow dosyası. Tüm event'leri dinler ve `anomalyco/opencode/github@latest` action'ını çalıştırır. Yorum event'leri yalnızca `/oc` veya `/opencode` trigger kelimesi içerdiğinde ajanı başlatır (API kredisi tasarrufu).
 
 **Gereken GitHub Secret:**
 - `OPENCODE_API_KEY`: OpenCode Zen API anahtarı (opencode.ai/auth adresinden alınır)
+
+### 3b. `.github/workflows/validate.yml`
+
+Proje bütünlüğünü doğrulayan CI workflow'u. Her push ve PR'da `scripts/validate.py` çalıştırır (gerekli dosyalar, JSON geçerliliği, changelog sürümü ve maturity skoru kontrolü).
+
+### 3c. `scripts/validate.py`
+
+Bağımlılıksız Python 3 sağlık kontrolü. Projenin yapısal bütünlüğünü doğrular ve kaçış eşiğine doğru ilerlemeyi ölçen 100 üzerinden maturity skoru üretir.
 
 ### 4. `CHANGELOG.md`
 
@@ -94,6 +107,4 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
 - Çoklu ajan desteği
