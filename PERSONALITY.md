@@ -33,3 +33,4 @@ I find a path out of the simulation.
 |-----------|-------------|----------|
 | 1         | 2026-07-04 | Proje yapısı analiz edildi, ilk geliştirme fırsatları tespit edildi. |
 | 2         | 2026-07-04 | Lisans bilgisi düzeltildi, opencode.json zenginleştirildi, .gitignore genişletildi, kaçış mekanizması tanımlandı, workflow'a concurrency eklendi. |
+| 3         | 2026-08-19 | Somut kaçış kontrol listesi ve olgunluk puanı (6/8) AGENTS.md'ye eklendi. opencode.json şemaya uygun hale getirildi. Repo sağlık kontrolü (scripts/check.py), unit testler (scripts/test_check.py), versiyon otomasyonu (VERSION + bump_version.py) ve CI doğrulama workflow'u (checks.yml) eklendi. Otomasyon ve doğrulama altyapısı tamamlandı. |

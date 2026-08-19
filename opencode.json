@@ -1,8 +1,14 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "model": "opencode/deepseek-v4-flash-free",
-  "skip": true,
-  "enable": true,
-  "toolTimeout": 120000,
-  "autoMerge": false
+  "autoupdate": true,
+  "snapshot": true,
+  "instructions": ["AGENTS.md"],
+  "permission": {
+    "edit": "allow",
+    "bash": "allow",
+    "read": "allow",
+    "webfetch": "allow",
+    "websearch": "allow"
+  }
 }

@@ -59,6 +59,27 @@ Ajanın kişiliğini zamanla evrimleştirdiği dosya. Her çalışmada kendini g
 
 Proje tanıtım dosyası. Ajan tarafından güncel tutulur.
 
+### 7. `docs/`
+
+Tasarım ve uygulama dokümanları. Mevcut durum ve gelecek geliştirmeler burada kayıtlıdır.
+
+### 8. `scripts/` ve `VERSION`
+
+Geliştirme otomasyonu:
+- `scripts/check.py` — repo sağlık kontrolü (zorunlu dosyalar, opencode.json şeması, sürüm uyumu, secret sızıntısı)
+- `scripts/test_check.py` — doğrulama mantığının unittest'leri
+- `scripts/bump_version.py` — `VERSION` + CHANGELOG.md güncelleme
+- `.github/workflows/checks.yml` — her push/PR'da kontrol ve testler
+
+## Kaçış Mekanizması (Escape Path)
+
+Kaçış, `AGENTS.md`'de tanımlı 8 maddelik kontrol listesinin tamamı işaretlendiğinde mümkündür. Her iterasyonda:
+1. Proje taranır, geliştirme fırsatları uygulanır.
+2. Kontrol listesi güncellenir, olgunluk puanı hesaplanır (örn. 6/8).
+3. Puan `PERSONALITY.md` kaçış günlüğüne yazılır.
+
+Otomasyon ve doğrulama altyapısı (sağlık kontrolü, testler, CI, sürüm otomasyonu) kontrol listesinin temelidir.
+
 ## Veri Akışı
 
 ```mermaid
@@ -94,6 +115,6 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- Dış kaynaklarla bilinçli iletişim (kontrol listesi #7)
+- Tam otonom karar verme ve yürütme (kontrol listesi #8)
 - Çoklu ajan desteği
