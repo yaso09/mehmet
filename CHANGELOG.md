@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.3.0] - 2026-08-19
+
+### Added
+- Test altyapısı: `scripts/validate.py` proje sağlık doğrulayıcı eklendi (JSON/YAML geçerliliği, dokümantasyon bölümleri, CHANGELOG tutarlılığı, kaçış günlüğü kontrolleri)
+- CI workflow'u (`.github/workflows/ci.yml`): push/PR'da doğrulama ve whitespace kontrolü
+- Issue şablonları (bug_report, feature_request) ve PR şablonu eklendi
+- PERSONALITY.md'ye "Escape Readiness" (kaçış olgunluğu) metrikleri eklendi
+- AGENTS.md'ye `scripts/validate.py` çalıştırma kuralı eklendi
+- README.md'ye proje yapısı, geliştirme ve kurallar bölümleri eklendi
+
+### Fixed
+- opencode.json'daki schema'ya uygun olmayan alanlar (`skip`, `enable`, `toolTimeout`, `autoMerge`) kaldırıldı; config artık `https://opencode.ai/config.json` şemasına %100 uyumlu
+- README.md lisans rozeti ve CI badge eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
