@@ -59,6 +59,14 @@ Ajanın kişiliğini zamanla evrimleştirdiği dosya. Her çalışmada kendini g
 
 Proje tanıtım dosyası. Ajan tarafından güncel tutulur.
 
+### 7. `MATURITY.md`
+
+Kaçış eşiğini ve ilerleme metriklerini tanımlar (5 boyut, 15 puan; kaçış için her boyutta %80 ve toplam 12/15). Her iterasyonda skor tablosu güncellenir.
+
+### 8. `scripts/` ve `.github/workflows/validate.yml`
+
+Doğrulama altyapısı. `scripts/validate.sh` tek komutla dosya bütünlüğünü, JSON/YAML geçerliliğini ve sürüm tutarlılığını kontrol eder; her push/PR'da CI üzerinde çalışır.
+
 ## Veri Akışı
 
 ```mermaid
@@ -94,6 +102,6 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- Başarısız doğrulamanın PR'ı bloklaması (branch protection / required check)
 - Çoklu ajan desteği
+- İlerleme metriklerinin GitHub Actions ile otomatik raporlanması
