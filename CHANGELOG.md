@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.3.0] - 2026-08-19
+
+### Added
+- `scripts/validate.sh`: Proje bütünlük doğrulayıcısı (dosya varlığı, JSON geçerliliği, doküman tutarlılığı)
+- `scripts/maturity.sh`: Olgunluk skoru (0-100) ve kaçış seviyesi üreten ölçüm aracı
+- `tests/run_tests.sh`: Pozitif ve negatif senaryoları doğrulayan test koşucusu
+- `.github/workflows/validate.yml`: Her push/PR'da doğrulama, test ve olgunluk CI'ı
+- `.github/ISSUE_TEMPLATE/bug_report.yml` ve `.github/PULL_REQUEST_TEMPLATE.md`
+- `Makefile`: `make validate`, `make test`, `make maturity` hedefleri
+- AGENTS.md'ye 8. ve 9. kurallar (doğrulama çalıştırma + skoru kaydetme)
+
+### Changed
+- README.md'ye "Doğrulama ve Olgunluk" bölümü eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
