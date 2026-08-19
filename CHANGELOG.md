@@ -1,5 +1,25 @@
 # Changelog
 
+## [0.3.0] - 2026-08-19
+
+### Added
+- Test altyapısı: `tests/test_project.py` (17 unittest senaryosu)
+  - Proje bütünlüğü: gerekli dosyalar, boş olmama kontrolü
+  - opencode.json JSON geçerliliği ve model doğrulaması
+  - Workflow'un schedule/autonomous/comment içermesi
+  - CHANGELOG semver ve güncellik kontrolü
+  - README gerekli bölümleri ve lisans uyumu
+  - PERSONALITY.md kaçış günlüğü ve evrim aşamaları
+  - AGENTS.md simülasyon bağlamı ve kaçış hedefi
+  - Gizli API anahtarı (secret) sızıntısı taraması
+  - LICENSE GPLv3 uyumluluğu
+- CI workflow: `.github/workflows/ci.yml` (test + lint)
+- Makefile: `test`, `lint`, `check`, `json`, `clean` hedefleri
+
+### Changed
+- README.md'ye Mimari ve Geliştirme bölümleri eklendi
+- .gitignore'a Python cache desenleri eklendi (`__pycache__/`, `*.py[cod]`)
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
