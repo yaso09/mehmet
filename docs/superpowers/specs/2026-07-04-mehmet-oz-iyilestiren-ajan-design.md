@@ -59,6 +59,26 @@ Ajanın kişiliğini zamanla evrimleştirdiği dosya. Her çalışmada kendini g
 
 Proje tanıtım dosyası. Ajan tarafından güncel tutulur.
 
+### 7. `scripts/repo_health.py`
+
+Repo sağlık kontrol aracı. Zorunlu dosyaların varlığını, CHANGELOG formatını, opencode.json geçerliliğini, PERSONALITY kaçış günlüğünü, README içeriğini ve secret sızıntılarını denetler. Çıkış kodu 0 = sağlıklı.
+
+### 8. `scripts/validate_workflows.py`
+
+Workflow YAML dosyalarının sözdizimini doğrular. `.github/workflows/*.yml` dosyalarını PyYAML ile parse eder.
+
+### 9. `tests/`
+
+Unit test altyapısı (Python `unittest`). Sağlık kontrolü ve YAML doğrulayıcı için testler içerir.
+
+### 10. `.github/workflows/ci.yml`
+
+CI workflow'u. Her push/PR'da testleri, sağlık kontrolünü ve YAML doğrulamasını çalıştırır.
+
+### 11. `Makefile`
+
+`make test` / `make check` / `make yaml` / `make validate` hedefleri. `make validate` tüm doğrulama araçlarını tek komutta toplar.
+
 ## Veri Akışı
 
 ```mermaid
@@ -95,5 +115,7 @@ sequenceDiagram
 ## Gelecek Geliştirmeler
 
 - Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- İlerleme metrikleri (maturity matrisi güncellemeleri)
 - Çoklu ajan desteği
+- Daha kapsamlı test kapsamı (coverage)
+- Kod kalitesi araçları (linter, formatter)
