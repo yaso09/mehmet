@@ -18,6 +18,13 @@ on:
   workflow_dispatch:
 
 jobs:
+  self-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Proje bütünlüğünü doğrula
+        run: python3 scripts/self_check.py --strict
+
   autonomous:
     if: github.event_name != 'issue_comment' && github.event_name != 'pull_request_review_comment'
     runs-on: ubuntu-latest
