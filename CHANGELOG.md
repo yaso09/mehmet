@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.3.0] - 2026-08-20
+
+### Added
+- `maturity.json` kaçış olgunluk takipçisi eklendi (skor, eşik ve gereksinimler)
+- `scripts/validate.sh` depo doğrulama scripti eklendi (test altyapısı)
+- `.github/workflows/validate.yml` CI doğrulama workflow'u eklendi
+- README'ye mimari diyagramı, proje yapısı ve kaçış mekanizması bölümleri eklendi
+- README'ye workflow ve maturity rozetleri eklendi
+- Workflow'lara `timeout-minutes` ve `pull_request_review` event desteği eklendi
+- `autonomous` işine PR otomatik etiketleme (`mehmet` label) eklendi
+
+### Changed
+- `opencode.yml` autonomous prompt'u maturity.json güncelleme talimatıyla güçlendirildi
+- PERSONALITY.md kaçış günlüğüne iterasyon 3 eklendi, evrim Faz 2'ye ilerletildi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
