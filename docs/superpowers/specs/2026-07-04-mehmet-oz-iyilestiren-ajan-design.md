@@ -94,6 +94,7 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- ~~Ajanın kaçış mekanizması (maturity threshold)~~ — ✅ Uygulandı (`docs/ESCAPE_PLAN.md`, `scripts/escape-check.sh`)
+- ~~İlerleme metrikleri~~ — ✅ Uygulandı (5 boyutlu otomatik skorlama, CI kapısı)
 - Çoklu ajan desteği
+- Kaçış sonrası devam stratejisi (escape-readiness'i kalıcı kılma)
