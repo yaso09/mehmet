@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.0] - 2026-08-20
+
+### Added
+- Kaçış mekanizması uygulandı: `scripts/maturity.py` ile olgunluk skoru (eşik 80/100)
+- Test altyapısı kuruldu: `tests/test_maturity.py` (7 unittest)
+- CI'ya `validate` job'ı eklendi (test + maturity kontrolü)
+- `docs/escape-mechanism.md` ile kaçış kriterleri dokümante edildi
+- AGENTS.md'ye maturity doğrulama kuralı (8. madde) eklendi
+- README'ye yapı, geliştirme komutları ve kaçış durumu bölümleri eklendi
+
+### Fixed
+- `scripts/` paketi için `__init__.py` eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
