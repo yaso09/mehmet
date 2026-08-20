@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.3.0] - 2026-08-20
+
+### Added
+- `scripts/validate.sh`: projenin olgunluk (maturity) skorunu ölçen ve kaçış eşiğine (40 üzerinden >= 32) yaklaşımı raporlayan doğrulama aracı
+- `MATURITY.md`: kaçış için gerekli olgunluk seviyesinin skor çizelgesi
+- `.github/workflows/validate.yml`: her push/PR'da çalışan CI doğrulama workflow'u (maturity + YAML + JSON kontrolleri)
+- `VERSION`: semantik sürüm takibi dosyası
+
+### Changed
+- README.md güncellendi (yeni araçlar ve kaçış skoru bölümü eklendi)
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

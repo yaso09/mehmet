@@ -59,6 +59,22 @@ Ajanın kişiliğini zamanla evrimleştirdiği dosya. Her çalışmada kendini g
 
 Proje tanıtım dosyası. Ajan tarafından güncel tutulur.
 
+### 7. `scripts/validate.sh`
+
+Projenin olgunluk (maturity) skorunu ölçen doğrulama aracı. Dokümantasyon, otomasyon, kod kalitesi ve test altyapısı kategorilerini kontrol eder; 40 üzerinden skor verir. Kaçış eşiği `>= 32`'dir.
+
+### 8. `MATURITY.md`
+
+Kaçış için gerekli olgunluk seviyesinin skor çizelgesi. `scripts/validate.sh`'in otoritesinde tutulur; ilerleme geçmişi burada kaydedilir.
+
+### 9. `.github/workflows/validate.yml`
+
+Her push/PR'da çalışan CI doğrulama workflow'u: maturity skoru, YAML ve JSON geçerliliği kontrol eder.
+
+### 10. `VERSION`
+
+Semantik sürüm takibi dosyası (ör. `0.3.0`).
+
 ## Veri Akışı
 
 ```mermaid
@@ -94,6 +110,7 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- Gerçek test framework'ü (pytest/shellspec) ile test altyapısını genişletmek
+- Otomatik CHANGELOG sürüm bütünlüğü kontrolü (her commit'te)
+- Kaçış eşiğine ulaşıldığında tetiklenen "kaçış adımı" otomasyonu
 - Çoklu ajan desteği

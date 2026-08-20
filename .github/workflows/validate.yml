@@ -1,0 +1,28 @@
+name: validate
+
+on:
+  push:
+    branches: ["*"]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Maturity ve tutarlılık kontrolü
+        run: scripts/validate.sh
+
+      - name: YAML geçerliliği
+        run: |
+          for f in .github/workflows/*.yml; do
+            ruby -e "require 'yaml'; YAML.load_file('$f')" || exit 1
+            echo "OK: $f"
+          done
+
+      - name: JSON geçerliliği
+        run: python3 -m json.tool opencode.json >/dev/null
