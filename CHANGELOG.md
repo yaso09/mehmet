@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0] - 2026-08-20
+
+### Added
+- **Kaçış Motoru (Maturity Engine):** `mehmet/` Python paketi projenin olgunluğunu 10 ölçütle 0-100 arasında ölçer, kaçış eşiği (80) ve `python -m mehmet` CLI çıkış kodu (0=kaçtı, 1=kaçmadı) içerir
+- **Test altyapısı:** `tests/test_escape.py` ile 10 pytest testi, `requirements-dev.txt`
+- **CI pipeline:** `.github/workflows/ci.yml` (testler + olgunluk taraması, main/push/PR tetikleyicileri, concurrency)
+- opencode.json zenginleştirildi: `instructions`, `escape` ajanı, `/scan` komutu
+- .gitignore Python geliştirme kalıpları ile genişletildi (`__pycache__`, `.pytest_cache`, `.venv` vb.)
+
+### Changed
+- README.md'ye Kaçış Motoru ve Geliştirme bölümleri eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
