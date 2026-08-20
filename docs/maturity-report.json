@@ -1,0 +1,14 @@
+{
+  "maturity_score": 36,
+  "maturity_max": 36,
+  "maturity_percent": 100,
+  "escape_threshold": 80,
+  "passed": 36,
+  "failed": 0,
+  "categories": {
+    "documentation": 9,
+    "config": 7,
+    "automation": 10,
+    "quality": 10
+  }
+}
