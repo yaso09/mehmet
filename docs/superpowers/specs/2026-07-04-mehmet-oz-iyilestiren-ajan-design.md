@@ -36,9 +36,14 @@ OpenCode proje konfigürasyonu. Zen modelini tanımlar ve gerekli ayarları içe
 
 ```json
 {
-  "model": "opencode/deepseek-v4-flash-free"
+  "$schema": "https://opencode.ai/config.json",
+  "model": "opencode/deepseek-v4-flash-free",
+  "autoupdate": false,
+  "snapshot": true
 }
 ```
+
+> Not: v0.3.0'da schema-geçersiz anahtarlar (`skip`, `enable`, `toolTimeout`, `autoMerge`) kaldırıldı; opencode bilinmeyen top-level anahtarlarda `ConfigInvalidError` ile açılmaz.
 
 ### 3. `.github/workflows/opencode.yml`
 
@@ -58,6 +63,19 @@ Ajanın kişiliğini zamanla evrimleştirdiği dosya. Her çalışmada kendini g
 ### 6. `README.md`
 
 Proje tanıtım dosyası. Ajan tarafından güncel tutulur.
+
+### 7. `.github/workflows/ci.yml`
+
+Test altyapısının CI ayağı. Her push ve PR'da `scripts/validate.sh` çalıştırılarak yapının bozulmadığı doğrulanır.
+
+### 8. `scripts/validate.sh`
+
+Bağımlılıksız doğrulama betiği (bash + ruby + python3, hepsi ubuntu-latest runner'ında mevcuttur):
+- Kritik dosyaların varlığı (README, CHANGELOG, PERSONALITY, AGENTS, workflow'lar)
+- Tüm JSON dosyalarının geçerliliği (`python3 -m json.tool`)
+- Tüm YAML dosyalarının geçerliliği (`ruby -ryaml`)
+- Dokümantasyon tutarlılığı (README bölümleri, CHANGELOG sürüm başlığı, PERSONALITY kaçış günlüğü)
+- `opencode.json` anahtarlarının şemaya uygunluğu
 
 ## Veri Akışı
 
@@ -94,6 +112,8 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- Kod kalitesi araçları (lint/format kontrolü)
+- İlerleme metrikleri otomasyonu (kaçış koşulları takibi)
 - Çoklu ajan desteği
+
+> v0.3.0 itibarıyla tamamlananlar: test altyapısı (validate.sh + ci.yml), kaçış koşulları/metrikleri tanımı, schema-geçerli opencode.json.
