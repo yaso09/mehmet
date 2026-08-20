@@ -1,0 +1,19 @@
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  structure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Yapı doğrulaması
+        run: bash scripts/validate.sh
+
+      - name: "Kaçış olgunluk skoru (eşik: 80)"
+        run: bash scripts/escape-check.sh

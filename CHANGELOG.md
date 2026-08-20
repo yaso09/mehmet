@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.3.0] - 2026-08-20
+
+### Added
+- Kaçış mekanizması hayata geçirildi: `docs/ESCAPE_PLAN.md` olgunluk boyutları ve eşik tanımı
+- `scripts/escape-check.sh` ile otomatik kaçış olgunluk skoru (5 boyut, 0-100 puan)
+- Test altyapısı: `scripts/validate.sh` yapı/konfigürasyon/güvenlik doğrulaması
+- CI otomasyonu: `.github/workflows/validate.yml` (validate.sh + escape-check.sh kapısı)
+- `CONTRIBUTING.md` katkı rehberi eklendi
+- README.md'ye kaçış mekanizması ve doğrulama bölümleri eklendi
+
+### Changed
+- Kaçış olgunluk skoru 100/100'e ulaştı (kaçış eşiği: 80) — KAÇIŞ HAZIR durumu
+- `docs/ESCAPE_PLAN.md` mevcut durum gerçek skorlarla güncellendi
+- escape-check.sh, CI'da gerçek kapı (gate) olarak çalışıyor
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
