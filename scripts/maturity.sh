@@ -79,10 +79,10 @@ fi
 report_file "Makefile" "Makefile mevcut (otomasyon)" 5
 
 COMMITS=$(git -C "$ROOT" rev-list --count HEAD 2>/dev/null || echo 0)
-if [ "$COMMITS" -ge 3 ]; then
-  pass "git geçmişi en az 3 commit" 5
+if [ -f "$ROOT/.git/shallow" ] || [ "$COMMITS" -ge 3 ]; then
+  pass "git geçmişi yeterli (shallow dahil)" 5
 else
-  fail "git geçmişi en az 3 commit" 5
+  fail "git geçmişi yeterli (shallow dahil)" 5
 fi
 
 if [ -z "$(git -C "$ROOT" status --porcelain)" ]; then
