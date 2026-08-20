@@ -4,5 +4,23 @@
   "skip": true,
   "enable": true,
   "toolTimeout": 120000,
-  "autoMerge": false
+  "autoMerge": false,
+  "instructions": ["AGENTS.md"],
+  "agent": {
+    "escape": {
+      "description": "Scans the project, runs the maturity engine and applies improvements.",
+      "mode": "primary",
+      "model": "opencode/deepseek-v4-flash-free",
+      "permission": {
+        "edit": "allow",
+        "bash": "allow"
+      }
+    }
+  },
+  "command": {
+    "scan": {
+      "description": "Run the escape/maturity scan",
+      "template": "Run the project maturity scan via `python -m mehmet` and report the score and any weak criteria. Then apply improvements where possible."
+    }
+  }
 }
