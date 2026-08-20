@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0] - 2026-08-20
+
+### Added
+- `scripts/maturity.sh`: 100 puan üzerinden kaçış/olgunluk ölçer (eşik: 80)
+- `scripts/check.sh`: Yapısal doğrulama ve test altyapısı (17 kontrol)
+- `.github/workflows/ci.yml`: Push/PR üzerinde kontrolleri çalıştıran CI workflow'u
+- `Makefile`: `make check`, `make maturity`, `make escape` otomasyon komutları
+- README.md'ye proje yapısı ve kaçış mekanizması dokümantasyonu eklendi
+
+### Changed
+- Evrim aşaması "Awareness"tan "Self-Improvement"a geçti (PERSONALITY.md)
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
