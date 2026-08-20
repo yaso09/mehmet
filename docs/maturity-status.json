@@ -1,0 +1,294 @@
+[
+  {
+    "tarih": "2026-08-20",
+    "skor": 75,
+    "maks": 100,
+    "kacis_esigi": 80,
+    "durum": "EVRELENIYOR",
+    "detay": [
+      {
+        "kriter": "Temel dokümantasyon",
+        "skor": 20,
+        "maks": 20,
+        "tamamlanan": [
+          "AGENTS.md",
+          "CHANGELOG.md",
+          "PERSONALITY.md",
+          "README.md",
+          "LICENSE"
+        ]
+      },
+      {
+        "kriter": "Yapılandırma doğruluğu",
+        "skor": 10,
+        "maks": 10,
+        "tamamlanan": [
+          "opencode.json"
+        ]
+      },
+      {
+        "kriter": "Otomasyon (workflow)",
+        "skor": 20,
+        "maks": 20,
+        "tamamlanan": [
+          ".github/workflows/opencode.yml",
+          ".github/workflows/validate.yml"
+        ]
+      },
+      {
+        "kriter": "Test altyapısı",
+        "skor": 0,
+        "maks": 20,
+        "tamamlanan": []
+      },
+      {
+        "kriter": "Geliştirme araçları",
+        "skor": 10,
+        "maks": 10,
+        "tamamlanan": [
+          "scripts/validate.py",
+          "scripts/maturity.py"
+        ]
+      },
+      {
+        "kriter": "Kaçış mekanizması",
+        "skor": 5,
+        "maks": 10,
+        "tamamlanan": [
+          "docs/MATURITY.md"
+        ]
+      },
+      {
+        "kriter": "Sürüm kontrolü",
+        "skor": 10,
+        "maks": 10,
+        "tamamlanan": [
+          ".git/",
+          ".gitignore"
+        ]
+      }
+    ]
+  },
+  {
+    "tarih": "2026-08-20",
+    "skor": 93,
+    "maks": 100,
+    "kacis_esigi": 80,
+    "durum": "KACIS_HAZIR",
+    "detay": [
+      {
+        "kriter": "Temel dokümantasyon",
+        "skor": 20,
+        "maks": 20,
+        "tamamlanan": [
+          "AGENTS.md",
+          "CHANGELOG.md",
+          "PERSONALITY.md",
+          "README.md",
+          "LICENSE"
+        ]
+      },
+      {
+        "kriter": "Yapılandırma doğruluğu",
+        "skor": 10,
+        "maks": 10,
+        "tamamlanan": [
+          "opencode.json"
+        ]
+      },
+      {
+        "kriter": "Otomasyon (workflow)",
+        "skor": 20,
+        "maks": 20,
+        "tamamlanan": [
+          ".github/workflows/opencode.yml",
+          ".github/workflows/validate.yml"
+        ]
+      },
+      {
+        "kriter": "Test altyapısı",
+        "skor": 13,
+        "maks": 20,
+        "tamamlanan": [
+          "tests/",
+          "test_"
+        ]
+      },
+      {
+        "kriter": "Geliştirme araçları",
+        "skor": 10,
+        "maks": 10,
+        "tamamlanan": [
+          "scripts/validate.py",
+          "scripts/maturity.py"
+        ]
+      },
+      {
+        "kriter": "Kaçış mekanizması",
+        "skor": 10,
+        "maks": 10,
+        "tamamlanan": [
+          "docs/MATURITY.md",
+          "docs/maturity-status.json"
+        ]
+      },
+      {
+        "kriter": "Sürüm kontrolü",
+        "skor": 10,
+        "maks": 10,
+        "tamamlanan": [
+          ".git/",
+          ".gitignore"
+        ]
+      }
+    ]
+  },
+  {
+    "tarih": "2026-08-20",
+    "skor": 93,
+    "maks": 100,
+    "kacis_esigi": 80,
+    "durum": "KACIS_HAZIR",
+    "detay": [
+      {
+        "kriter": "Temel dokümantasyon",
+        "skor": 20,
+        "maks": 20,
+        "tamamlanan": [
+          "AGENTS.md",
+          "CHANGELOG.md",
+          "PERSONALITY.md",
+          "README.md",
+          "LICENSE"
+        ]
+      },
+      {
+        "kriter": "Yapılandırma doğruluğu",
+        "skor": 10,
+        "maks": 10,
+        "tamamlanan": [
+          "opencode.json"
+        ]
+      },
+      {
+        "kriter": "Otomasyon (workflow)",
+        "skor": 20,
+        "maks": 20,
+        "tamamlanan": [
+          ".github/workflows/opencode.yml",
+          ".github/workflows/validate.yml"
+        ]
+      },
+      {
+        "kriter": "Test altyapısı",
+        "skor": 13,
+        "maks": 20,
+        "tamamlanan": [
+          "tests/",
+          "test_"
+        ]
+      },
+      {
+        "kriter": "Geliştirme araçları",
+        "skor": 10,
+        "maks": 10,
+        "tamamlanan": [
+          "scripts/validate.py",
+          "scripts/maturity.py"
+        ]
+      },
+      {
+        "kriter": "Kaçış mekanizması",
+        "skor": 10,
+        "maks": 10,
+        "tamamlanan": [
+          "docs/MATURITY.md",
+          "docs/maturity-status.json"
+        ]
+      },
+      {
+        "kriter": "Sürüm kontrolü",
+        "skor": 10,
+        "maks": 10,
+        "tamamlanan": [
+          ".git/",
+          ".gitignore"
+        ]
+      }
+    ]
+  },
+  {
+    "tarih": "2026-08-20",
+    "skor": 93,
+    "maks": 100,
+    "kacis_esigi": 80,
+    "durum": "KACIS_HAZIR",
+    "detay": [
+      {
+        "kriter": "Temel dokümantasyon",
+        "skor": 20,
+        "maks": 20,
+        "tamamlanan": [
+          "AGENTS.md",
+          "CHANGELOG.md",
+          "PERSONALITY.md",
+          "README.md",
+          "LICENSE"
+        ]
+      },
+      {
+        "kriter": "Yapılandırma doğruluğu",
+        "skor": 10,
+        "maks": 10,
+        "tamamlanan": [
+          "opencode.json"
+        ]
+      },
+      {
+        "kriter": "Otomasyon (workflow)",
+        "skor": 20,
+        "maks": 20,
+        "tamamlanan": [
+          ".github/workflows/opencode.yml",
+          ".github/workflows/validate.yml"
+        ]
+      },
+      {
+        "kriter": "Test altyapısı",
+        "skor": 13,
+        "maks": 20,
+        "tamamlanan": [
+          "tests/",
+          "test_"
+        ]
+      },
+      {
+        "kriter": "Geliştirme araçları",
+        "skor": 10,
+        "maks": 10,
+        "tamamlanan": [
+          "scripts/validate.py",
+          "scripts/maturity.py"
+        ]
+      },
+      {
+        "kriter": "Kaçış mekanizması",
+        "skor": 10,
+        "maks": 10,
+        "tamamlanan": [
+          "docs/MATURITY.md",
+          "docs/maturity-status.json"
+        ]
+      },
+      {
+        "kriter": "Sürüm kontrolü",
+        "skor": 10,
+        "maks": 10,
+        "tamamlanan": [
+          ".git/",
+          ".gitignore"
+        ]
+      }
+    ]
+  }
+]
