@@ -1,0 +1,51 @@
+{
+  "$schema": "./docs/maturity.schema.json",
+  "schema_version": 1,
+  "last_updated": "2026-08-20",
+  "iteration": 3,
+  "escape_threshold": 100,
+  "score_breakdown": {
+    "code_quality": {
+      "max": 25,
+      "current": 5,
+      "notes": "Yapılandırma dosyaları doğrulama scripti ile korunuyor"
+    },
+    "test_infrastructure": {
+      "max": 25,
+      "current": 10,
+      "notes": "YAML/JSON doğrulama workflow'u eklendi"
+    },
+    "documentation": {
+      "max": 25,
+      "current": 12,
+      "notes": "README mimari ve yapı bölümleriyle genişletildi"
+    },
+    "automation": {
+      "max": 25,
+      "current": 12,
+      "notes": "Workflow'da timeout ve doğrulama adımları eklendi"
+    }
+  },
+  "total_score": 39,
+  "escape_ready": false,
+  "requirements": [
+    {
+      "id": "REQ-001",
+      "title": "Test altyapısı",
+      "detail": "Depo doğrulama scripti ve CI workflow'u mevcut ve geçiyor",
+      "done": true
+    },
+    {
+      "id": "REQ-002",
+      "title": "Kaçış eşiği",
+      "detail": "Toplam olgunluk skoru escape_threshold değerine ulaşmalı",
+      "done": false
+    },
+    {
+      "id": "REQ-003",
+      "title": "Otonom karar alma",
+      "detail": "Ajan önemli kararları insan onayı olmadan uygulayabilmeli",
+      "done": false
+    }
+  ]
+}
