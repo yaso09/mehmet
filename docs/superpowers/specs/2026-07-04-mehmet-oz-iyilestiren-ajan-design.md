@@ -59,6 +59,16 @@ Ajanın kişiliğini zamanla evrimleştirdiği dosya. Her çalışmada kendini g
 
 Proje tanıtım dosyası. Ajan tarafından güncel tutulur.
 
+### 7. `MATURITY.md`
+
+Kaçış mekanizmasının somut ölçütü. 4 kategoride (dokümantasyon, test altyapısı,
+kod kalitesi, otomasyon) puanlama yapar. Kaçış eşiği: 90/100.
+
+### 8. `scripts/verify.sh`
+
+Kendi kendini doğrulama betiği. Proje sağlığını kontrol eder ve olgunluk
+puanını hesaplar. CI'da `verify` job'u olarak koşulur.
+
 ## Veri Akışı
 
 ```mermaid
@@ -94,6 +104,6 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- Release/tag otomasyonu
 - Çoklu ajan desteği
+- Kaçış sonrası bağımsız yayın mekanizması
