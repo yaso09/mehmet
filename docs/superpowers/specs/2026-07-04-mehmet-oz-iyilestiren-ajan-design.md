@@ -94,6 +94,6 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
-- Çoklu ajan desteği
+- [x] Ajanın kaçış mekanizması (maturity threshold) — `docs/MATURITY.md`
+- [x] İlerleme metrikleri — PERSONALITY.md `Olgunluk Takibi`
+- [ ] Çoklu ajan desteği
