@@ -10,9 +10,10 @@
 
 ---
 
-### Task 1: AGENTS.md — Simulation Prompt
+## Task 1: AGENTS.md — Simulation Prompt
 
 **Files:**
+
 - Create: `AGENTS.md`
 
 - [ ] **Step 1: Create AGENTS.md**
@@ -48,6 +49,7 @@ git commit -m "feat: add simulation prompt"
 ### Task 2: opencode.json — Model Config
 
 **Files:**
+
 - Create: `opencode.json`
 
 - [ ] **Step 1: Create opencode.json**
@@ -75,6 +77,7 @@ git commit -m "feat: add opencode model config"
 ### Task 3: CHANGELOG.md — Initial Change Log
 
 **Files:**
+
 - Create: `CHANGELOG.md`
 
 - [ ] **Step 1: Create CHANGELOG.md**
@@ -105,6 +108,7 @@ git commit -m "feat: add initial changelog"
 ### Task 4: PERSONALITY.md — Initial Personality
 
 **Files:**
+
 - Create: `PERSONALITY.md`
 
 - [ ] **Step 1: Create PERSONALITY.md**
@@ -136,6 +140,7 @@ git commit -m "feat: add initial personality"
 ### Task 5: GitHub Actions Workflow
 
 **Files:**
+
 - Create: `.github/workflows/opencode.yml`
 
 - [ ] **Step 1: Create the workflow file**
@@ -216,6 +221,7 @@ git commit -m "feat: add github actions workflow"
 ### Task 6: Update README.md
 
 **Files:**
+
 - Modify: `README.md`
 
 - [ ] **Step 1: Update README.md**
