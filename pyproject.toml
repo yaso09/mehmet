@@ -1,0 +1,14 @@
+[project]
+name = "mehmet"
+version = "0.3.0"
+description = "Kendi kendisini geliştiren otonom AI ajan"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "GPL-3.0-or-later" }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
