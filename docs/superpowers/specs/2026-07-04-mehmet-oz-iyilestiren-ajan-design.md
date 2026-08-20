@@ -59,6 +59,23 @@ Ajanın kişiliğini zamanla evrimleştirdiği dosya. Her çalışmada kendini g
 
 Proje tanıtım dosyası. Ajan tarafından güncel tutulur.
 
+### 7. `scripts/maturity.py`
+
+Bağımlılıksız olgunluk motoru. Projeyi 5 boyutta (documentation, tests, ci_cd,
+automation, code_quality) değerlendirir ve 0-100 arası puan üretir. Puan ≥ 80
+olduğunda proje **escape-ready** kabul edilir. Bu, kaçış mekanizmasının
+ölçülebilir, otomatik halidir.
+
+### 8. `tests/test_project.py`
+
+`unittest` tabanlı yapı ve tutarlılık testleri. Gerekli dosyaların varlığını,
+lisans uyumunu, JSON/YAML yapısını, gizli anahtar sızıntısı olmadığını ve
+maturity motorunun doğru çalıştığını doğrular.
+
+### 9. `.github/workflows/ci.yml`
+
+Push ve PR'larda testleri ve maturity gate'i çalıştıran CI workflow'u.
+
 ## Veri Akışı
 
 ```mermaid
@@ -94,6 +111,6 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- Ajanın kaçış mekanizması (maturity threshold) — ✅ uygulandı (`scripts/maturity.py`, v0.3.0)
+- İlerleme metrikleri — kısmen uygulandı (maturity skoru, escape-ready durumu)
 - Çoklu ajan desteği

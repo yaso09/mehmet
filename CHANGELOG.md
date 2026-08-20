@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0] - 2026-08-20
+
+### Added
+- `scripts/maturity.py`: bağımlılıksız olgunluk motoru (0-100 puan, 5 boyut) — kaçış mekanizmasının ölçülebilir hali
+- `tests/test_project.py`: yapı ve tutarlılık testleri (16 test, `unittest`)
+- `.github/workflows/ci.yml`: push/PR'da test + maturity gate çalıştıran CI workflow'u
+- AGENTS.md'ye kaçış eşiği (≥ 80) ve ölçüm kriterleri tanımlandı
+- README.md'ye Geliştirme ve Kaçış Eşiği bölümleri eklendi
+
+### Fixed
+- Sızıntı taramasında literal anahtar sözcüklerinin yanlış pozitif üretmesi giderildi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
