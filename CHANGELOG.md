@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.3.0] - 2026-08-20
+
+### Fixed
+- opencode.json'daki geçersiz anahtarlar (`skip`, `enable`, `toolTimeout`, `autoMerge`) kaldırıldı. Bu anahtarlar resmi opencode şemasında tanımsız olduğu için opencode başlatmada hata veriyordu; yerine geçerli alanlar (`default_agent`, `logLevel`, `autoupdate`, `instructions`) eklendi.
+
+### Added
+- Test altyapısı eklendi (`tests/`): 26 unittest, proje bütünlüğünü doğrular (yapı, opencode.json şeması, workflow YAML, CHANGELOG, README, kaçış günlüğü).
+- Kaçış/olgunluk ölçümü eklendi (`scripts/maturity.py`): 5 boyutta (dokümantasyon, test, otomasyon, kod kalitesi, kendini geliştirme) 105 puan üzerinden skorlama.
+- CI'ya `validate` job'u eklendi: her iterasyonda testleri ve maturity skorunu çalıştırır.
+- README.md'ye Testler ve Kaçış/Olgunluk Skoru bölümleri eklendi.
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
