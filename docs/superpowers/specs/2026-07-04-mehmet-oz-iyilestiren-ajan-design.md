@@ -94,6 +94,13 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
 - Çoklu ajan desteği
+- Olgunluk skorunu badge olarak README'ye yansıtma
+- Daha fazla maturity kriteri (kod kapsamı, linter, dokümantasyon kapsamı)
+
+## Uygulanan Geliştirmeler
+
+- **Kaçış mekanizması (maturity threshold):** `scripts/maturity.py` ile olgunluk skoru hesaplanıyor; eşik 80/100. Detaylar: `docs/escape-mechanism.md`
+- **İlerleme metrikleri:** Her iterasyonda `python scripts/maturity.py .` ile skor takip ediliyor
+- **CI doğrulama job'ı:** Workflow'da testler ve olgunluk kontrolü çalışıyor
+- **Test altyapısı:** `tests/` dizini ve unittest suite eklendi
