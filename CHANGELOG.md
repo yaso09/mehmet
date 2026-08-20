@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.3.0] - 2026-08-20
+
+### Added
+- Maturity scoring sistemi (`scripts/maturity.py`) eklendi: 5 boyutta (docs, automation, tests, quality, resilience) 0-100 arası kaçış ilerlemesi ölçer
+- Test altyapısı eklendi (`tests/`): yapı, doküman ve maturity testleri (harici bağımlılık yok)
+- Sıfır-bağımlılıklı test runner (`scripts/run_tests.py`) unittest discovery ile eklendi
+- `pyproject.toml` ve `Makefile` eklendi (`make test`, `make maturity`, `make check`, `make lint`)
+- GitHub Actions workflow'una `quality` job eklendi: her push'ta compile check, test suite ve maturity gate (60+) çalışır
+- Workflow'a `push` tetikleyicisi eklendi
+- .gitignore'a Python caches (`__pycache__`, `.pytest_cache`, `*.pyc`) eklendi
+
+### Changed
+- README.md: Test/Kalite bölümü ve maturity kullanımı dokümante edildi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

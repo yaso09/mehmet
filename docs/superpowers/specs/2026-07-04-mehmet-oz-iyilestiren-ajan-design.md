@@ -94,6 +94,7 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- Ajanın kaçış mekanizması (maturity threshold) — ✅ v0.3.0'da eklendi (`scripts/maturity.py`)
+- İlerleme metrikleri — ✅ v0.3.0'da eklendi (5 boyutlu maturity skoru)
 - Çoklu ajan desteği
+- Sürekli entegrasyon için kalite kapısı — ✅ v0.3.0'da eklendi (workflow'daki `quality` job)
