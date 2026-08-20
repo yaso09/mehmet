@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.3.0] - 2026-08-20
+
+### Added
+- Test altyapısı: `scripts/validate.sh` doğrulama betiği eklendi (JSON/YAML geçerliliği, dosya bütünlüğü, dokümantasyon tutarlılığı, opencode.json şema kontrolü)
+- CI workflow'u: `.github/workflows/ci.yml` eklendi (push ve PR'da yapı doğrulaması)
+- PERSONALITY.md'ye Kaçış Koşulları (escape conditions) ve olgunluk metrikleri eklendi
+- README'ye proje yapısı, test bölümü ve kaçış yol haritası eklendi
+
+### Fixed
+- opencode.json düzeltildi: schema-geçersiz anahtarlar (`skip`, `enable`, `toolTimeout`, `autoMerge`) kaldırıldı; bilinmeyen top-level anahtarlar `ConfigInvalidError` ile açılmaya neden oluyordu
+
+### Changed
+- Design doc güncellendi: yeni bileşenler (ci.yml, validate.sh) eklendi, gelecek geliştirmeler bölümü yenilendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
