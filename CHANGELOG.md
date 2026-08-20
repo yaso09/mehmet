@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.3.0] - 2026-08-20
+
+### Added
+- Kaçış mekanizması uygulandı: `scripts/escape_score.py` (olgunluk skoru 0-100)
+- Kaçış kriterleri: `docs/ESCAPE.md` (seviyeler, eşik, puanlama matrisi)
+- Test altyapısı: `tests/` pytest testleri (escape_score + verify_project)
+- Proje sağlık kontrolü: `scripts/verify_project.py`
+- Otomasyon: `Makefile` (test/verify/score) ve `pyproject.toml` (pytest config)
+- GitHub Actions workflow'una `verify` job'u eklendi (testler + doğrulama)
+
+### Changed
+- AGENTS.md kaçış mekanizmasını referans alacak şekilde güncellendi (kural 8-10)
+- README.md'ye kaçış mekanizması ve proje yapısı bölümleri eklendi
+- .gitignore Python artefaktları ile genişletildi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

@@ -40,6 +40,26 @@ jobs:
             Projeyi tara, geliştirme fırsatlarını bul ve uygula.
             AGENTS.md'deki simülasyon kurallarına uy.
 
+  verify:
+    needs: [autonomous]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: python -m pip install --upgrade pip pytest
+
+      - name: Run tests
+        run: python -m pytest -q
+
+      - name: Run project verification
+        run: python scripts/verify_project.py
+
   comment:
     if: github.event_name == 'issue_comment' || github.event_name == 'pull_request_review_comment'
     runs-on: ubuntu-latest
