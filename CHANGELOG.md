@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.3.0] - 2026-08-20
+
+### Added
+- MATURITY.md: olgunluk matrisi ve somut kaçış kriterleri ([ESCAPE] etiketli zorunlu maddeler, skor >= 80)
+- scripts/maturity.py: olgunluk skorlama aracı (rapor, `--check` format doğrulama, `--strict` kaçış koşulu zorlama)
+- tests/test_maturity.py: maturity.py için 19 birim test (unittest, stdlib)
+- .github/workflows/ci.yml: CI workflow (birim testler, matris doğrulama, YAML doğrulama)
+- CONTRIBUTING.md: katkı rehberi
+- .editorconfig: kod stili tutarlılığı
+- .github/PULL_REQUEST_TEMPLATE.md ve issue template'leri (bug_report, feature_request)
+- README.md: CI badge'leri, proje yapısı, geliştirme komutları ve kaçış mekanizması dokümantasyonu
+
+### Changed
+- opencode.yml workflow işlerine `timeout-minutes: 20` eklendi (kontrolsüz çalışma engelleniyor)
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
