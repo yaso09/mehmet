@@ -53,7 +53,19 @@ jobs:
         with:
           persist-credentials: false
 
+      - name: Trigger kelime kontrolü
+        id: trigger
+        env:
+          COMMENT_BODY: ${{ github.event.comment.body || '' }}
+        run: |
+          if echo "$COMMENT_BODY" | grep -qiE '^\s*(/oc|/opencode)\b'; then
+            echo "triggered=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "triggered=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - uses: anomalyco/opencode/github@latest
+        if: steps.trigger.outputs.triggered == 'true'
         env:
           OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
         with:

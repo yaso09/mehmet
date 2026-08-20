@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0] - 2026-08-20
+
+### Added
+- `scripts/validate.sh` proje sağlık kontrolü (dosya bütünlüğü, JSON/YAML, içerik, lisans, git temizliği)
+- `.github/workflows/check.yml` CI doğrulama workflow'u
+- `MATURITY.md` olgunluk metrikleri ve kaçış eşiği takibi (36/50)
+- README.md'ye yapı tablosu ve geliştirme bölümü
+
+### Fixed
+- `opencode.yml` yorum job'u artık yalnızca `/oc` veya `/opencode` ile başlayan yorumlara yanıt veriyor
+- Yorum tetikleyici filtreleme, env değişkeniyle shell injection riskine karşı güvenli hale getirildi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
