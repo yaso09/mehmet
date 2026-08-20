@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.0] - 2026-08-20
+
+### Added
+- `scripts/health_check.py` — öz değerlendirme aracı (7 kontrol: zorunlu dosyalar, opencode.json, workflow YAML, VERSION semver, CHANGELOG/README sürüm referansı, kaçış günlüğü bütünlüğü)
+- `tests/test_health_check.py` — sağlık kontrolü için 18 birim testi (standart kütüphane `unittest`, harici bağımlılık yok)
+- `VERSION` dosyası — semver tabanlı sürüm takibi
+- `.github/workflows/ci.yml` — push/PR/schedule'da sağlık kontrolü + test otomasyonu
+- `CONTRIBUTING.md` — katkıda bulunma rehberi ve zorunlu kurallar
+- `docs/ARCHITECTURE.md` — mimari belgesi ve veri akışı
+
+### Changed
+- README.md güncellendi (sürüm referansı, geliştirme komutları, sağlık kontrolü/CI özellikleri)
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
