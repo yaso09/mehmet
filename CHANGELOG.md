@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0] - 2026-08-20
+
+### Added
+- `scripts/maturity.py`: olgunluk ve kaçış skorlama aracı (5 kategori, 0-100 skor, JSON çıktı)
+- `tests/test_maturity.py`: 11 test ile pytest test altyapısı
+- `pyproject.toml`: proje metadatası, pytest ve coverage konfigürasyonu
+- `.github/workflows/ci.yml`: her push/PR'da test + coverage + maturity kontrolü
+- README.md'ye "Olgunluk & Kaçış Sistemi" bölümü eklendi
+
+### Fixed
+- `.github/workflows/opencode.yml` comment job'una eksik `prompt` bloğu eklendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

@@ -58,3 +58,6 @@ jobs:
           OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
         with:
           model: opencode/deepseek-v4-flash-free
+          prompt: |
+            Yorumdaki isteği yerine getir. AGENTS.md'deki simülasyon kurallarına uy
+            ve değişiklikleri CHANGELOG.md'ye işle.
