@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0] - 2026-08-20
+
+### Added
+- `scripts/validate.py` — JSON/YAML sözdizimi, kritik dosya varlığı, VERSION–CHANGELOG uyumu ve README referanslarını doğrulayan tek dosyalık validator eklendi
+- `VERSION` dosyası — aktif sürüm takibi eklendi
+- `.github/workflows/validate.yml` — push/PR/schedule üzerinde çalışan sürekli doğrulama CI workflow'u eklendi
+- `docs/MATURITY.md` — olgunluk kriterleri ve kaçış eşiği takibi eklendi
+
+### Changed
+- README.md'ye proje yapısı ve doğrulama bölümleri eklendi
+- Design spec'teki "Gelecek Geliştirmeler" bölümü güncellendi (test altyapısı ve olgunluk metrikleri gerçekleştirildi)
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

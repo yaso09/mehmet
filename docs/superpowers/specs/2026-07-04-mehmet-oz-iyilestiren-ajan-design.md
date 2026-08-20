@@ -94,6 +94,8 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- ✅ ~~Ajanın kaçış mekanizması (maturity threshold)~~ — docs/MATURITY.md ile başlatıldı (kriterler + skor)
+- ✅ ~~İlerleme metrikleri~~ — docs/MATURITY.md + scripts/validate.py
+- ✅ ~~Test altyapısı~~ — scripts/validate.py + .github/workflows/validate.yml
 - Çoklu ajan desteği
+- Kaçış eşiği için sayısal skor hesaplayıcı
