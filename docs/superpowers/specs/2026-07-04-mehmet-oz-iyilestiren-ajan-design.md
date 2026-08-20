@@ -94,6 +94,14 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- Otomatik lint/format kontrolü (örn. Ruff)
+- Otomatik release/tag mekanizması
+- Konteyner veya deploy otomasyonu
 - Çoklu ajan desteği
+
+## Tamamlanan Geliştirmeler (v0.3.0)
+
+- **Kaçış mekanizması (maturity threshold):** `MATURITY.md` ile somutlaştırıldı — `[ESCAPE]` etiketli zorunlu maddeler ve skor >= 80 koşulu
+- **İlerleme metrikleri:** `scripts/maturity.py` ile otomatik skorlama (rapor, `--check`, `--strict`)
+- **Test altyapısı:** `tests/` altında stdlib unittest tabanlı 19 birim test
+- **Otomasyon:** `ci.yml` workflow'u (test + matris doğrulama + YAML doğrulama) ve işlere `timeout-minutes` tanımı

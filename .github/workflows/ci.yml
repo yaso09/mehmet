@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Birim testleri çalıştır
+        run: python3 -m unittest discover -s tests -v
+
+      - name: Olgunluk matrisi formatını doğrula
+        run: python3 scripts/maturity.py --check
+
+      - name: Olgunluk raporu yazdır
+        run: python3 scripts/maturity.py
+
+      - name: YAML dosyalarını doğrula
+        run: python3 -c "import glob, sys; import yaml; files=glob.glob('.github/workflows/*.yml'); [yaml.safe_load(open(f)) for f in files]; print(f'{len(files)} workflow YAML dosyasi gecerli')"

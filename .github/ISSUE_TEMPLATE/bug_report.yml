@@ -1,0 +1,30 @@
+name: Bug Bildirimi
+description: Bir hata veya beklenmedik davranış bildir
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: Beklenen davranış
+      description: Ne olması gerekiyordu?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Gerçekleşen davranış
+      description: Ne oldu?
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Tekrar üretme adımları
+      description: Hatayı tekrar üretmek için adımlar
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Günlükler / çıktılar
+      render: shell

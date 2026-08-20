@@ -1,0 +1,36 @@
+name: Özellik Talebi
+description: Yeni bir özellik veya geliştirme öner
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: Bu özellik hangi sorunu çözecek?
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Önerilen çözüm
+      description: Özelliğin nasıl çalışmasını istiyorsunuz?
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Kategori
+      options:
+        - Kod kalitesi
+        - Test altyapısı
+        - Dokümantasyon
+        - Otomasyon
+        - Yeni davranış
+      default: 0
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Kaçış hedefine etkisi
+      description: Bu özellik olgunluk matrisini nasıl etkiler? (MATURITY.md)
