@@ -1,0 +1,21 @@
+name: validate
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Doğrulama
+        run: ./scripts/validate.sh
+
+      - name: Olgunluk skoru
+        run: ./scripts/maturity.sh

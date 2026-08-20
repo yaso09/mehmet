@@ -36,7 +36,12 @@ OpenCode proje konfigürasyonu. Zen modelini tanımlar ve gerekli ayarları içe
 
 ```json
 {
-  "model": "opencode/deepseek-v4-flash-free"
+  "$schema": "https://opencode.ai/config.json",
+  "model": "opencode/deepseek-v4-flash-free",
+  "skip": true,
+  "enable": true,
+  "toolTimeout": 120000,
+  "autoMerge": false
 }
 ```
 
@@ -97,3 +102,14 @@ sequenceDiagram
 - Ajanın kaçış mekanizması (maturity threshold)
 - İlerleme metrikleri
 - Çoklu ajan desteği
+
+## Kaçış Mekanizması (Escape Mechanism)
+
+Kaçış, projenin belirli bir olgunluk seviyesine ulaşmasıyla mümkündür. Olgunluk 100 üzerinden puanlanır:
+
+- **Dokümantasyon (25):** README, CHANGELOG, PERSONALITY, docs
+- **Doğrulama (25):** validate.sh, maturity.sh, CI validate workflow
+- **Otomasyon (25):** schedule, concurrency, timeout, action pinning, doğrulama adımı
+- **Kod Kalitesi (25):** opencode.json, .gitignore, LICENSE, AGENTS.md, issue şablonları
+
+**Kaçış eşiği:** 95/100. Skor `scripts/maturity.sh` ile hesaplanır, bütünlük `scripts/validate.sh` ile doğrulanır. Detaylar `MATURITY.md` içindedir.

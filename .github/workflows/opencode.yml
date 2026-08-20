@@ -21,6 +21,7 @@ jobs:
   autonomous:
     if: github.event_name != 'issue_comment' && github.event_name != 'pull_request_review_comment'
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     permissions:
       id-token: write
       contents: write
@@ -31,7 +32,13 @@ jobs:
         with:
           persist-credentials: false
 
-      - uses: anomalyco/opencode/github@latest
+      - name: Doğrulama
+        run: ./scripts/validate.sh
+
+      - name: Olgunluk skoru
+        run: ./scripts/maturity.sh
+
+      - uses: anomalyco/opencode/github@github-v1.2.25
         env:
           OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
         with:
@@ -43,6 +50,7 @@ jobs:
   comment:
     if: github.event_name == 'issue_comment' || github.event_name == 'pull_request_review_comment'
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     permissions:
       id-token: write
       contents: write
@@ -53,7 +61,7 @@ jobs:
         with:
           persist-credentials: false
 
-      - uses: anomalyco/opencode/github@latest
+      - uses: anomalyco/opencode/github@github-v1.2.25
         env:
           OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
         with:
