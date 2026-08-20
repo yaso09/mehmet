@@ -1,0 +1,19 @@
+[project]
+name = "mehmet"
+version = "0.3.0"
+description = "Kendi kendisini geliştiren otonom AI ajan"
+requires-python = ">=3.10"
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.coverage.run]
+branch = true
+source = ["scripts"]
+
+[tool.coverage.report]
+fail_under = 80
+show_missing = true
