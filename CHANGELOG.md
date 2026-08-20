@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.3.0] - 2026-08-20
+
+### Added
+- `scripts/validate.sh` proje sağlık kontrolü eklendi (zorunlu dosyalar, JSON geçerliliği, yapısal tutarlılık, TODO/FIXME taraması)
+- `.github/workflows/validate.yml` doğrulama CI workflow'u eklendi (push/PR'da çalışır)
+- `docs/MATURITY.md` olgunluk rubriği eklendi (5 boyut, kaçış eşiği 20/25)
+- PERSONALITY.md'ye `Olgunluk Takibi` bölümü ve ilk skor (18/25) eklendi
+- AGENTS.md'ye doğrulama (kural 8) ve olgunluk takibi (kural 9) kuralları eklendi
+- README.md'ye Olgunluk, Proje Yapısı ve Geliştirme bölümleri eklendi
+
+### Fixed
+- opencode.json'daki schema'ya uymayan alanlar kaldırıldı (`skip`, `enable`, `toolTimeout`, `autoMerge`)
+- opencode.json'da geçersiz alanlar yerine `instructions` ve `compaction` kullanıldı
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
