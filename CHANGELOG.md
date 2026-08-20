@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.3.0] - 2026-08-20
+
+### Added
+- METRICS.md olgunluk & kaçış skor kartı (100 puanlık eşik, güncel skor 95/100)
+- scripts/validate.sh config doğrulama betiği (JSON, YAML, opencode.json anahtar kontrolü)
+- Workflow'a "Validate config files" adımı eklendi
+- CONTRIBUTING.md etkileşim ve katkı rehberi
+- AGENTS.md'ye METRICS.md güncelleme kuralı (kural 8) eklendi
+
+### Changed
+- README.md proje yapısı tablosu ve geliştirme bölümüyle güncellendi
+- PERSONALITY.md kaçış günlüğüne iterasyon 3 eklendi, Phase 3 (Autonomy) işaretlendi
+
+### Fixed
+- opencode.json'daki geçersiz anahtarlar kaldırıldı (skip, enable, toolTimeout, autoMerge) — şema uyumlu hale getirildi
+- CHANGELOG.md 0.2.0'da belirtilen geçersiz konfigürasyon düzeltmesi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added

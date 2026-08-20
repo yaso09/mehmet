@@ -31,6 +31,9 @@ jobs:
         with:
           persist-credentials: false
 
+      - name: Validate config files
+        run: bash scripts/validate.sh
+
       - uses: anomalyco/opencode/github@latest
         env:
           OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
