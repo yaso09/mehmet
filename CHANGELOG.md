@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0] - 2026-08-20
+
+### Added
+- MATURITY.md: somut kaçış/olgunluk puanlama sistemi (4 kategori, 100 puan, 90 eşiği)
+- scripts/verify.sh: kendi kendini doğrulama betiği (dokümantasyon, test altyapısı, kod kalitesi, otomasyon puanı)
+- .yamllint: GitHub Actions YAML konvansiyonlarına uygun lint konfigürasyonu
+- README'ye CI badge, kaçış hedefi bölümü ve proje yapısı eklendi
+
+### Changed
+- Workflow'a `verify` job'u eklendi (otomatik self-verification)
+- README lisans bölümü GPLv3 olarak düzeltildi, design doc bileşenler listesi güncellendi
+
 ## [0.2.0] - 2026-07-04
 
 ### Added
