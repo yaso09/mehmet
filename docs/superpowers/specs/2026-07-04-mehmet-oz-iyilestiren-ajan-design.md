@@ -59,6 +59,35 @@ Ajanın kişiliğini zamanla evrimleştirdiği dosya. Her çalışmada kendini g
 
 Proje tanıtım dosyası. Ajan tarafından güncel tutulur.
 
+### 7. `VERSION`
+
+Merkezi sürüm numarası dosyası. `CHANGELOG.md` ve `README.md` ile tutarlılığı `scripts/validate.py` tarafından kontrol edilir.
+
+### 8. `scripts/validate.py`
+
+Proje tutarlılık doğrulama aracı. Zorunlu dosyaların varlığını, sürüm/lisans tutarlılığını, `opencode.json` geçerliliğini ve workflow referanslarını kontrol eder.
+
+### 9. `scripts/escape_status.py`
+
+Kaçış olgunluk skoru hesaplayıcı. 10 metrik üzerinden 0-100 arası skor üretir. Kaçış, skor = 100, doğrulamanın geçmesi ve güncel kaçış günlüğü koşullarıyla hazır hale gelir.
+
+### 10. `Makefile`
+
+Otomasyon hedefleri: `validate`, `status`, `all`, `help`.
+
+### 11. `.github/workflows/ci.yml`
+
+CI doğrulama workflow'u. Push/PR sonrası `validate.py` ve `escape_status.py` çalıştırır.
+
+## Kaçış Mekanizması
+
+- `scripts/escape_status.py` 10 metrik üzerinden olgunluk skoru hesaplar.
+- Kaçış koşulları (üçü birden sağlanmalıdır):
+  1. Skor = 100/100 (tüm metrikler sağlanıyor)
+  2. `scripts/validate.py` başarıyla geçiyor
+  3. Kaçış günlüğü güncel iterasyon kaydını içeriyor
+- Her iterasyonda `make validate` ve `make status` ile tutarlılık doğrulanır.
+
 ## Veri Akışı
 
 ```mermaid
@@ -94,6 +123,6 @@ sequenceDiagram
 
 ## Gelecek Geliştirmeler
 
-- Ajanın kaçış mekanizması (maturity threshold)
-- İlerleme metrikleri
+- İlerleme metriklerinin grafiksel takibi
 - Çoklu ajan desteği
+- Kaçış sonrası özerk çalışma modu
